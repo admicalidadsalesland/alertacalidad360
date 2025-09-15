@@ -138,21 +138,26 @@
     const testSoundBtn = document.getElementById('test-sound');
     const soundStatus = document.getElementById('sound-status');
 
-    // 🎵 Sonido embebido en base64 (confiable, sin CORS)
+    // ✅ AUDIO EMbebido VALIDO (WAV de 1s, universal)
     const audio = new Audio('data:audio/wav;base64,UklGRl9vT19XQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YU9vT18=');
 
     let audioEnabled = false;
 
-    // ✅ Prueba de sonido
     testSoundBtn.addEventListener('click', async () => {
+      // 🔍 Confirmación visual: ¿se disparó el evento?
+      alert('¡Clic detectado! Intentando reproducir sonido... (cierra este alerta)');
+
       try {
-        await audio.play();
-        audioEnabled = true;
-        testSoundBtn.disabled = true;
-        soundStatus.textContent = '🔊 Sonido activado ✅ Ahora recibirás alertas con sonido.';
-        soundStatus.style.color = '#27ae60';
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+          await playPromise;
+          audioEnabled = true;
+          testSoundBtn.disabled = true;
+          soundStatus.textContent = '🔊 Sonido activado ✅ Ahora recibirás alertas con sonido.';
+          soundStatus.style.color = '#27ae60';
+        }
       } catch (err) {
-        soundStatus.textContent = '❌ No se pudo reproducir sonido. Prueba en Chrome o permite sonidos en esta página.';
+        soundStatus.textContent = '❌ No se pudo reproducir sonido. Abre esta página en CHROME en modo incógnito y vuelve a intentarlo.';
         soundStatus.style.color = '#e74c3c';
         console.error("Error de audio:", err);
       }
@@ -188,12 +193,10 @@
             // 🗑️ Botón de cierre: Borra la alerta de Firestore
             const closeBtn = alertaDiv.querySelector('.close-btn');
             closeBtn.addEventListener('click', async () => {
-              // Animación de desvanecimiento
               alertaDiv.style.opacity = '0';
               alertaDiv.style.transform = 'translateX(100%)';
               alertaDiv.style.transition = 'all 0.3s ease';
 
-              // ✅ BORRAR REAL DE FIRESTORE
               try {
                 await db.collection("alertas").doc(doc.id).delete();
                 console.log(`✅ Alerta borrada de Firestore: ${doc.id}`);
@@ -206,7 +209,6 @@
                 return;
               }
 
-              // Elimina el elemento después de la animación
               setTimeout(() => alertaDiv.remove(), 300);
             });
 
@@ -217,7 +219,7 @@
             if (audioEnabled && (!window.lastAlertTime || now - window.lastAlertTime > 5000)) {
               audio.play().catch(e => {
                 console.warn("No se pudo reproducir sonido:", e);
-                soundStatus.textContent = '⚠️ El sonido falló. Vuelve a hacer clic en "Probar sonido".';
+                soundStatus.textContent = '⚠️ El sonido falló. Haz clic en "Probar sonido" nuevamente.';
                 soundStatus.style.color = '#e74c3c';
                 audioEnabled = false;
               });
