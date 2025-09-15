@@ -23,11 +23,14 @@
       margin-bottom: 16px;
       border-radius: 4px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
     }
     .timestamp {
       color: #7f8c8d;
       font-size: 0.9em;
-      margin-bottom: 8px;
     }
     .correo {
       color: #3498db;
@@ -36,6 +39,27 @@
     .mensaje {
       margin-top: 8px;
       line-height: 1.5;
+      word-wrap: break-word;
+    }
+    .close-btn {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      background: rgba(0,0,0,0.1);
+      border: none;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+      transition: background 0.2s;
+    }
+    .close-btn:hover {
+      background: rgba(0,0,0,0.2);
     }
     .loading {
       text-align: center;
@@ -47,6 +71,11 @@
       color: #95a5a6;
       padding: 40px;
     }
+    .error {
+      color: red;
+      text-align: center;
+      padding: 10px;
+    }
   </style>
 </head>
 <body>
@@ -56,7 +85,7 @@
     <p class="loading">Cargando alertas...</p>
   </div>
 
-  <!-- Firebase SDK (sin espacios extra) -->
+  <!-- Firebase SDK -->
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 
@@ -76,6 +105,9 @@
     const db = firebase.firestore();
 
     const container = document.getElementById('alertas-container');
+
+    // 🎵 Sonido de alerta (usamos un sonido público)
+    const audio = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mp3');
 
     // Escucha cambios en tiempo real en la colección "alertas"
     db.collection("alertas")
@@ -98,16 +130,34 @@
             const alertaDiv = document.createElement('div');
             alertaDiv.className = 'alerta';
             alertaDiv.innerHTML = `
+              <button class="close-btn">×</button>
               <div class="timestamp">📅 ${timestamp}</div>
               <div class="correo">✉️ ${correo}</div>
               <div class="mensaje">🚨 ${mensaje}</div>
             `;
+
+            // 🎯 Añade evento al botón de cerrar
+            const closeBtn = alertaDiv.querySelector('.close-btn');
+            closeBtn.addEventListener('click', () => {
+              alertaDiv.style.opacity = '0';
+              alertaDiv.style.transform = 'translateX(100%)';
+              alertaDiv.style.transition = 'all 0.3s ease';
+              setTimeout(() => alertaDiv.remove(), 300);
+            });
+
             container.appendChild(alertaDiv);
+
+            // 🔊 Reproduce sonido SOLO si es la primera alerta o si ha pasado más de 5 segundos desde la última
+            // Evita que suene continuamente si vienen muchas alertas juntas
+            const now = Date.now();
+            if (!window.lastAlertTime || now - window.lastAlertTime > 5000) {
+              audio.play().catch(e => console.warn("No se pudo reproducir sonido:", e));
+              window.lastAlertTime = now;
+            }
           });
         },
         (error) => {
-          // ✅ Aquí se capturan todos los errores de permisos, conexión, etc.
-          container.innerHTML = `<p style="color: red;">❌ Error: ${error.message}</p>`;
+          container.innerHTML = `<p class="error">❌ Error: ${error.message}</p>`;
           console.error("Error leyendo Firestore:", error);
         }
       );
