@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alertas Web360</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f8f9fa;
+    }
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+    }
+    .alerta {
+      background: white;
+      border-left: 4px solid #e74c3c;
+      padding: 16px;
+      margin-bottom: 16px;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .timestamp {
+      color: #7f8c8d;
+      font-size: 0.9em;
+      margin-bottom: 8px;
+    }
+    .correo {
+      color: #3498db;
+      font-weight: bold;
+    }
+    .mensaje {
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+    .loading {
+      text-align: center;
+      color: #7f8c8d;
+      font-style: italic;
+    }
+    .no-alertas {
+      text-align: center;
+      color: #95a5a6;
+      padding: 40px;
+    }
+  </style>
+</head>
+<body>
+  <h1>📋 Alertas Recibidas - Web360</h1>
+
+  <div id="alertas-container">
+    <p class="loading">Cargando alertas...</p>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+  <script>
+    // Configuración de Firebase (usa tu propio proyecto)
+    const firebaseConfig = {
+      apiKey: "AIzaSyBvXzgZQJqWkUxGtF8rRmDlKpYbOuHjLwM", // ❌ Reemplázame abajo
+      authDomain: "alertasweb360.firebaseapp.com",
+      projectId: "alertasweb360",
+      storageBucket: "alertasweb360.appspot.com",
+      messagingSenderId: "113022119227802677680",
+      appId: "1:113022119227802677680:web:1234567890abcdef"
+    };
+
+    // Inicializa Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+
+    const container = document.getElementById('alertas-container');
+
+    // Escucha cambios en tiempo real en la colección "alertas"
+    db.collection("alertas")
+      .orderBy("timestamp", "desc") // Ordena del más reciente al más antiguo
+      .onSnapshot((snapshot) => {
+        container.innerHTML = ''; // Limpia antes de renderizar
+
+        if (snapshot.empty) {
+          container.innerHTML = '<p class="no-alertas">No hay alertas aún.</p>';
+          return;
+        }
+
+        snapshot.forEach((doc) => {
+          const data = doc.data();
+          const timestamp = new Date(data.timestamp?.seconds * 1000 || data.timestamp).toLocaleString('es-MX');
+          const correo = data.correoAgente || 'Sin correo';
+          const mensaje = data.alertaTexto || 'Sin mensaje';
+
+          const alertaDiv = document.createElement('div');
+          alertaDiv.className = 'alerta';
+          alertaDiv.innerHTML = `
+            <div class="timestamp">📅 ${timestamp}</div>
+            <div class="correo">✉️ ${correo}</div>
+            <div class="mensaje">🚨 ${mensaje}</div>
+          `;
+          container.appendChild(alertaDiv);
+        });
+      })
+      .catch(error => {
+        container.innerHTML = `<p style="color: red;">❌ Error: ${error.message}</p>`;
+        console.error("Error leyendo Firestore:", error);
+      });
+  </script>
+</body>
+</html>
