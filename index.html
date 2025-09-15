@@ -1,128 +1,197 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Panel Admin - Alertas Web360</title>
-<style>
-  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 1000px; margin: 40px auto; padding: 20px; background-color: #f8f9fa; }
-  h1 { text-align: center; color: #2c3e50; }
-  table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-  th { background-color: #3498db; color: white; }
-  tr:nth-child(even) { background-color: #f2f2f2; }
-  button { padding: 6px 12px; margin: 2px; border: none; border-radius: 4px; cursor: pointer; }
-  .btn-delete { background-color: #e74c3c; color: white; }
-  .btn-add { background-color: #2ecc71; color: white; }
-  input[type="text"] { padding: 6px; width: 90%; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alertas Web360 - Acceso Protegido</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 20px;
+      background-color: #f0f7ff;
+    }
+    h1 {
+      color: #1a3a6e;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .login-container {
+      text-align: center;
+      padding: 50px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      margin: 0 auto;
+      max-width: 400px;
+    }
+    button {
+      background-color: #4285F4;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #3367D6;
+    }
+    .alertas-container {
+      display: none;
+      margin-top: 30px;
+    }
+    .alerta {
+      background: white;
+      border-left: 5px solid #e74c3c;
+      padding: 18px;
+      margin-bottom: 18px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .timestamp {
+      color: #666;
+      font-size: 0.9em;
+      margin-bottom: 8px;
+    }
+    .correo {
+      color: #3498db;
+      font-weight: bold;
+    }
+    .mensaje {
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+    .logout-btn {
+      background-color: #dc3545;
+      padding: 10px 20px;
+      border-radius: 6px;
+      color: white;
+      border: none;
+      font-size: 14px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .logout-btn:hover {
+      background-color: #c82333;
+    }
+    .loading {
+      text-align: center;
+      color: #777;
+      font-style: italic;
+    }
+  </style>
 </head>
 <body>
+  <h1>📋 Alertas Web360</h1>
 
-<h1>📋 Panel de Administración - Alertas Web360</h1>
+  <!-- Pantalla de Login -->
+  <div id="login-container">
+    <h2>Inicia sesión con tu correo corporativo</h2>
+    <p>Usa tu cuenta de <strong>@alertasweb360.com</strong></p>
+    <button id="login-btn">Iniciar sesión con Google</button>
+  </div>
 
-<!-- Formulario para agregar alerta -->
-<div>
-  <h2>Agregar Nueva Alerta</h2>
-  <input type="text" id="correo" placeholder="Correo del Agente">
-  <input type="text" id="mensaje" placeholder="Mensaje de alerta">
-  <button class="btn-add" id="agregar-alerta">Agregar</button>
-</div>
+  <!-- Pantalla de Alertas (oculta) -->
+  <div id="alertas-container" class="alertas-container">
+    <p class="loading">Cargando alertas...</p>
+  </div>
 
-<!-- Tabla de alertas -->
-<table>
-  <thead>
-    <tr>
-      <th>Timestamp</th>
-      <th>Correo</th>
-      <th>Mensaje</th>
-      <th>Acciones</th>
-    </tr>
-  </thead>
-  <tbody id="tabla-alertas">
-    <tr><td colspan="4" style="text-align:center;">Cargando alertas...</td></tr>
-  </tbody>
-</table>
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 
-<!-- Firebase SDK -->
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script>
+    // --- CONFIGURACIÓN DE FIREBASE (REEMPLAZA CON LA TUYA) ---
+    const firebaseConfig = {
+      apiKey: "AIzaSyBvXzgZQJqWkUxGtF8rRmDlKpYbOuHjLwM",
+      authDomain: "alertasweb360.firebaseapp.com",
+      projectId: "alertasweb360",
+      storageBucket: "alertasweb360.appspot.com",
+      messagingSenderId: "113022119227802677680",
+      appId: "1:113022119227802677680:web:abc123def456"
+    };
 
-<script>
-  // Configuración de Firebase
-  const firebaseConfig = {
-    apiKey: "AIzaSyDOHRSg12iQ-sRetVEl4O9Ni8IRQTivP_c",
-    authDomain: "alertasweb360.firebaseapp.com",
-    projectId: "alertasweb360",
-    storageBucket: "alertasweb360.firebasestorage.app",
-    messagingSenderId: "359004701928",
-    appId: "1:359004701928:web:ad6eb32d5fed92069a355d",
-    measurementId: "G-NEJYDW39PT"
-  };
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
 
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.firestore();
+    const loginContainer = document.getElementById('login-container');
+    const alertasContainer = document.getElementById('alertas-container');
+    const loginBtn = document.getElementById('login-btn');
 
-  const tabla = document.getElementById('tabla-alertas');
-
-  // --- Función para mostrar alertas ---
-  function cargarAlertas() {
-    db.collection("alertas").orderBy("timestamp", "desc")
-      .onSnapshot(snapshot => {
-        tabla.innerHTML = '';
-        if(snapshot.empty){
-          tabla.innerHTML = '<tr><td colspan="4" style="text-align:center;">No hay alertas.</td></tr>';
-          return;
-        }
-
-        snapshot.forEach(doc => {
-          const data = doc.data();
-          const id = doc.id;
-          const timestamp = new Date(data.timestamp?.seconds * 1000 || data.timestamp).toLocaleString('es-MX');
-          const correo = data.correoAgente || '';
-          const mensaje = data.alertaTexto || '';
-
-          const row = document.createElement('tr');
-          row.innerHTML = `
-            <td>${timestamp}</td>
-            <td>${correo}</td>
-            <td>${mensaje}</td>
-            <td>
-              <button class="btn-delete" onclick="eliminarAlerta('${id}')">Eliminar</button>
-            </td>
-          `;
-          tabla.appendChild(row);
+    // --- INICIAR SESIÓN CON GOOGLE ---
+    loginBtn.addEventListener('click', () => {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      auth.signInWithPopup(provider)
+        .then((result) => {
+          const user = result.user;
+          console.log("✅ Usuario logueado:", user.email);
+          loginContainer.style.display = 'none';
+          alertasContainer.style.display = 'block';
+          cargarAlertas();
+        })
+        .catch((error) => {
+          alert("❌ Error: " + error.message);
+          console.error(error);
         });
-      });
-  }
+    });
 
-  // --- Función para agregar alerta ---
-  document.getElementById('agregar-alerta').addEventListener('click', () => {
-    const correo = document.getElementById('correo').value.trim();
-    const mensaje = document.getElementById('mensaje').value.trim();
-    if(!correo || !mensaje) return alert('Todos los campos son obligatorios.');
+    // --- CARGAR ALERTAS EN TIEMPO REAL ---
+    function cargarAlertas() {
+      db.collection("alertas")
+        .orderBy("timestamp", "desc")
+        .onSnapshot((snapshot) => {
+          alertasContainer.innerHTML = '<p class="loading">Cargando alertas...</p>';
 
-    db.collection("alertas").add({
-      timestamp: new Date(),
-      correoAgente: correo,
-      alertaTexto: mensaje
-    }).then(() => {
-      document.getElementById('correo').value = '';
-      document.getElementById('mensaje').value = '';
-    }).catch(err => console.error('Error agregando alerta:', err));
-  });
+          if (snapshot.empty) {
+            alertasContainer.innerHTML = '<p class="loading">No hay alertas aún.</p>';
+            return;
+          }
 
-  // --- Función para eliminar alerta ---
-  function eliminarAlerta(id){
-    if(confirm("¿Eliminar esta alerta?")){
-      db.collection("alertas").doc(id).delete()
-        .catch(err => console.error('Error eliminando alerta:', err));
+          snapshot.forEach((doc) => {
+            const data = doc.data();
+            const timestamp = new Date(data.timestamp?.seconds * 1000 || data.timestamp).toLocaleString('es-MX');
+            const correo = data.correoAgente || 'Sin correo';
+            const mensaje = data.alertaTexto || 'Sin mensaje';
+
+            const alertaDiv = document.createElement('div');
+            alertaDiv.className = 'alerta';
+            alertaDiv.innerHTML = `
+              <div class="timestamp">📅 ${timestamp}</div>
+              <div class="correo">✉️ ${correo}</div>
+              <div class="mensaje">🚨 ${mensaje}</div>
+            `;
+            alertasContainer.appendChild(alertaDiv);
+          });
+        });
     }
-  }
 
-  // Carga inicial
-  cargarAlertas();
-</script>
+    // --- ESCUCHAR CAMBIOS DE AUTENTICACIÓN ---
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        // Si está logueado, carga las alertas
+        loginContainer.style.display = 'none';
+        alertasContainer.style.display = 'block';
+        cargarAlertas();
 
+        // Añadir botón de cierre de sesión
+        const logoutBtn = document.createElement('button');
+        logoutBtn.textContent = 'Cerrar sesión';
+        logoutBtn.className = 'logout-btn';
+        logoutBtn.onclick = () => auth.signOut();
+        alertasContainer.appendChild(logoutBtn);
+
+      } else {
+        // Si no está logueado, muestra el login
+        loginContainer.style.display = 'block';
+        alertasContainer.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
