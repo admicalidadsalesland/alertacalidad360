@@ -28,7 +28,7 @@
   <!-- BARRA LATERAL (Sidebar) -->
   <aside class="fixed inset-y-0 left-0 z-50 w-64 bg-gray-900 text-white shadow-xl transform transition-transform duration-300 sidebar-closed lg:translate-x-0">
     <div class="flex flex-col h-full">
-      <!-- Logo y título -->
+      <!-- Logo y Título -->
       <div class="p-6 border-b border-gray-700">
         <div class="flex items-center gap-3">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -64,7 +64,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 bg-gray-700 rounded-full flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
             </svg>
-            <span id="user-name" class="text-sm font-medium">Usuario</span>
+            <span id="user-name" class="text-sm font-medium">Juan</span>
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
@@ -80,6 +80,14 @@
             </button>
           </div>
         </div>
+
+        <!-- Botón de Desloguear en la parte inferior del sidebar -->
+        <button id="logout-btn-top" class="mt-4 w-full flex items-center gap-3 px-3 py-2 text-red-400 hover:bg-gray-800 rounded-lg transition-colors text-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+          </svg>
+          <span>Desloguear</span>
+        </button>
       </div>
     </div>
   </aside>
@@ -92,7 +100,7 @@
   </button>
 
   <!-- CONTENIDO PRINCIPAL -->
-  <main class="flex-1 lg:ml-64 pt-16 pb-12 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full">
+  <main class="flex-1 lg:ml-64 pt-16 pb-12 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full flex flex-col items-center justify-center">
 
     <!-- El JS se encargará de crear toda la interfaz -->
     <script>
@@ -353,8 +361,11 @@
             }
           });
 
-          // Asignar evento al botón de deslogueo
+          // Asignar evento al botón de deslogueo en el menú
           document.getElementById('logout-btn').onclick = logout;
+
+          // Asignar evento al botón de desloguear en la parte inferior del sidebar
+          document.getElementById('logout-btn-top').onclick = logout;
 
           // Toggle sidebar móvil
           const toggleSidebar = document.getElementById('toggle-sidebar');
