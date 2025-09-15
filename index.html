@@ -15,35 +15,6 @@
     h1 {
       color: #2c3e50;
       text-align: center;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .login-container {
-      text-align: center;
-      padding: 40px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin: 40px auto;
-      max-width: 400px;
-    }
-    button {
-      background-color: #4285F4;
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-      margin-top: 16px;
-    }
-    button:hover {
-      background-color: #3367D6;
-    }
-    .alertas-container {
-      display: none;
-      margin-top: 30px;
     }
     .alerta {
       background: white;
@@ -71,29 +42,26 @@
       color: #7f8c8d;
       font-style: italic;
     }
+    .no-alertas {
+      text-align: center;
+      color: #95a5a6;
+      padding: 40px;
+    }
   </style>
 </head>
 <body>
   <h1>📋 Alertas Recibidas - Web360</h1>
 
-  <!-- Contenido de Login -->
-  <div id="login-container" class="login-container">
-    <p>Por favor, inicia sesión con tu correo corporativo.</p>
-    <button id="login-btn">Iniciar sesión con Google</button>
-  </div>
-
-  <!-- Contenido de Alertas -->
-  <div id="alertas-container" class="alertas-container">
+  <div id="alertas-container">
     <p class="loading">Cargando alertas...</p>
   </div>
 
   <!-- Firebase SDK -->
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 
   <script>
-    // --- CONFIGURACIÓN DE FIREBASE ---
+    // Configuración de Firebase
     const firebaseConfig = {
       apiKey: "AIzaSyDOHRSg12iQ-sRetVEl4O9Ni8IRQTivP_c",
       authDomain: "alertasweb360.firebaseapp.com",
@@ -106,85 +74,40 @@
 
     // Inicializa Firebase
     firebase.initializeApp(firebaseConfig);
-    const auth = firebase.auth();
     const db = firebase.firestore();
+    const container = document.getElementById('alertas-container');
 
-    const loginContainer = document.getElementById('login-container');
-    const alertasContainer = document.getElementById('alertas-container');
-    const loginBtn = document.getElementById('login-btn');
+    // Escucha cambios en tiempo real en la colección "alertas"
+    db.collection("alertas")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapshot) => {
+        container.innerHTML = ''; // Limpia antes de renderizar
 
-    // --- LOGIN CON GOOGLE ---
-    loginBtn.addEventListener('click', () => {
-      const provider = new firebase.auth.GoogleAuthProvider();
-      auth.signInWithPopup(provider)
-        .then((result) => {
-          const user = result.user;
-          console.log("✅ Usuario logueado:", user.email);
+        if (snapshot.empty) {
+          container.innerHTML = '<p class="no-alertas">No hay alertas aún.</p>';
+          return;
+        }
 
-          // Solo permitir correos corporativos
-          const allowedEmails = [
-            "usuario1@tudominio.com",
-            "usuario2@tudominio.com",
-            "usuario3@tudominio.com"
-          ];
+        snapshot.forEach((doc) => {
+          const data = doc.data();
+          const timestamp = new Date(data.timestamp?.seconds * 1000 || data.timestamp).toLocaleString('es-MX');
+          const correo = data.correoAgente || 'Sin correo';
+          const mensaje = data.alertaTexto || 'Sin mensaje';
 
-          if (!allowedEmails.includes(user.email)) {
-            alert("❌ Este correo no está autorizado.");
-            auth.signOut();
-            return;
-          }
-
-          loginContainer.style.display = 'none';
-          alertasContainer.style.display = 'block';
-          cargarAlertas();
-        })
-        .catch((error) => {
-          alert("❌ Error al iniciar sesión: " + error.message);
-          console.error(error);
+          const alertaDiv = document.createElement('div');
+          alertaDiv.className = 'alerta';
+          alertaDiv.innerHTML = `
+            <div class="timestamp">📅 ${timestamp}</div>
+            <div class="correo">✉️ ${correo}</div>
+            <div class="mensaje">🚨 ${mensaje}</div>
+          `;
+          container.appendChild(alertaDiv);
         });
-    });
-
-    // --- CARGAR ALERTAS EN TIEMPO REAL ---
-    function cargarAlertas() {
-      db.collection("alertas")
-        .orderBy("timestamp", "desc")
-        .onSnapshot((snapshot) => {
-          alertasContainer.innerHTML = '';
-
-          if (snapshot.empty) {
-            alertasContainer.innerHTML = '<p class="loading">No hay alertas aún.</p>';
-            return;
-          }
-
-          snapshot.forEach((doc) => {
-            const data = doc.data();
-            const timestamp = new Date(data.timestamp?.seconds * 1000 || data.timestamp).toLocaleString('es-MX');
-            const correo = data.correoAgente || 'Sin correo';
-            const mensaje = data.alertaTexto || 'Sin mensaje';
-
-            const alertaDiv = document.createElement('div');
-            alertaDiv.className = 'alerta';
-            alertaDiv.innerHTML = `
-              <div class="timestamp">📅 ${timestamp}</div>
-              <div class="correo">✉️ ${correo}</div>
-              <div class="mensaje">🚨 ${mensaje}</div>
-            `;
-            alertasContainer.appendChild(alertaDiv);
-          });
-        });
-    }
-
-    // --- ESCUCHAR CAMBIOS DE AUTENTICACIÓN ---
-    auth.onAuthStateChanged((user) => {
-      if (user) {
-        loginContainer.style.display = 'none';
-        alertasContainer.style.display = 'block';
-        cargarAlertas();
-      } else {
-        loginContainer.style.display = 'block';
-        alertasContainer.style.display = 'none';
-      }
-    });
+      })
+      .catch(error => {
+        container.innerHTML = `<p style="color: red;">❌ Error: ${error.message}</p>`;
+        console.error("Error leyendo Firestore:", error);
+      });
   </script>
 </body>
 </html>
