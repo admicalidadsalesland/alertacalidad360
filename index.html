@@ -3,34 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>📋 Alertas Recibidas - Web360</title>
+  <title>📋 Alertas Web360</title>
 
   <!-- Tailwind CSS v3.4.1 via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    /* Animaciones personalizadas */
+    /* Animaciones */
     .alert-enter {
       animation: fadeInUp 0.4s ease-out;
     }
     @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     .fade-out {
       animation: fadeOut 0.5s ease-out forwards;
     }
     @keyframes fadeOut {
-      to {
-        opacity: 0;
-        transform: translateX(100%);
-      }
+      to { opacity: 0; transform: translateX(100%); }
+    }
+    .modal-overlay {
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .modal-content {
+      animation: slideIn 0.3s ease-out;
+    }
+    @keyframes slideIn {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
   </style>
 </head>
@@ -39,7 +40,7 @@
   <div class="max-w-3xl mx-auto">
     <!-- Header -->
     <header class="text-center mb-8">
-      <h1 class="text-3xl font-bold text-gray-800 tracking-tight mb-2">📋 Alertas Recibidas - Web360</h1>
+      <h1 class="text-3xl font-bold text-gray-800 tracking-tight mb-2">📋 Alertas Web360</h1>
       <p class="text-gray-600">Las alertas desaparecen al cerrarlas. El título cambia cuando hay novedades.</p>
     </header>
 
@@ -71,8 +72,33 @@
     <!-- Alerts container -->
     <div id="alerts-container" class="space-y-4"></div>
 
+    <!-- Botón para enviar alerta (oculto por defecto) -->
+    <div class="text-center mt-12">
+      <button id="send-alert-btn" class="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg shadow transition-colors duration-200 hidden">
+        ➕ Enviar Nueva Alerta
+      </button>
+    </div>
+
+    <!-- Modal de ingreso de contraseña -->
+    <div id="auth-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 modal-overlay">
+      <div class="bg-white rounded-xl shadow-2xl w-full max-w-md p-8 modal-content">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">🔑 Acceso Administrador</h2>
+        <p class="text-gray-600 mb-4">Ingresa la contraseña para enviar alertas:</p>
+        
+        <input type="password" id="admin-password" placeholder="Contraseña secreta" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent mb-4" autocomplete="off">
+        
+        <div class="flex gap-3 mb-4">
+          <button id="login-btn" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200">Entrar</button>
+          <button id="cancel-btn" class="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors duration-200">Cancelar</button>
+        </div>
+
+        <p id="login-error" class="text-red-500 text-sm text-center hidden">❌ Contraseña incorrecta. Intentos restantes: <span id="attempts">3</span></p>
+      </div>
+    </div>
+
     <!-- Footer -->
     <footer class="mt-12 text-center text-gray-500 text-sm">
+      ✅ Solo tú puedes enviar alertas.<br>
       ✅ Cada alerta se borra permanentemente al cerrarla.
     </footer>
   </div>
@@ -96,10 +122,15 @@
     firebase.initializeApp(firebaseConfig);
     const db = firebase.firestore();
 
-    const originalTitle = "📋 Alertas Recibidas - Web360";
+    const originalTitle = "📋 Alertas Web360";
     const alertTitle = "⚠️ ALERTA - Web360";
     let hasUnreadAlert = false;
     let lastAlertTime = 0;
+
+    // 🔐 Configuración de acceso
+    const ADMIN_PASSWORD = "tu_contraseña_secreta_123"; // ¡CAMBIA ESTO POR TU CONTRASEÑA!
+    let loginAttempts = 3;
+    let isBlocked = false;
 
     // Cambiar título del navegador
     function updateTitle() {
@@ -121,8 +152,79 @@
     const errorMessageEl = document.getElementById('error-message');
     const emptyEl = document.getElementById('empty');
     const container = document.getElementById('alerts-container');
+    const sendBtn = document.getElementById('send-alert-btn');
+    const modal = document.getElementById('auth-modal');
+    const passwordInput = document.getElementById('admin-password');
+    const loginBtn = document.getElementById('login-btn');
+    const cancelBtn = document.getElementById('cancel-btn');
+    const loginError = document.getElementById('login-error');
+    const attemptsEl = document.getElementById('attempts');
 
-    // Escuchar cambios en tiempo real
+    // Mostrar modal de acceso
+    function showAuthModal() {
+      modal.classList.remove('hidden');
+      passwordInput.value = '';
+      loginError.classList.add('hidden');
+      loginAttempts = 3;
+      attemptsEl.textContent = loginAttempts;
+    }
+
+    // Ocultar modal
+    function hideAuthModal() {
+      modal.classList.add('hidden');
+    }
+
+    // Validar contraseña
+    async function validatePassword() {
+      const password = passwordInput.value.trim();
+      if (password === ADMIN_PASSWORD) {
+        sendBtn.classList.remove('hidden');
+        hideAuthModal();
+        document.getElementById('status').textContent = "✅ Acceso concedido. Puedes enviar alertas.";
+        return true;
+      } else {
+        loginAttempts--;
+        attemptsEl.textContent = loginAttempts;
+        if (loginAttempts <= 0) {
+          loginError.textContent = "❌ Demasiados intentos. Espera 1 minuto.";
+          loginError.classList.remove('hidden');
+          isBlocked = true;
+          setTimeout(() => {
+            isBlocked = false;
+            loginError.classList.add('hidden');
+            loginAttempts = 3;
+            attemptsEl.textContent = loginAttempts;
+          }, 60000);
+        } else {
+          loginError.textContent = `❌ Contraseña incorrecta. Intentos restantes: ${loginAttempts}`;
+          loginError.classList.remove('hidden');
+        }
+        return false;
+      }
+    }
+
+    // Eventos del modal
+    loginBtn.addEventListener('click', async () => {
+      if (isBlocked) return;
+      await validatePassword();
+    });
+
+    cancelBtn.addEventListener('click', hideAuthModal);
+
+    // Mostrar modal al hacer clic en el botón de enviar
+    sendBtn.addEventListener('click', () => {
+      showAuthModal();
+    });
+
+    // Escuchar tecla Enter en el input
+    passwordInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        validatePassword();
+      }
+    });
+
+    // Escucha cambios en tiempo real en la colección "alertas"
     db.collection("alertas")
       .orderBy("timestamp", "desc")
       .onSnapshot(
@@ -146,7 +248,7 @@
             const alertDiv = document.createElement('div');
             alertDiv.className = 'group relative bg-white p-6 rounded-xl shadow-lg border-l-4 border-red-500 transition-all duration-300 transform hover:-translate-y-1 alert-enter';
             alertDiv.innerHTML = `
-              <button class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 w-8 h-8 flex items-center justify-center rounded-full bg-red-100 text-red-600 hover:bg-red-200 transition-all duration-200 z-10" aria-label="Cerrar alerta">
+              <button class="close-btn absolute top-4 right-4 opacity-0 group-hover:opacity-100 w-8 h-8 flex items-center justify-center rounded-full bg-red-100 text-red-600 hover:bg-red-200 transition-all duration-200 z-10" aria-label="Cerrar alerta">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
@@ -165,7 +267,6 @@
               </div>
             `;
 
-            // Botón de cierre
             const closeBtn = alertDiv.querySelector('.close-btn');
             if (closeBtn) {
               closeBtn.addEventListener('click', async () => {
@@ -174,8 +275,12 @@
 
                 try {
                   await db.collection("alertas").doc(doc.id).delete();
+                  console.log(`✅ Alerta borrada: ${doc.id}`);
                 } catch (err) {
                   console.error("Error al borrar:", err);
+                  alertDiv.classList.remove('fade-out');
+                  alertDiv.style.backgroundColor = '#fee2e2';
+                  alertDiv.innerHTML += '<div style="color: red; margin-top: 8px;">⚠️ Error al borrar</div>';
                 }
               });
             }
@@ -199,8 +304,79 @@
         }
       );
 
+    // Formulario para enviar alerta
+    function createAlertForm() {
+      const form = document.createElement('div');
+      form.className = 'fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-white p-6 rounded-xl shadow-2xl z-50 w-full max-w-md border border-gray-200';
+      form.innerHTML = `
+        <h3 class="text-lg font-bold text-gray-800 mb-4">📝 Enviar nueva alerta</h3>
+        <input type="text" id="alert-text" placeholder="Mensaje de alerta" class="w-full px-4 py-2 border border-gray-300 rounded-lg mb-3" required>
+        <input type="email" id="alert-email" placeholder="Tu correo (opcional)" class="w-full px-4 py-2 border border-gray-300 rounded-lg mb-3">
+        <div class="flex gap-3">
+          <button type="submit" id="submit-alert" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200">Enviar</button>
+          <button type="button" id="cancel-form" class="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors duration-200">Cancelar</button>
+        </div>
+      `;
+      document.body.appendChild(form);
+
+      const submitBtn = form.querySelector('#submit-alert');
+      const cancelBtn = form.querySelector('#cancel-form');
+
+      submitBtn.addEventListener('click', async () => {
+        const texto = document.getElementById('alert-text').value.trim();
+        const correo = document.getElementById('alert-email').value.trim() || 'Sin correo';
+
+        if (!texto) {
+          alert('Por favor, ingresa un mensaje.');
+          return;
+        }
+
+        try {
+          await db.collection("alertas").add({
+            alertaTexto: texto,
+            correoAgente: correo,
+            timestamp: new Date()
+          });
+          document.getElementById('alert-text').value = '';
+          document.getElementById('alert-email').value = '';
+          form.remove();
+        } catch (err) {
+          alert('Error al enviar alerta: ' + err.message);
+          console.error(err);
+        }
+      });
+
+      cancelBtn.addEventListener('click', () => {
+        form.remove();
+      });
+
+      // Cerrar al presionar Escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') form.remove();
+      });
+    }
+
+    // Mostrar formulario cuando se hace clic en el botón de enviar
+    sendBtn.addEventListener('click', () => {
+      createAlertForm();
+    });
+
     // Mostrar carga inicial
     loadingEl.classList.remove('hidden');
+
+    // Verificar si ya tiene acceso guardado (opcional)
+    if (localStorage.getItem('alertasAdminAccess') === 'true') {
+      sendBtn.classList.remove('hidden');
+      document.getElementById('status').textContent = "✅ Ya tienes acceso. Puedes enviar alertas.";
+    }
+
+    // Añadir evento para mostrar el botón de enviar tras éxito de login
+    window.addEventListener('message', (event) => {
+      if (event.data === 'accessGranted') {
+        sendBtn.classList.remove('hidden');
+        document.getElementById('status').textContent = "✅ Acceso concedido. Puedes enviar alertas.";
+      }
+    });
   </script>
 </body>
 </html>
