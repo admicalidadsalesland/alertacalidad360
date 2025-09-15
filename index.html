@@ -16,14 +16,32 @@
     }
   </style>
 </head>
-<body class="bg-gray-50 min-h-screen">
+<body class="bg-gray-50 min-h-screen flex">
 
-  <!-- El JS se encargará de crear toda la interfaz -->
+  <!-- Sidebar / Menu -->
+  <div id="sidebar" class="w-64 bg-white shadow-xl flex flex-col">
+    <div class="p-6 text-center border-b">
+      <h1 class="text-xl font-bold text-gray-800">📋 Alertas Web360</h1>
+    </div>
+    <nav class="flex-1 p-4 space-y-2">
+      <button id="logout-btn" class="w-full text-left flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-xl font-medium hover:bg-red-700 transition-colors">
+        🚪 Desloguear
+      </button>
+      <!-- Aquí puedes agregar más botones de navegación -->
+      <button class="w-full text-left flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-xl font-medium hover:bg-blue-700 transition-colors">
+        🏠 Inicio
+      </button>
+    </nav>
+  </div>
+
+  <!-- Contenedor principal -->
+  <div id="main-container" class="flex-1 p-8 overflow-auto">
+    <!-- El JS creará el contenido aquí -->
+  </div>
+
   <script>
-
     // =============================
     // 🔐 ALERTAS WEB360 - JS PURA
-    // Solo funciona en navegador con Firebase y Google Forms
     // =============================
 
     // ===== CONFIGURACIÓN (CAMBIA ESTO) =====
@@ -34,7 +52,7 @@
     ];
 
     const DEFAULT_PASSWORD = "Sales2025";
-    const GOOGLE_FORM_URL = "https://forms.gle/XXXXXX"; // ← ¡CAMBIA ESTE LINK! (¡sin espacios!)
+    const GOOGLE_FORM_URL = "https://forms.gle/XXXXXX"; 
     const FIREBASE_CONFIG = {
       apiKey: "TU_API_KEY_REAL_AQUI",
       authDomain: "alertasweb360.firebaseapp.com",
@@ -128,36 +146,22 @@
         function logout() {
           localStorage.removeItem('currentUserEmail');
           currentUserEmail = null;
-          document.getElementById('app-container')?.remove();
+          document.getElementById('main-container').innerHTML = '';
           showLoginModal();
         }
 
         // === INICIAR APP ===
         function initApp() {
-          if (document.getElementById('app-container')) return;
-
-          const container = document.createElement('div');
-          container.id = 'app-container';
-          container.className = 'max-w-4xl mx-auto px-4 py-8';
-
-          container.innerHTML = `
+          const main = document.getElementById('main-container');
+          main.innerHTML = `
             <div class="text-center mb-8">
-              <h1 class="text-3xl font-bold text-gray-800 mb-2">📋 Alertas Web360</h1>
               <p class="text-gray-600 text-lg">Las alertas se envían vía Google Forms. Solo tú puedes enviar.</p>
-            </div>
-
-            <div class="bg-white rounded-2xl shadow-xl p-6 mb-8 text-center">
-              <button id="logout-btn" class="inline-flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-red-700 transition-colors shadow-md">
-                🚪 Desloguear
-              </button>
             </div>
 
             <div id="alerts-container" class="space-y-4"></div>
             
             <p id="status" class="text-center text-gray-500 mt-8 text-sm italic"></p>
           `;
-
-          document.body.appendChild(container);
 
           document.getElementById('logout-btn').onclick = logout;
           document.getElementById('status').textContent = `✅ Bienvenido/a, ${currentUserEmail}. Recibirás solo tus alertas.`;
@@ -252,7 +256,7 @@
       };
     })();
 
-    // Animación CSS personalizada para entradas suaves
+    // Animación CSS personalizada
     const style = document.createElement('style');
     style.textContent = `
       @keyframes fadeIn {
@@ -263,7 +267,6 @@
       .animate-fadeInUp { animation: fadeIn 0.4s ease-out forwards; }
     `;
     document.head.appendChild(style);
-
   </script>
 </body>
 </html>
