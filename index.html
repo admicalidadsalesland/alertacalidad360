@@ -4,100 +4,77 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>📋 Alertas Recibidas - Web360</title>
+
+  <!-- Tailwind CSS v3.4.1 via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #f8f9fa;
+    /* Animaciones personalizadas */
+    .alert-enter {
+      animation: fadeInUp 0.4s ease-out;
     }
-    h1 {
-      color: #2c3e50;
-      text-align: center;
-      cursor: pointer;
-      user-select: none;
-      margin-bottom: 10px;
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-    h1:hover {
-      color: #3498db;
+    .fade-out {
+      animation: fadeOut 0.5s ease-out forwards;
     }
-    .alerta {
-      background: white;
-      border-left: 4px solid #e74c3c;
-      padding: 16px;
-      margin-bottom: 16px;
-      border-radius: 4px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .timestamp {
-      color: #7f8c8d;
-      font-size: 0.9em;
-    }
-    .correo {
-      color: #3498db;
-      font-weight: bold;
-    }
-    .mensaje {
-      margin-top: 8px;
-      line-height: 1.5;
-      word-wrap: break-word;
-    }
-    .close-btn {
-      position: absolute;
-      top: 8px;
-      right: 12px;
-      background: rgba(0,0,0,0.1);
-      border: none;
-      border-radius: 50%;
-      width: 24px;
-      height: 24px;
-      font-size: 16px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #333;
-      transition: background 0.2s;
-    }
-    .close-btn:hover {
-      background: rgba(0,0,0,0.2);
-    }
-    .loading {
-      text-align: center;
-      color: #7f8c8d;
-      font-style: italic;
-    }
-    .no-alertas {
-      text-align: center;
-      color: #95a5a6;
-      padding: 40px;
-    }
-    .error {
-      color: red;
-      text-align: center;
-      padding: 10px;
-    }
-    .status {
-      text-align: center;
-      color: #7f8c8d;
-      font-size: 0.9em;
-      margin: 8px 0;
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        transform: translateX(100%);
+      }
     }
   </style>
 </head>
-<body>
-  <h1>📋 Alertas Recibidas - Web360</h1>
+<body class="bg-gray-50 min-h-screen py-8 px-4 font-sans">
 
-  <button class="sound-test" id="test-sound" style="display: none;">🔊 Probar sonido de alerta</button>
-  <p class="status" id="sound-status">🔔 Cuando llegue una alerta, el título cambiará para llamarte la atención.</p>
+  <div class="max-w-3xl mx-auto">
+    <!-- Header -->
+    <header class="text-center mb-8">
+      <h1 class="text-3xl font-bold text-gray-800 tracking-tight mb-2">📋 Alertas Recibidas - Web360</h1>
+      <p class="text-gray-600">Las alertas desaparecen al cerrarlas. El título cambia cuando hay novedades.</p>
+    </header>
 
-  <div id="alertas-container">
-    <p class="loading">Cargando alertas...</p>
+    <!-- Status message -->
+    <p id="status" class="text-center text-gray-500 text-sm mb-6">
+      🔔 Cuando llegue una alerta, el título cambiará para llamarte la atención.
+    </p>
+
+    <!-- Loading state -->
+    <div id="loading" class="text-center text-gray-500 py-12 animate-pulse hidden">
+      <div class="w-16 h-16 bg-gray-200 rounded-full mx-auto mb-4"></div>
+      Cargando alertas...
+    </div>
+
+    <!-- Error state -->
+    <div id="error" class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded shadow-lg max-w-md mx-auto hidden">
+      <p class="font-bold">❌ Error</p>
+      <p id="error-message"></p>
+    </div>
+
+    <!-- Empty state -->
+    <div id="empty" class="bg-white p-12 rounded-xl shadow-lg text-center border border-gray-200 hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 17h5l-5 5v-5zM10.5 17h5l-5 5v-5zM6 17h5l-5 5v-5z" />
+      </svg>
+      <p class="mt-4 text-gray-500 text-lg">No hay alertas aún.</p>
+    </div>
+
+    <!-- Alerts container -->
+    <div id="alerts-container" class="space-y-4"></div>
+
+    <!-- Footer -->
+    <footer class="mt-12 text-center text-gray-500 text-sm">
+      ✅ Cada alerta se borra permanentemente al cerrarla.
+    </footer>
   </div>
 
   <!-- Firebase SDK -->
@@ -119,45 +96,44 @@
     firebase.initializeApp(firebaseConfig);
     const db = firebase.firestore();
 
-    const container = document.getElementById('alertas-container');
-    const status = document.getElementById('sound-status');
-
-    // 📌 Títulos originales
-    const ORIGINAL_TITLE = "📋 Alertas Recibidas - Web360";
-    const ALERT_TITLE = "⚠️ ALERTA - Web360";
-
+    const originalTitle = "📋 Alertas Recibidas - Web360";
+    const alertTitle = "⚠️ ALERTA - Web360";
     let hasUnreadAlert = false;
     let lastAlertTime = 0;
 
-    // 🔁 Cambia el título cuando hay alertas nuevas
+    // Cambiar título del navegador
     function updateTitle() {
-      document.title = hasUnreadAlert ? ALERT_TITLE : ORIGINAL_TITLE;
+      document.title = hasUnreadAlert ? alertTitle : originalTitle;
     }
 
-    // 👀 Detecta cuando el usuario cambia de pestaña
+    // Detectar cuando el usuario vuelve a la pestaña
     document.addEventListener('visibilitychange', () => {
       if (document.visibilityState === 'visible') {
-        // El usuario volvió a la pestaña → restablece título
         hasUnreadAlert = false;
         updateTitle();
-        status.textContent = "🔔 Cuando llegue una alerta, el título cambiará para llamarte la atención.";
-      } else {
-        // El usuario se fue → deja el título como alerta si hay algo nuevo
-        if (hasUnreadAlert) {
-          updateTitle();
-        }
+        document.getElementById('status').textContent = "🔔 Cuando llegue una alerta, el título cambiará para llamarte la atención.";
       }
     });
 
-    // Escucha cambios en tiempo real en la colección "alertas"
+    // Mostrar estado
+    const loadingEl = document.getElementById('loading');
+    const errorEl = document.getElementById('error');
+    const errorMessageEl = document.getElementById('error-message');
+    const emptyEl = document.getElementById('empty');
+    const container = document.getElementById('alerts-container');
+
+    // Escuchar cambios en tiempo real
     db.collection("alertas")
       .orderBy("timestamp", "desc")
       .onSnapshot(
         (snapshot) => {
+          loadingEl.classList.add('hidden');
+          errorEl.classList.add('hidden');
+          emptyEl.classList.add('hidden');
           container.innerHTML = '';
 
           if (snapshot.empty) {
-            container.innerHTML = '<p class="no-alertas">No hay alertas aún.</p>';
+            emptyEl.classList.remove('hidden');
             return;
           }
 
@@ -167,54 +143,64 @@
             const correo = data.correoAgente || 'Sin correo';
             const mensaje = data.alertaTexto || 'Sin mensaje';
 
-            const alertaDiv = document.createElement('div');
-            alertaDiv.className = 'alerta';
-            alertaDiv.innerHTML = `
-              <button class="close-btn">×</button>
-              <div class="timestamp">📅 ${timestamp}</div>
-              <div class="correo">✉️ ${correo}</div>
-              <div class="mensaje">🚨 ${mensaje}</div>
+            const alertDiv = document.createElement('div');
+            alertDiv.className = 'group relative bg-white p-6 rounded-xl shadow-lg border-l-4 border-red-500 transition-all duration-300 transform hover:-translate-y-1 alert-enter';
+            alertDiv.innerHTML = `
+              <button class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 w-8 h-8 flex items-center justify-center rounded-full bg-red-100 text-red-600 hover:bg-red-200 transition-all duration-200 z-10" aria-label="Cerrar alerta">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </button>
+              <div class="flex items-start space-x-3">
+                <div class="flex-shrink-0 text-gray-500 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <p class="text-sm text-gray-500 mb-1">${timestamp}</p>
+                  <p class="text-blue-600 font-medium mb-2">${correo}</p>
+                  <p class="text-gray-800 leading-relaxed">${mensaje}</p>
+                </div>
+              </div>
             `;
 
-            // 🗑️ Botón de cierre: Borra la alerta de Firestore
-            const closeBtn = alertaDiv.querySelector('.close-btn');
-            closeBtn.addEventListener('click', async () => {
-              alertaDiv.style.opacity = '0';
-              alertaDiv.style.transform = 'translateX(100%)';
-              alertaDiv.style.transition = 'all 0.3s ease';
+            // Botón de cierre
+            const closeBtn = alertDiv.querySelector('.close-btn');
+            if (closeBtn) {
+              closeBtn.addEventListener('click', async () => {
+                alertDiv.classList.add('fade-out');
+                setTimeout(() => alertDiv.remove(), 500);
 
-              try {
-                await db.collection("alertas").doc(doc.id).delete();
-                console.log(`✅ Alerta borrada de Firestore: ${doc.id}`);
-              } catch (error) {
-                console.error("❌ Error al borrar alerta:", error);
-                alertaDiv.style.opacity = '1';
-                alertaDiv.style.transform = 'translateX(0)';
-                alertaDiv.style.backgroundColor = '#ffebee';
-                alertaDiv.innerHTML += `<div style="color: red; margin-top: 8px;">⚠️ Error al borrar: ${error.message}</div>`;
-                return;
-              }
+                try {
+                  await db.collection("alertas").doc(doc.id).delete();
+                } catch (err) {
+                  console.error("Error al borrar:", err);
+                }
+              });
+            }
 
-              setTimeout(() => alertaDiv.remove(), 300);
-            });
+            container.appendChild(alertDiv);
 
-            container.appendChild(alertaDiv);
-
-            // ⚠️ NUEVA LÓGICA: Marcar como alerta si es la primera vez que llega
+            // Marcar como nueva alerta si es la primera en 5 segundos
             const now = Date.now();
-            if (now - lastAlertTime > 5000) { // Evita repetir si vienen muchas seguidas
+            if (now - lastAlertTime > 5000) {
               hasUnreadAlert = true;
-              updateTitle(); // Cambia el título inmediatamente
+              updateTitle();
               lastAlertTime = now;
-              status.textContent = "🚨 ¡Nueva alerta recibida! Vuelve a esta pestaña.";
+              document.getElementById('status').textContent = "🚨 ¡Nueva alerta recibida! Vuelve a esta pestaña.";
             }
           });
         },
         (error) => {
-          container.innerHTML = `<p class="error">❌ Error: ${error.message}</p>`;
-          console.error("Error leyendo Firestore:", error);
+          loadingEl.classList.add('hidden');
+          errorEl.classList.remove('hidden');
+          errorMessageEl.textContent = error.message;
         }
       );
+
+    // Mostrar carga inicial
+    loadingEl.classList.remove('hidden');
   </script>
 </body>
 </html>
