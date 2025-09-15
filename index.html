@@ -56,19 +56,19 @@
     <p class="loading">Cargando alertas...</p>
   </div>
 
-  <!-- Firebase SDK -->
+  <!-- Firebase SDK (sin espacios extra) -->
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 
   <script>
-    // Configuración de Firebase (usa tu propio proyecto)
+    // ⚠️ REEMPLAZA ESTE CONFIG CON EL TUYO REAL DE FIREBASE CONSOLE
     const firebaseConfig = {
-      apiKey: "AIzaSyBvXzgZQJqWkUxGtF8rRmDlKpYbOuHjLwM", // ❌ Reemplázame abajo
+      apiKey: "TU_API_KEY_REAL_AQUI", // ← ¡CÓPIALO DESDE FIREBASE CONSOLE!
       authDomain: "alertasweb360.firebaseapp.com",
       projectId: "alertasweb360",
       storageBucket: "alertasweb360.appspot.com",
       messagingSenderId: "113022119227802677680",
-      appId: "1:113022119227802677680:web:1234567890abcdef"
+      appId: "1:113022119227802677680:web:abc123def456"
     };
 
     // Inicializa Firebase
@@ -79,9 +79,9 @@
 
     // Escucha cambios en tiempo real en la colección "alertas"
     db.collection("alertas")
-      .orderBy("timestamp", "desc") // Ordena del más reciente al más antiguo
+      .orderBy("timestamp", "desc")
       .onSnapshot((snapshot) => {
-        container.innerHTML = ''; // Limpia antes de renderizar
+        container.innerHTML = '';
 
         if (snapshot.empty) {
           container.innerHTML = '<p class="no-alertas">No hay alertas aún.</p>';
