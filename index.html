@@ -63,7 +63,7 @@
   <script>
     // ⚠️ REEMPLAZA ESTE CONFIG CON EL TUYO REAL DE FIREBASE CONSOLE
     const firebaseConfig = {
-      apiKey: "TU_API_KEY_REAL_AQUI", // ← ¡CÓPIALO DESDE FIREBASE CONSOLE!
+      apiKey: "TU_API_KEY_REAL_AQUI",
       authDomain: "alertasweb360.firebaseapp.com",
       projectId: "alertasweb360",
       storageBucket: "alertasweb360.appspot.com",
@@ -80,34 +80,37 @@
     // Escucha cambios en tiempo real en la colección "alertas"
     db.collection("alertas")
       .orderBy("timestamp", "desc")
-      .onSnapshot((snapshot) => {
-        container.innerHTML = '';
+      .onSnapshot(
+        (snapshot) => {
+          container.innerHTML = '';
 
-        if (snapshot.empty) {
-          container.innerHTML = '<p class="no-alertas">No hay alertas aún.</p>';
-          return;
+          if (snapshot.empty) {
+            container.innerHTML = '<p class="no-alertas">No hay alertas aún.</p>';
+            return;
+          }
+
+          snapshot.forEach((doc) => {
+            const data = doc.data();
+            const timestamp = new Date(data.timestamp?.seconds * 1000 || data.timestamp).toLocaleString('es-MX');
+            const correo = data.correoAgente || 'Sin correo';
+            const mensaje = data.alertaTexto || 'Sin mensaje';
+
+            const alertaDiv = document.createElement('div');
+            alertaDiv.className = 'alerta';
+            alertaDiv.innerHTML = `
+              <div class="timestamp">📅 ${timestamp}</div>
+              <div class="correo">✉️ ${correo}</div>
+              <div class="mensaje">🚨 ${mensaje}</div>
+            `;
+            container.appendChild(alertaDiv);
+          });
+        },
+        (error) => {
+          // ✅ Aquí se capturan todos los errores de permisos, conexión, etc.
+          container.innerHTML = `<p style="color: red;">❌ Error: ${error.message}</p>`;
+          console.error("Error leyendo Firestore:", error);
         }
-
-        snapshot.forEach((doc) => {
-          const data = doc.data();
-          const timestamp = new Date(data.timestamp?.seconds * 1000 || data.timestamp).toLocaleString('es-MX');
-          const correo = data.correoAgente || 'Sin correo';
-          const mensaje = data.alertaTexto || 'Sin mensaje';
-
-          const alertaDiv = document.createElement('div');
-          alertaDiv.className = 'alerta';
-          alertaDiv.innerHTML = `
-            <div class="timestamp">📅 ${timestamp}</div>
-            <div class="correo">✉️ ${correo}</div>
-            <div class="mensaje">🚨 ${mensaje}</div>
-          `;
-          container.appendChild(alertaDiv);
-        });
-      })
-      .catch(error => {
-        container.innerHTML = `<p style="color: red;">❌ Error: ${error.message}</p>`;
-        console.error("Error leyendo Firestore:", error);
-      });
+      );
   </script>
 </body>
 </html>
