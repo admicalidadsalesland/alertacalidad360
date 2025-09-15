@@ -3,346 +3,175 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>📋 Alertas Web360</title>
-
-  <!-- Tailwind CSS v3.4.1 via CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <style>
-    /* Animaciones */
-    .alert-enter {
-      animation: fadeInUp 0.4s ease-out;
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .fade-out {
-      animation: fadeOut 0.5s ease-out forwards;
-    }
-    @keyframes fadeOut {
-      to { opacity: 0; transform: translateX(100%); }
-    }
-    .modal-overlay {
-      background: rgba(0, 0, 0, 0.5);
-    }
-    .modal-content {
-      animation: slideIn 0.3s ease-out;
-    }
-    @keyframes slideIn {
-      from { transform: translateY(50px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-  </style>
+  <title>Alertas Web360</title>
 </head>
-<body class="bg-gray-50 min-h-screen py-8 px-4 font-sans">
-
-  <div class="max-w-3xl mx-auto">
-    <!-- Header -->
-    <header class="text-center mb-8">
-      <h1 class="text-3xl font-bold text-gray-800 tracking-tight mb-2">📋 Alertas Web360</h1>
-      <p class="text-gray-600">Las alertas desaparecen al cerrarlas. El título cambia cuando hay novedades.</p>
-    </header>
-
-    <!-- Status message -->
-    <p id="status" class="text-center text-gray-500 text-sm mb-6">
-      🔔 Cuando llegue una alerta, el título cambiará para llamarte la atención.
-    </p>
-
-    <!-- Loading state -->
-    <div id="loading" class="text-center text-gray-500 py-12 animate-pulse hidden">
-      <div class="w-16 h-16 bg-gray-200 rounded-full mx-auto mb-4"></div>
-      Cargando alertas...
-    </div>
-
-    <!-- Error state -->
-    <div id="error" class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded shadow-lg max-w-md mx-auto hidden">
-      <p class="font-bold">❌ Error</p>
-      <p id="error-message"></p>
-    </div>
-
-    <!-- Empty state -->
-    <div id="empty" class="bg-white p-12 rounded-xl shadow-lg text-center border border-gray-200 hidden">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 17h5l-5 5v-5zM10.5 17h5l-5 5v-5zM6 17h5l-5 5v-5z" />
-      </svg>
-      <p class="mt-4 text-gray-500 text-lg">No hay alertas aún.</p>
-    </div>
-
-    <!-- Alerts container -->
-    <div id="alerts-container" class="space-y-4"></div>
-
-    <!-- Botón para enviar alerta (oculto por defecto) -->
-    <div class="text-center mt-12">
-      <button id="send-alert-btn" class="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg shadow transition-colors duration-200 hidden">
-        ➕ Enviar Nueva Alerta
-      </button>
-    </div>
-
-    <!-- Modal de Login por Correo -->
-    <div id="login-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 modal-overlay">
-      <div class="bg-white rounded-xl shadow-2xl w-full max-w-md p-8 modal-content">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6">🔐 Iniciar Sesión</h2>
-        <p class="text-gray-600 mb-4">Ingresa tu correo corporativo para acceder.</p>
-        
-        <input type="email" id="login-email" placeholder="tu.correo@empresa.com" class="w-full px-4 py-3 border border-gray-300 rounded-lg mb-4" autocomplete="email" required>
-        <input type="password" id="login-password" placeholder="Contraseña (Sales2025)" class="w-full px-4 py-3 border border-gray-300 rounded-lg mb-4" autocomplete="current-password" required>
-        
-        <div class="flex gap-3 mb-4">
-          <button id="login-btn" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200">Ingresar</button>
-          <button id="cancel-login-btn" class="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors duration-200">Cancelar</button>
-        </div>
-
-        <p id="login-error" class="text-red-500 text-sm text-center hidden">❌ Correo o contraseña inválidos.</p>
-      </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="mt-12 text-center text-gray-500 text-sm">
-      ✅ Solo tú puedes enviar alertas.<br>
-      ✅ Cada alerta se borra permanentemente al cerrarla.
-    </footer>
-  </div>
-
-  <!-- Firebase SDK -->
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
-
-  <!-- Firebase Messaging (para notificaciones push) -->
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-messaging-compat.js"></script>
-
+<body>
+  <!-- El JS se encargará de crear toda la interfaz -->
   <script>
-    // ✅ Lista de correos autorizados (edita aquí)
-    const AUTORIZED_EMAILS = [
-      "juan.perez@empresa.com",
-      "maria.garcia@empresa.com",
-      "carlos.rodriguez@empresa.com"
-    ];
 
-    const DEFAULT_PASSWORD = "Sales2025"; // Contraseña fija para todos
+    // =============================
+// 🔐 ALERTAS WEB360 - JS PURA
+// Solo funciona en navegador con Firebase y Google Forms
+// =============================
 
-    // ⚠️ REEMPLAZA ESTE CONFIG CON EL TUYO REAL DE FIREBASE CONSOLE
-    const firebaseConfig = {
-      apiKey: "TU_API_KEY_REAL_AQUI",
-      authDomain: "alertasweb360.firebaseapp.com",
-      projectId: "alertasweb360",
-      storageBucket: "alertasweb360.appspot.com",
-      messagingSenderId: "113022119227802677680",
-      appId: "1:113022119227802677680:web:abc123def456"
-    };
+// ===== CONFIGURACIÓN (CAMBIA ESTO) =====
+const AUTORIZED_EMAILS = [
+  "juan.perez@empresa.com",
+  "maria.garcia@empresa.com",
+  "carlos.rodriguez@empresa.com"
+];
 
-    // Inicializa Firebase
-    firebase.initializeApp(firebaseConfig);
+const DEFAULT_PASSWORD = "Sales2025";
+const GOOGLE_FORM_URL = "https://forms.gle/XXXXXX"; // ← ¡CAMBIA ESTE LINK!
+const FIREBASE_CONFIG = {
+  apiKey: "TU_API_KEY_REAL_AQUI",
+  authDomain: "alertasweb360.firebaseapp.com",
+  projectId: "alertasweb360",
+  storageBucket: "alertasweb360.appspot.com",
+  messagingSenderId: "113022119227802677680",
+  appId: "1:113022119227802677680:web:abc123def456"
+};
+
+// ===== INICIALIZAR FIREBASE =====
+(function() {
+  const script = document.createElement('script');
+  script.src = 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js';
+  document.head.appendChild(script);
+
+  const script2 = document.createElement('script');
+  script2.src = 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js';
+  document.head.appendChild(script2);
+
+  script.onload = script2.onload = () => {
+    firebase.initializeApp(FIREBASE_CONFIG);
     const db = firebase.firestore();
 
-    // Inicializa Firebase Messaging
-    const messaging = firebase.messaging();
-
     let currentUserEmail = null;
-    let hasUnreadAlert = false;
-    let lastAlertTime = 0;
 
-    // Cambiar título del navegador
-    function updateTitle() {
-      document.title = hasUnreadAlert ? "⚠️ ALERTA - Web360" : `📋 Alertas Web360 - ${currentUserEmail || 'Invitado'}`;
-    }
-
-    // Detectar cuando el usuario vuelve a la pestaña
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible') {
-        hasUnreadAlert = false;
-        updateTitle();
-        document.getElementById('status').textContent = `🔔 Bienvenido/a, ${currentUserEmail || 'invitado'}. Recibirás solo tus alertas.`;
-      }
-    });
-
-    // Mostrar estado
-    const loadingEl = document.getElementById('loading');
-    const errorEl = document.getElementById('error');
-    const errorMessageEl = document.getElementById('error-message');
-    const emptyEl = document.getElementById('empty');
-    const container = document.getElementById('alerts-container');
-    const sendBtn = document.getElementById('send-alert-btn');
-    const loginModal = document.getElementById('login-modal');
-    const emailInput = document.getElementById('login-email');
-    const passwordInput = document.getElementById('login-password');
-    const loginBtn = document.getElementById('login-btn');
-    const cancelLoginBtn = document.getElementById('cancel-login-btn');
-    const loginError = document.getElementById('login-error');
-
-    // Verifica si hay usuario logueado previamente
-    function checkAuth() {
-      const savedEmail = localStorage.getItem('currentUserEmail');
-      if (savedEmail && AUTORIZED_EMAILS.includes(savedEmail)) {
-        currentUserEmail = savedEmail;
-        showApp();
-      } else {
-        showLoginModal();
-      }
-    }
-
-    // Muestra el modal de login
+    // === LOGIN ===
     function showLoginModal() {
-      loginModal.classList.remove('hidden');
-      emailInput.value = '';
-      passwordInput.value = '';
-      loginError.classList.add('hidden');
-    }
-
-    // Oculta el modal de login
-    function hideLoginModal() {
-      loginModal.classList.add('hidden');
-    }
-
-    // Valida login
-    async function validateLogin() {
-      const email = emailInput.value.trim().toLowerCase();
-      const password = passwordInput.value.trim();
-
-      if (!email || !password) {
-        loginError.textContent = 'Por favor, ingresa correo y contraseña.';
-        loginError.classList.remove('hidden');
-        return false;
-      }
-
-      if (!AUTORIZED_EMAILS.includes(email)) {
-        loginError.textContent = 'Correo no autorizado.';
-        loginError.classList.remove('hidden');
-        return false;
-      }
-
-      if (password !== DEFAULT_PASSWORD) {
-        loginError.textContent = 'Contraseña incorrecta.';
-        loginError.classList.remove('hidden');
-        return false;
-      }
-
-      // Guardar en localStorage
-      localStorage.setItem('currentUserEmail', email);
-      currentUserEmail = email;
-
-      hideLoginModal();
-      showApp();
-      return true;
-    }
-
-    // Muestra la app principal (alertas + botón de enviar)
-    function showApp() {
-      sendBtn.classList.remove('hidden');
-      document.getElementById('status').textContent = `✅ Bienvenido/a, ${currentUserEmail}. Recibirás solo tus alertas.`;
-      updateTitle();
-    }
-
-    // Eventos del login
-    loginBtn.addEventListener('click', validateLogin);
-    cancelLoginBtn.addEventListener('click', hideLoginModal);
-
-    emailInput.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') validateLogin();
-    });
-
-    passwordInput.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') validateLogin();
-    });
-
-    // Mostrar login al cargar
-    checkAuth();
-
-    // --- FORMULARIO DE ENVÍO DE ALERTA ---
-    function createAlertForm() {
-      const form = document.createElement('div');
-      form.className = 'fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-white p-6 rounded-xl shadow-2xl z-50 w-full max-w-md border border-gray-200';
-      form.innerHTML = `
-        <h3 class="text-lg font-bold text-gray-800 mb-4">📝 Enviar nueva alerta</h3>
-        <input type="text" id="alert-text" placeholder="Mensaje de alerta" class="w-full px-4 py-2 border border-gray-300 rounded-lg mb-3" required>
-        <input type="email" id="alert-email" placeholder="Destinatario" class="w-full px-4 py-2 border border-gray-300 rounded-lg mb-3" value="${currentUserEmail}" readonly>
-        <div class="flex gap-3">
-          <button type="submit" id="submit-alert" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200">Enviar</button>
-          <button type="button" id="cancel-form" class="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors duration-200">Cancelar</button>
+      const modal = document.createElement('div');
+      modal.style.cssText = `
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center;
+        z-index: 9999;
+      `;
+      modal.innerHTML = `
+        <div style="
+          background: white; padding: 2rem; border-radius: 12px; width: 90%; max-width: 400px;
+          box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        ">
+          <h2 style="color: #2c3e50; margin-bottom: 1rem;">🔐 Iniciar Sesión</h2>
+          <input type="email" id="login-email" placeholder="tu.correo@empresa.com" style="
+            width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 6px;
+          " required>
+          <input type="password" id="login-password" placeholder="Contraseña (Sales2025)" style="
+            width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 6px;
+          " required>
+          <button id="login-btn" style="
+            width: 100%; padding: 12px; background: #3498db; color: white; border: none; border-radius: 6px; cursor: pointer; margin: 8px 0;
+          ">Ingresar</button>
+          <button id="cancel-btn" style="
+            width: 100%; padding: 12px; background: #95a5a6; color: white; border: none; border-radius: 6px; cursor: pointer;
+          ">Cancelar</button>
+          <p id="login-error" style="color: red; margin-top: 10px; font-size: 0.9em; display: none;">❌ Correo o contraseña inválidos.</p>
         </div>
       `;
-      document.body.appendChild(form);
+      document.body.appendChild(modal);
 
-      const submitBtn = form.querySelector('#submit-alert');
-      const cancelBtn = form.querySelector('#cancel-form');
+      const loginBtn = modal.querySelector('#login-btn');
+      const cancelBtn = modal.querySelector('#cancel-btn');
+      const errorEl = modal.querySelector('#login-error');
 
-      submitBtn.addEventListener('click', async () => {
-        const texto = document.getElementById('alert-text').value.trim();
-        const destinatario = document.getElementById('alert-email').value.trim();
+      loginBtn.onclick = () => {
+        const email = modal.querySelector('#login-email').value.trim().toLowerCase();
+        const password = modal.querySelector('#login-password').value.trim();
 
-        if (!texto) {
-          alert('Por favor, ingresa un mensaje.');
+        if (!email || !password) {
+          errorEl.textContent = 'Por favor, ingresa correo y contraseña.';
+          errorEl.style.display = 'block';
           return;
         }
 
-        try {
-          // Guardar en Firestore
-          await db.collection("alertas").add({
-            alertaTexto: texto,
-            correoAgente: destinatario,
-            timestamp: new Date(),
-            enviadoPor: currentUserEmail
-          });
-
-          // 🚨 ENVIAR NOTIFICACIÓN PUSH SOLO AL DESTINATARIO
-          const tokenDoc = await db.collection('fcm-tokens').doc(destinatario).get();
-          if (tokenDoc.exists) {
-            const token = tokenDoc.data().token;
-            const response = await fetch('https://fcm.googleapis.com/fcm/send', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-                'Authorization': 'key=TU_SERVER_KEY_AQUI' // ← ¡CAMBIA ESTO!
-              },
-              body: JSON.stringify({
-                to: token,
-                notification: {
-                  title: "🚨 Alerta Web360",
-                  body: texto,
-                  click_action: window.location.href
-                },
-                data: {
-                  url: window.location.href
-                }
-              })
-            });
-            if (!response.ok) throw new Error('Error enviando notificación push');
-            console.log(`✅ Notificación enviada a: ${destinatario}`);
-          } else {
-            console.warn(`⚠️ No se encontró token para: ${destinatario}`);
-          }
-
-          document.getElementById('alert-text').value = '';
-          form.remove();
-        } catch (err) {
-          alert('La alerta se guardó, pero no se pudo enviar notificación push. (Revisa clave de servidor)');
-          console.error(err);
+        if (!AUTORIZED_EMAILS.includes(email)) {
+          errorEl.textContent = 'Correo no autorizado.';
+          errorEl.style.display = 'block';
+          return;
         }
-      });
 
-      cancelBtn.addEventListener('click', () => {
-        form.remove();
-      });
+        if (password !== DEFAULT_PASSWORD) {
+          errorEl.textContent = 'Contraseña incorrecta.';
+          errorEl.style.display = 'block';
+          return;
+        }
 
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') form.remove();
-      });
+        localStorage.setItem('currentUserEmail', email);
+        currentUserEmail = email;
+        modal.remove();
+        initApp();
+      };
+
+      cancelBtn.onclick = () => modal.remove();
     }
 
-    sendBtn.addEventListener('click', createAlertForm);
+    // === DESLOGUEAR ===
+    function logout() {
+      localStorage.removeItem('currentUserEmail');
+      currentUserEmail = null;
+      document.getElementById('app-container')?.remove();
+      showLoginModal();
+    }
 
-    // --- ESCUCHA ALERTAS EN TIEMPO REAL (FILTRADAS POR CORREO) ---
-    db.collection("alertas")
-      .orderBy("timestamp", "desc")
-      .onSnapshot(
-        (snapshot) => {
-          loadingEl.classList.add('hidden');
-          errorEl.classList.add('hidden');
-          emptyEl.classList.add('hidden');
-          container.innerHTML = '';
+    // === INICIAR APP ===
+    function initApp() {
+      if (document.getElementById('app-container')) return;
+
+      const container = document.createElement('div');
+      container.id = 'app-container';
+      container.style.cssText = `
+        max-width: 900px; margin: 40px auto; padding: 20px; font-family: 'Segoe UI', sans-serif;
+        background: #f8f9fa; min-height: 100vh;
+      `;
+      container.innerHTML = `
+        <h1 style="color: #2c3e50; text-align: center; margin-bottom: 20px;">📋 Alertas Web360</h1>
+        <p style="text-align: center; color: #7f8c8d; margin-bottom: 30px;">
+          Las alertas se envían vía Google Forms. Solo tú puedes enviar.
+        </p>
+        <div style="text-align: center; margin-bottom: 30px;">
+          <button id="send-alert-btn" style="
+            padding: 12px 24px; background: #27ae60; color: white; border: none; border-radius: 8px;
+            font-size: 16px; cursor: pointer; transition: background 0.2s;
+          ">➕ Enviar Nueva Alerta</button>
+          <button id="logout-btn" style="
+            margin-left: 15px; padding: 10px 16px; background: #e74c3c; color: white; border: none; border-radius: 8px;
+            font-size: 14px; cursor: pointer;
+          ">🚪 Desloguear</button>
+        </div>
+        <div id="alerts-container"></div>
+        <p id="status" style="text-align: center; color: #7f8c8d; margin-top: 30px; font-size: 0.9em;"></p>
+      `;
+      document.body.appendChild(container);
+
+      document.getElementById('send-alert-btn').onclick = () => {
+        window.open(GOOGLE_FORM_URL, '_blank');
+        document.getElementById('status').textContent = '📲 Abriendo formulario... Llena el formulario y presiona "Enviar".';
+      };
+
+      document.getElementById('logout-btn').onclick = logout;
+
+      document.getElementById('status').textContent = `✅ Bienvenido/a, ${currentUserEmail}. Recibirás solo tus alertas.`;
+
+      // === ESCUCHAR ALERTAS EN TIEMPO REAL ===
+      const alertsContainer = document.getElementById('alerts-container');
+      const statusEl = document.getElementById('status');
+
+      db.collection("alertas")
+        .orderBy("timestamp", "desc")
+        .onSnapshot((snapshot) => {
+          alertsContainer.innerHTML = '';
 
           if (snapshot.empty) {
-            container.innerHTML = '<p class="no-alertas text-center text-gray-500 py-12">No hay alertas aún.</p>';
+            alertsContainer.innerHTML = '<p style="text-align: center; color: #95a5a6; padding: 40px;">No hay alertas aún.</p>';
             return;
           }
 
@@ -353,166 +182,53 @@
             const correo = data.correoAgente || 'Sin correo';
             const mensaje = data.alertaTexto || 'Sin mensaje';
 
-            // ✅ FILTRO CLAVE: Solo muestra alertas para el usuario logueado
             if (currentUserEmail && correo === currentUserEmail) {
               hasMatchingAlert = true;
 
               const alertDiv = document.createElement('div');
-              alertDiv.className = 'group relative bg-white p-6 rounded-xl shadow-lg border-l-4 border-red-500 transition-all duration-300 transform hover:-translate-y-1 alert-enter';
+              alertDiv.style.cssText = `
+                background: white; padding: 16px; margin-bottom: 16px; border-left: 4px solid #e74c3c;
+                border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+              `;
               alertDiv.innerHTML = `
-                <button class="close-btn absolute top-4 right-4 opacity-0 group-hover:opacity-100 w-8 h-8 flex items-center justify-center rounded-full bg-red-100 text-red-600 hover:bg-red-200 transition-all duration-200 z-10" aria-label="Cerrar alerta">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </button>
-                <div class="flex items-start space-x-3">
-                  <div class="flex-shrink-0 text-gray-500 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div class="flex-1">
-                    <p class="text-sm text-gray-500 mb-1">${timestamp}</p>
-                    <p class="text-blue-600 font-medium mb-2">${correo}</p>
-                    <p class="text-gray-800 leading-relaxed">${mensaje}</p>
-                    <p class="text-xs text-gray-400 mt-1">Enviada por: ${data.enviadoPor || 'Desconocido'}</p>
-                  </div>
-                </div>
+                <div style="margin-bottom: 8px; color: #7f8c8d; font-size: 0.9em;">📅 ${timestamp}</div>
+                <div style="color: #3498db; font-weight: bold; margin-bottom: 8px;">✉️ ${correo}</div>
+                <div style="margin-top: 8px; line-height: 1.5;">🚨 ${mensaje}</div>
+                <button style="
+                  float: right; background: #ecf0f1; border: none; border-radius: 50%; width: 24px; height: 24px;
+                  font-size: 14px; cursor: pointer; color: #333; display: inline-flex; align-items: center; justify-content: center;
+                ">&times;</button>
               `;
 
-              const closeBtn = alertDiv.querySelector('.close-btn');
-              if (closeBtn) {
-                closeBtn.addEventListener('click', async () => {
-                  alertDiv.classList.add('fade-out');
-                  setTimeout(() => alertDiv.remove(), 500);
+              alertDiv.querySelector('button').onclick = async () => {
+                alertDiv.style.opacity = '0';
+                alertDiv.style.transition = 'opacity 0.3s';
+                setTimeout(() => alertDiv.remove(), 300);
+                await db.collection("alertas").doc(doc.id).delete();
+              };
 
-                  try {
-                    await db.collection("alertas").doc(doc.id).delete();
-                    console.log(`✅ Alerta borrada: ${doc.id}`);
-                  } catch (err) {
-                    console.error("Error al borrar:", err);
-                    alertDiv.classList.remove('fade-out');
-                    alertDiv.style.backgroundColor = '#fee2e2';
-                    alertDiv.innerHTML += '<div style="color: red; margin-top: 8px;">⚠️ Error al borrar</div>';
-                  }
-                });
-              }
-
-              container.appendChild(alertDiv);
+              alertsContainer.appendChild(alertDiv);
             }
           });
 
-          // Si no hay alertas para este usuario, muestra mensaje vacío
           if (!hasMatchingAlert) {
-            container.innerHTML = '<p class="no-alertas text-center text-gray-500 py-12">No tienes alertas asignadas.</p>';
+            alertsContainer.innerHTML = '<p style="text-align: center; color: #95a5a6; padding: 40px;">No tienes alertas asignadas.</p>';
           }
-
-          // Marcar como alerta nueva si hay algo nuevo y no ha sido mostrado en 5s
-          const now = Date.now();
-          if (hasMatchingAlert && now - lastAlertTime > 5000) {
-            hasUnreadAlert = true;
-            updateTitle();
-            lastAlertTime = now;
-            document.getElementById('status').textContent = "🚨 ¡Nueva alerta para ti!";
-          }
-        },
-        (error) => {
-          loadingEl.classList.add('hidden');
-          errorEl.classList.remove('hidden');
-          errorMessageEl.textContent = error.message;
-          console.error("Error leyendo Firestore:", error);
-        }
-      );
-
-    // --- CONFIGURACIÓN DE NOTIFICACIONES PUSH ---
-    // Solicitar permiso al usuario
-    function requestPermission() {
-      Notification.requestPermission().then((permission) => {
-        if (permission === 'granted') {
-          console.log('✅ Permiso de notificaciones aceptado');
-          getToken();
-        } else {
-          console.log('❌ Permiso denegado');
-          document.getElementById('status').textContent = "⚠️ Por favor, permite notificaciones para recibir alertas fuera de la página.";
-        }
-      });
-    }
-
-    // Obtener token del dispositivo
-    async function getToken() {
-      try {
-        const currentToken = await messaging.getToken({
-          vapidKey: "TU_VAPID_KEY_AQUI" // ← ¡CAMBIA ESTO!
+        }, (error) => {
+          alertsContainer.innerHTML = `<p style="color: red; text-align: center;">❌ Error: ${error.message}</p>`;
         });
+    };
 
-        if (currentToken) {
-          console.log('✅ Token recibido:', currentToken);
-          // Guardar token vinculado al correo del usuario
-          if (currentUserEmail) {
-            await db.collection('fcm-tokens').doc(currentUserEmail).set({
-              token: currentToken,
-              email: currentUserEmail,
-              registeredAt: new Date()
-            }, { merge: true });
-            console.log(`✅ Token registrado para: ${currentUserEmail}`);
-          }
-        } else {
-          console.log('⚠️ No se pudo obtener token');
-        }
-      } catch (error) {
-        console.error('❌ Error al obtener token:', error);
-        document.getElementById('status').textContent = "❌ No se pudo registrar tu dispositivo. Usa Chrome o Edge.";
-      }
+    // === VERIFICAR SI YA ESTÁ LOGUEADO ===
+    const savedEmail = localStorage.getItem('currentUserEmail');
+    if (savedEmail && AUTORIZED_EMAILS.includes(savedEmail)) {
+      currentUserEmail = savedEmail;
+      initApp();
+    } else {
+      showLoginModal();
     }
-
-    // Escuchar cambios en el token
-    messaging.onTokenRefresh(async () => {
-      const currentToken = await messaging.getToken({ vapidKey: "TU_VAPID_KEY_AQUI" }); // ← ¡CAMBIA ESTO!
-      if (currentToken && currentUserEmail) {
-        await db.collection('fcm-tokens').doc(currentUserEmail).set({
-          token: currentToken,
-          email: currentUserEmail,
-          registeredAt: new Date()
-        }, { merge: true });
-      }
-    });
-
-    // Manejar mensajes en segundo plano (cuando la pestaña está cerrada)
-    messaging.onBackgroundMessage((payload) => {
-      console.log('[firebase-messaging-sw.js] Received background message:', payload);
-      const notificationTitle = payload.notification?.title || 'Alerta Web360';
-      const notificationOptions = {
-        body: payload.notification?.body || 'Nueva alerta recibida.',
-        icon: '/favicon.ico',
-        click_action: window.location.href
-      };
-      self.registration.showNotification(notificationTitle, notificationOptions);
-    });
-
-    // Registrar Service Worker para FCM
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/firebase-messaging-sw.js').then(registration => {
-          console.log('✅ Service Worker registrado:', registration.scope);
-        }).catch(error => {
-          console.error('❌ Error registrando Service Worker:', error);
-        });
-      });
-    }
-
-    // Llamar a requestPermission al cargar (solo si hay usuario logueado)
-    if (currentUserEmail) {
-      requestPermission();
-    }
-
-    // Añadir evento para solicitar permiso al hacer clic en "Enviar Alerta"
-    sendBtn.addEventListener('click', () => {
-      if (!currentUserEmail) return;
-      requestPermission();
-    });
-
-    // Mostrar carga inicial
-    loadingEl.classList.remove('hidden');
+  };
+})();
   </script>
 </body>
 </html>
