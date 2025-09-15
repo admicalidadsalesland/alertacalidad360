@@ -77,7 +77,7 @@
   <h1>📋 Alertas Recibidas - Web360</h1>
 
   <!-- Contenido de Login -->
-  <div id="login-container">
+  <div id="login-container" class="login-container">
     <p>Por favor, inicia sesión con tu correo corporativo.</p>
     <button id="login-btn">Iniciar sesión con Google</button>
   </div>
@@ -95,7 +95,7 @@
   <script>
     // --- CONFIGURACIÓN DE FIREBASE ---
     const firebaseConfig = {
-      apiKey: "AIzaSyBvXzgZQJqWkUxGtF8rRmDlKpYbOuHjLwM", // 👈 REEMPLAZA CON TU CONFIGURACIÓN REAL
+      apiKey: "AIzaSyBvXzgZQJqWkUxGtF8rRmDlKpYbOuHjLwM",
       authDomain: "alertasweb360.firebaseapp.com",
       projectId: "alertasweb360",
       storageBucket: "alertasweb360.appspot.com",
@@ -111,6 +111,13 @@
     const alertasContainer = document.getElementById('alertas-container');
     const loginBtn = document.getElementById('login-btn');
 
+    // --- USUARIOS PERMITIDOS ---
+    const usuariosPermitidos = [
+      "gricelasanchezm@salesland.net",
+      "ximena@example.com",
+      "usuario1@tudominio.com"
+    ];
+
     // --- LOGIN CON GOOGLE ---
     loginBtn.addEventListener('click', () => {
       const provider = new firebase.auth.GoogleAuthProvider();
@@ -118,6 +125,14 @@
         .then((result) => {
           const user = result.user;
           console.log("✅ Usuario logueado:", user.email);
+
+          // ✅ Validar si el correo está permitido
+          if (!usuariosPermitidos.includes(user.email)) {
+            alert("❌ Acceso denegado: usuario no autorizado");
+            auth.signOut();
+            return;
+          }
+
           loginContainer.style.display = 'none';
           alertasContainer.style.display = 'block';
           cargarAlertas();
@@ -133,7 +148,7 @@
       db.collection("alertas")
         .orderBy("timestamp", "desc")
         .onSnapshot((snapshot) => {
-          alertasContainer.innerHTML = '<p class="loading">Cargando alertas...</p>';
+          alertasContainer.innerHTML = '';
 
           if (snapshot.empty) {
             alertasContainer.innerHTML = '<p class="loading">No hay alertas aún.</p>';
@@ -155,12 +170,21 @@
             `;
             alertasContainer.appendChild(alertaDiv);
           });
+        }, (error) => {
+          alertasContainer.innerHTML = `<p style="color: red;">❌ Error al cargar alertas: ${error.message}</p>`;
+          console.error(error);
         });
     }
 
     // --- ESCUCHAR CAMBIOS DE AUTENTICACIÓN ---
     auth.onAuthStateChanged((user) => {
       if (user) {
+        if (!usuariosPermitidos.includes(user.email)) {
+          auth.signOut();
+          loginContainer.style.display = 'block';
+          alertasContainer.style.display = 'none';
+          return;
+        }
         loginContainer.style.display = 'none';
         alertasContainer.style.display = 'block';
         cargarAlertas();
