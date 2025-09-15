@@ -15,6 +15,11 @@
     h1 {
       color: #2c3e50;
       text-align: center;
+      cursor: pointer; /* Para activar sonido */
+      user-select: none;
+    }
+    h1:hover {
+      color: #3498db;
     }
     .alerta {
       background: white;
@@ -76,10 +81,17 @@
       text-align: center;
       padding: 10px;
     }
+    .sound-tip {
+      text-align: center;
+      color: #7f8c8d;
+      font-size: 0.9em;
+      margin: 10px 0;
+    }
   </style>
 </head>
 <body>
   <h1>📋 Alertas Recibidas - Web360</h1>
+  <p class="sound-tip">🔊 Haz clic aquí para activar el sonido de alertas (una sola vez)</p>
 
   <div id="alertas-container">
     <p class="loading">Cargando alertas...</p>
@@ -106,8 +118,15 @@
 
     const container = document.getElementById('alertas-container');
 
-    // 🎵 Sonido de alerta (usamos un sonido público)
+    // 🎵 Sonido de alerta
     const audio = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mp3');
+
+    // 🟡 Activar sonido al hacer clic en el título (permite autoplay)
+    document.querySelector('h1').addEventListener('click', () => {
+      audio.play().catch(e => console.warn("Error al reproducir sonido:", e));
+      document.querySelector('.sound-tip').innerHTML = '🔊 Sonido activado ✅';
+      document.querySelector('.sound-tip').style.color = '#27ae60';
+    });
 
     // Escucha cambios en tiempo real en la colección "alertas"
     db.collection("alertas")
@@ -136,22 +155,39 @@
               <div class="mensaje">🚨 ${mensaje}</div>
             `;
 
-            // 🎯 Añade evento al botón de cerrar
+            // 🗑️ Botón de cierre: Borra la alerta de Firestore
             const closeBtn = alertaDiv.querySelector('.close-btn');
-            closeBtn.addEventListener('click', () => {
+            closeBtn.addEventListener('click', async () => {
+              // Animación de desvanecimiento
               alertaDiv.style.opacity = '0';
               alertaDiv.style.transform = 'translateX(100%)';
               alertaDiv.style.transition = 'all 0.3s ease';
+              
+              // Borra la alerta de Firestore
+              try {
+                await db.collection("alertas").doc(doc.id).delete();
+                console.log(`Alerta borrada: ${doc.id}`);
+              } catch (error) {
+                console.error("Error al borrar alerta:", error);
+                alertaDiv.style.opacity = '1';
+                alertaDiv.style.transform = 'translateX(0)';
+                alertaDiv.style.backgroundColor = '#ffebee';
+                alertaDiv.innerHTML += '<div style="color: red; margin-top: 8px;">❌ Error al borrar</div>';
+              }
+              
+              // Elimina el elemento después de la animación
               setTimeout(() => alertaDiv.remove(), 300);
             });
 
             container.appendChild(alertaDiv);
 
-            // 🔊 Reproduce sonido SOLO si es la primera alerta o si ha pasado más de 5 segundos desde la última
-            // Evita que suene continuamente si vienen muchas alertas juntas
+            // 🔊 Reproduce sonido solo si es la primera alerta o si pasaron 5 segundos
             const now = Date.now();
             if (!window.lastAlertTime || now - window.lastAlertTime > 5000) {
-              audio.play().catch(e => console.warn("No se pudo reproducir sonido:", e));
+              // Solo reproduce si ya se ha activado el sonido
+              if (window.audioEnabled) {
+                audio.play().catch(e => console.warn("No se pudo reproducir sonido:", e));
+              }
               window.lastAlertTime = now;
             }
           });
@@ -161,6 +197,9 @@
           console.error("Error leyendo Firestore:", error);
         }
       );
+
+    // Inicializamos el estado del sonido
+    window.audioEnabled = false;
   </script>
 </body>
 </html>
