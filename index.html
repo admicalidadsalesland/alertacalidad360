@@ -1,245 +1,237 @@
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Alertas Web360</title>
-  <!-- Tailwind CSS via CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 min-h-screen font-sans">
+<body>
   <!-- El JS se encargará de crear toda la interfaz -->
   <script>
 
     // =============================
-    // 🔐 ALERTAS WEB360 - JS PURA + TAILWIND
-    // Solo funciona en navegador con Firebase y Google Forms
-    // =============================
+// 🔐 ALERTAS WEB360 - JS PURA
+// Solo funciona en navegador con Firebase y Google Forms
+// =============================
 
-    // ===== CONFIGURACIÓN (CAMBIA ESTO) =====
-    const AUTORIZED_EMAILS = [
-      "juan.perez@empresa.com",
-      "maria.garcia@empresa.com",
-      "carlos.rodriguez@empresa.com"
-    ];
+// ===== CONFIGURACIÓN (CAMBIA ESTO) =====
+const AUTORIZED_EMAILS = [
+  "juan.perez@empresa.com",
+  "maria.garcia@empresa.com",
+  "carlos.rodriguez@empresa.com"
+];
 
-    const DEFAULT_PASSWORD = "Sales2025";
-    const GOOGLE_FORM_URL = "https://forms.gle/XXXXXX"; // ← ¡CAMBIA ESTE LINK!
-    const FIREBASE_CONFIG = {
-      apiKey: "TU_API_KEY_REAL_AQUI",
-      authDomain: "alertasweb360.firebaseapp.com",
-      projectId: "alertasweb360",
-      storageBucket: "alertasweb360.appspot.com",
-      messagingSenderId: "113022119227802677680",
-      appId: "1:113022119227802677680:web:abc123def456"
+const DEFAULT_PASSWORD = "Sales2025";
+const GOOGLE_FORM_URL = "https://forms.gle/XXXXXX  "; // ← ¡CAMBIA ESTE LINK!
+const FIREBASE_CONFIG = {
+  apiKey: "TU_API_KEY_REAL_AQUI",
+  authDomain: "alertasweb360.firebaseapp.com",
+  projectId: "alertasweb360",
+  storageBucket: "alertasweb360.appspot.com",
+  messagingSenderId: "113022119227802677680",
+  appId: "1:113022119227802677680:web:abc123def456"
+};
+
+// ===== INICIALIZAR FIREBASE =====
+(function() {
+  const script = document.createElement('script');
+  script.src = 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js  ';
+  document.head.appendChild(script);
+
+  const script2 = document.createElement('script');
+  script2.src = 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js  ';
+  document.head.appendChild(script2);
+
+  script.onload = script2.onload = () => {
+    firebase.initializeApp(FIREBASE_CONFIG);
+    const db = firebase.firestore();
+
+    let currentUserEmail = null;
+
+    // === LOGIN ===
+    function showLoginModal() {
+      const modal = document.createElement('div');
+      modal.style.cssText = `
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center;
+        z-index: 9999;
+      `;
+      modal.innerHTML = `
+        <div style="
+          background: white; padding: 2rem; border-radius: 12px; width: 90%; max-width: 400px;
+          box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        ">
+          <h2 style="color: #2c3e50; margin-bottom: 1rem;">🔐 Iniciar Sesión</h2>
+          <input type="email" id="login-email" placeholder="tu.correo@empresa.com" style="
+            width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 6px;
+          " required>
+          <input type="password" id="login-password" placeholder="Contraseña (Sales2025)" style="
+            width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 6px;
+          " required>
+          <button id="login-btn" style="
+            width: 100%; padding: 12px; background: #3498db; color: white; border: none; border-radius: 6px; cursor: pointer; margin: 8px 0;
+          ">Ingresar</button>
+          <button id="cancel-btn" style="
+            width: 100%; padding: 12px; background: #95a5a6; color: white; border: none; border-radius: 6px; cursor: pointer;
+          ">Cancelar</button>
+          <p id="login-error" style="color: red; margin-top: 10px; font-size: 0.9em; display: none;">❌ Correo o contraseña inválidos.</p>
+        </div>
+      `;
+      document.body.appendChild(modal);
+
+      const loginBtn = modal.querySelector('#login-btn');
+      const cancelBtn = modal.querySelector('#cancel-btn');
+      const errorEl = modal.querySelector('#login-error');
+
+      loginBtn.onclick = () => {
+        const email = modal.querySelector('#login-email').value.trim().toLowerCase();
+        const password = modal.querySelector('#login-password').value.trim();
+
+        if (!email || !password) {
+          errorEl.textContent = 'Por favor, ingresa correo y contraseña.';
+          errorEl.style.display = 'block';
+          return;
+        }
+
+        if (!AUTORIZED_EMAILS.includes(email)) {
+          errorEl.textContent = 'Correo no autorizado.';
+          errorEl.style.display = 'block';
+          return;
+        }
+
+        if (password !== DEFAULT_PASSWORD) {
+          errorEl.textContent = 'Contraseña incorrecta.';
+          errorEl.style.display = 'block';
+          return;
+        }
+
+        localStorage.setItem('currentUserEmail', email);
+        currentUserEmail = email;
+        modal.remove();
+        initApp();
+      };
+
+      cancelBtn.onclick = () => modal.remove();
+    }
+
+    // === DESLOGUEAR ===
+    function logout() {
+      localStorage.removeItem('currentUserEmail');
+      currentUserEmail = null;
+      document.getElementById('app-container')?.remove();
+      showLoginModal();
+    }
+
+    // === INICIAR APP ===
+    function initApp() {
+      if (document.getElementById('app-container')) return;
+
+      const container = document.createElement('div');
+      container.id = 'app-container';
+      container.style.cssText = `
+        max-width: 900px; margin: 40px auto; padding: 20px; font-family: 'Segoe UI', sans-serif;
+        background: #f8f9fa; min-height: 100vh;
+      `;
+      container.innerHTML = `
+        <h1 style="color: #2c3e50; text-align: center; margin-bottom: 20px;">📋 Alertas Web360</h1>
+        <p style="text-align: center; color: #7f8c8d; margin-bottom: 30px;">
+          Las alertas se envían vía Google Forms. Solo tú puedes enviar.
+        </p>
+        <div style="text-align: center; margin-bottom: 30px;">
+          <button id="send-alert-btn" style="
+            padding: 12px 24px; background: #27ae60; color: white; border: none; border-radius: 8px;
+            font-size: 16px; cursor: pointer; transition: background 0.2s;
+          ">➕ Enviar Nueva Alerta</button>
+          <button id="logout-btn" style="
+            margin-left: 15px; padding: 10px 16px; background: #e74c3c; color: white; border: none; border-radius: 8px;
+            font-size: 14px; cursor: pointer;
+          ">🚪 Desloguear</button>
+        </div>
+        <div id="alerts-container"></div>
+        <p id="status" style="text-align: center; color: #7f8c8d; margin-top: 30px; font-size: 0.9em;"></p>
+      `;
+      document.body.appendChild(container);
+
+      document.getElementById('send-alert-btn').onclick = () => {
+        window.open(GOOGLE_FORM_URL, '_blank');
+        document.getElementById('status').textContent = '📲 Abriendo formulario... Llena el formulario y presiona "Enviar".';
+      };
+
+      document.getElementById('logout-btn').onclick = logout;
+
+      document.getElementById('status').textContent = `✅ Bienvenido/a, ${currentUserEmail}. Recibirás solo tus alertas.`;
+
+      // === ESCUCHAR ALERTAS EN TIEMPO REAL ===
+      const alertsContainer = document.getElementById('alerts-container');
+      const statusEl = document.getElementById('status');
+
+      db.collection("alertas")
+        .orderBy("timestamp", "desc")
+        .onSnapshot((snapshot) => {
+          alertsContainer.innerHTML = '';
+
+          if (snapshot.empty) {
+            alertsContainer.innerHTML = '<p style="text-align: center; color: #95a5a6; padding: 40px;">No hay alertas aún.</p>';
+            return;
+          }
+
+          let hasMatchingAlert = false;
+          snapshot.forEach((doc) => {
+            const data = doc.data();
+            const timestamp = new Date(data.timestamp?.seconds * 1000 || data.timestamp).toLocaleString('es-MX');
+            const correo = data.correoAgente || 'Sin correo';
+            const mensaje = data.alertaTexto || 'Sin mensaje';
+
+            if (currentUserEmail && correo === currentUserEmail) {
+              hasMatchingAlert = true;
+
+              const alertDiv = document.createElement('div');
+              alertDiv.style.cssText = `
+                background: white; padding: 16px; margin-bottom: 16px; border-left: 4px solid #e74c3c;
+                border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+              `;
+              alertDiv.innerHTML = `
+                <div style="margin-bottom: 8px; color: #7f8c8d; font-size: 0.9em;">📅 ${timestamp}</div>
+                <div style="color: #3498db; font-weight: bold; margin-bottom: 8px;">✉️ ${correo}</div>
+                <div style="margin-top: 8px; line-height: 1.5;">🚨 ${mensaje}</div>
+                <button style="
+                  float: right; background: #ecf0f1; border: none; border-radius: 50%; width: 24px; height: 24px;
+                  font-size: 14px; cursor: pointer; color: #333; display: inline-flex; align-items: center; justify-content: center;
+                ">&times;</button>
+              `;
+
+              alertDiv.querySelector('button').onclick = async () => {
+                alertDiv.style.opacity = '0';
+                alertDiv.style.transition = 'opacity 0.3s';
+                setTimeout(() => alertDiv.remove(), 300);
+                await db.collection("alertas").doc(doc.id).delete();
+              };
+
+              alertsContainer.appendChild(alertDiv);
+            }
+          });
+
+          if (!hasMatchingAlert) {
+            alertsContainer.innerHTML = '<p style="text-align: center; color: #95a5a6; padding: 40px;">No tienes alertas asignadas.</p>';
+          }
+        }, (error) => {
+          alertsContainer.innerHTML = `<p style="color: red; text-align: center;">❌ Error: ${error.message}</p>`;
+        });
     };
 
-    // ===== INICIALIZAR FIREBASE =====
-    (function() {
-      const script = document.createElement('script');
-      script.src = 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js';
-      document.head.appendChild(script);
-
-      const script2 = document.createElement('script');
-      script2.src = 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js';
-      document.head.appendChild(script2);
-
-      script.onload = script2.onload = () => {
-        firebase.initializeApp(FIREBASE_CONFIG);
-        const db = firebase.firestore();
-
-        let currentUserEmail = null;
-
-        // === LOGIN ===
-        function showLoginModal() {
-          const modal = document.createElement('div');
-          modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4';
-          modal.innerHTML = `
-            <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8 transform transition-all animate-fadeIn">
-              <h2 class="text-2xl font-bold text-gray-800 text-center mb-6">🔐 Iniciar Sesión</h2>
-              
-              <input type="email" id="login-email" placeholder="tu.correo@empresa.com" 
-                class="w-full px-4 py-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                required>
-              
-              <input type="password" id="login-password" placeholder="Contraseña (Sales2025)" 
-                class="w-full px-4 py-3 mb-6 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                required>
-              
-              <button id="login-btn" class="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors mb-3">
-                Ingresar
-              </button>
-              
-              <button id="cancel-btn" class="w-full bg-gray-300 text-gray-800 py-3 rounded-lg font-medium hover:bg-gray-400 transition-colors">
-                Cancelar
-              </button>
-              
-              <p id="login-error" class="text-red-500 text-sm mt-4 text-center hidden">❌ Correo o contraseña inválidos.</p>
-            </div>
-          `;
-          document.body.appendChild(modal);
-
-          const loginBtn = modal.querySelector('#login-btn');
-          const cancelBtn = modal.querySelector('#cancel-btn');
-          const errorEl = modal.querySelector('#login-error');
-
-          loginBtn.onclick = () => {
-            const email = modal.querySelector('#login-email').value.trim().toLowerCase();
-            const password = modal.querySelector('#login-password').value.trim();
-
-            if (!email || !password) {
-              errorEl.textContent = 'Por favor, ingresa correo y contraseña.';
-              errorEl.classList.remove('hidden');
-              return;
-            }
-
-            if (!AUTORIZED_EMAILS.includes(email)) {
-              errorEl.textContent = 'Correo no autorizado.';
-              errorEl.classList.remove('hidden');
-              return;
-            }
-
-            if (password !== DEFAULT_PASSWORD) {
-              errorEl.textContent = 'Contraseña incorrecta.';
-              errorEl.classList.remove('hidden');
-              return;
-            }
-
-            localStorage.setItem('currentUserEmail', email);
-            currentUserEmail = email;
-            modal.remove();
-            initApp();
-          };
-
-          cancelBtn.onclick = () => modal.remove();
-        }
-
-        // === DESLOGUEAR ===
-        function logout() {
-          localStorage.removeItem('currentUserEmail');
-          currentUserEmail = null;
-          document.getElementById('app-container')?.remove();
-          showLoginModal();
-        }
-
-        // === INICIAR APP ===
-        function initApp() {
-          if (document.getElementById('app-container')) return;
-
-          const container = document.createElement('div');
-          container.id = 'app-container';
-          container.className = 'max-w-4xl mx-auto px-6 py-12';
-
-          container.innerHTML = `
-            <div class="text-center mb-12">
-              <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">📋 Alertas Web360</h1>
-              <p class="text-gray-600 text-lg">Las alertas se envían vía Google Forms. Solo tú puedes enviar.</p>
-            </div>
-
-            <div class="bg-white rounded-2xl shadow-xl p-6 mb-6 border border-gray-100">
-              <div class="flex justify-between items-center mb-6">
-                <h2 class="text-xl font-bold text-gray-800">🔔 Tus Alertas Recientes</h2>
-                <button id="logout-btn" class="bg-red-600 hover:bg-red-700 text-white text-sm px-4 py-2 rounded-lg transition-colors">
-                  Desloguear
-                </button>
-              </div>
-              <div id="alerts-container" class="space-y-4"></div>
-              <p id="status" class="text-center text-gray-500 text-sm mt-8"></p>
-            </div>
-
-            <footer class="text-center text-gray-400 text-xs mt-12 pb-8">
-              © 2025 Alertas Web360 | Sistema interno | No compartas tus credenciales
-            </footer>
-          `;
-
-          document.body.appendChild(container);
-
-          document.getElementById('open-form-btn').onclick = () => {
-            window.open(GOOGLE_FORM_URL, '_blank');
-            document.getElementById('status').textContent = '📲 Abriendo formulario... Llena el formulario y presiona "Enviar".';
-          };
-
-          document.getElementById('logout-btn').onclick = logout;
-
-          document.getElementById('status').textContent = `✅ Bienvenido/a, ${currentUserEmail}. Recibirás solo tus alertas.`;
-
-          // === ESCUCHAR ALERTAS EN TIEMPO REAL ===
-          const alertsContainer = document.getElementById('alerts-container');
-          const statusEl = document.getElementById('status');
-
-          db.collection("alertas")
-            .orderBy("timestamp", "desc")
-            .onSnapshot((snapshot) => {
-              alertsContainer.innerHTML = '';
-
-              if (snapshot.empty) {
-                alertsContainer.innerHTML = '<p class="text-center text-gray-400 py-12 text-sm">No hay alertas aún. Envía la primera desde el formulario.</p>';
-                return;
-              }
-
-              let hasMatchingAlert = false;
-              snapshot.forEach((doc) => {
-                const data = doc.data();
-                const timestamp = new Date(data.timestamp?.seconds * 1000 || data.timestamp).toLocaleString('es-MX');
-                const correo = data.correoAgente || 'Sin correo';
-                const mensaje = data.alertaTexto || 'Sin mensaje';
-
-                if (currentUserEmail && correo === currentUserEmail) {
-                  hasMatchingAlert = true;
-
-                  const alertDiv = document.createElement('div');
-                  alertDiv.className = 'bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg relative group hover:bg-red-100 transition-colors';
-                  alertDiv.innerHTML = `
-                    <div class="text-xs text-gray-500 mb-2">${timestamp}</div>
-                    <div class="font-medium text-blue-700 mb-2">${correo}</div>
-                    <p class="text-gray-800 leading-relaxed">${mensaje}</p>
-                    <button class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 w-6 h-6 flex items-center justify-center rounded-full bg-red-100 text-red-600 hover:bg-red-200 transition-opacity">
-                      ×
-                    </button>
-                  `;
-
-                  alertDiv.querySelector('button').onclick = async () => {
-                    alertDiv.style.opacity = '0';
-                    alertDiv.style.transition = 'opacity 0.3s';
-                    setTimeout(() => alertDiv.remove(), 300);
-                    await db.collection("alertas").doc(doc.id).delete();
-                  };
-
-                  alertsContainer.appendChild(alertDiv);
-                }
-              });
-
-              if (!hasMatchingAlert) {
-                alertsContainer.innerHTML = '<p class="text-center text-gray-400 py-12 text-sm">No tienes alertas asignadas.</p>';
-              }
-            }, (error) => {
-              alertsContainer.innerHTML = `<p class="text-center text-red-600 py-8">❌ Error: ${error.message}</p>`;
-            });
-        };
-
-        // === VERIFICAR SI YA ESTÁ LOGUEADO ===
-        const savedEmail = localStorage.getItem('currentUserEmail');
-        if (savedEmail && AUTORIZED_EMAILS.includes(savedEmail)) {
-          currentUserEmail = savedEmail;
-          initApp();
-        } else {
-          showLoginModal();
-        }
-
-        // Añadir animación de fade-in para el modal
-        const style = document.createElement('style');
-        style.textContent = `
-          @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-          }
-          .animate-fadeIn {
-            animation: fadeIn 0.3s ease-out forwards;
-          }
-        `;
-        document.head.appendChild(style);
-      };
-    })();
+    // === VERIFICAR SI YA ESTÁ LOGUEADO ===
+    const savedEmail = localStorage.getItem('currentUserEmail');
+    if (savedEmail && AUTORIZED_EMAILS.includes(savedEmail)) {
+      currentUserEmail = savedEmail;
+      initApp();
+    } else {
+      showLoginModal();
+    }
+  };
+})();
   </script>
 </body>
 </html>
