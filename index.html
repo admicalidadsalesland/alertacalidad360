@@ -95,14 +95,16 @@
   <script>
     // --- CONFIGURACIÓN DE FIREBASE ---
     const firebaseConfig = {
-      apiKey: "AIzaSyBvXzgZQJqWkUxGtF8rRmDlKpYbOuHjLwM",
+      apiKey: "AIzaSyDOHRSg12iQ-sRetVEl4O9Ni8IRQTivP_c",
       authDomain: "alertasweb360.firebaseapp.com",
       projectId: "alertasweb360",
-      storageBucket: "alertasweb360.appspot.com",
-      messagingSenderId: "113022119227802677680",
-      appId: "1:113022119227802677680:web:abc123def456"
+      storageBucket: "alertasweb360.firebasestorage.app",
+      messagingSenderId: "359004701928",
+      appId: "1:359004701928:web:ad6eb32d5fed92069a355d",
+      measurementId: "G-NEJYDW39PT"
     };
 
+    // Inicializa Firebase
     firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
     const db = firebase.firestore();
@@ -110,13 +112,6 @@
     const loginContainer = document.getElementById('login-container');
     const alertasContainer = document.getElementById('alertas-container');
     const loginBtn = document.getElementById('login-btn');
-
-    // --- USUARIOS PERMITIDOS ---
-    const usuariosPermitidos = [
-      "gricelasanchezm@salesland.net",
-      "ximena@example.com",
-      "usuario1@tudominio.com"
-    ];
 
     // --- LOGIN CON GOOGLE ---
     loginBtn.addEventListener('click', () => {
@@ -126,9 +121,15 @@
           const user = result.user;
           console.log("✅ Usuario logueado:", user.email);
 
-          // ✅ Validar si el correo está permitido
-          if (!usuariosPermitidos.includes(user.email)) {
-            alert("❌ Acceso denegado: usuario no autorizado");
+          // Solo permitir correos corporativos
+          const allowedEmails = [
+            "usuario1@tudominio.com",
+            "usuario2@tudominio.com",
+            "usuario3@tudominio.com"
+          ];
+
+          if (!allowedEmails.includes(user.email)) {
+            alert("❌ Este correo no está autorizado.");
             auth.signOut();
             return;
           }
@@ -170,21 +171,12 @@
             `;
             alertasContainer.appendChild(alertaDiv);
           });
-        }, (error) => {
-          alertasContainer.innerHTML = `<p style="color: red;">❌ Error al cargar alertas: ${error.message}</p>`;
-          console.error(error);
         });
     }
 
     // --- ESCUCHAR CAMBIOS DE AUTENTICACIÓN ---
     auth.onAuthStateChanged((user) => {
       if (user) {
-        if (!usuariosPermitidos.includes(user.email)) {
-          auth.signOut();
-          loginContainer.style.display = 'block';
-          alertasContainer.style.display = 'none';
-          return;
-        }
         loginContainer.style.display = 'none';
         alertasContainer.style.display = 'block';
         cargarAlertas();
