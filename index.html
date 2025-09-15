@@ -13,272 +13,247 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      overflow-x: hidden;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .animate-fadeIn { animation: fadeIn 0.3s ease-out forwards; }
-    .animate-fadeInUp { animation: fadeIn 0.4s ease-out forwards; }
   </style>
 </head>
-<body class="bg-gray-50 min-h-screen">
+<body class="bg-gray-50 min-h-screen flex flex-col">
 
-  <!-- BARRA DE MENÚ SUPERIOR - FONDO BLANCO -->
-  <header class="bg-white shadow-md fixed top-0 left-0 right-0 z-40 border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-      <!-- Logo y Título -->
-      <div class="flex items-center gap-3">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-        </svg>
-        <h1 class="text-xl font-bold text-gray-800">Alertas Web360</h1>
+  <!-- Menú superior -->
+  <header class="bg-white shadow-md flex items-center justify-between px-6 py-4">
+    <div class="flex items-center gap-3">
+      <div class="bg-white rounded-lg p-2 shadow-sm">
+        <h1 class="text-xl font-bold text-gray-800">📋 Alertas Web360</h1>
       </div>
-
-      <!-- Botón de Deslogueo (derecha) -->
-      <button id="logout-btn" class="inline-flex items-center gap-2 bg-red-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-red-700 transition-colors shadow-sm text-sm">
-        🚪 Desloguear
-      </button>
     </div>
+    <button id="logout-btn" class="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-xl font-medium hover:bg-red-700 transition-colors">
+      🚪 Desloguear
+    </button>
   </header>
 
-  <!-- CONTENIDO PRINCIPAL (con margen superior para no quedar debajo del header) -->
-  <main class="pt-20 pb-12 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full">
-
-    <!-- El JS se encargará de crear toda la interfaz -->
-    <script>
-
-      // =============================
-      // 🔐 ALERTAS WEB360 - JS PURA
-      // Solo funciona en navegador con Firebase y Google Forms
-      // =============================
-
-      // ===== CONFIGURACIÓN (CAMBIA ESTO) =====
-      const AUTORIZED_EMAILS = [
-        "juan.perez@empresa.com",
-        "maria.garcia@empresa.com",
-        "carlos.rodriguez@empresa.com"
-      ];
-
-      const DEFAULT_PASSWORD = "Sales2025";
-      const GOOGLE_FORM_URL = "https://forms.gle/XXXXXX"; // ← ¡CAMBIA ESTE LINK! (¡sin espacios!)
-      const FIREBASE_CONFIG = {
-        apiKey: "TU_API_KEY_REAL_AQUI",
-        authDomain: "alertasweb360.firebaseapp.com",
-        projectId: "alertasweb360",
-        storageBucket: "alertasweb360.appspot.com",
-        messagingSenderId: "113022119227802677680",
-        appId: "1:113022119227802677680:web:abc123def456"
-      };
-
-      // ===== INICIALIZAR FIREBASE =====
-      (function() {
-        const script = document.createElement('script');
-        script.src = 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js';
-        document.head.appendChild(script);
-
-        const script2 = document.createElement('script');
-        script2.src = 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js';
-        document.head.appendChild(script2);
-
-        script.onload = script2.onload = () => {
-          firebase.initializeApp(FIREBASE_CONFIG);
-          const db = firebase.firestore();
-
-          let currentUserEmail = null;
-
-          // === LOGIN ===
-          function showLoginModal() {
-            const modal = document.createElement('div');
-            modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4';
-            modal.innerHTML = `
-              <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8 transform transition-all animate-fadeIn">
-                <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">🔐 Iniciar Sesión</h2>
-                
-                <input id="login-email" type="email" placeholder="tu.correo@empresa.com" 
-                  class="w-full px-4 py-3 mb-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow"
-                  required>
-                
-                <input id="login-password" type="password" placeholder="Contraseña (Sales2025)" 
-                  class="w-full px-4 py-3 mb-6 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow"
-                  required>
-                
-                <button id="login-btn" class="w-full bg-blue-600 text-white py-3 rounded-xl font-medium hover:bg-blue-700 transition-colors mb-3">
-                  Ingresar
-                </button>
-                
-                <button id="cancel-btn" class="w-full bg-gray-300 text-gray-800 py-3 rounded-xl font-medium hover:bg-gray-400 transition-colors">
-                  Cancelar
-                </button>
-                
-                <p id="login-error" class="text-red-500 text-sm mt-4 text-center hidden">❌ Correo o contraseña inválidos.</p>
-              </div>
-            `;
-            document.body.appendChild(modal);
-
-            const loginBtn = modal.querySelector('#login-btn');
-            const cancelBtn = modal.querySelector('#cancel-btn');
-            const errorEl = modal.querySelector('#login-error');
-
-            loginBtn.onclick = () => {
-              const email = modal.querySelector('#login-email').value.trim().toLowerCase();
-              const password = modal.querySelector('#login-password').value.trim();
-
-              if (!email || !password) {
-                errorEl.textContent = 'Por favor, ingresa correo y contraseña.';
-                errorEl.style.display = 'block';
-                return;
-              }
-
-              if (!AUTORIZED_EMAILS.includes(email)) {
-                errorEl.textContent = 'Correo no autorizado.';
-                errorEl.style.display = 'block';
-                return;
-              }
-
-              if (password !== DEFAULT_PASSWORD) {
-                errorEl.textContent = 'Contraseña incorrecta.';
-                errorEl.style.display = 'block';
-                return;
-              }
-
-              localStorage.setItem('currentUserEmail', email);
-              currentUserEmail = email;
-              modal.remove();
-              initApp();
-            };
-
-            cancelBtn.onclick = () => modal.remove();
-          }
-
-          // === DESLOGUEAR ===
-          function logout() {
-            localStorage.removeItem('currentUserEmail');
-            currentUserEmail = null;
-            document.getElementById('app-container')?.remove();
-            showLoginModal();
-          }
-
-          // === INICIAR APP ===
-          function initApp() {
-            if (document.getElementById('app-container')) return;
-
-            const container = document.createElement('div');
-            container.id = 'app-container';
-            container.className = 'mt-6';
-
-            container.innerHTML = `
-              <div class="text-center mb-8">
-                <h1 class="text-3xl font-bold text-gray-800 mb-2">📋 Alertas Web360</h1>
-                <p class="text-gray-600 text-lg">Las alertas se envían vía Google Forms. Solo tú puedes enviar.</p>
-              </div>
-
-              <div id="alerts-container" class="space-y-4"></div>
-              
-              <p id="status" class="text-center text-gray-500 mt-8 text-sm italic"></p>
-            `;
-
-            document.body.appendChild(container);
-
-            document.getElementById('status').textContent = `✅ Bienvenido/a, ${currentUserEmail}. Recibirás solo tus alertas.`;
-
-            // === ESCUCHAR ALERTAS EN TIEMPO REAL ===
-            const alertsContainer = document.getElementById('alerts-container');
-
-            db.collection("alertas")
-              .orderBy("timestamp", "desc")
-              .onSnapshot((snapshot) => {
-                alertsContainer.innerHTML = '';
-
-                if (snapshot.empty) {
-                  alertsContainer.innerHTML = `
-                    <div class="bg-white rounded-2xl shadow-lg p-12 text-center border-2 border-dashed border-gray-200">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-300 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5v-5zM10.5 3.5L12 5m0 0l1.5-1.5H12m0 0V5m0 0l-1.5 1.5H12m0 0v1.5M5 12h14" />
-                      </svg>
-                      <p class="text-gray-500 text-lg">No hay alertas aún.</p>
-                    </div>
-                  `;
-                  return;
-                }
-
-                let hasMatchingAlert = false;
-                snapshot.forEach((doc) => {
-                  const data = doc.data();
-                  const timestamp = new Date(data.timestamp?.seconds * 1000 || data.timestamp).toLocaleString('es-MX');
-                  const correo = data.correoAgente || 'Sin correo';
-                  const mensaje = data.alertaTexto || 'Sin mensaje';
-
-                  if (currentUserEmail && correo === currentUserEmail) {
-                    hasMatchingAlert = true;
-
-                    const alertDiv = document.createElement('div');
-                    alertDiv.className = 'bg-white rounded-2xl shadow-lg p-6 border-l-4 border-red-500 animate-fadeInUp';
-                    alertDiv.innerHTML = `
-                      <div class="flex justify-between items-start">
-                        <div>
-                          <p class="text-gray-500 text-sm mb-2">📅 ${timestamp}</p>
-                          <p class="font-semibold text-blue-600 mb-3">✉️ ${correo}</p>
-                          <p class="text-gray-800 leading-relaxed">${mensaje}</p>
-                        </div>
-                        <button class="ml-4 text-gray-400 hover:text-red-500 transition-colors p-1 rounded-full hover:bg-red-50">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                          </svg>
-                        </button>
-                      </div>
-                    `;
-
-                    alertDiv.querySelector('button').onclick = async () => {
-                      alertDiv.classList.add('opacity-0', 'transform', 'translate-y-2');
-                      alertDiv.classList.remove('animate-fadeInUp');
-                      setTimeout(() => {
-                        alertDiv.remove();
-                        db.collection("alertas").doc(doc.id).delete();
-                      }, 300);
-                    };
-
-                    alertsContainer.appendChild(alertDiv);
-                  }
-                });
-
-                if (!hasMatchingAlert) {
-                  alertsContainer.innerHTML = `
-                    <div class="bg-white rounded-2xl shadow-lg p-12 text-center border-2 border-dashed border-gray-200">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-300 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                      </svg>
-                      <p class="text-gray-500 text-lg">No tienes alertas asignadas.</p>
-                    </div>
-                  `;
-                }
-              }, (error) => {
-                alertsContainer.innerHTML = `
-                  <div class="bg-red-50 border border-red-200 rounded-2xl p-6 text-center">
-                    <p class="text-red-600 font-medium">❌ Error: ${error.message}</p>
-                  </div>
-                `;
-              });
-          };
-
-          // === VERIFICAR SI YA ESTÁ LOGUEADO ===
-          const savedEmail = localStorage.getItem('currentUserEmail');
-          if (savedEmail && AUTORIZED_EMAILS.includes(savedEmail)) {
-            currentUserEmail = savedEmail;
-            initApp();
-          } else {
-            showLoginModal();
-          }
-
-          // Asignar evento al botón de deslogueo en el header
-          document.getElementById('logout-btn').onclick = logout;
-
-        };
-      })();
-
-    </script>
+  <!-- Contenedor principal -->
+  <main id="main-container" class="flex-1 p-8 overflow-auto">
+    <!-- El JS creará el contenido aquí -->
   </main>
 
+  <script>
+    // =============================
+    // 🔐 ALERTAS WEB360 - JS PURA
+    // =============================
+
+    const AUTORIZED_EMAILS = [
+      "juan.perez@empresa.com",
+      "maria.garcia@empresa.com",
+      "carlos.rodriguez@empresa.com"
+    ];
+
+    const DEFAULT_PASSWORD = "Sales2025";
+    const GOOGLE_FORM_URL = "https://forms.gle/XXXXXX"; 
+    const FIREBASE_CONFIG = {
+      apiKey: "TU_API_KEY_REAL_AQUI",
+      authDomain: "alertasweb360.firebaseapp.com",
+      projectId: "alertasweb360",
+      storageBucket: "alertasweb360.appspot.com",
+      messagingSenderId: "113022119227802677680",
+      appId: "1:113022119227802677680:web:abc123def456"
+    };
+
+    (function() {
+      const script = document.createElement('script');
+      script.src = 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js';
+      document.head.appendChild(script);
+
+      const script2 = document.createElement('script');
+      script2.src = 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js';
+      document.head.appendChild(script2);
+
+      script.onload = script2.onload = () => {
+        firebase.initializeApp(FIREBASE_CONFIG);
+        const db = firebase.firestore();
+        let currentUserEmail = null;
+
+        function showLoginModal() {
+          const modal = document.createElement('div');
+          modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4';
+          modal.innerHTML = `
+            <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8 transform transition-all animate-fadeIn">
+              <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">🔐 Iniciar Sesión</h2>
+              
+              <input id="login-email" type="email" placeholder="tu.correo@empresa.com" 
+                class="w-full px-4 py-3 mb-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow"
+                required>
+              
+              <input id="login-password" type="password" placeholder="Contraseña (Sales2025)" 
+                class="w-full px-4 py-3 mb-6 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow"
+                required>
+              
+              <button id="login-btn" class="w-full bg-blue-600 text-white py-3 rounded-xl font-medium hover:bg-blue-700 transition-colors mb-3">
+                Ingresar
+              </button>
+              
+              <button id="cancel-btn" class="w-full bg-gray-300 text-gray-800 py-3 rounded-xl font-medium hover:bg-gray-400 transition-colors">
+                Cancelar
+              </button>
+              
+              <p id="login-error" class="text-red-500 text-sm mt-4 text-center hidden">❌ Correo o contraseña inválidos.</p>
+            </div>
+          `;
+          document.body.appendChild(modal);
+
+          const loginBtn = modal.querySelector('#login-btn');
+          const cancelBtn = modal.querySelector('#cancel-btn');
+          const errorEl = modal.querySelector('#login-error');
+
+          loginBtn.onclick = () => {
+            const email = modal.querySelector('#login-email').value.trim().toLowerCase();
+            const password = modal.querySelector('#login-password').value.trim();
+
+            if (!email || !password) {
+              errorEl.textContent = 'Por favor, ingresa correo y contraseña.';
+              errorEl.style.display = 'block';
+              return;
+            }
+
+            if (!AUTORIZED_EMAILS.includes(email)) {
+              errorEl.textContent = 'Correo no autorizado.';
+              errorEl.style.display = 'block';
+              return;
+            }
+
+            if (password !== DEFAULT_PASSWORD) {
+              errorEl.textContent = 'Contraseña incorrecta.';
+              errorEl.style.display = 'block';
+              return;
+            }
+
+            localStorage.setItem('currentUserEmail', email);
+            currentUserEmail = email;
+            modal.remove();
+            initApp();
+          };
+
+          cancelBtn.onclick = () => modal.remove();
+        }
+
+        function logout() {
+          localStorage.removeItem('currentUserEmail');
+          currentUserEmail = null;
+          document.getElementById('main-container').innerHTML = '';
+          showLoginModal();
+        }
+
+        function initApp() {
+          const main = document.getElementById('main-container');
+          main.innerHTML = `
+            <div class="text-center mb-8">
+              <p class="text-gray-600 text-lg">Las alertas se envían vía Google Forms. Solo tú puedes enviar.</p>
+            </div>
+
+            <div id="alerts-container" class="space-y-4"></div>
+            
+            <p id="status" class="text-center text-gray-500 mt-8 text-sm italic"></p>
+          `;
+
+          document.getElementById('logout-btn').onclick = logout;
+          document.getElementById('status').textContent = `✅ Bienvenido/a, ${currentUserEmail}. Recibirás solo tus alertas.`;
+
+          const alertsContainer = document.getElementById('alerts-container');
+
+          db.collection("alertas")
+            .orderBy("timestamp", "desc")
+            .onSnapshot((snapshot) => {
+              alertsContainer.innerHTML = '';
+
+              if (snapshot.empty) {
+                alertsContainer.innerHTML = `
+                  <div class="bg-white rounded-2xl shadow-lg p-12 text-center border-2 border-dashed border-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-300 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5v-5zM10.5 3.5L12 5m0 0l1.5-1.5H12m0 0V5m0 0l-1.5 1.5H12m0 0v1.5M5 12h14" />
+                    </svg>
+                    <p class="text-gray-500 text-lg">No hay alertas aún.</p>
+                  </div>
+                `;
+                return;
+              }
+
+              let hasMatchingAlert = false;
+              snapshot.forEach((doc) => {
+                const data = doc.data();
+                const timestamp = new Date(data.timestamp?.seconds * 1000 || data.timestamp).toLocaleString('es-MX');
+                const correo = data.correoAgente || 'Sin correo';
+                const mensaje = data.alertaTexto || 'Sin mensaje';
+
+                if (currentUserEmail && correo === currentUserEmail) {
+                  hasMatchingAlert = true;
+
+                  const alertDiv = document.createElement('div');
+                  alertDiv.className = 'bg-white rounded-2xl shadow-lg p-6 border-l-4 border-red-500 animate-fadeInUp';
+                  alertDiv.innerHTML = `
+                    <div class="flex justify-between items-start">
+                      <div>
+                        <p class="text-gray-500 text-sm mb-2">📅 ${timestamp}</p>
+                        <p class="font-semibold text-blue-600 mb-3">✉️ ${correo}</p>
+                        <p class="text-gray-800 leading-relaxed">${mensaje}</p>
+                      </div>
+                      <button class="ml-4 text-gray-400 hover:text-red-500 transition-colors p-1 rounded-full hover:bg-red-50">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    </div>
+                  `;
+
+                  alertDiv.querySelector('button').onclick = async () => {
+                    alertDiv.classList.add('opacity-0', 'transform', 'translate-y-2');
+                    alertDiv.classList.remove('animate-fadeInUp');
+                    setTimeout(() => {
+                      alertDiv.remove();
+                      db.collection("alertas").doc(doc.id).delete();
+                    }, 300);
+                  };
+
+                  alertsContainer.appendChild(alertDiv);
+                }
+              });
+
+              if (!hasMatchingAlert) {
+                alertsContainer.innerHTML = `
+                  <div class="bg-white rounded-2xl shadow-lg p-12 text-center border-2 border-dashed border-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-300 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    <p class="text-gray-500 text-lg">No tienes alertas asignadas.</p>
+                  </div>
+                `;
+              }
+            }, (error) => {
+              alertsContainer.innerHTML = `
+                <div class="bg-red-50 border border-red-200 rounded-2xl p-6 text-center">
+                  <p class="text-red-600 font-medium">❌ Error: ${error.message}</p>
+                </div>
+              `;
+            });
+        };
+
+        const savedEmail = localStorage.getItem('currentUserEmail');
+        if (savedEmail && AUTORIZED_EMAILS.includes(savedEmail)) {
+          currentUserEmail = savedEmail;
+          initApp();
+        } else {
+          showLoginModal();
+        }
+      };
+    })();
+
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fadeIn { animation: fadeIn 0.3s ease-out forwards; }
+      .animate-fadeInUp { animation: fadeIn 0.4s ease-out forwards; }
+    `;
+    document.head.appendChild(style);
+  </script>
 </body>
 </html>
