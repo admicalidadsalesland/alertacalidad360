@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alertas Web360</title>
+  <title>📋 Alertas Recibidas - Web360</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -82,21 +82,6 @@
       text-align: center;
       padding: 10px;
     }
-    .sound-test {
-      display: block;
-      margin: 15px auto;
-      padding: 10px 20px;
-      background: #3498db;
-      color: white;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-      font-size: 0.9em;
-    }
-    .sound-test:disabled {
-      background: #bdc3c7;
-      cursor: not-allowed;
-    }
     .status {
       text-align: center;
       color: #7f8c8d;
@@ -108,8 +93,8 @@
 <body>
   <h1>📋 Alertas Recibidas - Web360</h1>
 
-  <button class="sound-test" id="test-sound">🔊 Probar sonido de alerta</button>
-  <p class="status" id="sound-status">🔊 Haz clic en "Probar sonido" para activar permisos de audio.</p>
+  <button class="sound-test" id="test-sound" style="display: none;">🔊 Probar sonido de alerta</button>
+  <p class="status" id="sound-status">🔔 Cuando llegue una alerta, el título cambiará para llamarte la atención.</p>
 
   <div id="alertas-container">
     <p class="loading">Cargando alertas...</p>
@@ -135,31 +120,32 @@
     const db = firebase.firestore();
 
     const container = document.getElementById('alertas-container');
-    const testSoundBtn = document.getElementById('test-sound');
-    const soundStatus = document.getElementById('sound-status');
+    const status = document.getElementById('sound-status');
 
-    // ✅ AUDIO EMbebido VALIDO (WAV de 1s, universal)
-    const audio = new Audio('data:audio/wav;base64,UklGRl9vT19XQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YU9vT18=');
+    // 📌 Títulos originales
+    const ORIGINAL_TITLE = "📋 Alertas Recibidas - Web360";
+    const ALERT_TITLE = "⚠️ ALERTA - Web360";
 
-    let audioEnabled = false;
+    let hasUnreadAlert = false;
+    let lastAlertTime = 0;
 
-    testSoundBtn.addEventListener('click', async () => {
-      // 🔍 Confirmación visual: ¿se disparó el evento?
-      alert('¡Clic detectado! Intentando reproducir sonido... (cierra este alerta)');
+    // 🔁 Cambia el título cuando hay alertas nuevas
+    function updateTitle() {
+      document.title = hasUnreadAlert ? ALERT_TITLE : ORIGINAL_TITLE;
+    }
 
-      try {
-        const playPromise = audio.play();
-        if (playPromise !== undefined) {
-          await playPromise;
-          audioEnabled = true;
-          testSoundBtn.disabled = true;
-          soundStatus.textContent = '🔊 Sonido activado ✅ Ahora recibirás alertas con sonido.';
-          soundStatus.style.color = '#27ae60';
+    // 👀 Detecta cuando el usuario cambia de pestaña
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') {
+        // El usuario volvió a la pestaña → restablece título
+        hasUnreadAlert = false;
+        updateTitle();
+        status.textContent = "🔔 Cuando llegue una alerta, el título cambiará para llamarte la atención.";
+      } else {
+        // El usuario se fue → deja el título como alerta si hay algo nuevo
+        if (hasUnreadAlert) {
+          updateTitle();
         }
-      } catch (err) {
-        soundStatus.textContent = '❌ No se pudo reproducir sonido. Abre esta página en CHROME en modo incógnito y vuelve a intentarlo.';
-        soundStatus.style.color = '#e74c3c';
-        console.error("Error de audio:", err);
       }
     });
 
@@ -214,16 +200,13 @@
 
             container.appendChild(alertaDiv);
 
-            // 🔊 Reproducir sonido solo si se ha activado y no se ha reproducido en los últimos 5 segundos
+            // ⚠️ NUEVA LÓGICA: Marcar como alerta si es la primera vez que llega
             const now = Date.now();
-            if (audioEnabled && (!window.lastAlertTime || now - window.lastAlertTime > 5000)) {
-              audio.play().catch(e => {
-                console.warn("No se pudo reproducir sonido:", e);
-                soundStatus.textContent = '⚠️ El sonido falló. Haz clic en "Probar sonido" nuevamente.';
-                soundStatus.style.color = '#e74c3c';
-                audioEnabled = false;
-              });
-              window.lastAlertTime = now;
+            if (now - lastAlertTime > 5000) { // Evita repetir si vienen muchas seguidas
+              hasUnreadAlert = true;
+              updateTitle(); // Cambia el título inmediatamente
+              lastAlertTime = now;
+              status.textContent = "🚨 ¡Nueva alerta recibida! Vuelve a esta pestaña.";
             }
           });
         },
