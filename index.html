@@ -28,7 +28,7 @@
     .animate-fadeInUp { animation: fadeIn 0.4s ease-out forwards; }
     .sidebar-header { padding-top: 4px; }
 
-    /* 🔴 Botón Eliminar como X flotante (solo visible al pasar) */
+    /* 🔴 Botón Eliminar como X flotante (solo visible al pasar) - VERSION MEJORADA */
     .alert-card {
       position: relative;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -41,32 +41,35 @@
       position: absolute !important;
       top: 12px !important;
       right: 12px !important;
-      width: 24px !important;
-      height: 24px !important;
+      width: 28px !important;
+      height: 28px !important;
       border-radius: 50% !important;
-      background-color: rgba(239, 68, 68, 0.1) !important;
+      background-color: rgba(254, 242, 242, 0.7) !important; /* Fondo suave rosa claro */
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
       opacity: 0 !important;
       pointer-events: none !important;
-      transition: all 0.2s ease !important;
+      transition: all 0.25s ease !important;
       color: #ef4444 !important;
       font-weight: bold !important;
-      font-size: 14px !important;
       border: none !important;
       padding: 0 !important;
       margin: 0 !important;
       z-index: 10;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
     .alert-card:hover .delete-btn {
       opacity: 1 !important;
       pointer-events: all !important;
-      background-color: rgba(239, 68, 68, 0.2) !important;
+      background-color: rgba(254, 242, 242, 0.9) !important;
+      transform: scale(1.05);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     }
     .delete-btn:hover {
-      background-color: rgba(239, 68, 68, 0.4) !important;
-      transform: scale(1.15) !important;
+      background-color: rgba(239, 68, 68, 0.2) !important;
+      transform: scale(1.1) !important;
+      color: #dc2626 !important;
     }
 
     /* 🔵 Contador de alertas (badge estilo Slack/WhatsApp) */
@@ -294,9 +297,9 @@
                         <p class="text-gray-500 text-sm mb-3">📅 ${timestamp}</p>
                         <p class="font-semibold text-blue-600 mb-4">✉️ ${correo}</p>
                         <p class="text-gray-800 leading-relaxed text-base mb-4">${mensaje}</p>
-                        <!-- ✅ Nuevo botón X -->
+                        <!-- ✅ Nuevo botón X - Mejorado -->
                         <button class="delete-btn text-red-500 hover:text-red-700 opacity-0 group-hover:opacity-100 transition-opacity duration-200 focus:outline-none">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                           </svg>
                         </button>
