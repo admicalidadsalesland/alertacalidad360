@@ -22,10 +22,8 @@
     .animate-fadeIn { animation: fadeIn 0.3s ease-out forwards; }
     .animate-fadeInUp { animation: fadeIn 0.4s ease-out forwards; }
 
-    /* Ajuste del logo y título lateral */
     .sidebar-header { padding-top: 4px; }
 
-    /* Estilo hover menú lateral */
     .nav-link:hover {
       @apply bg-gray-800/80 text-white transition-colors duration-200;
     }
@@ -33,10 +31,9 @@
 </head>
 <body class="bg-gray-50 min-h-screen flex">
 
-  <!-- BARRA LATERAL FIJA -->
+  <!-- BARRA LATERAL -->
   <aside class="fixed top-0 left-0 bottom-0 z-40 w-64 bg-gray-900 text-white shadow-xl border-r border-gray-800">
     <div class="flex flex-col h-full">
-      <!-- Logo y título ajustado -->
       <div class="sidebar-header p-6 border-b border-gray-700 flex items-center gap-3">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
@@ -44,7 +41,6 @@
         <h1 class="text-xl font-bold text-white mt-0">Alertas Web360</h1>
       </div>
 
-      <!-- Menú de navegación -->
       <nav class="flex-1 px-4 py-6 space-y-1">
         <a href="#" class="flex items-center gap-3 px-3 py-3 rounded-lg bg-gray-800 text-blue-400 font-medium transition-all duration-200 hover:bg-gray-700">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -52,13 +48,6 @@
           </svg>
           <span>Dashboard</span>
         </a>
-
-        <!--  <a href="https://forms.gle/XXXXXX" target="_blank" class="flex items-center gap-3 px-3 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-gray-800/70 transition-all duration-200 font-medium">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-          </svg>
-          <span>Enviar Alerta</span>
-        </a> -->
       </nav>
 
       <div class="h-16"></div>
@@ -91,15 +80,33 @@
     </div>
   </header>
 
-  <!-- CONTENIDO PRINCIPAL -->
+  <!-- CONTENIDO -->
   <main class="flex-1 ml-64 pt-20 pb-12 px-6 sm:px-8 lg:px-12 w-full">
     <div id="app-container" class="mt-6"></div>
 
     <script>
       const AUTORIZED_EMAILS = ["juan.perez@empresa.com","maria.garcia@empresa.com","carlos.rodriguez@empresa.com"];
       const DEFAULT_PASSWORD = "Sales2025";
-      const GOOGLE_FORM_URL = "https://forms.gle/XXXXXX";
       const FIREBASE_CONFIG = { apiKey:"TU_API_KEY_REAL_AQUI", authDomain:"alertasweb360.firebaseapp.com", projectId:"alertasweb360", storageBucket:"alertasweb360.appspot.com", messagingSenderId:"113022119227802677680", appId:"1:113022119227802677680:web:abc123def456" };
+
+      // 🔔 manejo del parpadeo del título
+      let titleBlinkInterval = null;
+      const originalTitle = document.title;
+
+      function startTitleBlink() {
+        if (titleBlinkInterval) return;
+        let visible = false;
+        titleBlinkInterval = setInterval(() => {
+          document.title = visible ? "⚠️ Nueva alerta" : originalTitle;
+          visible = !visible;
+        }, 1200);
+      }
+
+      function stopTitleBlink() {
+        clearInterval(titleBlinkInterval);
+        titleBlinkInterval = null;
+        document.title = originalTitle;
+      }
 
       (function(){
         const script = document.createElement('script');
@@ -110,6 +117,7 @@
         document.head.appendChild(script2);
 
         script.onload = script2.onload = ()=>{
+
           firebase.initializeApp(FIREBASE_CONFIG);
           const db = firebase.firestore();
           let currentUserEmail=null;
@@ -155,8 +163,8 @@
               <p id="status" class="text-center text-gray-500 mt-8 text-sm italic">✅ Bienvenido/a, <span id="current-user-name"></span></p>
             `;
 
-            document.getElementById('user-name').textContent=currentUserEmail.split('@')[0].split('.')[0].charAt(0).toUpperCase()+currentUserEmail.split('@')[0].split('.')[0].slice(1);
-            document.getElementById('current-user-name').textContent=currentUserEmail.split('@')[0].split('.')[0].charAt(0).toUpperCase()+currentUserEmail.split('@')[0].split('.')[0].slice(1);
+            document.getElementById('user-name').textContent=currentUserEmail.split('@')[0].split('.')[0];
+            document.getElementById('current-user-name').textContent=currentUserEmail.split('@')[0].split('.')[0];
 
             const alertsContainer=document.getElementById('alerts-container');
             db.collection("alertas").orderBy("timestamp","desc").onSnapshot(snapshot=>{
@@ -178,14 +186,8 @@
                         <p class="font-semibold text-blue-600 mb-4">✉️ ${correo}</p>
                         <p class="text-gray-800 leading-relaxed text-base">${mensaje}</p>
                       </div>
-                      <button class="ml-4 text-gray-400 hover:text-red-500 transition-colors p-2 rounded-full hover:bg-red-50">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                      </button>
                     </div>
                   `;
-                  alertDiv.querySelector('button').onclick=()=>{alertDiv.remove(); db.collection("alertas").doc(doc.id).delete();};
                   alertsContainer.appendChild(alertDiv);
                 }
               });
@@ -193,11 +195,18 @@
                 alertsContainer.innerHTML=`
                   <div class="bg-white rounded-2xl shadow-lg p-16 text-center border-2 border-dashed border-gray-200 w-full">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-gray-300 mx-auto mb-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                     <p class="text-gray-500 text-xl font-medium">No tienes alertas asignadas.</p>
                   </div>
                 `;
+              }
+
+              // 🔔 Si hay alertas y el usuario NO está en la pestaña → parpadeo
+              if (hasMatchingAlert && document.hidden) {
+                startTitleBlink();
+              } else {
+                stopTitleBlink();
               }
             });
           }
@@ -212,6 +221,11 @@
             if(!document.getElementById('user-menu').contains(e.target) && !document.getElementById('user-menu-btn').contains(e.target)){
               document.getElementById('user-menu').classList.add('hidden');
             }
+          });
+
+          // 🔔 Si vuelve a la pestaña → detener parpadeo
+          document.addEventListener("visibilitychange", () => {
+            if (!document.hidden) stopTitleBlink();
           });
         };
       })();
