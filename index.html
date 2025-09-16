@@ -85,8 +85,8 @@
   </header>
 
   <!-- CONTENIDO PRINCIPAL -->
-  <main class="flex-1 ml-64 pt-20 pb-12 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full">
-    <div id="app-container" class="mt-6">
+  <main class="flex-1 ml-64 pt-28 pb-12 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full">
+    <div id="app-container" class="mt-4">
       <!-- JS inyectará las alertas aquí -->
     </div>
 
@@ -167,12 +167,12 @@
           function initApp() {
             const container = document.getElementById('app-container');
             container.innerHTML = `
-              <div class="text-center mb-8">
-                <h1 class="text-3xl font-bold text-gray-800 mb-2">📋 Alertas Web360</h1>
-                <p class="text-gray-600 text-lg">Las alertas se envían vía Google Forms. Solo tú puedes enviar.</p>
+              <div class="text-center mb-10">
+                <h1 class="text-4xl font-extrabold text-gray-800 mb-3">📋 Alertas Web360</h1>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Visualiza tus alertas recientes enviadas vía Google Forms. Solo tú puedes enviar y gestionar tus alertas.</p>
               </div>
-              <div id="alerts-container" class="space-y-4"></div>
-              <p id="status" class="text-center text-gray-500 mt-8 text-sm italic">✅ Bienvenido/a, ${currentUserEmail}</p>
+              <div id="alerts-container" class="space-y-5"></div>
+              <p id="status" class="text-center text-gray-500 mt-10 text-sm italic">✅ Bienvenido/a, ${currentUserEmail}</p>
             `;
 
             document.getElementById('user-name').textContent = currentUserEmail.split('@')[0];
@@ -186,10 +186,10 @@
                   const timestamp = new Date(data.timestamp?.seconds*1000||data.timestamp).toLocaleString('es-MX');
                   const mensaje = data.alertaTexto || '';
                   const alertDiv = document.createElement('div');
-                  alertDiv.className='bg-white rounded-2xl shadow-lg p-6 border-l-4 border-red-500 animate-fadeInUp';
+                  alertDiv.className='bg-white rounded-2xl shadow-lg p-6 border-l-4 border-red-500 animate-fadeInUp hover:shadow-2xl transition-shadow';
                   alertDiv.innerHTML = `
                     <p class="text-gray-500 text-sm mb-2">📅 ${timestamp}</p>
-                    <p class="text-gray-800">${mensaje}</p>
+                    <p class="text-gray-800 text-lg font-medium">${mensaje}</p>
                   `;
                   alertsContainer.appendChild(alertDiv);
                 }
