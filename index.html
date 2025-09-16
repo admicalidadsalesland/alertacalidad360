@@ -286,17 +286,29 @@
                   hasMatchingAlert=true;
                   total++;
                   const alertDiv=document.createElement('div');
-                  alertDiv.className='alert-card bg-white rounded-2xl shadow-lg p-6 border-l-4 border-red-500 animate-fadeInUp w-full'; // ✅ Añadido "alert-card"
+                  alertDiv.className='alert-card bg-white rounded-2xl shadow-lg p-6 border-l-4 border-red-500 animate-fadeInUp w-full group'; // ✅ Añadido 'group'
+
                   alertDiv.innerHTML=`
                     <div class="flex justify-between items-start w-full">
                       <div class="w-full pr-4">
                         <p class="text-gray-500 text-sm mb-3">📅 ${timestamp}</p>
                         <p class="font-semibold text-blue-600 mb-4">✉️ ${correo}</p>
                         <p class="text-gray-800 leading-relaxed text-base mb-4">${mensaje}</p>
-                        <button class="delete-btn bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-xl text-sm font-medium transition-colors">Eliminar</button>
+                        <!-- ✅ Nuevo botón X -->
+                        <button class="delete-btn text-red-500 hover:text-red-700 opacity-0 group-hover:opacity-100 transition-opacity duration-200 focus:outline-none">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        </button>
                       </div>
-                    </div>`;
-                  alertDiv.querySelector('.delete-btn').onclick=()=>db.collection("alertas").doc(doc.id).delete();
+                    </div>
+                  `;
+                  
+                  // Funcionalidad de eliminar
+                  alertDiv.querySelector('.delete-btn').onclick = () => {
+                    db.collection("alertas").doc(doc.id).delete();
+                  };
+                  
                   alertsContainer.appendChild(alertDiv);
                 }
               });
@@ -321,12 +333,12 @@
 
           const savedEmail=localStorage.getItem('currentUserEmail');
           if(savedEmail && AUTORIZED_EMAILS.includes(savedEmail)){currentUserEmail=savedEmail; initApp();} else{showLoginModal();}
-          document.getElementById('user-menu-btn').onclick=()=>{document.getElementById('user-menu').classList.toggle('hidden'); document.getElementById('user-menu').classList.toggle('show');}; // ✅ Añadido 'show'
+          document.getElementById('user-menu-btn').onclick=()=>{document.getElementById('user-menu').classList.toggle('hidden'); document.getElementById('user-menu').classList.toggle('show');};
           document.getElementById('logout-btn').onclick=logout;
           document.addEventListener('click', e=>{
             if(!document.getElementById('user-menu').contains(e.target) && !document.getElementById('user-menu-btn').contains(e.target)){
               document.getElementById('user-menu').classList.add('hidden');
-              document.getElementById('user-menu').classList.remove('show'); // ✅ Limpiar clase show
+              document.getElementById('user-menu').classList.remove('show');
             }
           });
           document.addEventListener("visibilitychange", () => { if (!document.hidden) stopTitleBlink(); });
