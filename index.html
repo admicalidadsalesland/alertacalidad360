@@ -11,185 +11,201 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Inter', sans-serif; }
+    body {
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeIn { animation: fadeIn 0.3s ease-out forwards; }
+    .animate-fadeInUp { animation: fadeIn 0.4s ease-out forwards; }
+    .fade-out { transition: opacity 0.3s ease-out; opacity: 0; }
   </style>
 </head>
-<body class="bg-gray-50 min-h-screen flex flex-col">
+<body class="bg-gray-50 min-h-screen flex">
 
-  <!-- 🔹 Barra superior -->
-  <header class="w-full bg-white shadow flex items-center justify-between px-6 py-4">
-    <h1 class="text-xl font-bold text-blue-900 flex items-center gap-2">
-      📋 Alertas Web360 
-      <span id="alert-count" class="hidden bg-red-600 text-white text-xs font-semibold px-2 py-0.5 rounded-full">0</span>
-    </h1>
-    <button id="logout-btn" class="hidden bg-red-600 text-white px-4 py-2 rounded-xl font-medium hover:bg-red-700 transition-colors">
-      🚪 Desloguear
-    </button>
+  <!-- BARRA LATERAL FIJA -->
+  <aside class="fixed top-0 left-0 bottom-0 z-40 w-64 bg-gray-900 text-white shadow-xl pt-16">
+    <div class="flex flex-col h-full">
+      <!-- Logo y título -->
+      <div class="p-6 border-b border-gray-700">
+        <div class="flex items-center gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
+          <h1 class="text-xl font-bold">Alertas Web360</h1>
+        </div>
+      </div>
+
+      <!-- Menú de navegación -->
+      <nav class="flex-1 px-4 py-6 space-y-2">
+        <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg bg-gray-800 text-blue-400">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          <span>Dashboard</span>
+        </a>
+
+        <a href="https://forms.gle/XXXXXX" target="_blank" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-800 text-gray-300 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+          </svg>
+          <span>Enviar Alerta</span>
+        </a>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-64 right-0 z-50 bg-white shadow-md border-b border-gray-100 px-4 py-2">
+    <div class="max-w-7xl mx-auto flex justify-end items-center h-full">
+      <div class="relative">
+        <button id="user-menu-btn" class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 bg-gray-100 rounded-full flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+          </svg>
+          <span id="user-name" class="text-sm font-medium text-gray-800">Usuario</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <!-- Menú desplegable del usuario -->
+        <div id="user-menu" class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl py-1 z-50 hidden border border-gray-100">
+          <button id="logout-btn" class="block w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-red-50 transition-colors flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+            </svg>
+            Desloguear
+          </button>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <!-- 🔹 Contenedor principal -->
-  <main id="main-container" class="flex-1 p-8 overflow-auto"></main>
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="flex-1 ml-64 pt-20 pb-12 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full">
+    <div id="app-container" class="mt-6"></div>
 
-  <script>
-    // =============================
-    // 🔐 ALERTAS WEB360 - JS PURA
-    // =============================
+    <script>
+      // =============================
+      // 🔐 ALERTAS WEB360 - JS
+      // =============================
 
-    const AUTORIZED_EMAILS = [
-      "juan.perez@empresa.com",
-      "maria.garcia@empresa.com",
-      "carlos.rodriguez@empresa.com"
-    ];
+      const AUTORIZED_EMAILS = [
+        "juan.perez@empresa.com",
+        "maria.garcia@empresa.com",
+        "carlos.rodriguez@empresa.com"
+      ];
+      const DEFAULT_PASSWORD = "Sales2025";
+      const GOOGLE_FORM_URL = "https://forms.gle/XXXXXX";
+      const FIREBASE_CONFIG = {
+        apiKey: "TU_API_KEY_REAL_AQUI",
+        authDomain: "alertasweb360.firebaseapp.com",
+        projectId: "alertasweb360",
+        storageBucket: "alertasweb360.appspot.com",
+        messagingSenderId: "113022119227802677680",
+        appId: "1:113022119227802677680:web:abc123def456"
+      };
 
-    const DEFAULT_PASSWORD = "Sales2025";
-    const FIREBASE_CONFIG = {
-      apiKey: "TU_API_KEY_REAL_AQUI",
-      authDomain: "alertasweb360.firebaseapp.com",
-      projectId: "alertasweb360",
-      storageBucket: "alertasweb360.appspot.com",
-      messagingSenderId: "113022119227802677680",
-      appId: "1:113022119227802677680:web:abc123def456"
-    };
+      (function() {
+        const script = document.createElement('script');
+        script.src = 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js';
+        document.head.appendChild(script);
 
-    (function() {
-      const script = document.createElement('script');
-      script.src = 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js';
-      document.head.appendChild(script);
+        const script2 = document.createElement('script');
+        script2.src = 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js';
+        document.head.appendChild(script2);
 
-      const script2 = document.createElement('script');
-      script2.src = 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js';
-      document.head.appendChild(script2);
+        script.onload = script2.onload = () => {
+          firebase.initializeApp(FIREBASE_CONFIG);
+          const db = firebase.firestore();
+          let currentUserEmail = null;
 
-      script.onload = script2.onload = () => {
-        firebase.initializeApp(FIREBASE_CONFIG);
-        const db = firebase.firestore();
-        let currentUserEmail = null;
+          function showLoginModal() {
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4';
+            modal.innerHTML = `
+              <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8 animate-fadeIn">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">🔐 Iniciar Sesión</h2>
+                <input id="login-email" type="email" placeholder="tu.correo@empresa.com" class="w-full px-4 py-3 mb-4 border rounded-xl" required>
+                <input id="login-password" type="password" placeholder="Contraseña (Sales2025)" class="w-full px-4 py-3 mb-6 border rounded-xl" required>
+                <button id="login-btn" class="w-full bg-blue-600 text-white py-3 rounded-xl mb-3">Ingresar</button>
+                <button id="cancel-btn" class="w-full bg-gray-300 text-gray-800 py-3 rounded-xl">Cancelar</button>
+                <p id="login-error" class="text-red-500 text-sm mt-4 text-center hidden">❌ Correo o contraseña inválidos.</p>
+              </div>
+            `;
+            document.body.appendChild(modal);
 
-        function showLoginModal() {
-          const modal = document.createElement('div');
-          modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4';
-          modal.innerHTML = `
-            <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8 transform transition-all animate-fadeIn">
-              <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">🔐 Iniciar Sesión</h2>
-              
-              <input id="login-email" type="email" placeholder="tu.correo@empresa.com" 
-                class="w-full px-4 py-3 mb-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow"
-                required>
-              
-              <input id="login-password" type="password" placeholder="Contraseña (Sales2025)" 
-                class="w-full px-4 py-3 mb-6 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow"
-                required>
-              
-              <button id="login-btn" class="w-full bg-blue-600 text-white py-3 rounded-xl font-medium hover:bg-blue-700 transition-colors mb-3">
-                Ingresar
-              </button>
-              
-              <button id="cancel-btn" class="w-full bg-gray-300 text-gray-800 py-3 rounded-xl font-medium hover:bg-gray-400 transition-colors">
-                Cancelar
-              </button>
-              
-              <p id="login-error" class="text-red-500 text-sm mt-4 text-center hidden">❌ Correo o contraseña inválidos.</p>
-            </div>
-          `;
-          document.body.appendChild(modal);
+            modal.querySelector('#login-btn').onclick = () => {
+              const email = modal.querySelector('#login-email').value.trim().toLowerCase();
+              const password = modal.querySelector('#login-password').value.trim();
+              const errorEl = modal.querySelector('#login-error');
 
-          const loginBtn = modal.querySelector('#login-btn');
-          const cancelBtn = modal.querySelector('#cancel-btn');
-          const errorEl = modal.querySelector('#login-error');
+              if (!AUTORIZED_EMAILS.includes(email)) { errorEl.textContent='Correo no autorizado'; errorEl.style.display='block'; return;}
+              if (password !== DEFAULT_PASSWORD) { errorEl.textContent='Contraseña incorrecta'; errorEl.style.display='block'; return;}
 
-          loginBtn.onclick = () => {
-            const email = modal.querySelector('#login-email').value.trim().toLowerCase();
-            const password = modal.querySelector('#login-password').value.trim();
+              localStorage.setItem('currentUserEmail', email);
+              currentUserEmail = email;
+              modal.remove();
+              initApp();
+            };
 
-            if (!email || !password) {
-              errorEl.textContent = 'Por favor, ingresa correo y contraseña.';
-              errorEl.style.display = 'block';
-              return;
-            }
+            modal.querySelector('#cancel-btn').onclick = () => modal.remove();
+          }
 
-            if (!AUTORIZED_EMAILS.includes(email)) {
-              errorEl.textContent = 'Correo no autorizado.';
-              errorEl.style.display = 'block';
-              return;
-            }
+          function logout() {
+            localStorage.removeItem('currentUserEmail');
+            currentUserEmail = null;
+            document.getElementById('app-container').innerHTML='';
+            showLoginModal();
+          }
 
-            if (password !== DEFAULT_PASSWORD) {
-              errorEl.textContent = 'Contraseña incorrecta.';
-              errorEl.style.display = 'block';
-              return;
-            }
+          function initApp() {
+            const container = document.getElementById('app-container');
+            container.innerHTML = `
+              <div class="text-center mb-8">
+                <h1 class="text-3xl font-bold text-gray-800 mb-2">
+                  📋 Alertas Web360 
+                  <span id="alert-count" class="hidden ml-2 bg-red-600 text-white text-xs px-2 py-0.5 rounded-full">0</span>
+                </h1>
+                <p class="text-gray-600 text-lg">Las alertas se envían vía Google Forms. Solo tú puedes enviar.</p>
+              </div>
+              <div id="alerts-container" class="space-y-4"></div>
+              <p id="status" class="text-center text-gray-500 mt-8 text-sm italic">✅ Bienvenido/a, ${currentUserEmail}</p>
+            `;
 
-            localStorage.setItem('currentUserEmail', email);
-            currentUserEmail = email;
-            modal.remove();
-            initApp();
-          };
+            document.getElementById('user-name').textContent = currentUserEmail.split('@')[0];
 
-          cancelBtn.onclick = () => modal.remove();
-        }
+            const alertsContainer = document.getElementById('alerts-container');
+            const alertCount = document.getElementById('alert-count');
 
-        function logout() {
-          localStorage.removeItem('currentUserEmail');
-          currentUserEmail = null;
-          document.getElementById('main-container').innerHTML = '';
-          document.getElementById('logout-btn').classList.add('hidden');
-          document.getElementById('alert-count').classList.add('hidden');
-          showLoginModal();
-        }
-
-        function initApp() {
-          const main = document.getElementById('main-container');
-          main.innerHTML = `
-            <div class="text-center mb-8">
-              <p class="text-gray-600 text-lg">Las alertas se envían vía Google Forms. Solo tú puedes enviar.</p>
-            </div>
-
-            <div id="alerts-container" class="space-y-4"></div>
-            
-            <p id="status" class="text-center text-gray-500 mt-8 text-sm italic"></p>
-          `;
-
-          document.getElementById('logout-btn').classList.remove('hidden');
-          document.getElementById('logout-btn').onclick = logout;
-          document.getElementById('status').textContent = `✅ Bienvenido/a, ${currentUserEmail}. Recibirás solo tus alertas.`;
-
-          const alertsContainer = document.getElementById('alerts-container');
-          const alertCount = document.getElementById('alert-count');
-
-          db.collection("alertas")
-            .orderBy("timestamp", "desc")
-            .onSnapshot((snapshot) => {
-              alertsContainer.innerHTML = '';
+            db.collection("alertas").orderBy("timestamp", "desc").onSnapshot(snapshot => {
+              alertsContainer.innerHTML='';
               let total = 0;
-              let hasMatchingAlert = false;
-
-              snapshot.forEach((doc) => {
-                const data = doc.data();
-                const timestamp = new Date(data.timestamp?.seconds * 1000 || data.timestamp).toLocaleString('es-MX');
-                const correo = data.correoAgente || 'Sin correo';
-                const mensaje = data.alertaTexto || 'Sin mensaje';
-
-                if (currentUserEmail && correo === currentUserEmail) {
-                  hasMatchingAlert = true;
+              snapshot.forEach(doc=>{
+                const data=doc.data();
+                if(data.correoAgente===currentUserEmail){
                   total++;
-
+                  const timestamp = new Date(data.timestamp?.seconds*1000||data.timestamp).toLocaleString('es-MX');
+                  const mensaje = data.alertaTexto || '';
                   const alertDiv = document.createElement('div');
-                  alertDiv.className = 'bg-white rounded-2xl shadow-lg p-6 border-l-4 border-red-500 animate-fadeIn transition-opacity duration-300';
+                  alertDiv.className='bg-white rounded-2xl shadow-lg p-6 border-l-4 border-red-500 animate-fadeInUp transition-opacity';
                   alertDiv.innerHTML = `
                     <div class="flex justify-between items-start">
                       <div>
                         <p class="text-gray-500 text-sm mb-2">📅 ${timestamp}</p>
-                        <p class="font-semibold text-blue-600 mb-3">✉️ ${correo}</p>
-                        <p class="text-gray-800 leading-relaxed">${mensaje}</p>
+                        <p class="text-gray-800">${mensaje}</p>
                       </div>
-                      <button class="ml-4 text-gray-400 hover:text-red-500 transition-colors p-1 rounded-full hover:bg-red-50">
-                        ✖
-                      </button>
+                      <button class="ml-4 text-gray-400 hover:text-red-500 transition-colors">✖</button>
                     </div>
                   `;
 
+                  // animación al borrar
                   alertDiv.querySelector('button').onclick = async () => {
-                    alertDiv.classList.add('opacity-0');
+                    alertDiv.classList.add('fade-out');
                     setTimeout(() => {
                       db.collection("alertas").doc(doc.id).delete();
                     }, 300);
@@ -199,50 +215,30 @@
                 }
               });
 
-              // Actualizar contador
-              if (total > 0) {
-                alertCount.textContent = total;
+              // contador
+              if(total>0){
+                alertCount.textContent=total;
                 alertCount.classList.remove('hidden');
               } else {
                 alertCount.classList.add('hidden');
               }
-
-              if (!hasMatchingAlert) {
-                alertsContainer.innerHTML = `
-                  <div class="bg-white rounded-2xl shadow-lg p-12 text-center border-2 border-dashed border-gray-200">
-                    <p class="text-gray-500 text-lg">No tienes alertas asignadas.</p>
-                  </div>
-                `;
-              }
-            }, (error) => {
-              alertsContainer.innerHTML = `
-                <div class="bg-red-50 border border-red-200 rounded-2xl p-6 text-center">
-                  <p class="text-red-600 font-medium">❌ Error: ${error.message}</p>
-                </div>
-              `;
             });
+          }
+
+          const savedEmail = localStorage.getItem('currentUserEmail');
+          if(savedEmail && AUTORIZED_EMAILS.includes(savedEmail)) {currentUserEmail=savedEmail; initApp();} 
+          else {showLoginModal();}
+
+          document.getElementById('user-menu-btn').onclick=()=>document.getElementById('user-menu').classList.toggle('hidden');
+          document.getElementById('logout-btn').onclick=logout;
+          document.addEventListener('click',(e)=>{
+            if(!document.getElementById('user-menu').contains(e.target)&&!document.getElementById('user-menu-btn').contains(e.target)){
+              document.getElementById('user-menu').classList.add('hidden');
+            }
+          });
         };
-
-        const savedEmail = localStorage.getItem('currentUserEmail');
-        if (savedEmail && AUTORIZED_EMAILS.includes(savedEmail)) {
-          currentUserEmail = savedEmail;
-          initApp();
-        } else {
-          showLoginModal();
-        }
-      };
-    })();
-
-    // 🔹 Animaciones personalizadas
-    const style = document.createElement('style');
-    style.textContent = `
-      @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-      .animate-fadeIn { animation: fadeIn 0.3s ease-out forwards; }
-    `;
-    document.head.appendChild(style);
-  </script>
+      })();
+    </script>
+  </main>
 </body>
 </html>
