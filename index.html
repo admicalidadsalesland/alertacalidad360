@@ -985,6 +985,29 @@
         firebase.initializeApp(FIREBASE_CONFIG);
         const db = firebase.firestore();
         let currentUserEmail = localStorage.getItem('currentUserEmail');
+        let originalTitle = document.title;
+        let alertBlinkInterval = null;
+        let windowIsActive = true;
+
+        window.addEventListener('focus', () => {
+          windowIsActive = true;
+          clearInterval(alertBlinkInterval);
+          document.title = originalTitle;
+        });
+        window.addEventListener('blur', () => windowIsActive = false);
+
+        function blinkTitle(newAlertCount) {
+          if (!windowIsActive) {
+            let showCount = true;
+            clearInterval(alertBlinkInterval);
+            alertBlinkInterval = setInterval(() => {
+              document.title = showCount 
+                ? `(${newAlertCount}) ⚠️ ¡Nuevas alertas!` 
+                : originalTitle;
+              showCount = !showCount;
+            }, 1000);
+          }
+        }
 
         function showLogin() {
           const modal = document.createElement('div');
@@ -1126,6 +1149,7 @@
             if (total > 0) {
               alertCount.textContent = total;
               alertCount.classList.remove('hidden');
+              blinkTitle(total);
             } else {
               alertCount.classList.add('hidden');
             }
