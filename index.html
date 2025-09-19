@@ -70,6 +70,10 @@
       animation: pulseRed 2s infinite;
     }
 
+    #alert-icon {
+      transition: all 0.3s ease;
+    }
+
     #user-menu {
       transform-origin: top right;
       transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -104,7 +108,7 @@
   <aside class="fixed top-0 left-0 bottom-0 z-40 w-64 bg-gradient-to-b from-gray-900 to-gray-800 text-white shadow-2xl border-r border-gray-700">
     <div class="flex flex-col h-full">
       <div class="p-6 border-b border-gray-700 flex items-center gap-3">
-        <div class="p-2 bg-red-500 rounded-xl">
+        <div id="alert-icon" class="p-2 bg-red-500 rounded-xl">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
           </svg>
@@ -160,7 +164,8 @@
 
   <script>
     const AUTORIZED_EMAILS = [
-"tiffanycerrona@salesland.net", 
+
+    "tiffanycerrona@salesland.net", 
 "aimyjaimet@salesland.net", 
 "anamunozc@salesland.net", 
 "gabymamanih@salesland.net", 
@@ -959,6 +964,7 @@
 "portabilidadwhatsapp.salesland.net", 
 "postventa.salesland.net",
 "gpt.salesland.net",
+
     ];
     const DEFAULT_PASSWORD = "Sales2025";
     const FIREBASE_CONFIG = { 
@@ -988,23 +994,26 @@
         let originalTitle = document.title;
         let alertBlinkInterval = null;
         let windowIsActive = true;
+        const alertIcon = document.getElementById('alert-icon');
 
         window.addEventListener('focus', () => {
           windowIsActive = true;
           clearInterval(alertBlinkInterval);
           document.title = originalTitle;
+          alertIcon.style.opacity = 1;
         });
         window.addEventListener('blur', () => windowIsActive = false);
 
-        function blinkTitle(newAlertCount) {
+        function blinkTitleAndIcon(newAlertCount) {
           if (!windowIsActive) {
-            let showCount = true;
+            let showAlert = true;
             clearInterval(alertBlinkInterval);
             alertBlinkInterval = setInterval(() => {
-              document.title = showCount 
+              document.title = showAlert 
                 ? `(${newAlertCount}) ⚠️ ¡Nuevas alertas!` 
                 : originalTitle;
-              showCount = !showCount;
+              alertIcon.style.opacity = showAlert ? 0.5 : 1;
+              showAlert = !showAlert;
             }, 1000);
           }
         }
@@ -1097,6 +1106,7 @@
                   <p class="text-gray-500 mt-2">Volverás a ver este espacio cuando tengas nuevas alertas.</p>
                 </div>`;
               alertCount.classList.add('hidden');
+              alertIcon.style.opacity = 1;
               return;
             }
 
@@ -1149,9 +1159,10 @@
             if (total > 0) {
               alertCount.textContent = total;
               alertCount.classList.remove('hidden');
-              blinkTitle(total);
+              blinkTitleAndIcon(total);
             } else {
               alertCount.classList.add('hidden');
+              alertIcon.style.opacity = 1;
             }
           });
         }
