@@ -27,58 +27,86 @@
       transform: scaleY(1);
       opacity: 1;
     }
+
+    /* Sidebar colapsado */
+    .sidebar-collapsed {
+      width: 72px !important;
+    }
+    .sidebar-collapsed #sidebar-title,
+    .sidebar-collapsed #sidebar-footer,
+    .sidebar-collapsed .sidebar-text {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      pointer-events: none;
+    }
+    .sidebar-collapsed .sidebar-text {
+      display: none;
+    }
+    .sidebar-collapsed #sidebar-nav a {
+      justify-content: center;
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+    .sidebar-collapsed #sidebar-toggle svg {
+      transform: rotate(180deg);
+    }
   </style>
 </head>
 <body class="bg-gray-50 min-h-screen flex">
 
-  <!-- 📌 BARRA LATERAL -->
-  <aside class="fixed top-0 left-0 bottom-0 z-40 w-64 bg-gradient-to-b from-gray-900 to-gray-800 text-white shadow-2xl border-r border-gray-700">
+  <!-- 📌 BARRA LATERAL MEJORADA -->
+  <aside id="sidebar" class="fixed top-0 left-0 bottom-0 z-40 w-64 bg-gradient-to-b from-gray-900 to-gray-800 text-white shadow-2xl border-r border-gray-700 transition-all duration-300">
     <div class="flex flex-col h-full">
-      <div class="p-6 border-b border-gray-700 flex items-center gap-3">
-        <h1 class="text-xl font-bold text-white">Web360</h1>
+      <div class="p-4 border-b border-gray-700 flex items-center justify-between">
+        <h1 id="sidebar-title" class="text-xl font-bold text-white transition-opacity duration-300">Web360</h1>
+        <button id="sidebar-toggle" class="text-gray-300 hover:text-white focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
-      <nav class="flex-1 px-4 py-6 space-y-1">
-        <!-- Link Dashboard -->
-        <a href="index.html" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-800 text-blue-400 font-medium transition-all hover:bg-gray-700 hover:shadow-lg">
+
+      <nav id="sidebar-nav" class="flex-1 px-2 py-6 space-y-1 overflow-hidden">
+        <a href="index.html" class="flex items-center gap-3 px-3 py-3 rounded-xl bg-gray-800 text-blue-400 font-medium transition-all hover:bg-gray-700 hover:shadow-lg group">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
             <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
           </svg>
-          <span>Dashboard</span>
+          <span class="sidebar-text">Dashboard</span>
         </a>
 
-        <!-- Link Blindaje -->
-        <a href="Blindaje.html" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-700 text-blue-300 font-semibold shadow-lg">
+        <a href="Blindaje.html" class="flex items-center gap-3 px-3 py-3 rounded-xl bg-gray-700 text-blue-300 font-semibold shadow-lg group">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
             <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
           </svg>
-          <span>Blindaje</span>
+          <span class="sidebar-text">Blindaje</span>
         </a>
 
-      <!-- Link Layout -->
-        <a href="layout.html" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-700 text-blue-300 font-semibold shadow-lg">
+        <a href="layout.html" class="flex items-center gap-3 px-3 py-3 rounded-xl bg-gray-700 text-blue-300 font-semibold shadow-lg group">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
             <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
           </svg>
-          <span>Layout</span>
+          <span class="sidebar-text">Layout</span>
         </a>
-        
       </nav>
-      <div class="p-4 text-center text-xs text-gray-400 border-t border-gray-700">
+
+      <div id="sidebar-footer" class="p-3 text-center text-xs text-gray-400 border-t border-gray-700 transition-opacity duration-300">
         © 2025 Web360
       </div>
     </div>
   </aside>
 
-  <!-- 📌 HEADER CON BOTÓN UX -->
-  <header class="fixed top-0 left-64 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-200 px-6 py-3">
+  <!-- 📌 HEADER -->
+  <header id="main-header" class="fixed top-0 left-64 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-200 px-6 py-3 transition-all duration-300">
     <div class="max-w-7xl mx-auto flex justify-end items-center h-full">
       <div class="relative">
         <button id="user-menu-btn" class="flex items-center gap-3 px-4 py-2 rounded-xl hover:bg-gray-50 transition-all duration-200 group">
           <span id="user-name" class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Usuario</span>
-          <div class="relative">
-            <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-xs font-bold">
-              U
-            </div>
+          <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-xs font-bold">
+            U
           </div>
         </button>
         <div id="user-menu" class="absolute right-0 mt-3 w-56 bg-white rounded-xl shadow-2xl py-2 z-50 border border-gray-100 hidden">
@@ -97,44 +125,227 @@
   </header>
 
   <!-- 📌 CONTENIDO -->
-  <main class="flex-1 ml-64 pt-24 pb-12 px-6">
-    <div class="max-w-5xl mx-auto">
-      <h1 class="text-3xl font-bold text-gray-800 mb-4">Módulo Blindaje</h1>
-      <p class="text-gray-600 mb-6">Aquí irá el contenido del módulo Blindaje. Puedes colocar gráficas, reportes o cualquier información relacionada.</p>
+  <main id="main-content" class="flex-1 ml-64 pt-24 pb-12 px-4 md:px-6 transition-all duration-300">
+    <div class="max-w-7xl mx-auto">
+      <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Módulo Blindaje - Asesoría Rápida</h1>
+      <p class="text-gray-600 mb-8 text-center max-w-3xl mx-auto">
+        Recursos clave al alcance de un clic: planes, discursos y respuestas a objeciones.
+      </p>
 
-      <!-- Ejemplo de tarjeta -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-white rounded-xl shadow p-6 border border-gray-100">
-          <h2 class="text-xl font-semibold text-gray-800 mb-2">Resumen</h2>
-          <p class="text-gray-600">Aquí puedes mostrar un resumen de indicadores de Blindaje.</p>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Columna 1 -->
+        <div class="space-y-6">
+          <div class="bg-white rounded-xl shadow p-5 border border-gray-100">
+            <h2 class="text-lg font-semibold text-gray-800 mb-3 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+              Planes de Celular
+            </h2>
+            <div class="space-y-3 text-sm">
+              <div><span class="font-medium">Básico:</span> 10 GB + llamadas ilimitadas — <span class="text-blue-600 font-semibold">$29.90/mes</span></div>
+              <div><span class="font-medium">Plus:</span> 30 GB + roaming — <span class="text-blue-600 font-semibold">$49.90/mes</span></div>
+              <div><span class="font-medium">Premium:</span> Ilimitado + 5G — <span class="text-blue-600 font-semibold">$79.90/mes</span></div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl shadow p-5 border border-gray-100">
+            <h2 class="text-lg font-semibold text-gray-800 mb-3 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              Speech Legal
+            </h2>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              "Este servicio está regulado por la Ley Federal de Telecomunicaciones. No requiere pago anticipado ni depósito. Activación inmediata tras verificación."
+            </p>
+          </div>
         </div>
-        <div class="bg-white rounded-xl shadow p-6 border border-gray-100">
-          <h2 class="text-xl font-semibold text-gray-800 mb-2">Detalle</h2>
-          <p class="text-gray-600">Aquí va información detallada o un gráfico.</p>
+
+        <!-- Columna 2 -->
+        <div class="space-y-6">
+          <div class="bg-white rounded-xl shadow p-5 border border-gray-100">
+            <h2 class="text-lg font-semibold text-gray-800 mb-3 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+              </svg>
+              Speech de Abordaje
+            </h2>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              "¡Hola! Soy [Nombre], asesor de Web360. ¿Tiene un momento para conocer una opción más rápida, económica y sin contratos largos?"
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl shadow p-5 border border-gray-100">
+            <h2 class="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+              Respuestas a Objeciones
+            </h2>
+            <div class="space-y-2">
+              <button onclick="openModal('modal1')" class="w-full text-left text-sm bg-blue-50 hover:bg-blue-100 text-blue-700 px-3 py-2 rounded-lg transition-colors">
+                "Ya tengo un plan"
+              </button>
+              <button onclick="openModal('modal2')" class="w-full text-left text-sm bg-blue-50 hover:bg-blue-100 text-blue-700 px-3 py-2 rounded-lg transition-colors">
+                "Estoy satisfecho con mi proveedor"
+              </button>
+              <button onclick="openModal('modal3')" class="w-full text-left text-sm bg-blue-50 hover:bg-blue-100 text-blue-700 px-3 py-2 rounded-lg transition-colors">
+                "No quiero cambiar de número"
+              </button>
+              <button onclick="openModal('modal4')" class="w-full text-left text-sm bg-blue-50 hover:bg-blue-100 text-blue-700 px-3 py-2 rounded-lg transition-colors">
+                "Es muy caro"
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna 3 -->
+        <div class="space-y-6">
+          <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl shadow p-5 border border-blue-100">
+            <h2 class="text-lg font-semibold text-gray-800 mb-2">💡 Consejos Rápidos</h2>
+            <ul class="text-sm text-gray-700 list-disc pl-4 space-y-1">
+              <li>Siempre escucha antes de hablar</li>
+              <li>Ofrece comparativas reales</li>
+              <li>Usa el nombre del cliente</li>
+              <li>Enfócate en ahorro y beneficios</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl shadow p-5 border border-gray-100">
+            <h2 class="text-lg font-semibold text-gray-800 mb-2">📌 Recordatorio</h2>
+            <p class="text-sm text-gray-700">
+              Todos los discursos y planes están actualizados al <strong>mayo 2025</strong>. Consulta cambios en el dashboard.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modales -->
+    <div id="modal1" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden z-50">
+      <div class="bg-white rounded-xl max-w-md w-full shadow-2xl">
+        <div class="p-5">
+          <h3 class="font-bold text-gray-800 mb-2">"Ya tengo un plan"</h3>
+          <p class="text-sm text-gray-700">
+            "¡Perfecto! Muchos clientes también tenían un plan, pero descubrieron que podían ahorrar hasta un 40%. ¿Le gustaría una comparativa rápida y sin compromiso?"
+          </p>
+        </div>
+        <div class="px-5 py-3 bg-gray-50 rounded-b-xl flex justify-end">
+          <button onclick="closeModal('modal1')" class="text-sm px-3 py-1.5 bg-blue-600 text-white rounded hover:bg-blue-700">Cerrar</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal2" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden z-50">
+      <div class="bg-white rounded-xl max-w-md w-full shadow-2xl">
+        <div class="p-5">
+          <h3 class="font-bold text-gray-800 mb-2">"Estoy satisfecho con mi proveedor"</h3>
+          <p class="text-sm text-gray-700">
+            "Entiendo. Pero incluso los clientes satisfechos pueden ahorrar cientos al año. Le ofrezco una comparativa en 2 minutos, sin presión."
+          </p>
+        </div>
+        <div class="px-5 py-3 bg-gray-50 rounded-b-xl flex justify-end">
+          <button onclick="closeModal('modal2')" class="text-sm px-3 py-1.5 bg-blue-600 text-white rounded hover:bg-blue-700">Cerrar</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal3" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden z-50">
+      <div class="bg-white rounded-xl max-w-md w-full shadow-2xl">
+        <div class="p-5">
+          <h3 class="font-bold text-gray-800 mb-2">"No quiero cambiar de número"</h3>
+          <p class="text-sm text-gray-700">
+            "¡No hay problema! Por ley, puede conservar su número actual. El proceso es gratuito, rápido y lo gestionamos nosotros."
+          </p>
+        </div>
+        <div class="px-5 py-3 bg-gray-50 rounded-b-xl flex justify-end">
+          <button onclick="closeModal('modal3')" class="text-sm px-3 py-1.5 bg-blue-600 text-white rounded hover:bg-blue-700">Cerrar</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal4" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden z-50">
+      <div class="bg-white rounded-xl max-w-md w-full shadow-2xl">
+        <div class="p-5">
+          <h3 class="font-bold text-gray-800 mb-2">"Es muy caro"</h3>
+          <p class="text-sm text-gray-700">
+            "Entiendo. Pero comparado con lo que paga actualmente, este plan le ahorraría $20 al mes ($240 al año). ¿Le gustaría ver cómo funciona?"
+          </p>
+        </div>
+        <div class="px-5 py-3 bg-gray-50 rounded-b-xl flex justify-end">
+          <button onclick="closeModal('modal4')" class="text-sm px-3 py-1.5 bg-blue-600 text-white rounded hover:bg-blue-700">Cerrar</button>
         </div>
       </div>
     </div>
   </main>
 
-  <!-- 📌 SCRIPT UX -->
+  <!-- Scripts -->
   <script>
-    // Toggle menú UX
+    // Sidebar toggle
+    const sidebar = document.getElementById('sidebar');
+    const header = document.getElementById('main-header');
+    const mainContent = document.getElementById('main-content');
+    const toggleBtn = document.getElementById('sidebar-toggle');
+
+    if (localStorage.getItem('sidebarCollapsed') === 'true') {
+      collapseSidebar();
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      if (sidebar.classList.contains('sidebar-collapsed')) {
+        expandSidebar();
+      } else {
+        collapseSidebar();
+      }
+    });
+
+    function collapseSidebar() {
+      sidebar.classList.add('sidebar-collapsed');
+      header.style.left = '72px';
+      mainContent.style.marginLeft = '72px';
+      localStorage.setItem('sidebarCollapsed', 'true');
+    }
+
+    function expandSidebar() {
+      sidebar.classList.remove('sidebar-collapsed');
+      header.style.left = '256px';
+      mainContent.style.marginLeft = '256px';
+      localStorage.setItem('sidebarCollapsed', 'false');
+    }
+
+    // User menu
     document.getElementById('user-menu-btn').onclick = () => {
       const menu = document.getElementById('user-menu');
       menu.classList.toggle('hidden');
       menu.classList.toggle('show');
     };
 
-    // Logout
     document.getElementById('logout-btn').onclick = () => {
       localStorage.clear();
-      window.location.href = "index.html"; // o login.html si manejas login aparte
+      window.location.href = "index.html";
     };
 
-    // Mostrar datos de usuario desde localStorage
     const email = localStorage.getItem('currentUserEmail') || "usuario@correo.com";
     document.getElementById('user-email-display').textContent = email;
     document.getElementById('user-name').textContent = email.split('@')[0];
+
+    // Modals
+    function openModal(modalId) {
+      document.getElementById(modalId).classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    document.querySelectorAll('.fixed.bg-black').forEach(modal => {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal(modal.id);
+      });
+    });
   </script>
 </body>
 </html>
