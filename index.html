@@ -129,8 +129,6 @@
           </svg>
           <span>Blindaje</span>
         </a>
-
-
       </nav>
       <div class="p-4 text-center text-xs text-gray-400 border-t border-gray-700">
         © 2025 Web360
@@ -314,7 +312,9 @@
           const alertsContainer = document.getElementById('alerts-container');
 
           db.collection("alertas").orderBy("timestamp", "desc").onSnapshot(snap => {
+            let alertCount = 0;
             alertsContainer.innerHTML = '';
+
             snap.docs.forEach(doc => {
               const data = doc.data();
               const supervisores = data.supervisores || [];
@@ -325,6 +325,8 @@
               );
               
               if (match) {
+                alertCount++;
+
                 const ts = new Date(data.timestamp?.seconds * 1000 || data.timestamp).toLocaleString('es-PE', {
                   year: 'numeric',
                   month: 'short',
@@ -362,6 +364,15 @@
                 alertsContainer.appendChild(div);
               }
             });
+
+            // ✅ Actualizar el contador global de alertas
+            const alertCountEl = document.getElementById('alert-count');
+            if (alertCount > 0) {
+              alertCountEl.textContent = alertCount > 99 ? '99+' : alertCount;
+              alertCountEl.classList.remove('hidden');
+            } else {
+              alertCountEl.classList.add('hidden');
+            }
           });
         }
 
