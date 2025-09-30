@@ -90,11 +90,11 @@
           <span class="sidebar-text">Dashboard</span>
         </a>
 
-        <a href="Caribu_phx.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-gray-700 text-blue-300 font-medium group">
+        <a href="Blindaje.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-gray-700 text-blue-300 font-medium group">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
             <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
           </svg>
-          <span class="sidebar-text">Caribú PHX</span>
+          <span class="sidebar-text">Blindaje</span>
         </a>
 
 
@@ -148,123 +148,636 @@
           <div class="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
 
             <h2 class="text-sm font-medium text-gray-800 mb-3 flex items-center justify-between gap-3">
-  <!-- Icono + texto -->
-  <span class="flex items-center gap-1.5">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-    </svg>
-    Planes de Celular
-  </span>
+              <!-- Icono + texto -->
+              <span class="flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+                Planes de Celular
+              </span>
 
-  <!-- Botón -->
-  <button type="button" onclick="openModal('modalciclo')" 
-    class="text-xs bg-orange-50 hover:bg-orange-100 text-orange-700 px-2.5 py-1.5 rounded-md transition-colors flex items-center gap-1.5">
-    <i class="fas fa-calendar-alt"></i>
-      CICLOS
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-    </svg>
-  </button>
-</h2>
+              <!-- Botón -->
+              <button type="button" onclick="openModal('modalciclo')" 
+                class="text-xs bg-orange-50 hover:bg-orange-100 text-orange-700 px-2.5 py-1.5 rounded-md transition-colors flex items-center gap-1.5">
+                <i class="fas fa-calendar-alt"></i>
+                  CICLOS
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </h2>
 
             <div class="relative overflow-hidden">
               <div id="planes-carousel" class="flex transition-transform duration-300 ease-in-out">
 
                 <!-- Plan 1 -->
-            <div class="min-w-[50%] px-1">
-              <div class="bg-blue-50 rounded-lg p-3 border border-blue-00 text-center">
-                <h3 class="font-semibold text-blue-800 text-sm">Plan Ahorro Mi Movistar S/25.9 VI</h3>
+            <div class="min-w-[33.3333333333333%] px-1">
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <!-- Encabezado -->
+                <h3 class="font-semibold text-blue-700 text-sm text-center mb-2">
+                  📱 Plan Ahorro Mi Movistar S/25.9 VI
+                </h3>
+                
+                <!-- Beneficios -->
+                <div class="space-y-2 text-xs text-gray-700 text-center">
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-phone-volume text-blue-500"></i> Llamadas ilimitadas
+                    </span>
+                    a nivel nacional.
+                  </p>
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-globe text-green-500"></i> 250 minutos
+                    </span>
+                    LDI a EE.UU. y Canadá.
+                  </p>
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-wifi text-indigo-500"></i> 4 GB de internet
+                    </span>
+                  </p>
 
-                      <p class="text-xs text-gray-700 mt-1">
-                        <span class="font-semibold"><i class="fas fa-phone-volume"></i> <!-- sugiere llamadas + audio -->Llamadas ilimitadas</span> a nivel nacional.
-                      </p>
+                  <p class="text-[10px] text-gray-500 italic text-center border-t pt-2">*No informar a clientes de Loreto</p>
 
-                      <p class="text-xs text-gray-700 mt-1">
-                       <i class="fas fa-globe text-xs"></i>
-                        <span class="font-semibold">250 minutos</span> LDI a EE.UU. y Canadá.
-                      </p>
-                        
-                      <p class="text-m text-gray-700 mt-1">
-                          <span class="font-semibold">
-                            <i class="fas fa-wifi"></i>
-                            4 GB de internet.</span>
-                      </p>
+                  <p>
+                    <span class="font-semibold">Apps ILIMITADAS (12 meses):</span> WhatsApp, Facebook Fotos, Messenger, Instagram Fotos y Waze.
+                  </p>
 
-                      <p class="mt-2 text-[10px] text-gray-500 italic text-center">*No informar a clientes de Loreto</p>
-                      <p class="text-xs text-gray-700 mt-1">    
-                          <span class="font-semibold">Apps ILIMITADAS por 12 meses:</span> 
-                          WhatsApp, Facebook fotos, Facebook Messenger, Instagram fotos y Waze.
-                      </p>
-                          <p class="text-xs text-gray-700 mt-1 flex flex-wrap items-center justify-center gap-1">
-                            <i class="fab fa-whatsapp text-green-500 text-base"></i>
-                            <i class="fab fa-facebook text-blue-500 text-base"></i>
-                            <i class="fab fa-instagram text-purple-500 text-base"></i>
-                            <i class="fab fa-facebook-messenger text-blue-400 text-base"></i>
-                            <i class="fab fa-waze text-black-500 text-base"></i>
-                          </p>
+                  <!-- Íconos apps -->
+                  <div class="flex items-center justify-center gap-2 text-base mt-1">
+                    <i class="fab fa-whatsapp text-green-500"></i>
+                    <i class="fab fa-facebook text-blue-500"></i>
+                    <i class="fab fa-instagram text-red-500"></i>
+                    <i class="fab fa-facebook-messenger text-blue-400"></i>
+                    <i class="fab fa-waze text-gray-700"></i>
+                  </div>
 
-                      <p class="text-xs text-gray-700 mt-1">
-                       <i class="fas fa-sms"></i>
-                            <span class="font-semibold">500 SMS </span>
-                            para cualquier operador.
-                      </p>
+                  <!-- Separador -->
+                  <p class="text-[10px] text-gray-500 italic text-center border-t pt-2"></p>
 
-                      <p class="text-xs text-gray-700 mt-1">
-                       <span class="font-semibold">50 MB de tu plan promocionales por 12 meses </span>
-                        para usarlos como datos internacionales en determinados países de América y Europa.</p>
-                      <p class="text-blue-600 font-bold text-lg mt-1">S/25.90<span class="text-xs font-normal">/mes</span></p>
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-sms text-pink-500"></i> 500 SMS
+                    </span>
+                    para cualquier operador.
+                  </p>
+                  <p>
+                    <span class="font-semibold">50 MB promocionales (12 meses)</span> para usarlos como datos internacionales en países de América y Europa.
+                  </p>
+                </div>
 
-                    <!-- ✅ Botón mejorado: Lectura del Contrato -->
-                    <button 
-                      type="button" 
-                      onclick="openModal('modal-plan1')" 
-                      class="mt-3 w-full py-2 px-4 text-xs font-medium text-blue-600 bg-white border border-blue-300 rounded-lg shadow-sm hover:bg-blue-50 hover:border-blue-400 hover:shadow transition-all duration-200 ease-in-out"
-                    >
-                      Lectura del Contrato
-                    </button>
+                <!-- Precio -->
+                <div class="text-center mt-3">
+                  <p class="text-blue-600 font-bold text-lg">S/25.90<span class="text-xs font-normal">/mes</span></p>
+                </div>
+
+                <!-- Botón -->
+                <button 
+                  type="button" 
+                  onclick="openModal('modal-plan1')" 
+                  class="mt-4 w-full py-2 px-4 text-sm font-medium text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700 transition-all duration-200 ease-in-out"
+                >
+                  📄 Lectura del Contrato
+                </button>
               </div>
             </div>
 
-
                 <!-- Plan 2 -->
-                <div class="min-w-[50%] px-1"><div class="bg-indigo-50 rounded-lg p-3 border border-indigo-100 text-center">
-                  <h3 class="font-semibold text-indigo-800 text-sm">Plus</h3>
-                    <p class="text-xs text-gray-700 mt-1">30 GB + roaming incluido</p>
-                    <p class="text-indigo-600 font-bold text-lg mt-1">$49.90<span class="text-xs font-normal">/mes</span></p>
+            <div class="min-w-[33.3333333333333%] px-1">
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <!-- Encabezado -->
+                <h3 class="font-semibold text-blue-700 text-sm text-center mb-2">
+                  📱 Plan Ahorro Mi Movistar S/29.9 VI
+                </h3>
+                
+                <!-- Beneficios -->
+                <div class="space-y-2 text-xs text-gray-700 text-center">
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-phone-volume text-blue-500"></i> Llamadas ilimitadas
+                    </span>
+                    a nivel nacional.
+                  </p>
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-globe text-green-500"></i> 300 minutos
+                    </span>
+                    LDI a EE.UU. y Canadá.
+                  </p>
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-wifi text-indigo-500"></i> 10 GB de internet
+                    </span>
+                  </p>
+
+                  <p class="text-[10px] text-gray-500 italic text-center border-t pt-2">*No informar a clientes de Loreto</p>
+
+                  <p>
+                    <span class="font-semibold">Apps ILIMITADAS (12 meses):</span> WhatsApp, Facebook Fotos, Messenger, Instagram Fotos y Waze.
+                  </p>
+
+                  <!-- Íconos apps -->
+                  <div class="flex items-center justify-center gap-2 text-base mt-1">
+                    <i class="fab fa-whatsapp text-green-500"></i>
+                    <i class="fab fa-facebook text-blue-500"></i>
+                    <i class="fab fa-instagram text-purple-500"></i>
+                    <i class="fab fa-facebook-messenger text-blue-400"></i>
+                    <i class="fab fa-waze text-gray-700"></i>
                   </div>
+
+                  <!-- Separador -->
+                  <p class="text-[10px] text-gray-500 italic text-center border-t pt-2"></p>
+
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-sms text-pink-500"></i> 500 SMS
+                    </span>
+                    para cualquier operador.
+                  </p>
+                  <p>
+                    <span class="font-semibold">100 MB promocionales (12 meses)</span> 
+                    para usarlos como datos internacionales en países de América y Europa, así como 
+                    <span class="text-green-500 font-normal">
+                      <i class="fab fa-whatsapp text-green-500"></i>
+                      WhatsApp de texto ilimitado.
+                    </span>
+                  </p>
                 </div>
-                <!-- Plan 3 -->
-                <div class="min-w-[50%] px-1">
-                  <div class="bg-indigo-50 rounded-lg p-3 border border-indigo-100 text-center shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 ease-in-out cursor-pointer">
-                    <h3 class="font-semibold text-purple-800 text-sm">Premium</h3>
-                    <p class="text-xs text-gray-700 mt-1">Ilimitado + 5G prioritario</p>
-                    <p class="text-purple-600 font-bold text-lg mt-1">$79.90<span class="text-xs font-normal">/mes</span></p>
+
+                <!-- Precio -->
+                <div class="text-center mt-3">
+                  <p class="text-blue-600 font-bold text-lg">S/29.90<span class="text-xs font-normal">/mes</span></p>
+                </div>
+
+                <!-- Botón -->
+                <button 
+                  type="button" 
+                  onclick="openModal('modal-plan2')" 
+                  class="mt-4 w-full py-2 px-4 text-sm font-medium text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700 transition-all duration-200 ease-in-out"
+                >
+                  📄 Lectura del Contrato
+                </button>
+              </div>
+            </div>
+
+              <!-- Plan 3 -->
+            <div class="min-w-[33.3333333333333%] px-1">
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <!-- Encabezado -->
+                <h3 class="font-semibold text-blue-700 text-sm text-center mb-2">
+                  📱 Plan Ahorro Mi Movistar S/35.9 VI
+                </h3>
+                
+                <!-- Beneficios -->
+                <div class="space-y-2 text-xs text-gray-700 text-center">
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-phone-volume text-blue-500"></i> Llamadas ilimitadas
+                    </span>
+                    a nivel nacional.
+                  </p>
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-globe text-green-500"></i> 300 minutos
+                    </span>
+                    LDI a EE.UU. y Canadá.
+                  </p>
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-wifi text-indigo-500"></i> 20 GB de internet
+                    </span>
+                  </p>
+
+                  <p class="text-[10px] text-gray-500 italic text-center border-t pt-2">*No informar a clientes de Loreto</p>
+
+                  <p>
+                    <span class="font-semibold">Apps ILIMITADAS (12 meses):</span> WhatsApp, Facebook Fotos, Messenger, Instagram Fotos y Waze.
+                  </p>
+
+                  <!-- Íconos apps -->
+                  <div class="flex items-center justify-center gap-2 text-base mt-1">
+                    <i class="fab fa-whatsapp text-green-500"></i>
+                    <i class="fab fa-facebook text-blue-500"></i>
+                    <i class="fab fa-instagram text-purple-500"></i>
+                    <i class="fab fa-facebook-messenger text-blue-400"></i>
+                    <i class="fab fa-waze text-gray-700"></i>
                   </div>
+
+                  <!-- Separador -->
+                  <p class="text-[10px] text-gray-500 italic text-center border-t pt-2"></p>
+
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-sms text-pink-500"></i> 500 SMS
+                    </span>
+                    para cualquier operador.
+                  </p>
+                  <p>
+                    <span class="font-semibold">250 MB promocionales (12 meses)</span> 
+                    para usarlos como datos internacionales en países de América y Europa, así como 
+                    <span class="text-green-500 font-normal">
+                      <i class="fab fa-whatsapp text-green-500"></i>
+                      WhatsApp de texto ilimitado.
+                    </span>
+                  </p>
                 </div>
-                <!-- Plan 4 -->
-                <div class="min-w-[50%] px-1">
-                  <div class="bg-indigo-50 rounded-lg p-3 border border-indigo-100 text-center shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 ease-in-out cursor-pointer">
-                    <h3 class="font-semibold text-green-800 text-sm">Familiar</h3>
-                    <p class="text-xs text-gray-700 mt-1">4 líneas, 20 GB c/u</p>
-                    <p class="text-green-600 font-bold text-lg mt-1">$129.90<span class="text-xs font-normal">/mes</span></p>
+
+                <!-- Precio -->
+                <div class="text-center mt-3">
+                  <p class="text-blue-600 font-bold text-lg">S/35.90<span class="text-xs font-normal">/mes</span></p>
+                </div>
+
+                <!-- Botón -->
+                <button 
+                  type="button" 
+                  onclick="openModal('modal-plan3')" 
+                  class="mt-4 w-full py-2 px-4 text-sm font-medium text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700 transition-all duration-200 ease-in-out"
+                >
+                  📄 Lectura del Contrato
+                </button>
+              </div>
+            </div>
+
+            <!-- Plan 4 -->
+
+            <div class="min-w-[33.3333333333333%] px-1">
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <!-- Encabezado -->
+                <h3 class="font-semibold text-blue-700 text-sm text-center mb-2">
+                  📱 Plan Ahorro Mi Movistar S/39.9 VI
+                </h3>
+                
+                <!-- Beneficios -->
+                <div class="space-y-2 text-xs text-gray-700 text-center">
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-phone-volume text-blue-500"></i> Llamadas ilimitadas
+                    </span>
+                    a nivel nacional.
+                  </p>
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-globe text-green-500"></i> 350 minutos
+                    </span>
+                    LDI a EE.UU. y Canadá.
+                  </p>
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-wifi text-indigo-500"></i> 25 GB de internet
+                    </span>
+                  </p>
+
+                  <p class="text-[10px] text-gray-500 italic text-center border-t pt-2">*No informar a clientes de Loreto</p>
+
+                  <p>
+                    <span class="font-semibold">Apps ILIMITADAS (12 meses):</span> WhatsApp, Facebook Fotos, Messenger, Instagram Fotos y Waze.
+                  </p>
+
+                  <!-- Íconos apps -->
+                  <div class="flex items-center justify-center gap-2 text-base mt-1">
+                    <i class="fab fa-whatsapp text-green-500"></i>
+                    <i class="fab fa-facebook text-blue-500"></i>
+                    <i class="fab fa-instagram text-purple-500"></i>
+                    <i class="fab fa-facebook-messenger text-blue-400"></i>
+                    <i class="fab fa-waze text-gray-700"></i>
                   </div>
+
+                  <!-- Separador -->
+                  <p class="text-[10px] text-gray-500 italic text-center border-t pt-2"></p>
+
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-sms text-pink-500"></i> 500 SMS
+                    </span>
+                    para cualquier operador.
+                  </p>
+                  <p>
+                    <span class="font-semibold">100 MB promocionales (12 meses)</span> 
+                    para usarlos como datos internacionales en países de América y Europa, así como 
+                    <span class="text-green-500 font-normal">
+                      <i class="fab fa-whatsapp text-green-500"></i>
+                      WhatsApp de texto ilimitado.
+                    </span>
+                  </p>
                 </div>
+
+                <!-- Precio -->
+                <div class="text-center mt-3">
+                  <p class="text-blue-600 font-bold text-lg">S/39.90<span class="text-xs font-normal">/mes</span></p>
+                </div>
+
+                <!-- Botón -->
+                <button 
+                  type="button" 
+                  onclick="openModal('modal-plan4')" 
+                  class="mt-4 w-full py-2 px-4 text-sm font-medium text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700 transition-all duration-200 ease-in-out"
+                >
+                  📄 Lectura del Contrato
+                </button>
+              </div>
+            </div>
+
                 <!-- Plan 5 -->
-                <div class="min-w-[50%] px-1">
-                  <div class="bg-indigo-50 rounded-lg p-3 border border-indigo-100 text-center shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 ease-in-out cursor-pointer">
-                    <h3 class="font-semibold text-amber-800 text-sm">Empresarial</h3>
-                    <p class="text-xs text-gray-700 mt-1">Ilimitado + soporte 24/7</p>
-                    <p class="text-amber-600 font-bold text-lg mt-1">$199.90<span class="text-xs font-normal">/mes</span></p>
+            <div class="min-w-[33.3333333333333%] px-1">
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <!-- Encabezado -->
+                <h3 class="font-semibold text-blue-700 text-sm text-center mb-2">
+                  📱 Plan Ahorro Mi Movistar S/45.9 VI
+                </h3>
+                
+                <!-- Beneficios -->
+                <div class="space-y-2 text-xs text-gray-700 text-center">
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-phone-volume text-blue-500"></i> Llamadas ilimitadas
+                    </span>
+                    a nivel nacional.
+                  </p>
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-globe text-green-500"></i> 350 minutos
+                    </span>
+                    LDI a EE.UU. y Canadá.
+                  </p>
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-wifi text-indigo-500"></i> 36 GB de internet
+                    </span>
+                  </p>
+
+                  <p class="text-[10px] text-gray-500 italic text-center border-t pt-2">*No informar a clientes de Loreto</p>
+
+                  <p>
+                    <span class="font-semibold">Apps ILIMITADAS (12 meses):</span> WhatsApp, Facebook Fotos, Messenger, Instagram Fotos y Waze.
+                  </p>
+
+                  <!-- Íconos apps -->
+                  <div class="flex items-center justify-center gap-2 text-base mt-1">
+                    <i class="fab fa-whatsapp text-green-500"></i>
+                    <i class="fab fa-facebook text-blue-500"></i>
+                    <i class="fab fa-instagram text-purple-500"></i>
+                    <i class="fab fa-facebook-messenger text-blue-400"></i>
+                    <i class="fab fa-waze text-gray-700"></i>
                   </div>
+
+                  <!-- Separador -->
+                  <p class="text-[10px] text-gray-500 italic text-center border-t pt-2"></p>
+
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-sms text-pink-500"></i> 500 SMS
+                    </span>
+                    para cualquier operador.
+                  </p>
+                  <p>
+                    <span class="font-semibold">1.25 GB promocionales (12 meses)</span> 
+                    para usarlos como datos internacionales en países de América y Europa, así como 
+                    <span class="text-green-500 font-normal">
+                      <i class="fab fa-whatsapp text-green-500"></i>
+                      WhatsApp de texto ilimitado.
+                    </span>
+                  </p>
                 </div>
+
+                <!-- Precio -->
+                <div class="text-center mt-3">
+                  <p class="text-blue-600 font-bold text-lg">S/45.90<span class="text-xs font-normal">/mes</span></p>
+                </div>
+
+                <!-- Botón -->
+                <button 
+                  type="button" 
+                  onclick="openModal('modal-plan5')" 
+                  class="mt-4 w-full py-2 px-4 text-sm font-medium text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700 transition-all duration-200 ease-in-out"
+                >
+                  📄 Lectura del Contrato
+                </button>
+              </div>
+            </div>
+
                 <!-- Plan 6 -->
-                <div class="min-w-[50%] px-1">
-                  <div class="bg-indigo-50 rounded-lg p-3 border border-indigo-100 text-center shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 ease-in-out cursor-pointer">
-                    <h3 class="font-semibold text-rose-800 text-sm">Estudiante</h3>
-                    <p class="text-xs text-gray-700 mt-1">15 GB + redes sociales gratis</p>
-                    <p class="text-rose-600 font-bold text-lg mt-1">$19.90<span class="text-xs font-normal">/mes</span></p>
+            <div class="min-w-[33.3333333333333%] px-1">
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <!-- Encabezado -->
+                <h3 class="font-semibold text-blue-700 text-sm text-center mb-2">
+                  📱 Plan Ahorro Mi Movistar S/49.9 VI
+                </h3>
+                
+                <!-- Beneficios -->
+                <div class="space-y-2 text-xs text-gray-700 text-center">
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-phone-volume text-blue-500"></i> Llamadas ilimitadas
+                    </span>
+                    a nivel nacional.
+                  </p>
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-globe text-green-500"></i> 400 minutos
+                    </span>
+                    LDI a EE.UU. y Canadá.
+                  </p>
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-wifi text-indigo-500"></i> 40 GB de internet
+                    </span>
+                  </p>
+
+                  <p class="text-[10px] text-gray-500 italic text-center border-t pt-2">*No informar a clientes de Loreto</p>
+
+                  <p>
+                    <span class="font-semibold">Apps ILIMITADAS (12 meses):</span> WhatsApp, Facebook Fotos, Messenger, Instagram Fotos y Waze.
+                  </p>
+
+                  <!-- Íconos apps -->
+                  <div class="flex items-center justify-center gap-2 text-base mt-1">
+                    <i class="fab fa-whatsapp text-green-500"></i>
+                    <i class="fab fa-facebook text-blue-500"></i>
+                    <i class="fab fa-instagram text-purple-500"></i>
+                    <i class="fab fa-facebook-messenger text-blue-400"></i>
+                    <i class="fab fa-waze text-gray-700"></i>
                   </div>
+
+                  <!-- Separador -->
+                  <p class="text-[10px] text-gray-500 italic text-center border-t pt-2"></p>
+
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-sms text-pink-500"></i> 500 SMS
+                    </span>
+                    para cualquier operador.
+                  </p>
+                  <p>
+                    <span class="font-semibold">1.50 GB promocionales (12 meses)</span> 
+                    para usarlos como datos internacionales en países de América y Europa, así como 
+                    <span class="text-green-500 font-normal">
+                      <i class="fab fa-whatsapp text-green-500"></i>
+                      WhatsApp de texto ilimitado.
+                    </span>
+                  </p>
                 </div>
+
+                <!-- Precio -->
+                <div class="text-center mt-3">
+                  <p class="text-blue-600 font-bold text-lg">S/49.90<span class="text-xs font-normal">/mes</span></p>
+                </div>
+
+                <!-- Botón -->
+                <button 
+                  type="button" 
+                  onclick="openModal('modal-plan6')" 
+                  class="mt-4 w-full py-2 px-4 text-sm font-medium text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700 transition-all duration-200 ease-in-out"
+                >
+                  📄 Lectura del Contrato
+                </button>
+              </div>
+            </div>
+
+                <!-- Plan 7 -->
+            <div class="min-w-[33.3333333333333%] px-1">
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <!-- Encabezado -->
+                <h3 class="font-semibold text-blue-700 text-sm text-center mb-2">
+                  📱 Plan Ahorro Mi Movistar S/55.9 VI
+                </h3>
+                
+                <!-- Beneficios -->
+                <div class="space-y-2 text-xs text-gray-700 text-center">
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-phone-volume text-blue-500"></i> Llamadas ilimitadas
+                    </span>
+                    a nivel nacional e internacional como EE.UU. y Canadá.
+                  </p>
+
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-wifi text-indigo-500"></i> 66 GB de internet
+                    </span>
+                  </p>
+
+                  <p class="text-[10px] text-gray-500 italic text-center border-t pt-2">*No informar a clientes de Loreto</p>
+
+                  <p>
+                    <span class="font-semibold">Apps ILIMITADAS (12 meses):</span> WhatsApp, Facebook Fotos, Messenger, Instagram Fotos, Waze y Spotify.
+                  </p>
+
+                  <!-- Íconos apps -->
+                  <div class="flex items-center justify-center gap-2 text-base mt-1">
+                    <i class="fab fa-whatsapp text-green-500"></i>
+                    <i class="fab fa-facebook text-blue-500"></i>
+                    <i class="fab fa-instagram text-purple-500"></i>
+                    <i class="fab fa-facebook-messenger text-blue-400"></i>
+                    <i class="fab fa-waze text-gray-700"></i>
+                    <i class="fab fa-spotify text-green-500"></i>
+                  </div>
+
+                  <!-- Separador -->
+                  <p class="text-[10px] text-gray-500 italic text-center border-t pt-2"></p>
+
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-sms text-pink-500"></i> 500 SMS
+                    </span>
+                    para cualquier operador.
+                  </p>
+                  <p>
+                    <span class="font-semibold">2 GB promocionales (12 meses)</span> 
+                    para usarlos como datos internacionales en países de América y Europa, así como 
+                    <span class="text-green-500 font-normal">
+                      <i class="fab fa-whatsapp text-green-500"></i>
+                      WhatsApp de texto ilimitado.
+                    </span>
+                  </p>
+                </div>
+
+                <!-- Precio -->
+                <div class="text-center mt-3">
+                  <p class="text-blue-600 font-bold text-lg">S/55.90<span class="text-xs font-normal">/mes</span></p>
+                </div>
+
+                <!-- Botón -->
+                <button 
+                  type="button" 
+                  onclick="openModal('modal-plan7')" 
+                  class="mt-4 w-full py-2 px-4 text-sm font-medium text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700 transition-all duration-200 ease-in-out"
+                >
+                  📄 Lectura del Contrato
+                </button>
+              </div>
+            </div>
+
+                <!-- Plan 8 -->
+            <div class="min-w-[33.3333333333333%] px-1">
+              <div class="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <!-- Encabezado -->
+                <h3 class="font-semibold text-blue-700 text-sm text-center mb-2">
+                  📱 Plan Ahorro Adicional S/39.9 VI
+                </h3>
+                
+                <!-- Beneficios -->
+                <div class="space-y-2 text-xs text-gray-700 text-center">
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-phone-volume text-blue-500"></i> Llamadas ilimitadas
+                    </span>
+                    a nivel nacional e internacional como EE.UU. y Canadá.
+                  </p>
+
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-wifi text-indigo-500"></i> 120 GB de internet
+                    </span>
+                  </p>
+
+                    <!-- Separador -->
+                  <p class="text-[10px] text-gray-500 italic text-center border-t pt-2"></p>
+
+                  <p>
+                    <span class="font-semibold flex items-center justify-center gap-1">
+                      <i class="fas fa-sms text-pink-500"></i> 500 SMS
+                    </span>
+                    para cualquier operador.
+                  </p>
+                  <p>
+                    <span class="font-semibold">3 GB promocionales (12 meses)</span> 
+                    para usarlos como datos internacionales en países de América y Europa, así como 
+                    <span class="text-green-500 font-normal">
+                      <i class="fab fa-whatsapp text-green-500"></i>
+                      WhatsApp de texto ilimitado.
+                    </span>
+                  </p>
+                </div>
+
+                <!-- Precio -->
+                <div class="text-center mt-3">
+                  <p class="text-blue-600 font-bold text-lg">S/39.90<span class="text-xs font-normal">/mes</span></p>
+                </div>
+
+                <!-- Botón -->
+                <button 
+                  type="button" 
+                  onclick="openModal('modal-plan8')" 
+                  class="mt-4 w-full py-2 px-4 text-sm font-medium text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700 transition-all duration-200 ease-in-out"
+                >
+                  📄 Lectura del Contrato
+                </button>
+
+                  <div class="mt-3 flex items-start gap-2 rounded-lg border-2 border-yellow-400 bg-yellow-100 p-3 shadow-md">
+                    <i class="fas fa-exclamation-triangle text-yellow-600 mt-0.5 text-sm"></i>
+                    <p class="text-[11px] text-yellow-900 leading-snug">
+                      <span class="font-semibold">IMPORTANTE:</span> Plan <span class="underline">NO VÁLIDO</span> para clientes de Loreto.
+                    </p>
+                  </div>
+
+
+
+              </div>
+              
+            </div>
+
+
               </div>
 
               <!-- Botones de navegación -->
@@ -312,113 +825,112 @@
 
   <div id="speech-content" class="hidden">
     <div class="p-4 pt-0">
+       <!-- INICIO DE SPEECH -->
 
-<div class="p-5 max-w-3xl mx-auto text-sm text-gray-700 space-y-6">
+<div class="p-6 max-w-3xl mx-auto text-sm text-gray-700 space-y-8 font-sans">
   <!-- Título principal -->
-  <header class="text-center pb-4 border-b border-gray-200">
-    <h1 class="font-bold text-xl text-gray-900 tracking-tight">SPEECH CARIBU</h1>
+  <header class="text-center pb-6 border-b border-gray-200">
+    <h1 class="font-bold text-2xl text-gray-900 tracking-tight">SPEECH CARIBU</h1>
+    <p class="text-xs text-gray-500 mt-1">Guion de apoyo para gestión de beneficios</p>
   </header>
 
-  <!-- Sección: Saludo y Presentación -->
+  <!-- Paso 1 -->
   <section>
-    <h2 class="font-semibold text-gray-800 mb-2 flex items-center">
-      <span class="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2"></span>
+    <h2 class="font-semibold text-gray-900 mb-3 flex items-center text-base">
+      <span class="flex items-center justify-center w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold mr-3">1</span>
       Saludo y presentación
     </h2>
-    <div class="bg-gray-50 rounded-lg p-4 space-y-1.5">
-      <p><span class="font-medium text-blue-700">Asesor:</span> Hola, [NOMBRE DEL CLIENTE].</p>
-      <p><span class="font-medium text-gray-800">Cliente:</span> Sí.</p>
-      <p><span class="font-medium text-blue-700">Asesor:</span> Mi nombre es [NOMBRE DEL ASESOR] y te llamo del área de Beneficios Exclusivos de Movistar, porque hemos visto que las recargas que realizas se te están acabando muy rápido y queremos ayudarte.</p>
+    <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 space-y-2.5">
+      <p><span class="font-semibold text-blue-700">Asesor:</span> Hola, <span class="font-medium text-gray-900">[NOMBRE DEL CLIENTE]</span>.</p>
+      <p><span class="font-semibold text-gray-800">Cliente:</span> Sí.</p>
+      <p><span class="font-semibold text-blue-700">Asesor:</span> Mi nombre es <span class="font-medium text-gray-900">[NOMBRE DEL ASESOR]</span> y te llamo del área de Beneficios Exclusivos de Movistar...</p>
     </div>
   </section>
 
-  <!-- Sección: Planteamiento del Problema -->
+  <!-- Paso 2 -->
   <section>
-    <h2 class="font-semibold text-gray-800 mb-2 flex items-center">
-      <span class="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2"></span>
+    <h2 class="font-semibold text-gray-900 mb-3 flex items-center text-base">
+      <span class="flex items-center justify-center w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold mr-3">2</span>
       Planteamiento del problema
     </h2>
-    <div class="bg-gray-50 rounded-lg p-4">
-      <p>
-        <span class="font-medium text-blue-700">Asesor:</span> [NOMBRE DEL CLIENTE], incluso veo en mi sistema que hace 2 semanas realizaste una recarga de 5 soles y el saldo se te acabó muy rápido si diste cuenta. ¿Cierto? ¿Correcto? ¿Verdad?
-      </p>
+    <div class="bg-gray-50 border border-gray-200 rounded-lg p-4">
+      <p><span class="font-semibold text-blue-700">Asesor:</span> <span class="font-medium text-gray-900">[NOMBRE DEL CLIENTE]</span>, incluso veo en mi sistema que hace 2 semanas realizaste una recarga...</p>
     </div>
   </section>
 
-  <!-- Sección: Propuesta de Solución -->
+  <!-- Paso 3 -->
   <section>
-    <h2 class="font-semibold text-gray-800 mb-2 flex items-center">
-      <span class="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2"></span>
+    <h2 class="font-semibold text-gray-900 mb-3 flex items-center text-base">
+      <span class="flex items-center justify-center w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold mr-3">3</span>
       Propuesta de solución
     </h2>
-    <div class="bg-gray-50 rounded-lg p-4">
-      <p>
-        <span class="font-medium text-blue-700">Asesor:</span> A partir de ahora, [NOMBRE DEL CLIENTE], ya vas a olvidarte de estar haciendo recargas, porque vas a contar con minutos ilimitados para comunicarte con cualquier operador a nivel nacional.
-      </p>
+    <div class="bg-gray-50 border border-gray-200 rounded-lg p-4">
+      <p><span class="font-semibold text-blue-700">Asesor:</span> A partir de ahora, <span class="font-medium text-gray-900">[NOMBRE DEL CLIENTE]</span>, ya vas a olvidarte de estar haciendo recargas...</p>
     </div>
   </section>
 
-  <!-- Sección: Sondeo Estratégico -->
+  <!-- Paso 4 -->
   <section>
-    <h2 class="font-semibold text-gray-800 mb-2 flex items-center">
-      <span class="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2"></span>
+    <h2 class="font-semibold text-gray-900 mb-3 flex items-center text-base">
+      <span class="flex items-center justify-center w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold mr-3">4</span>
       Sondeo estratégico
     </h2>
-    <div class="bg-gray-50 rounded-lg p-4">
-      <p>
-        <span class="font-medium text-blue-700">Asesor:</span> Veo en mi sistema que utilizas bastante las llamadas... Cuéntame, ¿también usas internet? ¿Tienes WhatsApp?
-      </p>
+    <div class="bg-gray-50 border border-gray-200 rounded-lg p-4">
+      <p><span class="font-semibold text-blue-700">Asesor:</span> Veo en mi sistema que utilizas bastante las llamadas... Cuéntame, ¿también usas internet? ¿Tienes WhatsApp?</p>
     </div>
   </section>
 
-  <!-- Sección: Argumentación y Beneficios -->
+  <!-- Paso 5 -->
   <section>
-    <h2 class="font-semibold text-gray-800 mb-2 flex items-center">
-      <span class="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2"></span>
-      Argumentación y beneficios<br>
-      <span class="text-xs font-normal text-gray-500 ml-5">(Adaptar según la respuesta del cliente)</span>
+    <h2 class="font-semibold text-gray-900 mb-3 flex items-center text-base">
+      <span class="flex items-center justify-center w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold mr-3">5</span>
+      Argumentación y beneficios
+      <span class="text-xs font-normal text-gray-500 ml-2">(Adaptar según la respuesta del cliente)</span>
     </h2>
-    <div class="bg-gray-50 rounded-lg p-4 space-y-2">
-      <p>
-        <span class="font-medium text-blue-700">Asesor:</span> Perfecto, este plan no solo te da minutos ilimitados, sino que además incluye:
-      </p>
-      <ul class="list-none space-y-1.5 pl-1">
+    <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 space-y-3">
+      <p><span class="font-semibold text-blue-700">Asesor:</span> Perfecto, este plan no solo te da minutos ilimitados, sino que además incluye:</p>
+      <ul class="space-y-2 pl-1">
         <li class="flex items-start">
-          <svg class="w-4 h-4 text-blue-500 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <svg class="w-4 h-4 text-green-600 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
           </svg>
-          <span>Internet para usar las principales apps: WhatsApp, Facebook (fotos), Instagram (fotos), Messenger, Waze.</span>
+          <span>Internet para WhatsApp, Facebook (fotos), Instagram (fotos), Messenger, Waze.</span>
         </li>
         <li class="flex items-start">
-          <svg class="w-4 h-4 text-blue-500 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <svg class="w-4 h-4 text-green-600 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
           </svg>
           <span>Cobertura a nivel nacional, estés donde estés.</span>
         </li>
         <li class="flex items-start">
-          <svg class="w-4 h-4 text-blue-500 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <svg class="w-4 h-4 text-green-600 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
           </svg>
-          <span>Pago fijo mensual, evitando gastos excesivos en recargas.</span>
+          <span>Pago fijo mensual, evitando gastos en recargas.</span>
         </li>
       </ul>
-      <p class="italic text-gray-600 mt-2">
-        (Resaltar beneficios según el uso que mencione el cliente)
+      <p class="italic text-gray-500 text-xs mt-2">
+        Resaltar beneficios según el uso que mencione el cliente.
       </p>
     </div>
   </section>
 
   <!-- Nota importante -->
-  <aside class="bg-blue-50 border border-blue-100 rounded-lg p-4 mt-2">
-    <p class="text-blue-800 text-sm font-medium flex items-start">
-      <svg class="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-      </svg>
-      <strong>Importante:</strong> Argumentar y resaltar los beneficios en base al uso que le da el cliente. Además, mencionar mínimo 3 beneficios del plan.
-    </p>
+  <aside class="bg-amber-50 border-l-4 border-amber-400 rounded-r-lg p-4 pl-5 flex items-start shadow-sm">
+    <svg class="w-5 h-5 text-amber-600 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+    </svg>
+    <div>
+      <p class="text-amber-800 text-sm leading-relaxed">
+        <strong>Nota importante:</strong> Argumentar y resaltar los beneficios en base al uso que le da el cliente.  
+        <br>Mencionar <span class="font-semibold">mínimo 3 beneficios</span> del plan.
+      </p>
+    </div>
   </aside>
 </div>
 
+
+ <!-- FIN DE SPEECH -->
     </div>
   </div>
 
@@ -949,8 +1461,12 @@
   </div>
 </div>
 
+
+
   </main>
 
+
+  
   <!-- Scripts -->
   <script>
     // Sidebar toggle
