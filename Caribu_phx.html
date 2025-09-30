@@ -106,39 +106,43 @@
     </div>
   </aside>
 
-  <!-- 📌 HEADER -->
-  <header id="main-header" class="fixed top-0 left-64 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-200 px-5 py-2.5 transition-all duration-300">
-    <div class="max-w-7xl mx-auto flex justify-end items-center h-full">
-      <div class="relative">
-        <button id="user-menu-btn" class="flex items-center gap-2.5 px-3 py-1.5 rounded-lg hover:bg-gray-100 transition-all duration-200 group">
-          <span id="user-name" class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Usuario</span>
-          <div class="w-7 h-7 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-xs font-medium">
-            U
-          </div>
-        </button>
-        <div id="user-menu" class="absolute right-0 mt-2 w-52 bg-white rounded-lg shadow-lg py-1.5 z-50 border border-gray-100 hidden">
-          <div class="px-4 py-1.5 text-xs text-gray-700 border-b border-gray-100">
-            <div id="user-email-display" class="font-medium">usuario@correo.com</div>
-          </div>
-          <button id="logout-btn" class="flex items-center w-full px-4 py-2 text-xs text-red-600 hover:bg-red-50 hover:text-red-700 transition-colors gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-            </svg>
-            Desloguear
-          </button>
+<!-- 📌 HEADER -->
+<header id="main-header" class="fixed top-0 left-64 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-200 px-5 py-2.5 transition-all duration-300">
+  <div class="max-w-7xl mx-auto flex justify-between items-center h-full">
+    
+    <!-- Título -->
+    <h1 class="text-lg font-semibold text-gray-800">Caribú Digital – Asesoría Rápida</h1>
+    
+    <!-- Menú de usuario -->
+    <div class="relative">
+      <button id="user-menu-btn" class="flex items-center gap-2.5 px-3 py-1.5 rounded-lg hover:bg-gray-100 transition-all duration-200 group">
+        <span id="user-name" class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Usuario</span>
+        <div class="w-7 h-7 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-xs font-medium">
+          U
         </div>
+      </button>
+      <div id="user-menu" class="absolute right-0 mt-2 w-52 bg-white rounded-lg shadow-lg py-1.5 z-50 border border-gray-100 hidden">
+        <div class="px-4 py-1.5 text-xs text-gray-700 border-b border-gray-100">
+          <div id="user-email-display" class="font-medium">usuario@correo.com</div>
+        </div>
+        <button id="logout-btn" class="flex items-center w-full px-4 py-2 text-xs text-red-600 hover:bg-red-50 hover:text-red-700 transition-colors gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+          </svg>
+          Desloguear
+        </button>
       </div>
     </div>
-  </header>
+  </div>
+</header>
+
 
   <!-- 📌 CONTENIDO -->
   <main id="main-content" class="flex-1 ml-64 pt-20 pb-10 px-4 md:px-6 transition-all duration-300">
     
     <div class="max-w-7xl mx-auto">
-      <h1 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Caribú Digital – Asesoría Rápida</h1>
-      <!--   <p class="text-gray-600 mb-6 text-center max-w-2xl mx-auto text-sm">
-        Recursos clave al alcance de un clic: planes, discursos y respuestas a objeciones.
-      </p>-->
+
+
 
       <div class="grid grid-cols-12 gap-5">
         <!-- ✅ Columna 1: Ancha (8/12) -->
