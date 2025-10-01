@@ -269,7 +269,25 @@
     document.getElementById('user-menu-btn').addEventListener('click', () => {
       document.getElementById('user-menu').classList.toggle('show');
     });
+
+
+    
+    // User menu
+    document.getElementById('user-menu-btn').onclick = () => {
+      const menu = document.getElementById('user-menu');
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('show');
+    };
+
+    document.getElementById('logout-btn').onclick = () => {
+      localStorage.clear();
+      window.location.href = "index.html";
+    };
+
+    const email = localStorage.getItem('currentUserEmail') || "usuario@correo.com";
+    document.getElementById('user-email-display').textContent = email;
+    document.getElementById('user-name').textContent = email.split('@')[0];
   </script>
-  <script src="modulos.js"></script>
+
 </body>
 </html>
