@@ -3,190 +3,187 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>🔍 Buscador de Agentes | Caribú</title>
+  <title>Web360 - Caribu PHX</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
-    * {
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    }
+
+    /* Menú de usuario animado */
+    #user-menu {
+      transform-origin: top right;
+      transform: scaleY(0);
+      opacity: 0;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      display: block;
+    }
+    #user-menu.show {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+
+    /* Sidebar colapsado */
+    .sidebar-collapsed {
+      width: 72px !important;
+    }
+    .sidebar-collapsed #sidebar-title,
+    .sidebar-collapsed #sidebar-footer,
+    .sidebar-collapsed .sidebar-text {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      overflow: hidden;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+      pointer-events: none;
     }
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      background: linear-gradient(135deg, #f5f7fa 0%, #e4edf9 100%);
-      padding: 2rem;
-      color: #333;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    h1 {
-      font-weight: 700;
-      font-size: 1.8rem;
-      color: #0d47a1;
-      margin-bottom: 0.5rem;
-    }
-    .subtitle {
-      color: #666;
-      font-size: 1rem;
-    }
-    .search-box {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
-    #dniInput {
-      padding: 12px 16px;
-      font-size: 1rem;
-      border: 2px solid #ccc;
-      border-radius: 8px;
-      width: 220px;
-      outline: none;
-      transition: border-color 0.3s;
-    }
-    #dniInput:focus {
-      border-color: #0d47a1;
-    }
-    button {
-      padding: 12px 24px;
-      background: #0d47a1;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    button:hover {
-      background: #1565c0;
-    }
-    #status {
-      text-align: center;
-      margin-top: 10px;
-      color: #555;
-      font-style: italic;
-    }
-    .result-card {
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-      padding: 2rem;
+    .sidebar-collapsed .sidebar-text {
       display: none;
     }
-    .agent-name {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: #0d47a1;
-      margin-bottom: 1.5rem;
-      text-align: center;
+    .sidebar-collapsed #sidebar-nav a {
+      justify-content: center;
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
     }
-    .weeks-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      gap: 16px;
-      margin-bottom: 1.5rem;
-    }
-    .week-card {
-      background: #f0f7ff;
-      border: 1px solid #bbdefb;
-      border-radius: 12px;
-      padding: 16px 12px;
-      text-align: center;
-      transition: transform 0.2s;
-    }
-    .week-card:hover {
-      transform: translateY(-3px);
-    }
-    .week-label {
-      font-size: 0.85rem;
-      color: #555;
-      margin-bottom: 6px;
-    }
-    .week-value {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #1565c0;
-    }
-    .week-empty {
-      color: #999;
-      font-style: italic;
-    }
-    .total-general {
-      text-align: center;
-      padding-top: 1rem;
-      border-top: 2px dashed #e0e0e0;
-    }
-    .total-label {
-      font-size: 1.1rem;
-      color: #555;
-      margin-bottom: 6px;
-    }
-    .total-value {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: #0d47a1;
-    }
-    @media (max-width: 600px) {
-      .weeks-grid {
-        grid-template-columns: 1fr;
-      }
-      body {
-        padding: 1rem;
-      }
+    .sidebar-collapsed #sidebar-toggle svg {
+      transform: rotate(180deg);
     }
   </style>
 </head>
-<body>
-  <div class="container">
-    <header>
-      <h1>🔍 Buscador de Agentes</h1>
-      <p class="subtitle">Ingresa el DNI del agente para ver su desempeño semanal</p>
-    </header>
+<body class="bg-gray-50 min-h-screen flex">
 
-    <div class="search-box">
-      <input type="text" id="dniInput" placeholder="Ej: 3882225" autocomplete="off" />
-      <button onclick="buscarPorDNI()">Buscar</button>
-    </div>
-
-    <div id="status">Escribe un DNI y haz clic en Buscar</div>
-
-    <div class="result-card" id="result">
-      <div class="agent-name" id="agentName"></div>
-      <div class="weeks-grid">
-        <div class="week-card">
-          <div class="week-label">Semana 1</div>
-          <div class="week-value" id="s1"></div>
-        </div>
-        <div class="week-card">
-          <div class="week-label">Semana 2</div>
-          <div class="week-value" id="s2"></div>
-        </div>
-        <div class="week-card">
-          <div class="week-label">Semana 3</div>
-          <div class="week-value" id="s3"></div>
-        </div>
-        <div class="week-card">
-          <div class="week-label">Semana 4</div>
-          <div class="week-value" id="s4"></div>
-        </div>
-        <div class="week-card">
-          <div class="week-label">Semana 5</div>
-          <div class="week-value" id="s5"></div>
-        </div>
+  <!-- 📌 BARRA LATERAL -->
+  <aside id="sidebar" class="fixed top-0 left-0 bottom-0 z-40 w-64 bg-gradient-to-b from-gray-900 to-gray-800 text-white shadow-2xl border-r border-gray-700 transition-all duration-300">
+    <div class="flex flex-col h-full">
+      <div class="p-4 border-b border-gray-700 flex items-center justify-between">
+        <h1 id="sidebar-title" class="text-lg font-semibold text-white transition-opacity duration-300">Web360</h1>
+        <button id="sidebar-toggle" aria-label="Alternar menú lateral" class="text-gray-300 hover:text-white focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
-      <div class="total-general">
-        <div class="total-label">Total General</div>
-        <div class="total-value" id="totalGeneral"></div>
+
+      <nav id="sidebar-nav" class="flex-1 px-2 py-5 space-y-1 overflow-hidden">
+        <a href="index.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-gray-800 text-blue-400 font-medium transition-all hover:bg-gray-700 group">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+          </svg>
+          <span class="sidebar-text">Dashboard</span>
+        </a>
+
+        <a href="Caribu_phx.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-gray-700 text-blue-300 font-medium group">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+          </svg>
+          <span class="sidebar-text">Caribu PHX</span>
+        </a>
+      </nav>
+
+      <div id="sidebar-footer" class="p-3 text-center text-xs text-gray-500 border-t border-gray-700 transition-opacity duration-300">
+        © 2025 Web360
       </div>
     </div>
-  </div>
+  </aside>
 
+  <!-- 📌 HEADER -->
+  <header id="main-header" class="fixed top-0 left-64 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-200 px-5 py-2.5 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex justify-between items-center h-full">
+      <h1 class="text-lg font-semibold text-gray-800">Notas de Calidad </h1>
+      <div class="relative">
+        <button id="user-menu-btn" class="flex items-center gap-2.5 px-3 py-1.5 rounded-lg hover:bg-gray-100 transition-all duration-200 group">
+          <span id="user-name" class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Usuario</span>
+          <div class="w-7 h-7 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-xs font-medium">U</div>
+        </button>
+        <div id="user-menu" class="absolute right-0 mt-2 w-52 bg-white rounded-lg shadow-lg py-1.5 z-50 border border-gray-100 hidden">
+          <div class="px-4 py-1.5 text-xs text-gray-700 border-b border-gray-100">
+            <div id="user-email-display" class="font-medium">usuario@correo.com</div>
+          </div>
+          <button id="logout-btn" class="flex items-center w-full px-4 py-2 text-xs text-red-600 hover:bg-red-50 hover:text-red-700 transition-colors gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+            </svg>
+            Desloguear
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 📌 CONTENIDO PRINCIPAL -->
+  <main id="main-content" class="flex-1 ml-64 pt-20 pb-10 px-4 md:px-6 transition-all duration-300">
+    <div class="max-w-4xl mx-auto">
+      <!-- Título -->
+      <div class="text-center mb-8">
+        <h1 class="text-2xl font-bold text-blue-900">🔍 Buscador de Agentes</h1>
+        <p class="text-gray-600 mt-2">Ingresa el DNI del agente para ver su desempeño semanal</p>
+      </div>
+
+      <!-- Buscador -->
+      <div class="flex flex-wrap justify-center gap-3 mb-6">
+        <input
+          type="text"
+          id="dniInput"
+          placeholder="Ej: 3882225"
+          autocomplete="off"
+          class="px-4 py-2.5 w-full max-w-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+        />
+        <button
+          onclick="buscarPorDNI()"
+          class="px-6 py-2.5 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-md"
+        >
+          Buscar
+        </button>
+      </div>
+
+      <!-- Mensaje de estado -->
+      <div id="status" class="text-center text-gray-600 italic mb-6">Escribe un DNI y haz clic en Buscar</div>
+
+      <!-- Resultado -->
+      <div id="result" class="bg-white rounded-xl shadow-md p-6 hidden">
+        <div id="agentName" class="text-xl font-bold text-center text-blue-800 mb-6"></div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mb-6">
+          <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center">
+            <div class="text-sm text-gray-600">Semana 1</div>
+            <div id="s1" class="text-lg font-bold text-blue-700 mt-1">—</div>
+          </div>
+          <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center">
+            <div class="text-sm text-gray-600">Semana 2</div>
+            <div id="s2" class="text-lg font-bold text-blue-700 mt-1">—</div>
+          </div>
+          <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center">
+            <div class="text-sm text-gray-600">Semana 3</div>
+            <div id="s3" class="text-lg font-bold text-blue-700 mt-1">—</div>
+          </div>
+          <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center">
+            <div class="text-sm text-gray-600">Semana 4</div>
+            <div id="s4" class="text-lg font-bold text-blue-700 mt-1">—</div>
+          </div>
+          <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center">
+            <div class="text-sm text-gray-600">Semana 5</div>
+            <div id="s5" class="text-lg font-bold text-blue-700 mt-1">—</div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-200 pt-4 text-center">
+          <div class="text-gray-600">Total General</div>
+          <div id="totalGeneral" class="text-2xl font-extrabold text-blue-900 mt-1">—</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
   <script>
     const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSurBIXBz-zxgpeTzfypry62oOkEvUpRZ-NK7XopbQbCz87sZJFuBUhPTBS17HVxHLuO0kYPe2r3YT0/pub?gid=187586138&single=true&output=csv';
 
@@ -197,19 +194,18 @@
 
       if (!dni) {
         statusEl.textContent = '⚠️ Por favor ingresa un DNI.';
-        resultEl.style.display = 'none';
+        resultEl.classList.add('hidden');
         return;
       }
 
       statusEl.textContent = 'Buscando...';
-      resultEl.style.display = 'none';
+      resultEl.classList.add('hidden');
 
       try {
         const response = await fetch(CSV_URL);
         const csv = await response.text();
         const lines = csv.split('\n').filter(line => line.trim() !== '');
 
-        // La primera línea son los encabezados
         const headers = lines[0].split(',').map(h => h.trim());
         const dniIndex = headers.indexOf('Dni Agente');
         const agenteIndex = headers.indexOf('Agente');
@@ -229,17 +225,16 @@
         for (let i = 1; i < lines.length; i++) {
           const row = lines[i].split(',').map(cell => cell.trim().replace(/"/g, ''));
           if (row[dniIndex] === dni) {
-            // Mostrar datos
             document.getElementById('agentName').textContent = row[agenteIndex] || '—';
-            
+
             const setValue = (id, value) => {
               const el = document.getElementById(id);
               if (value && value !== '') {
                 el.textContent = value;
-                el.classList.remove('week-empty');
+                el.classList.remove('text-gray-400', 'italic');
               } else {
                 el.textContent = '—';
-                el.classList.add('week-empty');
+                el.classList.add('text-gray-400', 'italic');
               }
             };
 
@@ -250,7 +245,7 @@
             setValue('s5', row[s5Index]);
             setValue('totalGeneral', row[totalIndex] || '—');
 
-            resultEl.style.display = 'block';
+            resultEl.classList.remove('hidden');
             statusEl.textContent = '✅ Resultado encontrado.';
             found = true;
             break;
@@ -260,16 +255,19 @@
         if (!found) {
           statusEl.textContent = '❌ No se encontró ningún agente con ese DNI.';
         }
-
       } catch (error) {
         console.error('Error:', error);
         statusEl.textContent = '⚠️ Error al cargar los datos. Revisa la consola.';
       }
     }
 
-    // Permitir búsqueda al presionar Enter
     document.getElementById('dniInput').addEventListener('keypress', (e) => {
       if (e.key === 'Enter') buscarPorDNI();
+    });
+
+    // Opcional: lógica del menú de usuario
+    document.getElementById('user-menu-btn').addEventListener('click', () => {
+      document.getElementById('user-menu').classList.toggle('show');
     });
   </script>
 </body>
