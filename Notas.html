@@ -328,6 +328,11 @@
       window.location.href = "login.html";
     });
   });
+
+  document.getElementById('sidebar-toggle').onclick = () => {
+  const sidebar = document.getElementById('sidebar');
+  sidebar.classList.toggle('hidden');
+};
 </script>
 
 
