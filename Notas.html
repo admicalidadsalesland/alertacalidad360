@@ -184,139 +184,115 @@
   </main>
 
   <!-- Scripts -->
-  <script>
-    const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSurBIXBz-zxgpeTzfypry62oOkEvUpRZ-NK7XopbQbCz87sZJFuBUhPTBS17HVxHLuO0kYPe2r3YT0/pub?gid=187586138&single=true&output=csv';
+<script>
+  const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSurBIXBz-zxgpeTzfypry62oOkEvUpRZ-NK7XopbQbCz87sZJFuBUhPTBS17HVxHLuO0kYPe2r3YT0/pub?gid=187586138&single=true&output=csv';
 
-    async function buscarPorDNI() {
-      const dni = document.getElementById('dniInput').value.trim();
-      const statusEl = document.getElementById('status');
-      const resultEl = document.getElementById('result');
+  // === BUSCADOR POR DNI ===
+  async function buscarPorDNI() {
+    const dni = document.getElementById('dniInput').value.trim();
+    const statusEl = document.getElementById('status');
+    const resultEl = document.getElementById('result');
 
-      if (!dni) {
-        statusEl.textContent = '⚠️ Por favor ingresa un DNI.';
-        resultEl.classList.add('hidden');
+    if (!dni) {
+      statusEl.textContent = '⚠️ Por favor ingresa un DNI.';
+      resultEl.classList.add('hidden');
+      return;
+    }
+
+    statusEl.textContent = 'Buscando...';
+    resultEl.classList.add('hidden');
+
+    try {
+      const response = await fetch(CSV_URL);
+      const csv = await response.text();
+      const lines = csv.split('\n').filter(line => line.trim() !== '');
+
+      const headers = lines[0].split(',').map(h => h.trim());
+      const dniIndex = headers.indexOf('Dni Agente');
+      const agenteIndex = headers.indexOf('Agente');
+      const s1Index = headers.indexOf('SEMANA 1');
+      const s2Index = headers.indexOf('SEMANA 2');
+      const s3Index = headers.indexOf('SEMANA 3');
+      const s4Index = headers.indexOf('SEMANA 4');
+      const s5Index = headers.indexOf('SEMANA 5');
+      const totalIndex = headers.indexOf('Total general');
+
+      if (dniIndex === -1) {
+        statusEl.textContent = '❌ Error: columna "Dni Agente" no encontrada.';
         return;
       }
 
-      statusEl.textContent = 'Buscando...';
-      resultEl.classList.add('hidden');
+      let found = false;
+      for (let i = 1; i < lines.length; i++) {
+        const row = lines[i].split(',').map(cell => cell.trim().replace(/"/g, ''));
+        if (row[dniIndex] === dni) {
+          document.getElementById('agentName').textContent = row[agenteIndex] || '—';
 
-      try {
-        const response = await fetch(CSV_URL);
-        const csv = await response.text();
-        const lines = csv.split('\n').filter(line => line.trim() !== '');
+          const setValue = (id, value) => {
+            const el = document.getElementById(id);
+            if (value && value !== '') {
+              el.textContent = value;
+              el.classList.remove('text-gray-400', 'italic');
+            } else {
+              el.textContent = '—';
+              el.classList.add('text-gray-400', 'italic');
+            }
+          };
 
-        const headers = lines[0].split(',').map(h => h.trim());
-        const dniIndex = headers.indexOf('Dni Agente');
-        const agenteIndex = headers.indexOf('Agente');
-        const s1Index = headers.indexOf('SEMANA 1');
-        const s2Index = headers.indexOf('SEMANA 2');
-        const s3Index = headers.indexOf('SEMANA 3');
-        const s4Index = headers.indexOf('SEMANA 4');
-        const s5Index = headers.indexOf('SEMANA 5');
-        const totalIndex = headers.indexOf('Total general');
+          setValue('s1', row[s1Index]);
+          setValue('s2', row[s2Index]);
+          setValue('s3', row[s3Index]);
+          setValue('s4', row[s4Index]);
+          setValue('s5', row[s5Index]);
+          setValue('totalGeneral', row[totalIndex] || '—');
 
-        if (dniIndex === -1) {
-          statusEl.textContent = '❌ Error: columna "Dni Agente" no encontrada.';
-          return;
+          resultEl.classList.remove('hidden');
+          statusEl.textContent = '✅ Resultado encontrado.';
+          found = true;
+          break;
         }
-
-        let found = false;
-        for (let i = 1; i < lines.length; i++) {
-          const row = lines[i].split(',').map(cell => cell.trim().replace(/"/g, ''));
-          if (row[dniIndex] === dni) {
-            document.getElementById('agentName').textContent = row[agenteIndex] || '—';
-
-            const setValue = (id, value) => {
-              const el = document.getElementById(id);
-              if (value && value !== '') {
-                el.textContent = value;
-                el.classList.remove('text-gray-400', 'italic');
-              } else {
-                el.textContent = '—';
-                el.classList.add('text-gray-400', 'italic');
-              }
-            };
-
-            setValue('s1', row[s1Index]);
-            setValue('s2', row[s2Index]);
-            setValue('s3', row[s3Index]);
-            setValue('s4', row[s4Index]);
-            setValue('s5', row[s5Index]);
-            setValue('totalGeneral', row[totalIndex] || '—');
-
-            resultEl.classList.remove('hidden');
-            statusEl.textContent = '✅ Resultado encontrado.';
-            found = true;
-            break;
-          }
-        }
-
-        if (!found) {
-          statusEl.textContent = '❌ No se encontró ningún agente con ese DNI.';
-        }
-      } catch (error) {
-        console.error('Error:', error);
-        statusEl.textContent = '⚠️ Error al cargar los datos. Revisa la consola.';
       }
+
+      if (!found) {
+        statusEl.textContent = '❌ No se encontró ningún agente con ese DNI.';
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      statusEl.textContent = '⚠️ Error al cargar los datos. Revisa la consola.';
     }
+  }
 
-    document.getElementById('dniInput').addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') buscarPorDNI();
-    });
+  // Buscar con Enter
+  document.getElementById('dniInput').addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') buscarPorDNI();
+  });
 
-    // Opcional: lógica del menú de usuario
-    document.getElementById('user-menu-btn').addEventListener('click', () => {
-      document.getElementById('user-menu').classList.toggle('show');
-    });
-
-
-    
-
-
-      // ✅ Validación de sesión al cargar la página
+  // === VALIDACIÓN DE SESIÓN ===
   document.addEventListener("DOMContentLoaded", () => {
     const email = localStorage.getItem("currentUserEmail");
 
     if (!email) {
-      // Si no está logueado, redirige al login
-      window.location.href = "login.html"; 
+      window.location.href = "login.html"; // 🔑 Redirige si no hay sesión
     } else {
-      // Mostrar datos del usuario
       document.getElementById("user-email-display").textContent = email;
       document.getElementById("user-name").textContent = email.split("@")[0];
     }
+
+    // Toggle del menú de usuario
+    document.getElementById("user-menu-btn").addEventListener("click", () => {
+      const menu = document.getElementById("user-menu");
+      menu.classList.toggle("hidden");
+      menu.classList.toggle("show");
+    });
+
+    // Logout
+    document.getElementById("logout-btn").addEventListener("click", () => {
+      localStorage.clear();
+      window.location.href = "login.html";
+    });
   });
+</script>
 
-  // ✅ Menú de usuario (toggle)
-  document.getElementById("user-menu-btn").addEventListener("click", () => {
-    const menu = document.getElementById("user-menu");
-    menu.classList.toggle("hidden");
-    menu.classList.toggle("show");
-  });
-
-  // ✅ Cerrar sesión
-  document.getElementById("logout-btn").addEventListener("click", () => {
-    localStorage.clear();
-    window.location.href = "login.html"; 
-  });
-
-
-    // ✅ Verificación de sesión
-document.addEventListener("DOMContentLoaded", () => {
-  const email = localStorage.getItem("currentUserEmail");
-
-  if (!email) {
-    // Si no hay sesión activa, redirigir al login
-    window.location.href = "login.html"; 
-  } else {
-    // Mostrar datos de usuario en el menú
-    document.getElementById("user-email-display").textContent = email;
-    document.getElementById("user-name").textContent = email.split("@")[0];
-  }
-});
-
-  </script>
 
 </body>
 </html>
