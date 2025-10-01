@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Web360 - Caribu PHX</title>
+  <title>Web360 - Notas</title>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -272,21 +272,34 @@
 
 
     
-    // User menu
-    document.getElementById('user-menu-btn').onclick = () => {
-      const menu = document.getElementById('user-menu');
-      menu.classList.toggle('hidden');
-      menu.classList.toggle('show');
-    };
 
-    document.getElementById('logout-btn').onclick = () => {
-      localStorage.clear();
-      window.location.href = "index.html";
-    };
 
-    const email = localStorage.getItem('currentUserEmail') || "usuario@correo.com";
-    document.getElementById('user-email-display').textContent = email;
-    document.getElementById('user-name').textContent = email.split('@')[0];
+      // ✅ Validación de sesión al cargar la página
+  document.addEventListener("DOMContentLoaded", () => {
+    const email = localStorage.getItem("currentUserEmail");
+
+    if (!email) {
+      // Si no está logueado, redirige al login
+      window.location.href = "login.html"; 
+    } else {
+      // Mostrar datos del usuario
+      document.getElementById("user-email-display").textContent = email;
+      document.getElementById("user-name").textContent = email.split("@")[0];
+    }
+  });
+
+  // ✅ Menú de usuario (toggle)
+  document.getElementById("user-menu-btn").addEventListener("click", () => {
+    const menu = document.getElementById("user-menu");
+    menu.classList.toggle("hidden");
+    menu.classList.toggle("show");
+  });
+
+  // ✅ Cerrar sesión
+  document.getElementById("logout-btn").addEventListener("click", () => {
+    localStorage.clear();
+    window.location.href = "login.html"; 
+  });
   </script>
 
 </body>
