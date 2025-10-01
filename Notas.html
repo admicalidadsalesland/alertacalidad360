@@ -87,18 +87,30 @@
     </h1>
   </div>
 
-  <!-- Botón menú (con mismo id que antes) -->
+  <!-- Botón menú -->
   <button id="sidebar-toggle" aria-label="Alternar menú lateral" 
           class="p-2 rounded-lg bg-gray-700 hover:bg-gray-600 
                  text-gray-300 hover:text-white focus:outline-none 
-                 transition duration-200 shadow">
-    <svg xmlns="http://www.w3.org/2000/svg" 
-         class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" 
-            stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                 transition duration-200 shadow flex items-center justify-center">
+    
+    <!-- Icono hamburguesa -->
+    <svg id="icon-hamburger" xmlns="http://www.w3.org/2000/svg" 
+         class="h-6 w-6 transition-transform duration-300" fill="none" 
+         viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+            d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+    
+    <!-- Icono X (cerrar) -->
+    <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" 
+         class="h-6 w-6 hidden transition-transform duration-300" 
+         fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+            d="M6 18L18 6M6 6l12 12" />
     </svg>
   </button>
 </div>
+
 
       
       <nav id="sidebar-nav" class="flex-1 px-2 py-5 space-y-1 overflow-hidden">
@@ -329,10 +341,20 @@
     });
   });
 
-  document.getElementById('sidebar-toggle').onclick = () => {
-  const sidebar = document.getElementById('sidebar');
+const sidebarToggle = document.getElementById('sidebar-toggle');
+const sidebar = document.getElementById('sidebar');
+const iconHamburger = document.getElementById('icon-hamburger');
+const iconClose = document.getElementById('icon-close');
+
+sidebarToggle.addEventListener('click', () => {
+  // Mostrar / ocultar sidebar
   sidebar.classList.toggle('hidden');
-};
+
+  // Animar iconos
+  iconHamburger.classList.toggle('hidden');
+  iconClose.classList.toggle('hidden');
+});
+
 </script>
 
 
