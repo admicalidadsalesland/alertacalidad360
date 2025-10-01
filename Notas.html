@@ -300,6 +300,22 @@
     localStorage.clear();
     window.location.href = "login.html"; 
   });
+
+
+    // ✅ Verificación de sesión
+document.addEventListener("DOMContentLoaded", () => {
+  const email = localStorage.getItem("currentUserEmail");
+
+  if (!email) {
+    // Si no hay sesión activa, redirigir al login
+    window.location.href = "login.html"; 
+  } else {
+    // Mostrar datos de usuario en el menú
+    document.getElementById("user-email-display").textContent = email;
+    document.getElementById("user-name").textContent = email.split("@")[0];
+  }
+});
+
   </script>
 
 </body>
