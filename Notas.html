@@ -314,19 +314,29 @@
     });
   });
 
-const sidebarToggle = document.getElementById('sidebar-toggle');
+
+
+
+  const sidebarToggle = document.getElementById('sidebar-toggle');
 const sidebar = document.getElementById('sidebar');
 const iconHamburger = document.getElementById('icon-hamburger');
 const iconClose = document.getElementById('icon-close');
 
 sidebarToggle.addEventListener('click', () => {
-  // Mostrar / ocultar sidebar
-  sidebar.classList.toggle('hidden');
+  // Sidebar responsive: colapsa ancho en lugar de ocultar
+  if (sidebar.classList.contains("w-64")) {
+    sidebar.classList.remove("w-64");
+    sidebar.classList.add("w-16");
+  } else {
+    sidebar.classList.remove("w-16");
+    sidebar.classList.add("w-64");
+  }
 
-  // Animar iconos
+  // Cambiar iconos
   iconHamburger.classList.toggle('hidden');
   iconClose.classList.toggle('hidden');
 });
+
 
 </script>
 
