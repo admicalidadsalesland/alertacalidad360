@@ -188,36 +188,22 @@
       appId: "1:123:web:abc" 
     };
 
-    // 🔗 URL pública del Google Sheet en CSV (¡sin espacios!)
-    const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTIgsZoBQjMmvl3iDq6GzMt0gvfyCxy5F7eCPZ6Q04YT52gKDiLQ5P9JflhA4zOFcrRRUjHqaDc08zA/pub?gid=0&single=true&output=csv";
+    // ✅ Nueva URL: ahora apunta a tu función serverless en Vercel
+    const SHEET_URL = "/api/sheet";
     let SHEET_DATA = [];
 
-    // ✅ Función que devuelve una promesa para Promise.all
+    // ✅ Función actualizada para cargar JSON (no CSV)
     async function loadSheetData() {
       try {
         const res = await fetch(SHEET_URL);
-        if (!res.ok) throw new Error("Error al cargar el CSV");
-        const csv = await res.text();
-        const lines = csv.trim().split("\n");
-        if (lines.length < 2) throw new Error("CSV vacío");
-
-        const headers = lines[0].split(",").map(h => h.trim());
-        const rows = lines.slice(1).map(line => {
-          // Soporte básico para campos entre comillas
-          const cells = line.split(",").map(c => c.trim().replace(/^"(.*)"$/, "$1"));
-          let obj = {};
-          headers.forEach((h, i) => {
-            obj[h] = (cells[i] || "").toLowerCase();
-          });
-          return obj;
-        });
-
-        SHEET_DATA = rows;
+        if (!res.ok) throw new Error("Error al cargar los datos");
+        const { data } = await res.json(); // ← recibe JSON
+        SHEET_DATA = data;
         console.log("✅ Datos del Sheet cargados:", SHEET_DATA);
         return SHEET_DATA;
       } catch (error) {
         console.error("❌ Error al cargar el Sheet:", error);
-        alert("⚠️ No se pudo cargar la lista de usuarios autorizados. Verifica la URL del Sheet.");
+        alert("⚠️ No se pudo cargar la lista de usuarios autorizados.");
         throw error;
       }
     }
@@ -268,7 +254,6 @@
             const errorEl = modal.querySelector('#login-error');
             errorEl.classList.add('hidden');
 
-            // ✅ Buscar en cualquiera de los roles (con encabezados exactos)
             const row = SHEET_DATA.find(r =>
               r["CorreoAgente"] === email ||
               r["Supervisor"] === email ||
@@ -373,7 +358,6 @@
               }
             });
 
-            // ✅ Actualizar el contador global de alertas
             const alertCountEl = document.getElementById('alert-count');
             if (alertCount > 0) {
               alertCountEl.textContent = alertCount > 99 ? '99+' : alertCount;
@@ -384,7 +368,6 @@
           });
         }
 
-        // ✅ Validar sesión guardada usando los datos del Sheet
         if (currentUserEmail) {
           const row = SHEET_DATA.find(r =>
             r["CorreoAgente"] === currentUserEmail ||
