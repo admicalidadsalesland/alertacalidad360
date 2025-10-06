@@ -188,25 +188,71 @@
       appId: "1:123:web:abc" 
     };
 
-    // ✅ Nueva URL: ahora apunta a tu función serverless en Vercel
-    const SHEET_URL = "/api/sheet";
+    // 🔗 URL pública del Google Sheet en CSV (¡sin espacios!)
+    const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTIgsZoBQjMmvl3iDq6GzMt0gvfyCxy5F7eCPZ6Q04YT52gKDiLQ5P9JflhA4zOFcrRRUjHqaDc08zA/pub?gid=0&single=true&output=csv";
     let SHEET_DATA = [];
 
-    // ✅ Función actualizada para cargar JSON (no CSV)
+    // ✅ Función que devuelve una promesa para Promise.all
     async function loadSheetData() {
       try {
         const res = await fetch(SHEET_URL);
-        if (!res.ok) throw new Error("Error al cargar los datos");
-        const { data } = await res.json(); // ← recibe JSON
-        SHEET_DATA = data;
+        if (!res.ok) throw new Error("Error al cargar el CSV");
+        const csv = await res.text();
+        const lines = csv.trim().split("\n");
+        if (lines.length < 2) throw new Error("CSV vacío");
+
+        const headers = lines[0].split(",").map(h => h.trim());
+        const rows = lines.slice(1).map(line => {
+          // Soporte básico para campos entre comillas
+          const cells = line.split(",").map(c => c.trim().replace(/^"(.*)"$/, "$1"));
+          let obj = {};
+          headers.forEach((h, i) => {
+            obj[h] = (cells[i] || "").toLowerCase();
+          });
+          return obj;
+        });
+
+        SHEET_DATA = rows;
         console.log("✅ Datos del Sheet cargados:", SHEET_DATA);
         return SHEET_DATA;
       } catch (error) {
         console.error("❌ Error al cargar el Sheet:", error);
-        alert("⚠️ No se pudo cargar la lista de usuarios autorizados.");
+        alert("⚠️ No se pudo cargar la lista de usuarios autorizados. Verifica la URL del Sheet.");
         throw error;
       }
     }
+
+    // === PARPADEO DEL TÍTULO ===
+    let blinkInterval = null;
+    const originalTitle = document.title;
+
+    function startTitleBlink(alertCount) {
+      if (blinkInterval) return;
+      blinkInterval = setInterval(() => {
+        if (document.hidden) {
+          document.title = document.title.startsWith('⚠️') 
+            ? originalTitle 
+            : `⚠️ ${alertCount} nueva${alertCount > 1 ? 's' : ''} alerta${alertCount > 1 ? 's' : ''} • Alertas Web360`;
+        } else {
+          stopTitleBlink();
+        }
+      }, 1000);
+    }
+
+    function stopTitleBlink() {
+      if (blinkInterval) {
+        clearInterval(blinkInterval);
+        blinkInterval = null;
+      }
+      document.title = originalTitle;
+    }
+
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) {
+        stopTitleBlink();
+      }
+    });
+    // === FIN PARPADEO ===
 
     (function(){
       const loadScript = src => new Promise(res => {
@@ -364,6 +410,13 @@
               alertCountEl.classList.remove('hidden');
             } else {
               alertCountEl.classList.add('hidden');
+            }
+
+            // ✅ Gestionar el parpadeo del título
+            if (alertCount > 0 && document.hidden) {
+              startTitleBlink(alertCount);
+            } else {
+              stopTitleBlink();
             }
           });
         }
