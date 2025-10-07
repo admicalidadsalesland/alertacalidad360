@@ -227,87 +227,64 @@
 
   <!-- Scripts -->
 <script>
-  const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSurBIXBz-zxgpeTzfypry62oOkEvUpRZ-NK7XopbQbCz87sZJFuBUhPTBS17HVxHLuO0kYPe2r3YT0/pub?gid=187586138&single=true&output=csv';
 
-  // === BUSCADOR POR DNI ===
-  async function buscarPorDNI() {
-    const dni = document.getElementById('dniInput').value.trim();
-    const statusEl = document.getElementById('status');
-    const resultEl = document.getElementById('result');
+  // === NUEVA LÓGICA DE BUSCADOR LOCAL ===
+async function buscarPorDNI() {
+  const dni = document.getElementById('dniInput').value.trim();
+  const statusEl = document.getElementById('status');
+  const resultEl = document.getElementById('result');
 
-    if (!dni) {
-      statusEl.textContent = '⚠️ Por favor ingresa un DNI.';
-      resultEl.classList.add('hidden');
+  if (!dni) {
+    statusEl.textContent = '⚠️ Por favor ingresa un DNI.';
+    resultEl.classList.add('hidden');
+    return;
+  }
+
+  statusEl.textContent = 'Buscando...';
+  resultEl.classList.add('hidden');
+
+  try {
+    const response = await fetch(`/api/buscar?dni=${dni}`);
+
+    if (!response.ok) {
+      statusEl.textContent = '❌ No se encontró ningún agente con ese DNI.';
       return;
     }
 
-    statusEl.textContent = 'Buscando...';
-    resultEl.classList.add('hidden');
+    const row = await response.json();
+    document.getElementById('agentName').textContent = row["Agente"] || '—';
 
-    try {
-      const response = await fetch(CSV_URL);
-      const csv = await response.text();
-      const lines = csv.split('\n').filter(line => line.trim() !== '');
-
-      const headers = lines[0].split(',').map(h => h.trim());
-      const dniIndex = headers.indexOf('Dni Agente');
-      const agenteIndex = headers.indexOf('Agente');
-      const s1Index = headers.indexOf('SEMANA 1');
-      const s2Index = headers.indexOf('SEMANA 2');
-      const s3Index = headers.indexOf('SEMANA 3');
-      const s4Index = headers.indexOf('SEMANA 4');
-      const s5Index = headers.indexOf('SEMANA 5');
-      const totalIndex = headers.indexOf('Total general');
-
-      if (dniIndex === -1) {
-        statusEl.textContent = '❌ Error: columna "Dni Agente" no encontrada.';
-        return;
+    const setValue = (id, value) => {
+      const el = document.getElementById(id);
+      if (value && value !== '') {
+        el.textContent = value;
+        el.classList.remove('text-gray-400', 'italic');
+      } else {
+        el.textContent = '—';
+        el.classList.add('text-gray-400', 'italic');
       }
+    };
 
-      let found = false;
-      for (let i = 1; i < lines.length; i++) {
-        const row = lines[i].split(',').map(cell => cell.trim().replace(/"/g, ''));
-        if (row[dniIndex] === dni) {
-          document.getElementById('agentName').textContent = row[agenteIndex] || '—';
+    setValue('s1', row["SEMANA 1"]);
+    setValue('s2', row["SEMANA 2"]);
+    setValue('s3', row["SEMANA 3"]);
+    setValue('s4', row["SEMANA 4"]);
+    setValue('s5', row["SEMANA 5"]);
+    setValue('totalGeneral', row["Total general"]);
 
-          const setValue = (id, value) => {
-            const el = document.getElementById(id);
-            if (value && value !== '') {
-              el.textContent = value;
-              el.classList.remove('text-gray-400', 'italic');
-            } else {
-              el.textContent = '—';
-              el.classList.add('text-gray-400', 'italic');
-            }
-          };
-
-          setValue('s1', row[s1Index]);
-          setValue('s2', row[s2Index]);
-          setValue('s3', row[s3Index]);
-          setValue('s4', row[s4Index]);
-          setValue('s5', row[s5Index]);
-          setValue('totalGeneral', row[totalIndex] || '—');
-
-          resultEl.classList.remove('hidden');
-          statusEl.textContent = '✅ Resultado encontrado.';
-          found = true;
-          break;
-        }
-      }
-
-      if (!found) {
-        statusEl.textContent = '❌ No se encontró ningún agente con ese DNI.';
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      statusEl.textContent = '⚠️ Error al cargar los datos. Revisa la consola.';
-    }
+    resultEl.classList.remove('hidden');
+    statusEl.textContent = '✅ Resultado encontrado.';
+  } catch (error) {
+    console.error(error);
+    statusEl.textContent = '⚠️ Error al buscar datos.';
   }
+}
 
-  // Buscar con Enter
-  document.getElementById('dniInput').addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') buscarPorDNI();
-  });
+// Permitir buscar con Enter
+document.getElementById('dniInput').addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') buscarPorDNI();
+});
+
 
   // === VALIDACIÓN DE SESIÓN ===
   document.addEventListener("DOMContentLoaded", () => {
