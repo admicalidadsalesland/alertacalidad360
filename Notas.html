@@ -291,7 +291,7 @@ document.getElementById('dniInput').addEventListener('keypress', (e) => {
     const email = localStorage.getItem("currentUserEmail");
 
     if (!email) {
-      window.location.href = "login.html"; // 🔑 Redirige si no hay sesión
+      window.location.href = "Notas.html"; // 🔑 Redirige si no hay sesión
     } else {
       document.getElementById("user-email-display").textContent = email;
       document.getElementById("user-name").textContent = email.split("@")[0];
