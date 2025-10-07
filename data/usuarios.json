@@ -1,0 +1,5406 @@
+[
+  {
+    "CorreoAgente": "martinardela@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "felix.castillo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "maryzabarbul@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "monicasolsol@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "renzochuo@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "bejarano.katherine@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "rociocolque@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "christelgarcia@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "felix.castillo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "carlosrowe@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cuba.paolo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "ceciliasaenz@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "elizabethdiaz@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "joselujan@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bazan.merari@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "sheilaromero@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "yesseniasolsol@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "elenapaucar@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jovanagonzales@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bilbao.bruno@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "milagrospena@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bilbao.bruno@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "yennynizama@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "felix.castillo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jeanbaldeon@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "vega.luis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "fiorellahuaman@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "neyra.fiorella@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jhonatancervantes@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "masuda.michihiro@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "lorenzogramajo@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "masuda.michihiro@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "luislipa@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "masuda.michihiro@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "isabelarevalo@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "felix.castillo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "joisercalderon@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bilbao.bruno@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "karenmendoza@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "quiñones.nathaly@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "miguelfarfan@salesland.net",
+    "Campaña": "MT",
+    "Supervisor": "prieto.daphne@salesland.net",
+    "Monitores": "mt.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "nicollevaldez@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "gonzalez.yoelis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "yahairacabrejos@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "yahairahuari@salesland.net",
+    "Campaña": "PORTABILIDAD WHATSAPP",
+    "Supervisor": "alfaro.miriam@salesland.net",
+    "Monitores": "portabilidadwhatsapp.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "yessimardelgado@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "encinas.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "briggitlozano@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bazan.merari@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "fiorellaguevara@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cahuana.giovanni@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jasonrojas@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cahuana.giovanni@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "karlagranados@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "joearias@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "piña.clever@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mairacalzada@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "campaña.lesly@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "patricchatte@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "bejarano.katherine@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "yizzacarhuamaca@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "bejarano.katherine@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "zharickdelacruz@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "canto.maria@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "abigailgalindos@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "vega.luis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "brendaquispe@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "enzomerino@salesland.net",
+    "Campaña": "PORTABILIDAD WHATSAPP",
+    "Supervisor": "alfaro.miriam@salesland.net",
+    "Monitores": "portabilidadwhatsapp.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "gabrielagreda@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "gonzalez.yoelis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "katherinerivas@salesland.net",
+    "Campaña": "PORTABILIDAD WHATSAPP",
+    "Supervisor": "alfaro.miriam@salesland.net",
+    "Monitores": "portabilidadwhatsapp.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "wendychong@salesland.net",
+    "Campaña": "PORTABILIDAD WHATSAPP",
+    "Supervisor": "alfaro.miriam@salesland.net",
+    "Monitores": "portabilidadwhatsapp.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "fernandoiparraguirre@salesland.net",
+    "Campaña": "PORTABILIDAD CHILE",
+    "Supervisor": "macalupu.jhonny@salesland.net",
+    "Monitores": "portabilidadchile.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "omarramosc@salesland.net",
+    "Campaña": "POST VENTA",
+    "Supervisor": "salazar.jhonatan@salesland.net",
+    "Monitores": "postventa.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "silviachumbimuni@salesland.net",
+    "Campaña": "PORTABILIDAD CHILE",
+    "Supervisor": "macalupu.jhonny@salesland.net",
+    "Monitores": "portabilidadchile.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "helenheredia@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "figini.vanessa@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "danielvasquez@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bazan.merari@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "migueltaboada@salesland.net",
+    "Campaña": "PORTABILIDAD WHATSAPP",
+    "Supervisor": "alfaro.miriam@salesland.net",
+    "Monitores": "portabilidadwhatsapp.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "usuario@salesland.net",
+    "Campaña": "POST VENTA",
+    "Supervisor": "salazar.jhonatan@salesland.net",
+    "Monitores": "postventa.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "javiermontoya@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "bejarano.katherine@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "angelarojas@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "piña.clever@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "danielbarrenechea@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "piña.clever@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "editagalvez@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "piña.clever@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "juliamunoz@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "piña.clever@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "lisandrasuarez@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "campaña.lesly@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "luispacheco@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "piña.clever@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "nancyespinoza@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "campaña.lesly@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "pedrochauca@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "campaña.lesly@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "rafaelpujalt@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "piña.clever@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "anaguerrero@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cahuana.giovanni@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "andersoncuadros@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "cristinamendoza@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cahuana.giovanni@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "gemacarreno@salesland.net",
+    "Campaña": "MT",
+    "Supervisor": "prieto.daphne@salesland.net",
+    "Monitores": "mt.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "andreavallejos@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "neyra.fiorella@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "arianvallejos@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "neyra.fiorella@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "dianaayquipa@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "neyra.fiorella@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "edgarpolanco@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "bracamonte.jesus@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jonhespinoza@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "figini.vanessa@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mayrazapatae@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "figini.vanessa@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "rolandocordova@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "neyra.fiorella@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "albertocastillo@salesland.net",
+    "Campaña": "PORTABILIDAD CHILE",
+    "Supervisor": "macalupu.jhonny@salesland.net",
+    "Monitores": "portabilidadchile.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "dafnegonzales@salesland.net",
+    "Campaña": "PORTABILIDAD WHATSAPP",
+    "Supervisor": "alfaro.miriam@salesland.net",
+    "Monitores": "portabilidadwhatsapp.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "janamarlopez@salesland.net",
+    "Campaña": "PORTABILIDAD CHILE",
+    "Supervisor": "macalupu.jhonny@salesland.net",
+    "Monitores": "portabilidadchile.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "yamilereyes@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "canto.maria@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "florenciaquesada@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cuba.paolo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mathiasyap@salesland.net",
+    "Campaña": "PORTABILIDAD INBOUND",
+    "Supervisor": "talavera.angel@salesland.net",
+    "Monitores": "portabilidadinbound.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "sherylsoncco@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cuba.paolo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "faresdiaz@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cahuana.giovanni@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "cesarserranoa@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "canto.maria@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "alessandracardenas@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "bracamonte.jesus@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "andreaalvarez@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "javier.veronica@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "celinaportocarrero@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "bracamonte.jesus@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "carlospantigosov@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "moscoso.ken@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mercyhuaman@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "vega.luis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "diegocabello@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "quiñones.nathaly@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jeremyampuero@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "guerrero.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "johanmendoza@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "garcia.leide@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "laurapardo@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "quiñones.nathaly@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "vivianavega@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "vega.luis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "sandrasanchezl@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "cristhiancarpio@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cuba.paolo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "frankriojas@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "gonzalez.yoelis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jamesfreitas@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "gonzalez.yoelis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jeffersonmore@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "lilianaguerrero@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "gonzalez.yoelis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "meyaching@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bazan.merari@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mirianvasquez@salesland.net",
+    "Campaña": "PORTABILIDAD WHATSAPP",
+    "Supervisor": "alfaro.miriam@salesland.net",
+    "Monitores": "portabilidadwhatsapp.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "rodrigohurtado@salesland.net",
+    "Campaña": "PORTABILIDAD INBOUND",
+    "Supervisor": "talavera.angel@salesland.net",
+    "Monitores": "portabilidadinbound.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "alessioespinoza@salesland.pe",
+    "Campaña": "CARIBU",
+    "Supervisor": "bracamonte.jesus@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "claudiafalen@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "masuda.michihiro@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "erikcalarcon@salesland.pe",
+    "Campaña": "CARIBU",
+    "Supervisor": "moscoso.ken@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mercedescaceda@salesland.pe",
+    "Campaña": "PORTABILIDAD PREPAGO",
+    "Supervisor": "miguel.alvarez@salesland.net",
+    "Monitores": "portabilidadprepago.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "yiroezziomallqui@salesland.pe",
+    "Campaña": "CARIBU",
+    "Supervisor": "bracamonte.jesus@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "grecialazo@salesland.pe",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "gonzalez.yoelis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "milagroscruz@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "gonzalez.yoelis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "ruthcruz@salesland.pe",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "quiñones.nathaly@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "sebastianlaura@salesland.pe",
+    "Campaña": "MT",
+    "Supervisor": "prieto.daphne@salesland.net",
+    "Monitores": "mt.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "giarellysalas@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "quiñones.nathaly@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "alistersegovia@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "vega.luis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "bhetsiortiz@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "guerrero.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "briyitromero@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "vega.luis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "danielaapayco@salesland.net",
+    "Campaña": "PORTABILIDAD WHATSAPP",
+    "Supervisor": "alfaro.miriam@salesland.net",
+    "Monitores": "portabilidadwhatsapp.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "dannaquiroz@salesland.net",
+    "Campaña": "PORTABILIDAD WHATSAPP",
+    "Supervisor": "alfaro.miriam@salesland.net",
+    "Monitores": "portabilidadwhatsapp.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "dayanavillanueva@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "vega.luis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "diegobernahola@salesland.net",
+    "Campaña": "PORTABILIDAD WHATSAPP",
+    "Supervisor": "alfaro.miriam@salesland.net",
+    "Monitores": "portabilidadwhatsapp.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "fabriziomacalopu@salesland.net",
+    "Campaña": "PORTABILIDAD WHATSAPP",
+    "Supervisor": "alfaro.miriam@salesland.net",
+    "Monitores": "portabilidadwhatsapp.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "giancarlomorante@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "guerrero.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "javierbautista@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "quiñones.nathaly@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "salvatorevaldivia@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "vega.luis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "saritatamanni@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "vega.luis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "vivianaprado@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "guerrero.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "yeimicaira@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "melanievaldez@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "encinas.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "alysongamarra@salesland.net",
+    "Campaña": "PORTABILIDAD INBOUND",
+    "Supervisor": "talavera.angel@salesland.net",
+    "Monitores": "portabilidadinbound.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "joseneyra@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "garcia.leide@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "ladyponce@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "bejarano.katherine@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "leonardoramirez@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "quiñones.nathaly@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "miguelinanoriega@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cuba.paolo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "renzovalera@salesland.net",
+    "Campaña": "MT",
+    "Supervisor": "prieto.daphne@salesland.net",
+    "Monitores": "mt.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "rodrigonoa@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "garcia.leide@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "yoselynugarte@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "brendacallirgos@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "masuda.michihiro@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "danielruiz@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "figini.vanessa@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "karlahuapaya@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "bracamonte.jesus@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "larrybarrionuevo@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "figini.vanessa@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "milagrosvillanueva@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "masuda.michihiro@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "ruddyquispe@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "massiel.alarcon@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "betzaberodriguez@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "massiel.alarcon@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "javierinca@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "bejarano.katherine@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "claudiaarroyo@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "estrada.emily@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "johannpalacios@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "luisignacio@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cuba.paolo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "luissuarez@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "estrada.emily@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "luzhumpiri@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "estrada.emily@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "vanesafajardo@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "quiñones.nathaly@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "angiesialer@salesland.net",
+    "Campaña": "POST VENTA",
+    "Supervisor": "salazar.jhonatan@salesland.net",
+    "Monitores": "postventa.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "arlenemendoza@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "encinas.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "alexandrahuamani@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "moscoso.ken@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "janethaguayo@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "massiel.alarcon@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "josemamani@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "javier.veronica@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "sebastianllanos@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "moscoso.ken@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "andreajuarez@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "yaxcelenylara@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "massiel.alarcon@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "biancachavez@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "masuda.michihiro@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "josesamaniego@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "javier.veronica@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "luisdinegro@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "figini.vanessa@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "sebastianbonifaz@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "carlosarmas@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "moscoso.ken@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "rodrigomelgarejo@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "masuda.michihiro@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "janethenriquez@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "campaña.lesly@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "carmenrodriguez@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bilbao.bruno@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "aldotupia@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "geraldineguardamino@salesland.net",
+    "Campaña": "MT",
+    "Supervisor": "prieto.daphne@salesland.net",
+    "Monitores": "mt.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "geraldineherrera@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "felix.castillo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "rebecaortiz@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "victordavila@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "yoselinlazaro@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bilbao.bruno@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "carolinavillanoa@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cuba.paolo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jesustorres@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "canto.maria@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "dayannaquilca@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cahuana.giovanni@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jackelinearriaga@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "estrada.emily@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "normitapinedo@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "estrada.emily@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "rubivivas@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cahuana.giovanni@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jeanmendoza@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "masuda.michihiro@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "kimberlyngonzales@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "moscoso.ken@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "perlasernaque@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "pierosevilla@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "carissamartinez@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "guerrero.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "karinacondori@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cuba.paolo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "luhannahuertas@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "martinvivanco@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "figini.vanessa@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "medalithcalero@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "patriciabenavides@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "franzgarcia@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "bracamonte.jesus@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "christopherquispe@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cahuana.giovanni@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "elizabethmendoza@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "moscoso.ken@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "cristinagarcia@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cahuana.giovanni@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "danyermisesqueda@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "alexmachaca@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "bracamonte.jesus@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "ulisescalderon@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cuba.paolo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "carolinadiaz@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "neyra.fiorella@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "rosaninasivincha@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "bejarano.katherine@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mariellaapaza@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "masuda.michihiro@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jhosselynalanya@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "encinas.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mayerlycastaneda@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "bravo.kerry@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "merycuevas@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cuba.paolo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "pieronegron@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cuba.paolo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "sebasthiamdelgado@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cuba.paolo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "tiffannyparedes@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "nancycuellar@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cuba.paolo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "carolinamendoza@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "neyra.fiorella@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "manuelvergara@salesland.net",
+    "Campaña": "PORTABILIDAD PREPAGO",
+    "Supervisor": "miguel.alvarez@salesland.net",
+    "Monitores": "portabilidadprepago.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "nicolecarmen@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "bejarano.katherine@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "ariananaupari@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "neyra.fiorella@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "yadhirapuente@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "bejarano.katherine@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "bennysalvador@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "canto.maria@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jeanreyes@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "bracamonte.jesus@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "diegocastro@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bilbao.bruno@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "duanflores@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mariahuamanttica@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "stephanovillanueva@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "encinas.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "valeriamurga@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "canto.maria@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "kimberlimreyes@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "moscoso.ken@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mirkoflores@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "figini.vanessa@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mariafacundo@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "encinas.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "brunoacosta@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mariaflores@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "guialianaguerra@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "encinas.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "juliaquispe@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "nadimpomasoncco@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "estrada.emily@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mariafigueroa@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "estrada.emily@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "nicolaszamata@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "encinas.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "gabrielamendoza@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "neyra.fiorella@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "gissellballena@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "massiel.alarcon@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "joselinguerrat@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "piña.clever@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "rodolfovargasl@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "ojt.capl@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "linikeraraujoh@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "campaña.lesly@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "claudiamedinam@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "vasquez.allison@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "cinthiafloresm@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "vasquez.allison@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "sebastianramonm@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "ojt.capl@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jhoanaricascac@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "neyra.fiorella@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "sandypachasc@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "ojt.capl@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "rodrigotiradop@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "vasquez.allison@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "shulayguevarab@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "vasquez.allison@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "maricielopalaciost@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "vasquez.allison@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mariaormenom@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "vasquez.allison@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "emmaperezl@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "ojt.capl@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "rociomamanig@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "vasquez.allison@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "galojimenezg@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "bracamonte.jesus@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "gisellatapias@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "bracamonte.jesus@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "gabrielaarrellanop@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "masuda.michihiro@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "gerardoabadl@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "vasquez.allison@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "luiscardenas@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "campaña.lesly@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "angelaquijandria@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "guerrero.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "dianaloconi@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "neyra.fiorella@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "marlenydiaz@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mikelluque@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "estrada.emily@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "nicoleningle@salesland.net",
+    "Campaña": "PORTABILIDAD WHATSAPP",
+    "Supervisor": "alfaro.miriam@salesland.net",
+    "Monitores": "portabilidadwhatsapp.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "cristinaperea@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "encinas.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jhonnyzapatad@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "massiel.alarcon@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "ximenasalsavilcaa@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "garcia.luis@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "anacozm@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "garcia.luis@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "stefanocalderons@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "bejarano.katherine@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mariaromeroh@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "garcia.luis@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "cittaballenap@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "garcia.luis@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "olenkacampanac@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "garcia.luis@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "miguelseladaa@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "neyra.fiorella@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "sayuritejadav@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "garcia.luis@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jeremycoze@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "garcia.luis@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "carlosmezac@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "garcia.luis@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "gloriaangelesm@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "massiel.alarcon@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "santiagofrayreg@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bazan.merari@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "haguitcantarob@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "gonzalez.yoelis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "anatantachucov@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "quiñones.nathaly@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "aarongallosos@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bazan.merari@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "amirsolanoc@salesland.net",
+    "Campaña": "MT",
+    "Supervisor": "prieto.daphne@salesland.net",
+    "Monitores": "mt.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mayckolgamarrap@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "guerrero.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jahirsanchezc@salesland.net",
+    "Campaña": "MT",
+    "Supervisor": "prieto.daphne@salesland.net",
+    "Monitores": "mt.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "gustavopalletea@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bazan.merari@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "alexiaparedesq@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "andrescastrog@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bazan.merari@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "dannapachecob@salesland.net",
+    "Campaña": "MT",
+    "Supervisor": "prieto.daphne@salesland.net",
+    "Monitores": "mt.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "eddycamarenad@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cuba.paolo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "shandratarancoc@salesland.net",
+    "Campaña": "MT",
+    "Supervisor": "prieto.daphne@salesland.net",
+    "Monitores": "mt.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "adrianopachecop@salesland.net",
+    "Campaña": "MT",
+    "Supervisor": "prieto.daphne@salesland.net",
+    "Monitores": "mt.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "danielarim@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "quiñones.nathaly@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "leonardofajardov@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "joaquinpuentedelavegam@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "vega.luis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "karololiveraf@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "encinas.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "alejandraalvant@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "encinas.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "fabianbroncanor@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "encinas.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "katerubinosz@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "quiñones.nathaly@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jesusmichaeld@salesland.net",
+    "Campaña": "MT",
+    "Supervisor": "prieto.daphne@salesland.net",
+    "Monitores": "mt.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jecsulopeze@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "bricknajarro@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "estrada.emily@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "akikoyoshidak@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "roberturibet@salesland.net",
+    "Campaña": "CAEQ DIGITAL",
+    "Supervisor": "jhon.altamirano@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "dannaticonam@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "bejarano.katherine@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "christelveram@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "garcia.luis@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "carlososorios@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "garcia.luis@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "raultaicoc@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "garcia.luis@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "keslyepalmag@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "bejarano.katherine@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jeycorivadeneyrav@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "bejarano.katherine@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "evavillalobosd@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "garcia.luis@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "claudiamaitab@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "garcia.luis@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "carmenbarrientosm@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "felix.castillo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "darwindiazd@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "felix.castillo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "elvacarbajall@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "felix.castillo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "gianellacuipac@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "felix.castillo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "juanpereyrac@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "felix.castillo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "magalybermudezg@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "felix.castillo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "melinacondora@salesland.net",
+    "Campaña": "PORTABILIDAD WHATSAPP",
+    "Supervisor": "alfaro.miriam@salesland.net",
+    "Monitores": "portabilidadwhatsapp.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "wendydiazm@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "felix.castillo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "omarleoni@salesland.net",
+    "Campaña": "PORTABILIDAD WHATSAPP",
+    "Supervisor": "alfaro.miriam@salesland.net",
+    "Monitores": "portabilidadwhatsapp.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "gisellamarquinar@salesland.net",
+    "Campaña": "PORTABILIDAD WHATSAPP",
+    "Supervisor": "alfaro.miriam@salesland.net",
+    "Monitores": "portabilidadwhatsapp.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "erikgarazatuad@salesland.net",
+    "Campaña": "PORTABILIDAD WHATSAPP",
+    "Supervisor": "alfaro.miriam@salesland.net",
+    "Monitores": "portabilidadwhatsapp.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "ladyguzmans@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "priscillamonsalvem@salesland.net",
+    "Campaña": "PORTABILIDAD WHATSAPP",
+    "Supervisor": "alfaro.miriam@salesland.net",
+    "Monitores": "portabilidadwhatsapp.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mayraochoag@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "massiel.alarcon@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "lizllanoss@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "garcia.luis@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "josecaballerol@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "canto.maria@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jenniferperezg@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "canto.maria@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jesusibarrac@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "garcia.luis@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "eduardocarrerac@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "neyra.fiorella@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mercedeszunigac@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "garcia.luis@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "andreasarcoc@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "canto.maria@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "barbaraaguilarj@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "garcia.luis@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "angeloponced@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "massiel.alarcon@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jakelinechinchayh@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "garcia.luis@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "rhenzohoyosr@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "garcia.luis@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "lucianajaramillof@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "garcia.luis@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "anderzonpovisv@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "piña.clever@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "monicaperry@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "piña.clever@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mayrazapataa@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "campaña.lesly@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "gloryapintado@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "campaña.lesly@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "saskiasenadorc@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "piña.clever@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "lindamarengoc@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "piña.clever@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "milagrosllacuar@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "campaña.lesly@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "davidfuertesg@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "piña.clever@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "sergiocastroo@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "campaña.lesly@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "simonorcialg@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "campaña.lesly@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "irmagutierrezh@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "piña.clever@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "angelosanchezn@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "campaña.lesly@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "nayelicosquilloz@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "berthaparionap@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "camilaberrocalv@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "yuleisiorihuelar@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "yandireramosc@salesland.net",
+    "Campaña": "PORTABILIDAD CHILE",
+    "Supervisor": "macalupu.jhonny@salesland.net",
+    "Monitores": "portabilidadchile.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jeanalbornoz@salesland.pe",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "estrada.emily@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "orianamontoyas@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "guerrero.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "lourdesbrionesp@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "felix.castillo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "gracielavalenciat@salesland.net",
+    "Campaña": "CAEQ DIGITAL",
+    "Supervisor": "jhon.altamirano@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "arianamoraless@salesland.net",
+    "Campaña": "CAEQ DIGITAL",
+    "Supervisor": "jhon.altamirano@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "erikromanv@salesland.net",
+    "Campaña": "CAEQ DIGITAL",
+    "Supervisor": "jhon.altamirano@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "christophercampomanesa@salesland.net",
+    "Campaña": "CAEQ DIGITAL",
+    "Supervisor": "jhon.altamirano@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "alessandrasantosp@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "quiñones.nathaly@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "aylenolivaresm@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "gonzalez.yoelis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "estelarodriguezm@salesland.net",
+    "Campaña": "MT",
+    "Supervisor": "prieto.daphne@salesland.net",
+    "Monitores": "mt.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "xiomaraamayas@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "garcia.leide@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "gabrielnavarreteg@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "estrada.emily@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "luceroauccatingog@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "garcia.leide@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jhonmaldonador@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cahuana.giovanni@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "crystalvergarayg@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "encinas.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "laishazapataa@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "brayanhuanayj@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "masuda.michihiro@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "karinagalindo@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bilbao.bruno@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "kellyortega@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "annacastillo@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "arturomontoya@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "cristophercubas@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "quiñones.nathaly@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "dorianlozada@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cahuana.giovanni@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "robertquispe@salesland.net",
+    "Campaña": "PORTABILIDAD CHILE",
+    "Supervisor": "macalupu.jhonny@salesland.net",
+    "Monitores": "portabilidadchile.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jhonatanyovera@salesland.net",
+    "Campaña": "PORTABILIDAD CHILE",
+    "Supervisor": "macalupu.jhonny@salesland.net",
+    "Monitores": "portabilidadchile.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "marilumendez@salesland.net",
+    "Campaña": "PORTABILIDAD CHILE",
+    "Supervisor": "macalupu.jhonny@salesland.net",
+    "Monitores": "portabilidadchile.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "shantalmontes@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cuba.paolo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "marhomymedinaa@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "dorisjarat@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "encinas.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "carlosmurilloc@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cahuana.giovanni@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "matiasvalladolidc@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cahuana.giovanni@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "bryanmoranp@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "salazar.jennifer@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "ailinlovonc@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "ojt.capl@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "rodrigocondorir@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "ojt.capl@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "arianamorenov@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "ojt.capl@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "davisdelaguilae@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "ojt.capl@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "geancanalesg@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "ojt.capl@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mateofarjer@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "ojt.capl@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "xiomaraperezr@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "ojt.capl@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "chrischumbesc@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "ojt.capl@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "marianamartinq@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "vasquez.allison@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "anavilelac@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "vasquez.allison@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "armandomendezp@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "vasquez.allison@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "davidchavezy@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "ojt.capl@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "eduardomuroc@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "ojt.capl@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "adrianadavidc@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "ojt.capl@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "antuanetgutierrezr@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "neyra.fiorella@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "rauldelgadoc@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "vasquez.allison@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "kelyfigueredog@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "vasquez.allison@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "joaquinvegaf@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "figini.vanessa@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "pieroballonal@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "ojt.caribu@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "marisolhuachacac@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "javier.veronica@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "luceromaytab@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "javier.veronica@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mayracuellare@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "moscoso.ken@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jazminquintanac@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "masuda.michihiro@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "pierinaastovilcam@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "bracamonte.jesus@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "alissonpanduroa@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "moscoso.ken@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "luisherreraj@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "masuda.michihiro@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "gianellamoraler@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "ojt.caribu@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "marianopimentelc@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "moscoso.ken@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "yerismargomezs@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "bracamonte.jesus@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "joserodrigueza@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "ojt.caribu@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "pamelapardor@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "bracamonte.jesus@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "yassercuria@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "ojt.caribu@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "brissarazurim@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "ojt.caribu@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "milagrosaquinoh@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "ojt.phoenix@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jaimeconsuelos@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "piña.clever@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jeremyalvaradoa@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "ojt.phoenix@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "dayanaunoccl@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "campaña.lesly@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "denysvalverdea@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "campaña.lesly@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "camilazavala@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "ojt.phoenix@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "andersonramosa@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "chumbes.jose@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "dayannecandelat@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "bravo.kerry@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "georgeterbullinof@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "bravo.kerry@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jeremycordovaa@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "chumbes.jose@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "joaquinmedinar@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "bravo.kerry@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "ronaldoandradec@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "bravo.kerry@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "yadyrabacah@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "chumbes.jose@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jamirmontesg@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "bravo.kerry@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "valerialagunam@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "bravo.kerry@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "rebecacobar@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "bravo.kerry@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "luzquisper@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "chumbes.jose@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "adrianafernandezh@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "bravo.kerry@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "juanchavezp@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "bravo.kerry@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "luisrondonv@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "chumbes.jose@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "remmymedinal@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "bravo.kerry@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "xiomaramazal@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "bravo.kerry@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "angiefloresf@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mariazamudiob@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "vasquez.allison@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "akemialtezt@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "vasquez.allison@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "tomilickrengifov@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "vasquez.allison@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "filibertoestradam@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "vasquez.allison@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mariarequejoc@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "vasquez.allison@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "karlacalderonc@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "vasquez.allison@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mayckerperezg@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "bravo.kerry@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "cristhiancristhiana@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "bravo.kerry@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "juanrodriguezp@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "chumbes.jose@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mayarahsaavedraa@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "chumbes.jose@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "anjelisalinasa@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "aramispenalozaa@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "arianaeliasm@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "camilaramosp@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "darienmelgarejom@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "dayrarojast@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "deisyprimos@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "edufuentesm@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jeanyauricazao@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "elviszamorav@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "andreaariasr@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "bryanlizamas@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "estefanycarrionp@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "gianfloresi@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jheseniamunozl@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "nicolerimascah@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "wendypalaciosr@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "elsacastillop@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "vasquez.allison@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "juanespinozar@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "vasquez.allison@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "denissefajardon@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "ojt.capl@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "carolinavazquezc@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "vasquez.allison@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "gabytorreso@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "encinas.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "alexandraytoc@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "prieto.daphne@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "pierinapalaciosb@salesland.net",
+    "Campaña": "MT",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "mt.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "cristhianlarosah@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "quiñones.nathaly@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "nickhuamanic@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bravo.kerry@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jhosepchoccelahuaf@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "chumbes.jose@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "katherinechacaliazar@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "chumbes.jose@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "leandrolandeor@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "bravo.kerry@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "adanvillanuevap@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "bravo.kerry@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "victorhugoc@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "chumbes.jose@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "carloshuamanchumog@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "chumbes.jose@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "juanduranh@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "bravo.kerry@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "rosaruizn@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "chumbes.jose@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "susanutcanem@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "bravo.kerry@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "estrellagalarzac@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "chumbes.jose@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "janetdamianu@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "chumbes.jose@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "robertodescalzig@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "chumbes.jose@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "summyroblesb@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "bravo.kerry@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "alejandromendozaf@salesland.net",
+    "Campaña": "PORTABILIDAD CRECIMIENTO",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "#N/A",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "angelgavirias@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "carmenperaltad@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "cristhopherpalominom@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "deissyevangelistaz@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "gonzalolopezl@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jairnamop@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "luissanchezp@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "peetervidalv@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "kelvinchacoab@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "dayanaoterop@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "harumyanicamaa@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "percyvivess@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "rolycastilloc@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "ojt.portabilidad@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "richardpuyens@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "ojt.portabilidad@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "rocioverag@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "ojt.portabilidad@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "yaritzamoralesm@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "ojt.portabilidad@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "luisfabianosanchezv@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "ojt.portabilidad@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "alexandradominguezl@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "ojt.portabilidad@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "rosalyharob@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "ojt.portabilidad@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "leslieyarlequef@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "ojt.portabilidad@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "luisvergarap@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "ojt.portabilidad@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "walterplasenciai@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "ojt.portabilidad@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "kevinpachecoh@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "ojt.portabilidad@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "allisonjoyav@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "ojt.portabilidad@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mitzahelaucahuasid@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "ojt.portabilidad@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jorgepierrefiestasr@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "ojt.portabilidad@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "arturoaguilarj@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "vasquez.allison@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jesusyacilae@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "javier.veronica@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "adrianapimentelr@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "javier.veronica@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "andreachangb@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "javier.veronica@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "betzabeardianf@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "javier.veronica@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "evelynquispea@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "moscoso.ken@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "giorginahuancav@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "figini.vanessa@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "luiggituestas@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "javier.veronica@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mayerlyvillanuevam@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "piña.clever@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "nellyrodriguezj@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "javier.veronica@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "oscarespinozac@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "javier.veronica@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "ruthrondanf@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "ruthcastillov@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "deborahcuencac@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "leninseminarior@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "garcia.luis@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "katherinrojase@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "garcia.luis@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "katherinebustamanted@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "diegominayac@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "garcia.luis@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mikaelybejarr@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "miguel.alvarez@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "matiasarredondoi@salesland.net",
+    "Campaña": "PORTABILIDAD PREPAGO",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "portabilidadprepago.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "renzomarquinao@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "garcia.luis@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jimmyvillenam@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "anthonyalvarezs@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "miguel.alvarez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "josesalasm@salesland.net",
+    "Campaña": "PORTABILIDAD PREPAGO",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "portabilidadprepago.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "alfredopomar@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "anthonymunozh@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "berthajimenezg@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "camilaportilloc@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "carlosquesquenv@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "carlosrupayn@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "piña.clever@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "consuelolopezq@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "campaña.lesly@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "gabrielapalominof@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jhimyalayac@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jhonnhuamana@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "juanmontesinosc@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "juanarredondoc@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "lilianasandovala@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "luiscabreras@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "plinioleong@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "campaña.lesly@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "rodrigosulcar@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "piña.clever@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "sebastianquisper@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "campaña.lesly@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "williammontesinoss@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "quiñones.nathaly@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "adrianoperezg@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "encinas.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "angeloalvac@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "encinas.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "dhairahuarangas@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "gianellafigueroaa@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "vega.luis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jhonatancoloradot@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "estrada.emily@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "ligiajanelleg@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "encinas.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "maxnajarrol@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "guerrero.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "saraivasquezc@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "encinas.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "tatimozar@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "garcia.leide@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "faviogarcias@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "cristhophervaldiviao@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "diegoocanoo@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "irmaquesquenc@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "zapata.pedro@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "lilianacuellars@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "medalycarbajalr@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "nilsensalazarv@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "miguel.alvarez@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "trilcetoscanoc@salesland.net",
+    "Campaña": "PORTABILIDAD PREPAGO",
+    "Supervisor": "nora.chavez@salesland.net",
+    "Monitores": "portabilidadprepago.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "zaidayupanquic@salesland.net",
+    "Campaña": "BLINDAJE",
+    "Supervisor": "vega.luis@salesland.net",
+    "Monitores": "blindaje.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "emersonparionaq@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "vega.luis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "luislozanor@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "masuda.michihiro@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "angelagarciah@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "campaña.lesly@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "cinthyaberrocalr@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "campaña.lesly@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jenifermegoc@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "moscoso.ken@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "gladysbravom@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "piña.clever@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "josafatsegurag@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "bracamonte.jesus@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "josemu?izr@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "campaña.lesly@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "juanayllona@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "figini.vanessa@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "juanapeveh@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "piña.clever@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "sebastianvergarayl@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "masuda.michihiro@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "stefanycanchisz@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "figini.vanessa@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "veronicamontijom@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "felix.castillo@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "abdielrubinosz@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "felix.castillo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "greysayastap@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "felix.castillo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "hilarynvilchezc@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "felix.castillo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jackelineazaneror@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "felix.castillo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "katherineromerov@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "felix.castillo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mariaretom@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "felix.castillo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "marielaquirozl@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "felix.castillo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "nelsymoralesc@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "felix.castillo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "sayuriborjasv@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "campaña.lesly@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "anthoanelagrandav@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "neyra.fiorella@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "abrahanparionag@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "bejarano.katherine@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "emmaduffoom@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "neyra.fiorella@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "luisleguiac@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "garcia.leide@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mariavillafuerteb@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bejarano.katherine@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "samuelostosc@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "canto.maria@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "selenavivars@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "aldayirdanessil@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bazan.merari@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "andreinasanchezm@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bazan.merari@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "cristinasanchezq@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bazan.merari@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "dayanaquinchor@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "prieto.daphne@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "diegogarciag@salesland.net",
+    "Campaña": "MT",
+    "Supervisor": "cahuana.giovanni@salesland.net",
+    "Monitores": "mt.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "ernestogutierrezj@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "encinas.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jeremyminayag@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jordantorresp@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "encinas.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "lucerocardenasm@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mabelynayastap@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "felix.castillo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "marcosobandov@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mariaaguirrec@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mariajaram@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cuba.paolo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mariaalarconc@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "milenasantosv@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "garcia.leide@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "paolavillaltad@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "moscoso.ken@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jorgehandabakaz@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "figini.vanessa@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "juliolaj@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "javier.veronica@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "luisaeffiob@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "figini.vanessa@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "saydasanat@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "moscoso.ken@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jeremycardenasg@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "jhon.altamirano@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "adrianacuetoparedes1@gmail.com",
+    "Campaña": "CAEQ DIGITAL",
+    "Supervisor": "jhon.altamirano@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "gabrielsantananieto627@gmail.com",
+    "Campaña": "CAEQ DIGITAL",
+    "Supervisor": "jhon.altamirano@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "isaacvargaslt@gmail.com",
+    "Campaña": "CAEQ DIGITAL",
+    "Supervisor": "neyra.fiorella@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "betsymerinoo@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "canto.maria@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "carlospachecos@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "massiel.alarcon@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "edithisidroc@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "massiel.alarcon@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "hillaryberrospip@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "neyra.fiorella@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "kellychungai@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "massiel.alarcon@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "kiaramenar@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "canto.maria@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "leylasuarezm@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "neyra.fiorella@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "nayelisosac@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "bilbao.bruno@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "alissonleem@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bazan.merari@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "diegocaballerov@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "gonzalez.yoelis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "emilyquispea@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bazan.merari@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "giulianavilchezt@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "gonzalez.yoelis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "kevinmendozap@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "estrada.emily@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "luanafloresm@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "luiscabezasd@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bilbao.bruno@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "luisportocarreroj@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "guerrero.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "maryquichcaa@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "garcia.leide@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "marylinespinozag@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "talavera.angel@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mathiasguerral@salesland.net",
+    "Campaña": "PORTABILIDAD INBOUND",
+    "Supervisor": "javier.veronica@salesland.net",
+    "Monitores": "portabilidadinbound.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "missyoncoya@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "bilbao.bruno@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "xiomaramartinp@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bejarano.katherine@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "karensilvam@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "macalupu.jhonny@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "migueldelgados@salesland.net",
+    "Campaña": "PORTABILIDAD CHILE",
+    "Supervisor": "canto.maria@salesland.net",
+    "Monitores": "portabilidadchile.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "nayeliyanezt@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "campaña.lesly@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "melissagarciac@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "masuda.michihiro@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "brendamaytag@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "aimyjaimet@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "estrada.emily@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "anamunozc@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "gonzalez.yoelis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "harolpairazamanm@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "guerrero.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "leonardorabanalv@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "jhon.altamirano@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "luisochoac@salesland.net",
+    "Campaña": "CAEQ DIGITAL",
+    "Supervisor": "jhon.altamirano@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "raitchelgonzaq@salesland.net",
+    "Campaña": "CAEQ DIGITAL",
+    "Supervisor": "guerrero.jean@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "stephaniecastanedar@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "massiel.alarcon@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "alessandramamanic@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "massiel.alarcon@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "carlosruizc@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "massiel.alarcon@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "miriampachecob@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "jhon.altamirano@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "edgardoherreraa@salesland.net",
+    "Campaña": "CAEQ DIGITAL",
+    "Supervisor": "campaña.lesly@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "sandranuneza@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "massiel.alarcon@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "alexandersolisg@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "vega.luis@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "angimararmasb@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "massiel.alarcon@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jeanpiercabrerah@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "massiel.alarcon@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "leonardohumpireg@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "massiel.alarcon@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "santiagodiazp@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "cahuana.giovanni@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "anaquijandriad@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bazan.merari@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "astridpinascob@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cahuana.giovanni@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "gloriagajardoq@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "gonzalez.yoelis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "gretasanchezg@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "guerrero.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "isaacfernandezc@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "rodrigomalcaa@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "javier.veronica@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "camillallajarunac@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "bracamonte.jesus@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "garymendozae@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "masuda.michihiro@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "nicolasorellanac@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "cahuana.giovanni@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "andrescalongosg@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "estrada.emily@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "freddyocanal@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "garcia.leide@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jeffersonjaramilloj@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "joselyntejadag@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "vega.luis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "saraigaldog@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "felix.castillo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "amillsaeza@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "carlosaquinoc@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "felix.castillo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "cristhianamaop@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "leidyalarconf@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "felix.castillo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "paulsasaria@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "massiel.alarcon@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "carloscespedesr@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "masuda.michihiro@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "gianellavalerioj@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "massiel.alarcon@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "kevinbajalquef@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "massiel.alarcon@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "yrvinbalcazarc@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "kiaraherrerac@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bracamonte.jesus@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "brisaramirezb@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "bracamonte.jesus@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "nayelibautistap@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "quiñones.nathaly@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "andyserranov@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "piña.clever@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "angelloclarov@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "gonzalez.yoelis@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "carlosraymondir@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "garcia.leide@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "diegorojasr@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "campaña.lesly@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "estrellaluciob@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "estrada.emily@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "ianperizv@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "vega.luis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mathiasgarcia@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "milagroscorreae@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "garcia.leide@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "sandrallontopm@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "campaña.lesly@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "trianagodoyo@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "neyra.fiorella@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "frankrosalesd@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "canto.maria@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "franshescasanchezm@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "canto.maria@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jennyffercruze@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "bejarano.katherine@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "renatoreateguia@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "canto.maria@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "royquirozv@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "bejarano.katherine@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "willyyparraguirreg@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "neyra.fiorella@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "yeneiinocentee@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "moscoso.ken@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "carlosblasj@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "piña.clever@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jhonvillah@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "quiñones.nathaly@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "ghersonnavarroc@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "prieto.daphne@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "juanlopezy@salesland.net",
+    "Campaña": "MT",
+    "Supervisor": "estrada.emily@salesland.net",
+    "Monitores": "mt.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mariacacianom@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "patrickcacedah@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cahuana.giovanni@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "rodrigoabadp@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "guerrero.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "aldomoralesr@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "garcia.leide@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "manuelbazoaltoj@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bejarano.katherine@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jhordysandovalv@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "estrada.emily@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "gonzalosalazarl@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cuba.paolo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jonnychamorrov@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bazan.merari@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "karlatorresc@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "estrada.emily@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "samuelcondorin@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "perez.susam@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "brendatupinos@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "bracamonte.jesus@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "danielamartelc@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "masuda.michihiro@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "josephapolayaa@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "bracamonte.jesus@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "taniamaldonadom@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "figini.vanessa@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "xiomarasalesb@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "neyra.fiorella@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "ricardoalegrea@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "estrada.emily@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "alvarocasimirog@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "estrada.emily@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "analydelgadoc@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "talavera.angel@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "analyancajimag@salesland.net",
+    "Campaña": "PORTABILIDAD INBOUND",
+    "Supervisor": "talavera.angel@salesland.net",
+    "Monitores": "portabilidadinbound.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "arianacasimirog@salesland.net",
+    "Campaña": "PORTABILIDAD INBOUND",
+    "Supervisor": "talavera.angel@salesland.net",
+    "Monitores": "portabilidadinbound.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "cindyhinojosac@salesland.net",
+    "Campaña": "PORTABILIDAD INBOUND",
+    "Supervisor": "cahuana.giovanni@salesland.net",
+    "Monitores": "portabilidadinbound.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "francescoagurtos@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "juliovivasb@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "bejarano.katherine@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "kimberlyacostap@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "guerrero.jean@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "sergiolopezl@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "masuda.michihiro@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "liztomayquispea@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "canto.maria@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "lesllygomezm@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "canto.maria@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "ximenareateguia@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "prieto.daphne@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "henryllajarunac@salesland.net",
+    "Campaña": "MT",
+    "Supervisor": "encinas.jean@salesland.net",
+    "Monitores": "mt.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "josecamarenas@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "cuba.paolo@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "perlitacruzf@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "milagrostapias@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "piña.clever@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jazminfigueroai@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "piña.clever@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "lauragarciaf@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "piña.clever@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "sharontiradop@salesland.net",
+    "Campaña": "CARIBU DIGITAL",
+    "Supervisor": "macalupu.jhonny@salesland.net",
+    "Monitores": "cuentasphx@salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "erichjimenezr@salesland.net",
+    "Campaña": "PORTABILIDAD CHILE",
+    "Supervisor": "macalupu.jhonny@salesland.net",
+    "Monitores": "portabilidadchile.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "katherincernal@salesland.net",
+    "Campaña": "PORTABILIDAD CHILE",
+    "Supervisor": "macalupu.jhonny@salesland.net",
+    "Monitores": "portabilidadchile.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "leslycayoa@salesland.net",
+    "Campaña": "PORTABILIDAD CHILE",
+    "Supervisor": "macalupu.jhonny@salesland.net",
+    "Monitores": "portabilidadchile.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mariahuamanic@salesland.net",
+    "Campaña": "PORTABILIDAD CHILE",
+    "Supervisor": "pachas.william@salesland.net",
+    "Monitores": "portabilidadchile.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mariaandradef@salesland.net",
+    "Campaña": "PORTABILIDAD CHILE",
+    "Supervisor": "javier.veronica@salesland.net",
+    "Monitores": "portabilidadchile.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "stephanyatochev@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "moscoso.ken@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "aracellicachayc@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "vega.luis@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "henrycarbajalv@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "guerrero.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "angeloparedesq@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "vega.luis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "dannaetthuatayp@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "guerrero.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "dylangallosas@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "guerrero.jean@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "fabritzioariast@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jesusmedinab@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "vega.luis@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "kristelordonezs@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "macalupu.jhonny@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jackelynmiranda@salesland.net",
+    "Campaña": "PORTABILIDAD CHILE",
+    "Supervisor": "macalupu.jhonny@salesland.net",
+    "Monitores": "portabilidadchile.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "josephespino@salesland.net",
+    "Campaña": "PORTABILIDAD CHILE",
+    "Supervisor": "canto.maria@salesland.net",
+    "Monitores": "portabilidadchile.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "fahridzolaa@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "canto.maria@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "kelihuamana@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "canto.maria@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "luzgonzalesp@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "valdivia.nelson@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "alexandraalvarezd@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "anaya.sofia@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "maxalcantarav@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "macalupu.jhonny@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "shirleyrabanal@salesland.net",
+    "Campaña": "PORTABILIDAD CHILE",
+    "Supervisor": "cuba.paolo@salesland.net",
+    "Monitores": "portabilidadchile.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "mirianfalcon@salesland.net",
+    "Campaña": "PORTABILIDAD",
+    "Supervisor": "moscoso.ken@salesland.net",
+    "Monitores": "portabilidad.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "fabianosorior@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "moscoso.ken@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "leeguillenc@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "javier.veronica@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "lizetmiramira@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "moscoso.ken@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "soledadquispec@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "figini.vanessa@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "yesselyncordovat@salesland.net",
+    "Campaña": "CARIBU",
+    "Supervisor": "vargaz.miguel@salesland.net",
+    "Monitores": "caribu.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "allisonvasquez@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "neyra.fiorella@salesland.net",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  },
+  {
+    "CorreoAgente": "jhordysoto@salesland.net",
+    "Campaña": "CAPL",
+    "Supervisor": "",
+    "Monitores": "capl.salesland.net",
+    "SupervisorGlobal": "gpt.salesland.net"
+  }
+]
