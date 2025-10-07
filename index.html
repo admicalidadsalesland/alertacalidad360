@@ -188,44 +188,9 @@
       appId: "1:123:web:abc" 
     };
 
-// 🔗 URL pública del Google Sheet en CSV (¡sin espacios!)
-const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTIgsZoBQjMmvl3iDq6GzMt0gvfyCxy5F7eCPZ6Q04YT52gKDiLQ5P9JflhA4zOFcrRRUjHqaDc08zA/pub?gid=0&single=true&output=csv";
-let SHEET_DATA = [];
-
-// ✅ Función que devuelve una promesa para Promise.all
-async function loadSheetData() {
-  try {
-    const res = await fetch(SHEET_URL);
-    if (!res.ok) throw new Error("Error al cargar el CSV");
-
-    const csv = await res.text();
-    // 🛠 Elimina líneas vacías o mal formateadas
-    const lines = csv.trim().split(/\r?\n/).filter(l => l.trim() !== "");
-    if (lines.length < 2) throw new Error("CSV vacío o mal formateado");
-
-    const headers = lines[0].split(",").map(h => h.trim());
-    const rows = lines.slice(1)
-      .filter(line => line && line.includes(",")) // evita procesar líneas sin datos válidos
-      .map(line => {
-        // Soporte básico para campos entre comillas
-        const cells = line.split(",").map(c => c.trim().replace(/^"(.*)"$/, "$1"));
-        let obj = {};
-        headers.forEach((h, i) => {
-          obj[h] = (cells[i] || "").toLowerCase();
-        });
-        return obj;
-      });
-
-    SHEET_DATA = rows;
-    console.log("✅ Datos del Sheet cargados:", SHEET_DATA);
-    return SHEET_DATA;
-  } catch (error) {
-    console.error("❌ Error al cargar el Sheet:", error);
-    alert("⚠️ No se pudo cargar la lista de usuarios autorizados. Verifica la URL del Sheet.");
-    throw error;
-  }
-}
-
+    // === Eliminamos la dependencia del Google Sheet.
+    // Ahora validamos usuarios mediante el endpoint /api/buscarCorreo?email=<email>
+    // Asegúrate de tener /api/buscarCorreo.js que retorne el objeto del usuario por email.
 
     // === PARPADEO DEL TÍTULO ===
     let blinkInterval = null;
@@ -267,16 +232,19 @@ async function loadSheetData() {
         document.head.appendChild(s);
       });
 
+      // Cargamos solo los scripts de Firebase (ya no necesitamos cargar el CSV)
       Promise.all([
         loadScript('https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js'),
-        loadScript('https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js'),
-        loadSheetData()
+        loadScript('https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js')
       ]).then(() => {
+        // Inicializar Firebase
         firebase.initializeApp(FIREBASE_CONFIG);
         const db = firebase.firestore();
+
         let currentUserEmail = localStorage.getItem('currentUserEmail');
         let currentCampaign = localStorage.getItem('campanaAsignada');
 
+        // Mostrar modal de login
         function showLogin() {
           const modal = document.createElement('div');
           modal.className = 'login-modal fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 p-4';
@@ -299,36 +267,42 @@ async function loadSheetData() {
           document.body.appendChild(modal);
           setTimeout(() => modal.classList.add('show'), 50);
 
-          modal.querySelector('#login-btn').onclick = () => {
+          modal.querySelector('#login-btn').onclick = async () => {
             const email = modal.querySelector('#login-email').value.trim().toLowerCase();
             const pass = modal.querySelector('#login-pass').value.trim();
             const errorEl = modal.querySelector('#login-error');
             errorEl.classList.add('hidden');
 
-            const row = SHEET_DATA.find(r =>
-              r["CorreoAgente"] === email ||
-              r["Supervisor"] === email ||
-              r["Monitores"] === email ||
-              r["SupervisorGlobal"] === email
-            );
+            if (!email) {
+              errorEl.textContent = "❌ Ingresa un correo";
+              errorEl.classList.remove('hidden');
+              return;
+            }
 
-            if (!row) {
+            try {
+              // Consultamos el endpoint que valida el correo y devuelve el objeto usuario si existe
+              const res = await fetch(`/api/buscarCorreo?email=${encodeURIComponent(email)}`);
+              if (!res.ok) throw new Error('Correo no autorizado');
+              const user = await res.json();
+
+              if (pass !== DEFAULT_PASSWORD) {
+                errorEl.textContent = "❌ Contraseña incorrecta";
+                errorEl.classList.remove('hidden');
+                return;
+              }
+
+              // Guardamos sesión y arrancamos app
+              localStorage.setItem('currentUserEmail', email);
+              localStorage.setItem('campanaAsignada', user["Campaña"] || "");
+              currentUserEmail = email;
+              currentCampaign = user["Campaña"];
+              modal.remove();
+              initApp();
+            } catch (err) {
+              console.error('Login error:', err);
               errorEl.textContent = "❌ Correo no autorizado";
               errorEl.classList.remove('hidden');
-              return;
             }
-            if (pass !== DEFAULT_PASSWORD) {
-              errorEl.textContent = "❌ Contraseña incorrecta";
-              errorEl.classList.remove('hidden');
-              return;
-            }
-
-            localStorage.setItem('currentUserEmail', email);
-            localStorage.setItem('campanaAsignada', row["Campaña"] || "");
-            currentUserEmail = email;
-            currentCampaign = row["Campaña"];
-            modal.remove();
-            initApp();
           };
         }
 
@@ -355,6 +329,7 @@ async function loadSheetData() {
           
           const alertsContainer = document.getElementById('alerts-container');
 
+          // Mantén tu conexión a Firestore tal cual
           db.collection("alertas").orderBy("timestamp", "desc").onSnapshot(snap => {
             let alertCount = 0;
             alertsContainer.innerHTML = '';
@@ -426,22 +401,28 @@ async function loadSheetData() {
           });
         }
 
+        // Al iniciar: si hay sesión, validamos con el endpoint /api/buscarCorreo
         if (currentUserEmail) {
-          const row = SHEET_DATA.find(r =>
-            r["CorreoAgente"] === currentUserEmail ||
-            r["Supervisor"] === currentUserEmail ||
-            r["Monitores"] === currentUserEmail ||
-            r["SupervisorGlobal"] === currentUserEmail
-          );
-          if (row) {
-            initApp();
-          } else {
-            showLogin();
-          }
+          fetch(`/api/buscarCorreo?email=${encodeURIComponent(currentUserEmail)}`)
+            .then(r => {
+              if (!r.ok) throw new Error('No autorizado');
+              return r.json();
+            })
+            .then(user => {
+              // Si válido, actualizamos campaign y arrancamos
+              currentCampaign = user["Campaña"] || currentCampaign;
+              localStorage.setItem('campanaAsignada', currentCampaign || "");
+              initApp();
+            })
+            .catch(() => {
+              // sesión inválida -> pedir login
+              showLogin();
+            });
         } else {
           showLogin();
         }
 
+        // Eventos UI
         document.getElementById('logout-btn').onclick = logout;
         document.getElementById('user-menu-btn').onclick = () => {
           const menu = document.getElementById('user-menu');
