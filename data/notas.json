@@ -1,22 +1,542 @@
 [
   {
-    "Dni Agente": "3882225",
-    "Agente": "Juan Pérez",
-    "SEMANA 1": "95",
-    "SEMANA 2": "90",
-    "SEMANA 3": "87",
-    "SEMANA 4": "93",
-    "SEMANA 5": "88",
-    "Total general": "90.6"
+    "Dni Agente": 40070885,
+    "Agente": "EDGARDO MANUEL HERRERA ARRUNATEGUI",
+    "SEMANA 1": "93.8%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "93.8%"
   },
   {
-    "Dni Agente": "1223344",
-    "Agente": "María López",
-    "SEMANA 1": "88",
-    "SEMANA 2": "85",
-    "SEMANA 3": "80",
-    "SEMANA 4": "83",
-    "SEMANA 5": "85",
-    "Total general": "84.2"
+    "Dni Agente": 60095952,
+    "Agente": "JHESLY NAYELY BARZOLA BORJA",
+    "SEMANA 1": "97.8%",
+    "SEMANA 2": "95.0%",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "97.2%"
+  },
+  {
+    "Dni Agente": 61790011,
+    "Agente": "LUIS ALVARO OCHOA CUADROS",
+    "SEMANA 1": "39.3%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "39.3%"
+  },
+  {
+    "Dni Agente": 70696739,
+    "Agente": "CHRISTOPHER CAMPOMANES AUCCASI",
+    "SEMANA 1": "99.3%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "99.3%"
+  },
+  {
+    "Dni Agente": 70825791,
+    "Agente": "ROBERT AURELIO URIBE TICLA",
+    "SEMANA 1": "88.3%",
+    "SEMANA 2": "98.0%",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "90.2%"
+  },
+  {
+    "Dni Agente": 72694742,
+    "Agente": "ERIK JOSE ROMAN VEGA",
+    "SEMANA 1": "79.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "79.0%"
+  },
+  {
+    "Dni Agente": 73063917,
+    "Agente": "RAITCHEL ESTRELLA GONZA QUISPE",
+    "SEMANA 1": "44.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "44.0%"
+  },
+  {
+    "Dni Agente": 74500665,
+    "Agente": "GRACIELA DEL ROSARIO VALENCIA TAPULLIMA",
+    "SEMANA 1": "97.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "97.0%"
+  },
+  {
+    "Dni Agente": 75357155,
+    "Agente": "ARIANA EMELY MORALES SOLIER",
+    "SEMANA 1": "97.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "97.0%"
+  },
+  {
+    "Dni Agente": 76283993,
+    "Agente": "ADRIANA CUETO PAREDES",
+    "SEMANA 1": "96.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "96.0%"
+  },
+  {
+    "Dni Agente": 3882225,
+    "Agente": "LUIS GUILLERMO PACHECO VARGAS",
+    "SEMANA 1": "95.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "95.0%"
+  },
+  {
+    "Dni Agente": 6859583,
+    "Agente": "SIMON EDUARDO ORCIAL GARCIA",
+    "SEMANA 1": "80.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "80.0%"
+  },
+  {
+    "Dni Agente": 9340719,
+    "Agente": "MONICA MARIA PERRY LAURA",
+    "SEMANA 1": "100.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "100.0%"
+  },
+  {
+    "Dni Agente": 9918944,
+    "Agente": "MILAGROS LLACUA RIOS",
+    "SEMANA 1": "100.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "100.0%"
+  },
+  {
+    "Dni Agente": 10687999,
+    "Agente": "LAURA IVONNE GARCIA FLORES",
+    "SEMANA 1": "50.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "50.0%"
+  },
+  {
+    "Dni Agente": 41980216,
+    "Agente": "YETRO YERICO QUINTANILLA ALEJOS",
+    "SEMANA 1": "50.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "50.0%"
+  },
+  {
+    "Dni Agente": 43101653,
+    "Agente": "JUAN JOSE AYLLON ACOSTA",
+    "SEMANA 1": "45.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "45.0%"
+  },
+  {
+    "Dni Agente": 43362129,
+    "Agente": "MAYRA MERCEDES ZAPATA ALVAREZ",
+    "SEMANA 1": "85.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "85.0%"
+  },
+  {
+    "Dni Agente": 44883701,
+    "Agente": "IRMA KARINA GUTIÉRREZ HUARACALLO",
+    "SEMANA 1": "85.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "85.0%"
+  },
+  {
+    "Dni Agente": 45195823,
+    "Agente": "MELISSA YERLY GARCIA CHORRES",
+    "SEMANA 1": "65.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "65.0%"
+  },
+  {
+    "Dni Agente": 45740919,
+    "Agente": "GABRIELA MABEL PALOMINO FRANCO",
+    "SEMANA 1": "90.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "90.0%"
+  },
+  {
+    "Dni Agente": 46175890,
+    "Agente": "JULIA MUÑOZ LIZARASO",
+    "SEMANA 1": "100.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "100.0%"
+  },
+  {
+    "Dni Agente": 46176139,
+    "Agente": "SERGIO CASTRO OBREGON",
+    "SEMANA 1": "0.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "0.0%"
+  },
+  {
+    "Dni Agente": 47282093,
+    "Agente": "LISANDRA CONCEPCION SUAREZ GARATE",
+    "SEMANA 1": "90.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "90.0%"
+  },
+  {
+    "Dni Agente": 47687928,
+    "Agente": "GLORYA STEFFANY PINTADO LAZARO",
+    "SEMANA 1": "95.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "95.0%"
+  },
+  {
+    "Dni Agente": 48281845,
+    "Agente": "NANCY VERONICA ESPINOZA PEDROZA",
+    "SEMANA 1": "60.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "60.0%"
+  },
+  {
+    "Dni Agente": 60430066,
+    "Agente": "SHARON YANDIRA TIRADO PACHAS",
+    "SEMANA 1": "100.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "100.0%"
+  },
+  {
+    "Dni Agente": 60753416,
+    "Agente": "SASKIA MARIA SENADOR CORNEJO",
+    "SEMANA 1": "85.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "85.0%"
+  },
+  {
+    "Dni Agente": 62432427,
+    "Agente": "DANIEL BARRENECHEA ALZA",
+    "SEMANA 1": "90.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "90.0%"
+  },
+  {
+    "Dni Agente": 62472445,
+    "Agente": "JANETH ZORAIDE ENRIQUEZ VARGAS",
+    "SEMANA 1": "65.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "65.0%"
+  },
+  {
+    "Dni Agente": 62774548,
+    "Agente": "JAZMIN FIGUEROA ISASI",
+    "SEMANA 1": "95.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "95.0%"
+  },
+  {
+    "Dni Agente": 70082647,
+    "Agente": "WILLIAM STEVEN MONTES SING",
+    "SEMANA 1": "80.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "80.0%"
+  },
+  {
+    "Dni Agente": 70696056,
+    "Agente": "SEBASTIAN DAVID VERGARAY LOZANO",
+    "SEMANA 1": "0.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "0.0%"
+  },
+  {
+    "Dni Agente": 70855633,
+    "Agente": "ANDERZON FRANK POVIS VILLANUEVA",
+    "SEMANA 1": "85.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "85.0%"
+  },
+  {
+    "Dni Agente": 71264717,
+    "Agente": "JENIFER LESLIE MEGO CONGONA",
+    "SEMANA 1": "80.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "80.0%"
+  },
+  {
+    "Dni Agente": 71277225,
+    "Agente": "LINDA NAHELY MARENGO CASTRO",
+    "SEMANA 1": "100.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "100.0%"
+  },
+  {
+    "Dni Agente": 71550989,
+    "Agente": "SEBASTIAN SHANDE QUISPE RONDAN",
+    "SEMANA 1": "0.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "0.0%"
+  },
+  {
+    "Dni Agente": 71696993,
+    "Agente": "LUIS GERARDO CARDENAS BALVIN",
+    "SEMANA 1": "100.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "100.0%"
+  },
+  {
+    "Dni Agente": 72858166,
+    "Agente": "ESTRELLA VALENTINA LUCIO BACA",
+    "SEMANA 1": "77.5%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "77.5%"
+  },
+  {
+    "Dni Agente": 74066267,
+    "Agente": "ANGELA SHANON ROJAS AMABLE",
+    "SEMANA 1": "5.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "5.0%"
+  },
+  {
+    "Dni Agente": 74071606,
+    "Agente": "DAVID CHIAN FUERTES GONZALES",
+    "SEMANA 1": "87.5%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "87.5%"
+  },
+  {
+    "Dni Agente": 74179107,
+    "Agente": "ANTHOANELA DEYSI GRANDA VILLEGAS",
+    "SEMANA 1": "0.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "0.0%"
+  },
+  {
+    "Dni Agente": 74271887,
+    "Agente": "RODRIGO SULCA RODRIGUEZ",
+    "SEMANA 1": "0.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "0.0%"
+  },
+  {
+    "Dni Agente": 74847803,
+    "Agente": "TRIANA BRUNILDA GODOY OSORII",
+    "SEMANA 1": "77.5%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "77.5%"
+  },
+  {
+    "Dni Agente": 75232885,
+    "Agente": "JOSELIN GUERRA TARICUARIMA",
+    "SEMANA 1": "95.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "95.0%"
+  },
+  {
+    "Dni Agente": 75402111,
+    "Agente": "JOE CALEB ARIAS MATTOS",
+    "SEMANA 1": "70.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "70.0%"
+  },
+  {
+    "Dni Agente": 75402127,
+    "Agente": "CONSUELO DEL CARMEN LOPEZ QUIROZ",
+    "SEMANA 1": "75.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "75.0%"
+  },
+  {
+    "Dni Agente": 75404637,
+    "Agente": "PEDRO LUIS CHAUCA IZQUIERDO",
+    "SEMANA 1": "90.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "90.0%"
+  },
+  {
+    "Dni Agente": 75595802,
+    "Agente": "ANGELLO MARTIN CLARO VELIZ",
+    "SEMANA 1": "100.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "100.0%"
+  },
+  {
+    "Dni Agente": 75609881,
+    "Agente": "RAFAEL ALFONSO PUJALT SIANCAS",
+    "SEMANA 1": "93.8%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "93.8%"
+  },
+  {
+    "Dni Agente": 75937957,
+    "Agente": "MAIRA MARITZA CALZADA RIVAS",
+    "SEMANA 1": "90.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "90.0%"
+  },
+  {
+    "Dni Agente": 76501062,
+    "Agente": "JHON HENRY VILLA HUMBO",
+    "SEMANA 1": "33.3%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "33.3%"
+  },
+  {
+    "Dni Agente": 76520405,
+    "Agente": "JOSAFAT SEGURA SEGURA GONZALES",
+    "SEMANA 1": "0.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "0.0%"
+  },
+  {
+    "Dni Agente": 77100193,
+    "Agente": "CINTHYA PAMELA BERROCAL ROJAS",
+    "SEMANA 1": "95.0%",
+    "SEMANA 2": "",
+    "SEMANA 3": "",
+    "SEMANA 4": "",
+    "SEMANA 5": "",
+    "Total general": "95.0%"
   }
 ]
