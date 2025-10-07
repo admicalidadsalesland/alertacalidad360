@@ -1,0 +1,18 @@
+import data from "../data/usuarios.json";
+
+export default function handler(req, res) {
+  const { email } = req.query;
+  if (!email) return res.status(400).json({ error: "Falta el parámetro 'email'" });
+
+  const resultado = data.find(
+    (item) => String(item["CorreoAgente"]).toLowerCase() === String(email).toLowerCase()
+      || String(item["Supervisor"]).toLowerCase() === String(email).toLowerCase()
+      || String(item["Monitores"]).toLowerCase() === String(email).toLowerCase()
+      || String(item["SupervisorGlobal"]).toLowerCase() === String(email).toLowerCase()
+  );
+
+  if (!resultado)
+    return res.status(404).json({ error: "Correo no autorizado." });
+
+  res.status(200).json(resultado);
+}
