@@ -3,28 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Web360 - Notas</title>
+  <title>Web360 - Buscador de Agentes</title>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts & Font Awesome -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    /* Transición suave */
     #sidebar { transition: width 0.2s ease, transform 0.2s ease; }
     #main-content { transition: margin-left 0.2s ease; }
- 
-    /* Sidebar mini */
+
     #sidebar.mini { width: 4.5rem; }
     #sidebar.mini .sidebar-text { display: none; }
     #sidebar.mini .sidebar-header,
     #sidebar.mini .sidebar-footer { justify-content: center; }
     #sidebar.mini .nav-item i { margin: 0 auto; display: block; }
 
-    /* Móvil */
     @media (max-width: 768px) {
       #sidebar:not(.open) { transform: translateX(-100%); }
       #sidebar.open { transform: translateX(0); }
@@ -32,96 +29,128 @@
     }
   </style>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 min-h-screen">
 
-  <!-- Botón Sidebar -->
-  <button id="toggleSidebar" class="fixed top-4 left-4 z-50 p-2 rounded-lg bg-white shadow w-10 h-10 flex items-center justify-center" aria-label="Toggle Sidebar">
-    <i class="fas fa-bars text-gray-700"></i>
-  </button>
+<!-- Botón Sidebar -->
+<button id="toggleSidebar" class="fixed top-4 left-4 z-50 p-2 rounded-lg bg-white shadow w-10 h-10 flex items-center justify-center" aria-label="Toggle Sidebar">
+  <i class="fas fa-bars text-gray-700"></i>
+</button>
 
-  <!-- Sidebar -->
-<aside id="sidebar" class="w-64 h-full fixed z-40 flex flex-col rounded-r-xl shadow-lg 
-bg-gradient-to-b from-gray-800 via-blue-700 to-cyan-500 text-white transition-all duration-300">
-<!-- Header -->
-<div class="flex items-center gap-3 p-4 border-b border-blue-400/30">
-<div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
-<i class="fas fa-globe text-white"></i>
-</div>
-<h1 class="font-extrabold text-lg sidebar-text">Web360</h1>
-</div>
+<!-- Sidebar -->
+<aside id="sidebar" class="w-64 h-full fixed z-40 flex flex-col rounded-r-xl shadow-lg bg-gradient-to-b from-gray-800 via-blue-700 to-cyan-500 text-white transition-all duration-300">
+  <div class="flex items-center gap-3 p-4 border-b border-blue-400/30">
+    <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+      <i class="fas fa-globe text-white"></i>
+    </div>
+    <h1 class="font-extrabold text-lg sidebar-text">Web360</h1>
+  </div>
 
+  <nav class="flex-1 p-3">
+    <h2 class="text-xs font-semibold uppercase tracking-wider text-blue-200 sidebar-text mb-2">Menú</h2>
+    <ul class="space-y-1">
+      <li>
+        <a href="#" class="flex items-center p-3 rounded-lg bg-white/20 text-white font-semibold">
+          <i class="fas fa-tachometer-alt w-5 text-center"></i>
+          <span class="ml-3 sidebar-text">Notas</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://alertacalidad360.vercel.app/Caribu_phx.html" class="flex items-center p-3 rounded-lg hover:bg-white/10">
+          <i class="fas fa-users w-5 text-center"></i>
+          <span class="ml-3 sidebar-text">Caribu PHX</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
 
-<!-- Menú -->
-<nav class="flex-1 p-3">
-<h2 class="text-xs font-semibold uppercase tracking-wider text-blue-200 sidebar-text mb-2">Menú</h2>
-<ul class="space-y-1">
-<li>
-<a href="Notas.html" class="flex items-center p-3 rounded-lg bg-white/20 text-white font-semibold">
-<i class="fas fa-tachometer-alt w-5 text-center"></i>
-<span class="ml-3 sidebar-text">Notas</span>
-</a>
-</li>
-<li>
-<a href="Caribu_phx.html" class="flex items-center p-3 rounded-lg hover:bg-white/10">
-<i class="fas fa-users w-5 text-center"></i>
-<span class="ml-3 sidebar-text">Caribu PHX</span>
-</a>
-</li>
-</ul>
-</nav>
-
-
-<!-- Footer -->
-<div class="p-4 border-t border-blue-400/30">
-<div class="flex items-center space-x-3">
-<div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center font-bold">360</div>
-<div class="sidebar-text">
-<p class="text-sm font-semibold">Desarrollado</p>
-<p class="text-xs text-blue-200">© 2025 Web360</p>
-</div>
-</div>
-</div>
+  <div class="p-4 border-t border-blue-400/30">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center font-bold">360</div>
+      <div class="sidebar-text">
+        <p class="text-sm font-semibold">Desarrollado</p>
+        <p class="text-xs text-blue-200">© 2025 Web360</p>
+      </div>
+    </div>
+  </div>
 </aside>
 
-  <!-- Contenido principal -->
-<main id="main-content" class="ml-64 p-4 transition-all duration-300">
-  <!-- Tarjeta contenedora para el iframe -->
-  <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 h-[calc(100vh-48px)]">
-    <div class="w-full h-full">
-      <!-- Reemplaza src con tu URL real -->
-      <iframe 
-        src="http://lpt-m48:5000/buscador" 
-        title="Aplicación de Notas"
-        class="w-full h-full border-0"
-        loading="lazy"
-        allowfullscreen>
-      </iframe>
+<!-- Contenido principal -->
+<main id="main-content" class="ml-64 p-6 transition-all duration-300">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-8">
+      <div class="flex justify-center items-center gap-2 text-blue-700 mb-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        <h1 class="text-2xl font-bold">Buscador de Agentes</h1>
+      </div>
+      <p class="text-gray-600">Ingresa el DNI del agente para ver su desempeño semanal</p>
     </div>
+
+    <div class="flex gap-3 mb-6">
+      <input id="dniInput" type="text" placeholder="Ej: 70696056" class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      <button id="buscarBtn" class="px-6 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition flex items-center gap-2">
+        Buscar
+      </button>
+    </div>
+
+    <div id="loadingSpinner" class="hidden flex justify-center my-6">
+      <svg class="animate-spin h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+      </svg>
+    </div>
+
+    <div id="errorMsg" class="mb-4 p-3 bg-red-100 text-red-700 rounded-lg hidden"></div>
+
+    <div id="resultado" class="bg-blue-50 border border-blue-200 rounded-xl p-6 shadow-md hidden">
+      <h2 id="nombreAgente" class="text-xl font-bold text-blue-800 mb-4"></h2>
+      <div class="grid grid-cols-1 sm:grid-cols-5 gap-4 mb-6">
+        <div class="bg-white p-4 rounded-lg text-center shadow">
+          <div class="text-xs text-gray-500">Semana 1</div>
+          <div id="semana1" class="text-xl font-bold text-blue-700">—</div>
+        </div>
+        <div class="bg-white p-4 rounded-lg text-center shadow">
+          <div class="text-xs text-gray-500">Semana 2</div>
+          <div id="semana2" class="text-xl font-bold text-blue-700">—</div>
+        </div>
+        <div class="bg-white p-4 rounded-lg text-center shadow">
+          <div class="text-xs text-gray-500">Semana 3</div>
+          <div id="semana3" class="text-xl font-bold text-blue-700">—</div>
+        </div>
+        <div class="bg-white p-4 rounded-lg text-center shadow">
+          <div class="text-xs text-gray-500">Semana 4</div>
+          <div id="semana4" class="text-xl font-bold text-blue-700">—</div>
+        </div>
+        <div class="bg-white p-4 rounded-lg text-center shadow">
+          <div class="text-xs text-gray-500">Semana 5</div>
+          <div id="semana5" class="text-xl font-bold text-blue-700">—</div>
+        </div>
+      </div>
+      <div class="border-t pt-4 text-center">
+        <div class="text-sm text-gray-600">Total General</div>
+        <div id="totalGeneral" class="text-2xl font-bold text-blue-800">—</div>
+      </div>
+    </div>
+
+    <div id="mensajeInicial" class="text-center text-gray-500 italic mt-8">Ingresa un DNI para ver resultados...</div>
   </div>
 </main>
 
-
-  <!-- Scripts al final del body -->
-  <script>
-
-
-
-    // ✅ Lógica del sidebar
-    const sidebar = document.getElementById('sidebar');
-    const mainContent = document.getElementById('main-content');
-    const toggleBtn = document.getElementById('toggleSidebar');
-
-    function toggleSidebar() {
-      if (window.innerWidth >= 768) {
-        sidebar.classList.toggle('mini');
-        mainContent.classList.toggle('ml-16');
-        mainContent.classList.toggle('ml-64');
-      } else {
-        sidebar.classList.toggle('open');
-      }
+<script>
+  const sidebar = document.getElementById('sidebar');
+  const mainContent = document.getElementById('main-content');
+  const toggleBtn = document.getElementById('toggleSidebar');
+  function toggleSidebar() {
+    if(window.innerWidth >= 768){
+      sidebar.classList.toggle('mini');
+      mainContent.classList.toggle('ml-16');
+      mainContent.classList.toggle('ml-64');
+    } else {
+      sidebar.classList.toggle('open');
     }
-
-    toggleBtn.addEventListener('click', toggleSidebar);
-  </script>
+  }
+  toggleBtn.addEventListener('click', toggleSidebar);
+</script>
 </body>
 </html>
