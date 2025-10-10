@@ -138,6 +138,73 @@
 </main>
 
 <script>
+
+<script>
+document.getElementById("buscarBtn").addEventListener("click", function () {
+    let dni = document.getElementById("dniInput").value.trim();
+    if (!dni) {
+        mostrarError("Por favor, ingresa un DNI.");
+        return;
+    }
+
+    // Convertir a número si está en formato numérico
+    dni = isNaN(dni) ? dni : Number(dni);
+
+    mostrarCargando();
+
+    fetch("data/notas.json")
+        .then(response => {
+            if (!response.ok) throw new Error("No se pudo cargar el archivo JSON");
+            return response.json();
+        })
+        .then(data => {
+            // Buscar comparando DNI como número o string
+            const agente = data.find(item => item.DNI == dni);
+
+            ocultarCargando();
+
+            if (!agente) {
+                mostrarError("No se encontró agente con ese DNI");
+                return;
+            }
+
+            mostrarResultado(agente);
+        })
+        .catch(error => {
+            ocultarCargando();
+            mostrarError("Error cargando datos: " + error.message);
+        });
+});
+
+function mostrarResultado(agente) {
+    document.getElementById("mensajeInicial").style.display = "none";
+    document.getElementById("errorMsg").classList.add("hidden");
+    document.getElementById("resultado").classList.remove("hidden");
+
+    document.getElementById("nombreAgente").textContent = agente.Agente;
+    document.getElementById("semana1").textContent = agente.Semana1 || "—";
+    document.getElementById("semana2").textContent = agente.Semana2 || "—";
+    document.getElementById("semana3").textContent = agente.Semana3 || "—";
+    document.getElementById("semana4").textContent = agente.Semana4 || "—";
+    document.getElementById("semana5").textContent = agente.Semana5 || "—";
+    document.getElementById("totalGeneral").textContent = agente.Totalgeneral || "—";
+}
+
+function mostrarError(msg) {
+    document.getElementById("resultado").classList.add("hidden");
+    document.getElementById("errorMsg").textContent = msg;
+    document.getElementById("errorMsg").classList.remove("hidden");
+}
+
+function mostrarCargando() {
+    document.getElementById("loadingSpinner").classList.remove("hidden");
+}
+function ocultarCargando() {
+    document.getElementById("loadingSpinner").classList.add("hidden");
+}
+</script>
+
+  
   const sidebar = document.getElementById('sidebar');
   const mainContent = document.getElementById('main-content');
   const toggleBtn = document.getElementById('toggleSidebar');
