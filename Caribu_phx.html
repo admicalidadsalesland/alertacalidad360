@@ -37,34 +37,37 @@
   }
 
 
+
+
+
 .floating-icons {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* Evita que bloqueen clics */
+  pointer-events: none;
 }
 
 .icon {
   position: absolute;
-  font-size: 24px;
+  font-size: 40px;
   animation: float 3s ease-in-out infinite;
 }
 
-.icon:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
-.icon:nth-child(2) { top: 30%; right: 10%; animation-delay: 1s; }
-.icon:nth-child(3) { bottom: 20%; left: 10%; animation-delay: 2s; }
-.icon:nth-child(4) { bottom: 10%; right: 20%; animation-delay: 0.5s; }
+/* Posicionamiento según la imagen */
+.icon:nth-child(1) { top: 5%; right: 30%; animation-delay: 0s; }        /* 📧 - sobre */
+.icon:nth-child(2) { top: 25%; right: 2%; animation-delay: 0.5s; }     /* ▶️ - play */
+.icon:nth-child(3) { top: 35%; right: 30%; animation-delay: 1s; }       /* 💬 - chat */
+.icon:nth-child(4) { top: 5%; right: 10%; animation-delay: 1.5s; }    /* 🔔 - campana */
+.icon:nth-child(5) { bottom: 10%; right: 25%; animation-delay: 2s; }    /* ❤️ - corazón */
+.icon:nth-child(6) { bottom: 5%; right: 5%; animation-delay: 2.5s; }  /* 🌍 - globo */
 
 @keyframes float {
   0% { transform: translate(0, 0); }
   50% { transform: translate(5px, -5px); }
   100% { transform: translate(0, 0); }
 }
-
-
-
 
   </style>
 </head>
@@ -122,11 +125,112 @@
 
 
   <!-- Contenido principal -->
+   
 
 <main id="main-content" class="flex-1 ml-64 pt-3 pb-10 px-4 md:px-6 transition-all duration-300 min-h-screen">
   <header class="mb-6">
     <h1 class="text-2xl font-bold text-gray-700">📖 Caribu Digital – Asesoría Rápida</h1>
   </header>
+
+<!-- Inicio del Banner Carousel Top -->
+<div class="mt-1 mb-10">
+
+  <div class="relative rounded-2xl overflow-hidden shadow-xl h-[320px] md:h-[320px]">
+          <div class="floating-icons z-20 absolute inset-0 pointer-events-none">
+            <div class="icon">📧</div>   <!-- Sobre amarillo -->
+            <div class="icon">▶️</div>   <!-- Botón de reproducción -->
+            <div class="icon">💬</div>   <!-- Burbuja de chat -->
+            <div class="icon">🔔</div>   <!-- Campana con notificación -->
+            <div class="icon">❤️</div>   <!-- Corazón rojo -->
+            <div class="icon">🌍</div>   <!-- Globo con pin -->
+          </div>
+    <!-- Contenedor de los banners -->
+    <div id="carouselTop" class="relative w-full h-full">
+      <!-- Banner 1 -->
+      <div class="carousel-top-slide absolute inset-0 bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 p-8 md:p-12 text-white flex flex-col md:flex-row items-center justify-between transition-opacity duration-700 opacity-100">
+        <div class="z-10 max-w-xl">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">¡Resalta los beneficios!</h2>
+          <p class="text-lg md:text-xl opacity-90 mb-6">
+             Plan Ahorro Adicional S/39.9 VI con initernet ilimitados y más beneficios especiales.
+          </p>
+          <i class="bg-white text-red-600 font-bold px-6 py-3 rounded-full shadow-md hover:bg-gray-200 transition inline-block">
+            ¡Ofrece ya!
+          </i>
+        </div>
+        <div class="mt-6 md:mt-0 z-10">
+          <img 
+            src="https://raw.githubusercontent.com/gporrast20/imagenes/refs/heads/main/url.jpg" 
+            alt="Promo" 
+            class="w-64 md:w-80 rounded-xl shadow-lg object-cover"
+            onerror="this.src='https://via.placeholder.com/300x200/ffffff/cccccc?text=Promo';"
+          >
+        </div>
+        <div class="absolute inset-0 bg-white/10 backdrop-blur-sm rounded-2xl pointer-events-none"></div>
+      </div>
+
+      <!-- Banner 2 -->
+      <div class="carousel-top-slide absolute inset-0 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 p-8 md:p-12 text-white flex flex-col md:flex-row items-center justify-between transition-opacity duration-700 opacity-0">
+        <div class="z-10 max-w-xl">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">¡Para clientes con marca de promoción!</h2>
+          <p class="text-lg md:text-xl opacity-90 mb-6">
+            Beneficios que te da el plan, A PARTIR DEL PRÓXIMO MES recibirás [30GB/50GB] durante 6 meses totalmente gratis!!!
+          </p>
+          <i class="bg-white text-blue-700 font-bold px-6 py-3 rounded-full shadow-md hover:bg-gray-200 transition inline-block">
+             Bono 30GB/50GB x 6 meses
+          </i>
+        </div>
+        <div class="mt-6 md:mt-0 z-10">
+          <img 
+            src="https://raw.githubusercontent.com/gporrast20/imagenes/833721fe019613352e4def18f3a44e0b39f0514b/apuntando.jpg" 
+            alt="Beneficios" 
+            class="w-56 md:w-80 rounded-xl shadow-lg object-cover"
+          >
+        </div>
+        <div class="absolute inset-0 bg-black/10 backdrop-blur-sm rounded-2xl pointer-events-none"></div>
+      </div>
+
+          <!-- Banner 3 -->
+          <div class="carousel-top-slide absolute inset-0 bg-gradient-to-r from-green-500 via-teal-500 to-cyan-500 p-8 md:p-12 text-white flex flex-col md:flex-row items-center justify-between transition-opacity duration-700 opacity-0">
+            <div class="z-10 max-w-xl">
+              <h2 class="text-3xl md:text-4xl font-bold mb-4">¡RECUERDA!</h2>
+              <p class="text-lg md:text-xl opacity-90 mb-6">
+                Mencionar los tres principales beneficios del plan, por ejemplo:
+                <span>
+                  Llamadas ilimitadas a nivel nacional.
+                  los GB de internet.
+                  5 Apps ILIMITADAS  por 12 meses: WhatsApp, Facebook fotos, Facebook
+                  Messenger, Instagram fotos y Waze.
+                </span>
+              </p>
+              <i class="bg-white text-green-700 font-bold px-6 py-3 rounded-full shadow-md hover:bg-gray-200 transition inline-block">
+                No lo Olvides
+              </i>
+            </div>
+            <div class="mt-6 md:mt-0 z-10">
+              <img 
+                src="https://raw.githubusercontent.com/gporrast20/imagenes/58fb1d15262485e591b65936a241f0c984289f63/promo.jpg" 
+                alt="Beneficios" 
+                class="w-56 md:w-80 rounded-xl shadow-lg object-cover"
+              >
+            </div>
+            <div class="absolute inset-0 bg-black/10 backdrop-blur-sm rounded-2xl pointer-events-none"></div>
+          </div>
+
+
+    </div>
+
+    <!-- Indicadores -->
+    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
+      <button class="indicator-top w-3 h-3 rounded-full bg-white/60 hover:bg-white"></button>
+      <button class="indicator-top w-3 h-3 rounded-full bg-white/30 hover:bg-white"></button>
+      <button class="indicator-top w-3 h-3 rounded-full bg-white/30 hover:bg-white"></button>
+
+    </div>
+  </div>
+</div>
+<!-- Fin del Banner Carousel -->
+
+
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-12 gap-5">
         <!-- ✅ Columna 1: Ancha (8/12) -->
@@ -1167,24 +1271,19 @@
         </svg>
         Enlaces de Acceso
       </h2>
-
       <div class="space-y-2 text-xs">
         <a href="https://docs.google.com/spreadsheets/d/1hOGF7VUzob5J04OQkdpBPmUZJJ6e1n41SSIes5T5fGc/edit?gid=1090641435#gid=1090641435" target="_blank" class="flex items-center gap-1.5 text-blue-600 hover:text-blue-800 hover:underline">
           📊 Nueva Calculadora
         </a>
-
         <a href="http://crm-salesland.sales.group:5174/login" target="_blank" class="flex items-center gap-1.5 text-blue-600 hover:text-blue-800 hover:underline">
           🗂️ CRM
         </a>
-
         <a href="https://ventas.movistar.com.pe/login" target="_blank" class="flex items-center gap-1.5 text-blue-600 hover:text-blue-800 hover:underline">
           🌐 Dito
         </a>
-
         <a href="https://slmv3.nexum.cc/index.php" target="_blank" class="flex items-center gap-1.5 text-blue-600 hover:text-blue-800 hover:underline">
           ⚙️ Nexum
         </a>
-
         <a href="https://correoweb.salesland.net" target="_blank" class="flex items-center gap-1.5 text-blue-600 hover:text-blue-800 hover:underline">
           ✉️ Correo
         </a>
@@ -1192,24 +1291,14 @@
     </div>
 
     <!-- 🎨 Columna 2: Imagen con iconos flotantes FUERA de la imagen -->
-    <div class="md:w-1/2 flex items-center justify-center relative" style="min-height: 220px;">
-
+    <div class="md:w-1/2 flex items-center justify-center relative" style="min-height: 150px;">
       <!-- Imagen principal (en z-10) -->
-      <img 
-        src="https://raw.githubusercontent.com/gporrast20/imagenes/refs/heads/main/url.jpg"
+        <img 
+        src="https://img.freepik.com/vector-premium/computadora-portatil-iconos-redes-sociales-alrededor_24908-6725.jpg"
         alt="Ventajas del plan" 
-        class="rounded-2xl max-w-full h-auto shadow-md z-10 relative"
+        class="rounded-2xl max-w-full h-auto  z-10 relative"
         onerror="this.src='https://via.placeholder.com/400x200/e0e0e0/999999?text=Imagen+no+disponible';"
-      />
-
-      <!-- Iconos flotantes (en z-20, posicionados absolutamente dentro del contenedor) -->
-      <div class="floating-icons z-20 absolute inset-0 pointer-events-none">
-        <div class="icon">❤️</div>
-        <div class="icon">💬</div>
-        <div class="icon">😂</div>
-        <div class="icon">📲</div>
-      </div>
-
+      /> 
     </div>
 
   </div>
@@ -3050,6 +3139,38 @@
   <!-- Scripts al final del body -->
 <script src="modulos.js"></script>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const root = document.querySelector('#carouselTop');
+    const banners = root.querySelectorAll('.carousel-top-slide');
+    const indicators = document.querySelectorAll('.indicator-top');
+
+    let currentIndex = 0;
+
+    function showBanner(index) {
+      banners.forEach((banner, i) => {
+        banner.classList.toggle('opacity-100', i === index);
+        banner.classList.toggle('opacity-0', i !== index);
+      });
+
+      indicators.forEach((dot, i) => {
+        dot.classList.toggle('bg-white/60', i === index);
+        dot.classList.toggle('bg-white/30', i !== index);
+      });
+
+      currentIndex = index;
+    }
+
+    indicators.forEach((dot, i) => {
+      dot.addEventListener('click', () => showBanner(i));
+    });
+
+    setInterval(() => {
+      const newIndex = (currentIndex + 1) % banners.length;
+      showBanner(newIndex);
+    }, 20000);
+  });
+</script>
 
 
 </body>
