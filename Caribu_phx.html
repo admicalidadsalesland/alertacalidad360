@@ -35,6 +35,37 @@
   .hover\:animate-spin-hover:hover {
     animation: spin-hover 1s linear infinite;
   }
+
+
+.floating-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Evita que bloqueen clics */
+}
+
+.icon {
+  position: absolute;
+  font-size: 24px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.icon:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+.icon:nth-child(2) { top: 30%; right: 10%; animation-delay: 1s; }
+.icon:nth-child(3) { bottom: 20%; left: 10%; animation-delay: 2s; }
+.icon:nth-child(4) { bottom: 10%; right: 20%; animation-delay: 0.5s; }
+
+@keyframes float {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(5px, -5px); }
+  100% { transform: translate(0, 0); }
+}
+
+
+
+
   </style>
 </head>
 <body class="bg-gray-10">
@@ -1124,13 +1155,14 @@
   </div>
 </div>
 
-
-<div class="bg-white rounded-lg shadow-lg p-4 border border-gray-100">
+<!-- ENALCES -->
+<div class="bg-white rounded-lg shadow-lg p-5 border border-gray-100">
   <div class="flex flex-col md:flex-row gap-6">
-    <!-- Columna 1: Enlaces de Acceso -->
+
+    <!-- ✅ Columna 1: Enlaces de Acceso -->
     <div class="md:w-1/2">
-      <h2 class="text-sm font-medium text-gray-800 mb-3 flex items-center gap-1.5">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <h2 class="text-sm font-semibold text-gray-800 mb-3 flex items-center gap-1.5">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
         </svg>
         Enlaces de Acceso
@@ -1138,53 +1170,53 @@
 
       <div class="space-y-2 text-xs">
         <a href="https://docs.google.com/spreadsheets/d/1hOGF7VUzob5J04OQkdpBPmUZJJ6e1n41SSIes5T5fGc/edit?gid=1090641435#gid=1090641435" target="_blank" class="flex items-center gap-1.5 text-blue-600 hover:text-blue-800 hover:underline">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-          </svg>
-          Nueva Calculadora
+          📊 Nueva Calculadora
         </a>
-        
+
         <a href="http://crm-salesland.sales.group:5174/login" target="_blank" class="flex items-center gap-1.5 text-blue-600 hover:text-blue-800 hover:underline">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-          </svg>
-          CRM
+          🗂️ CRM
         </a>
-        
+
         <a href="https://ventas.movistar.com.pe/login" target="_blank" class="flex items-center gap-1.5 text-blue-600 hover:text-blue-800 hover:underline">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-          </svg>
-          Dito
+          🌐 Dito
         </a>
 
         <a href="https://slmv3.nexum.cc/index.php" target="_blank" class="flex items-center gap-1.5 text-blue-600 hover:text-blue-800 hover:underline">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-          </svg>
-          Nexum
+          ⚙️ Nexum
         </a>
 
         <a href="https://correoweb.salesland.net" target="_blank" class="flex items-center gap-1.5 text-blue-600 hover:text-blue-800 hover:underline">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-          </svg>
-          Correo
+          ✉️ Correo
         </a>
       </div>
     </div>
 
-    <!-- Columna 2: Imagen -->
-    <div class="md:w-1/2 flex items-center justify-center">
+    <!-- 🎨 Columna 2: Imagen con iconos flotantes FUERA de la imagen -->
+    <div class="md:w-1/2 flex items-center justify-center relative" style="min-height: 220px;">
+
+      <!-- Imagen principal (en z-10) -->
       <img 
-        src="https://raw.githubusercontent.com/gporrast20/imagenes/refs/heads/main/url.jpg" 
+        src="https://raw.githubusercontent.com/gporrast20/imagenes/refs/heads/main/url.jpg"
         alt="Ventajas del plan" 
-        class="rounded-lg  max-w-full h-auto"
+        class="rounded-2xl max-w-full h-auto shadow-md z-10 relative"
         onerror="this.src='https://via.placeholder.com/400x200/e0e0e0/999999?text=Imagen+no+disponible';"
       />
+
+      <!-- Iconos flotantes (en z-20, posicionados absolutamente dentro del contenedor) -->
+      <div class="floating-icons z-20 absolute inset-0 pointer-events-none">
+        <div class="icon">❤️</div>
+        <div class="icon">💬</div>
+        <div class="icon">😂</div>
+        <div class="icon">📲</div>
+      </div>
+
     </div>
+
   </div>
 </div>
+
+
+
 
 
 <div class="rounded-lg shadow-lg p-4 border border-gray-700
