@@ -103,11 +103,11 @@
     "DNI": 3882225,
     "Agente": "LUIS GUILLERMO PACHECO VARGAS",
     "Semana1": "100.0%",
-    "Semana2": "",
+    "Semana2": "80.0%",
     "Semana3": "",
     "Semana4": "",
     "Semana5": "",
-    "Totalgeneral": "100.0%"
+    "Totalgeneral": "90.0%"
   },
   {
     "DNI": 6859583,
@@ -143,31 +143,31 @@
     "DNI": 10687999,
     "Agente": "LAURA IVONNE GARCIA FLORES",
     "Semana1": "0.0%",
-    "Semana2": "",
+    "Semana2": "95.0%",
     "Semana3": "",
     "Semana4": "",
     "Semana5": "",
-    "Totalgeneral": "0.0%"
+    "Totalgeneral": "47.5%"
   },
   {
     "DNI": 41980216,
     "Agente": "YETRO YERICO QUINTANILLA ALEJOS",
     "Semana1": "0.0%",
-    "Semana2": "",
+    "Semana2": "75.0%",
     "Semana3": "",
     "Semana4": "",
     "Semana5": "",
-    "Totalgeneral": "0.0%"
+    "Totalgeneral": "37.5%"
   },
   {
     "DNI": 43101653,
     "Agente": "JUAN JOSE AYLLON ACOSTA",
-    "Semana1": "0.0%",
+    "Semana1": "70.0%",
     "Semana2": "90.0%",
     "Semana3": "",
     "Semana4": "",
     "Semana5": "",
-    "Totalgeneral": "45.0%"
+    "Totalgeneral": "80.0%"
   },
   {
     "DNI": 43362129,
@@ -303,11 +303,11 @@
     "DNI": 62774548,
     "Agente": "JAZMIN FIGUEROA ISASI",
     "Semana1": "90.0%",
-    "Semana2": "",
+    "Semana2": "0.0%",
     "Semana3": "",
     "Semana4": "",
     "Semana5": "",
-    "Totalgeneral": "90.0%"
+    "Totalgeneral": "45.0%"
   },
   {
     "DNI": 70082647,
@@ -333,11 +333,11 @@
     "DNI": 70855633,
     "Agente": "ANDERZON FRANK POVIS VILLANUEVA",
     "Semana1": "85.0%",
-    "Semana2": "",
+    "Semana2": "0.0%",
     "Semana3": "",
     "Semana4": "",
     "Semana5": "",
-    "Totalgeneral": "85.0%"
+    "Totalgeneral": "42.5%"
   },
   {
     "DNI": 71264717,
@@ -463,11 +463,11 @@
     "DNI": 75402127,
     "Agente": "CONSUELO DEL CARMEN LOPEZ QUIROZ",
     "Semana1": "0.0%",
-    "Semana2": "",
+    "Semana2": "80.0%",
     "Semana3": "",
     "Semana4": "",
     "Semana5": "",
-    "Totalgeneral": "0.0%"
+    "Totalgeneral": "40.0%"
   },
   {
     "DNI": 75404637,
@@ -493,11 +493,11 @@
     "DNI": 75609881,
     "Agente": "RAFAEL ALFONSO PUJALT SIANCAS",
     "Semana1": "87.5%",
-    "Semana2": "",
+    "Semana2": "0.0%",
     "Semana3": "",
     "Semana4": "",
     "Semana5": "",
-    "Totalgeneral": "87.5%"
+    "Totalgeneral": "58.3%"
   },
   {
     "DNI": 75937957,
@@ -588,5 +588,15 @@
     "Semana4": "",
     "Semana5": "",
     "Totalgeneral": "70.00%"
+  },
+  {
+    "DNI": 25520561,
+    "Agente": "NELLY MARISSA RODRIGUEZ JUAREZ",
+    "Semana1": "",
+    "Semana2": "100.00%",
+    "Semana3": "",
+    "Semana4": "",
+    "Semana5": "",
+    "Totalgeneral": "100.00%"
   }
 ]
