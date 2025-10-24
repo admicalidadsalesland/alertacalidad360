@@ -65,9 +65,9 @@
     "Semana1": "88.0%",
     "Semana2": "82.0%",
     "Semana3": "88.0%",
-    "Semana4": "83.0%",
+    "Semana4": "91.5%",
     "Semana5": "",
-    "Totalgeneral": "86.2%"
+    "Totalgeneral": "88.1%"
   },
   {
     "DNI": 74500665,
@@ -95,9 +95,9 @@
     "Semana1": "95.5%",
     "Semana2": "93.0%",
     "Semana3": "88.0%",
-    "Semana4": "78.0%",
+    "Semana4": "85.5%",
     "Semana5": "",
-    "Totalgeneral": "89.7%"
+    "Totalgeneral": "90.1%"
   },
   {
     "DNI": 61089994,
@@ -118,6 +118,26 @@
     "Semana4": "100.0%",
     "Semana5": "",
     "Totalgeneral": "100.0%"
+  },
+  {
+    "DNI": 75157228,
+    "Agente": "FHERGIE JANICE INFANTE GUTIERREZ",
+    "Semana1": "",
+    "Semana2": "",
+    "Semana3": "",
+    "Semana4": "78.0%",
+    "Semana5": "",
+    "Totalgeneral": "78.0%"
+  },
+  {
+    "DNI": 72738754,
+    "Agente": "PIETRO ALESSANDRO DEL AGUILA CARRILLO",
+    "Semana1": "",
+    "Semana2": "",
+    "Semana3": "",
+    "Semana4": "76.0%",
+    "Semana5": "",
+    "Totalgeneral": "76.0%"
   },
   {
     "DNI": 3882225,
@@ -145,9 +165,9 @@
     "Semana1": "100.0%",
     "Semana2": "60.0%",
     "Semana3": "100.0%",
-    "Semana4": "",
+    "Semana4": "80.0%",
     "Semana5": "",
-    "Totalgeneral": "86.7%"
+    "Totalgeneral": "85.0%"
   },
   {
     "DNI": 9918944,
@@ -295,7 +315,7 @@
     "Semana1": "85.0%",
     "Semana2": "90.0%",
     "Semana3": "95.0%",
-    "Semana4": "",
+    "Semana4": "90.0%",
     "Semana5": "",
     "Totalgeneral": "90.0%"
   },
@@ -323,11 +343,11 @@
     "DNI": 62774548,
     "Agente": "JAZMIN FIGUEROA ISASI",
     "Semana1": "90.0%",
-    "Semana2": "0.0%",
+    "Semana2": "30.0%",
     "Semana3": "0.0%",
     "Semana4": "85.0%",
     "Semana5": "",
-    "Totalgeneral": "43.8%"
+    "Totalgeneral": "47.0%"
   },
   {
     "DNI": 70082647,
@@ -522,22 +542,22 @@
   {
     "DNI": 75937957,
     "Agente": "MAIRA MARITZA CALZADA RIVAS",
-    "Semana1": "90.0%",
-    "Semana2": "80.0%",
-    "Semana3": "92.5%",
-    "Semana4": "90.0%",
+    "Semana1": "90.00%",
+    "Semana2": "80.00%",
+    "Semana3": "92.50%",
+    "Semana4": "90.00%",
     "Semana5": "",
-    "Totalgeneral": "89.0%"
+    "Totalgeneral": "89.00%"
   },
   {
     "DNI": 76501062,
     "Agente": "JHON HENRY VILLA HUMBO",
-    "Semana1": "0.0%",
-    "Semana2": "95.0%",
-    "Semana3": "90.0%",
-    "Semana4": "0.0%",
+    "Semana1": "0.00%",
+    "Semana2": "95.00%",
+    "Semana3": "90.00%",
+    "Semana4": "0.00%",
     "Semana5": "",
-    "Totalgeneral": "37.0%"
+    "Totalgeneral": "37.00%"
   },
   {
     "DNI": 76520405,
