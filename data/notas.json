@@ -1,153 +1,13 @@
 [
   {
-    "DNI": 40070885,
-    "Agente": "EDGARDO MANUEL HERRERA ARRUNATEGUI",
-    "Semana1": "89.7%",
-    "Semana2": "78.0%",
-    "Semana3": "",
-    "Semana4": "",
-    "Semana5": "",
-    "Totalgeneral": "86.8%"
-  },
-  {
-    "DNI": 60095952,
-    "Agente": "JHESLY NAYELY BARZOLA BORJA",
-    "Semana1": "96.5%",
-    "Semana2": "89.0%",
-    "Semana3": "92.0%",
-    "Semana4": "92.7%",
-    "Semana5": "",
-    "Totalgeneral": "92.6%"
-  },
-  {
-    "DNI": 61790011,
-    "Agente": "LUIS ALVARO OCHOA CUADROS",
-    "Semana1": "78.5%",
-    "Semana2": "63.0%",
-    "Semana3": "91.0%",
-    "Semana4": "92.0%",
-    "Semana5": "",
-    "Totalgeneral": "83.7%"
-  },
-  {
-    "DNI": 70696739,
-    "Agente": "CHRISTOPHER CAMPOMANES AUCCASI",
-    "Semana1": "98.0%",
-    "Semana2": "91.0%",
-    "Semana3": "94.0%",
-    "Semana4": "",
-    "Semana5": "",
-    "Totalgeneral": "94.3%"
-  },
-  {
-    "DNI": 70825791,
-    "Agente": "ROBERT AURELIO URIBE TICLA",
-    "Semana1": "92.0%",
-    "Semana2": "88.0%",
-    "Semana3": "87.5%",
-    "Semana4": "78.0%",
-    "Semana5": "",
-    "Totalgeneral": "87.6%"
-  },
-  {
-    "DNI": 72694742,
-    "Agente": "ERIK JOSE ROMAN VEGA",
-    "Semana1": "90.0%",
-    "Semana2": "",
-    "Semana3": "",
-    "Semana4": "",
-    "Semana5": "",
-    "Totalgeneral": "90.0%"
-  },
-  {
-    "DNI": 73063917,
-    "Agente": "RAITCHEL ESTRELLA GONZA QUISPE",
-    "Semana1": "88.0%",
-    "Semana2": "82.0%",
-    "Semana3": "88.0%",
-    "Semana4": "92.0%",
-    "Semana5": "",
-    "Totalgeneral": "88.8%"
-  },
-  {
-    "DNI": 74500665,
-    "Agente": "GRACIELA DEL ROSARIO VALENCIA TAPULLIMA",
-    "Semana1": "91.0%",
-    "Semana2": "91.0%",
-    "Semana3": "92.0%",
-    "Semana4": "88.0%",
-    "Semana5": "",
-    "Totalgeneral": "90.3%"
-  },
-  {
-    "DNI": 75357155,
-    "Agente": "ARIANA EMELY MORALES SOLIER",
-    "Semana1": "95.0%",
-    "Semana2": "76.0%",
-    "Semana3": "99.0%",
-    "Semana4": "",
-    "Semana5": "",
-    "Totalgeneral": "92.3%"
-  },
-  {
-    "DNI": 76283993,
-    "Agente": "ADRIANA CUETO PAREDES",
-    "Semana1": "95.5%",
-    "Semana2": "93.0%",
-    "Semana3": "88.0%",
-    "Semana4": "85.5%",
-    "Semana5": "",
-    "Totalgeneral": "90.1%"
-  },
-  {
-    "DNI": 61089994,
-    "Agente": "GABRIEL ALEXANDER SANTANA NIETO",
-    "Semana1": "",
-    "Semana2": "78.0%",
-    "Semana3": "90.5%",
-    "Semana4": "96.5%",
-    "Semana5": "",
-    "Totalgeneral": "90.4%"
-  },
-  {
-    "DNI": 7493336,
-    "Agente": "JAIR OSWALDO CABELLO TAMANI",
-    "Semana1": "",
-    "Semana2": "",
-    "Semana3": "",
-    "Semana4": "96.5%",
-    "Semana5": "",
-    "Totalgeneral": "96.5%"
-  },
-  {
-    "DNI": 75157228,
-    "Agente": "FHERGIE JANICE INFANTE GUTIERREZ",
-    "Semana1": "",
-    "Semana2": "",
-    "Semana3": "",
-    "Semana4": "78.0%",
-    "Semana5": "",
-    "Totalgeneral": "78.0%"
-  },
-  {
-    "DNI": 72738754,
-    "Agente": "PIETRO ALESSANDRO DEL AGUILA CARRILLO",
-    "Semana1": "",
-    "Semana2": "",
-    "Semana3": "",
-    "Semana4": "76.0%",
-    "Semana5": "",
-    "Totalgeneral": "76.0%"
-  },
-  {
     "DNI": 3882225,
     "Agente": "LUIS GUILLERMO PACHECO VARGAS",
     "Semana1": "100.0%",
     "Semana2": "80.0%",
     "Semana3": "95.0%",
     "Semana4": "97.5%",
-    "Semana5": "",
-    "Totalgeneral": "94.0%"
+    "Semana5": "90.00%",
+    "Totalgeneral": "93.3%"
   },
   {
     "DNI": 6859583,
@@ -156,8 +16,8 @@
     "Semana2": "75.0%",
     "Semana3": "95.0%",
     "Semana4": "72.5%",
-    "Semana5": "",
-    "Totalgeneral": "79.0%"
+    "Semana5": "75.00%",
+    "Totalgeneral": "78.3%"
   },
   {
     "DNI": 9340719,
@@ -176,8 +36,8 @@
     "Semana2": "90.0%",
     "Semana3": "100.0%",
     "Semana4": "87.5%",
-    "Semana5": "",
-    "Totalgeneral": "93.0%"
+    "Semana5": "85.00%",
+    "Totalgeneral": "91.7%"
   },
   {
     "DNI": 10687999,
@@ -186,8 +46,8 @@
     "Semana2": "95.0%",
     "Semana3": "100.0%",
     "Semana4": "87.5%",
-    "Semana5": "",
-    "Totalgeneral": "74.0%"
+    "Semana5": "75.00%",
+    "Totalgeneral": "74.2%"
   },
   {
     "DNI": 41980216,
@@ -196,8 +56,8 @@
     "Semana2": "75.0%",
     "Semana3": "90.0%",
     "Semana4": "85.0%",
-    "Semana5": "",
-    "Totalgeneral": "67.0%"
+    "Semana5": "95.00%",
+    "Totalgeneral": "71.7%"
   },
   {
     "DNI": 43101653,
@@ -206,8 +66,8 @@
     "Semana2": "90.0%",
     "Semana3": "95.0%",
     "Semana4": "87.5%",
-    "Semana5": "",
-    "Totalgeneral": "86.0%"
+    "Semana5": "70.00%",
+    "Totalgeneral": "83.3%"
   },
   {
     "DNI": 43362129,
@@ -226,8 +86,8 @@
     "Semana2": "70.0%",
     "Semana3": "0.0%",
     "Semana4": "87.5%",
-    "Semana5": "",
-    "Totalgeneral": "66.0%"
+    "Semana5": "65.00%",
+    "Totalgeneral": "65.8%"
   },
   {
     "DNI": 45195823,
@@ -236,8 +96,8 @@
     "Semana2": "100.0%",
     "Semana3": "95.0%",
     "Semana4": "77.5%",
-    "Semana5": "",
-    "Totalgeneral": "83.0%"
+    "Semana5": "85.00%",
+    "Totalgeneral": "83.3%"
   },
   {
     "DNI": 45740919,
@@ -246,8 +106,8 @@
     "Semana2": "95.0%",
     "Semana3": "95.0%",
     "Semana4": "90.0%",
-    "Semana5": "",
-    "Totalgeneral": "92.0%"
+    "Semana5": "90.00%",
+    "Totalgeneral": "91.7%"
   },
   {
     "DNI": 46175890,
@@ -256,8 +116,8 @@
     "Semana2": "90.0%",
     "Semana3": "100.0%",
     "Semana4": "100.0%",
-    "Semana5": "",
-    "Totalgeneral": "98.0%"
+    "Semana5": "90.00%",
+    "Totalgeneral": "96.7%"
   },
   {
     "DNI": 46176139,
@@ -276,8 +136,8 @@
     "Semana2": "90.0%",
     "Semana3": "100.0%",
     "Semana4": "85.0%",
-    "Semana5": "",
-    "Totalgeneral": "90.0%"
+    "Semana5": "85.00%",
+    "Totalgeneral": "89.2%"
   },
   {
     "DNI": 47687928,
@@ -296,8 +156,8 @@
     "Semana2": "100.0%",
     "Semana3": "95.0%",
     "Semana4": "95.0%",
-    "Semana5": "",
-    "Totalgeneral": "79.2%"
+    "Semana5": "90.00%",
+    "Totalgeneral": "80.7%"
   },
   {
     "DNI": 60430066,
@@ -306,7 +166,7 @@
     "Semana2": "85.0%",
     "Semana3": "100.0%",
     "Semana4": "82.5%",
-    "Semana5": "",
+    "Semana5": "90.00%",
     "Totalgeneral": "90.0%"
   },
   {
@@ -315,7 +175,7 @@
     "Semana1": "85.0%",
     "Semana2": "90.0%",
     "Semana3": "95.0%",
-    "Semana4": "",
+    "Semana4": "90.0%",
     "Semana5": "",
     "Totalgeneral": "90.0%"
   },
@@ -326,8 +186,8 @@
     "Semana2": "80.0%",
     "Semana3": "90.0%",
     "Semana4": "87.5%",
-    "Semana5": "",
-    "Totalgeneral": "85.8%"
+    "Semana5": "85.00%",
+    "Totalgeneral": "85.6%"
   },
   {
     "DNI": 62472445,
@@ -336,8 +196,8 @@
     "Semana2": "60.0%",
     "Semana3": "90.0%",
     "Semana4": "67.5%",
-    "Semana5": "",
-    "Totalgeneral": "71.0%"
+    "Semana5": "90.00%",
+    "Totalgeneral": "74.2%"
   },
   {
     "DNI": 62774548,
@@ -345,9 +205,9 @@
     "Semana1": "90.0%",
     "Semana2": "30.0%",
     "Semana3": "0.0%",
-    "Semana4": "",
-    "Semana5": "",
-    "Totalgeneral": "37.5%"
+    "Semana4": "87.5%",
+    "Semana5": "90.00%",
+    "Totalgeneral": "59.3%"
   },
   {
     "DNI": 70082647,
@@ -366,8 +226,8 @@
     "Semana2": "90.0%",
     "Semana3": "90.0%",
     "Semana4": "85.0%",
-    "Semana5": "",
-    "Totalgeneral": "58.3%"
+    "Semana5": "85.00%",
+    "Totalgeneral": "62.1%"
   },
   {
     "DNI": 70855633,
@@ -376,8 +236,8 @@
     "Semana2": "0.0%",
     "Semana3": "90.0%",
     "Semana4": "80.0%",
-    "Semana5": "",
-    "Totalgeneral": "63.8%"
+    "Semana5": "0.00%",
+    "Totalgeneral": "51.0%"
   },
   {
     "DNI": 71264717,
@@ -426,8 +286,8 @@
     "Semana2": "95.0%",
     "Semana3": "95.0%",
     "Semana4": "90.0%",
-    "Semana5": "",
-    "Totalgeneral": "90.8%"
+    "Semana5": "80.00%",
+    "Totalgeneral": "89.3%"
   },
   {
     "DNI": 74066267,
@@ -436,8 +296,8 @@
     "Semana2": "80.0%",
     "Semana3": "100.0%",
     "Semana4": "80.0%",
-    "Semana5": "",
-    "Totalgeneral": "65.0%"
+    "Semana5": "90.00%",
+    "Totalgeneral": "70.0%"
   },
   {
     "DNI": 74071606,
@@ -446,8 +306,8 @@
     "Semana2": "80.0%",
     "Semana3": "0.0%",
     "Semana4": "90.0%",
-    "Semana5": "",
-    "Totalgeneral": "67.0%"
+    "Semana5": "70.00%",
+    "Totalgeneral": "67.5%"
   },
   {
     "DNI": 74179107,
@@ -456,8 +316,8 @@
     "Semana2": "80.0%",
     "Semana3": "95.0%",
     "Semana4": "90.0%",
-    "Semana5": "",
-    "Totalgeneral": "66.3%"
+    "Semana5": "75.00%",
+    "Totalgeneral": "68.0%"
   },
   {
     "DNI": 74271887,
@@ -466,8 +326,8 @@
     "Semana2": "75.0%",
     "Semana3": "85.0%",
     "Semana4": "70.0%",
-    "Semana5": "",
-    "Totalgeneral": "57.5%"
+    "Semana5": "75.00%",
+    "Totalgeneral": "61.0%"
   },
   {
     "DNI": 74847803,
@@ -476,8 +336,8 @@
     "Semana2": "100.0%",
     "Semana3": "95.0%",
     "Semana4": "85.0%",
-    "Semana5": "",
-    "Totalgeneral": "89.0%"
+    "Semana5": "90.00%",
+    "Totalgeneral": "89.2%"
   },
   {
     "DNI": 75232885,
@@ -486,8 +346,8 @@
     "Semana2": "100.0%",
     "Semana3": "0.0%",
     "Semana4": "90.0%",
-    "Semana5": "",
-    "Totalgeneral": "75.0%"
+    "Semana5": "80.00%",
+    "Totalgeneral": "75.8%"
   },
   {
     "DNI": 75402111,
@@ -496,8 +356,8 @@
     "Semana2": "0.0%",
     "Semana3": "100.0%",
     "Semana4": "80.0%",
-    "Semana5": "",
-    "Totalgeneral": "52.0%"
+    "Semana5": "90.00%",
+    "Totalgeneral": "58.3%"
   },
   {
     "DNI": 75402127,
@@ -506,8 +366,8 @@
     "Semana2": "80.0%",
     "Semana3": "95.0%",
     "Semana4": "87.5%",
-    "Semana5": "",
-    "Totalgeneral": "70.0%"
+    "Semana5": "90.00%",
+    "Totalgeneral": "73.3%"
   },
   {
     "DNI": 75404637,
@@ -516,8 +376,8 @@
     "Semana2": "85.0%",
     "Semana3": "90.0%",
     "Semana4": "85.0%",
-    "Semana5": "",
-    "Totalgeneral": "87.0%"
+    "Semana5": "90.00%",
+    "Totalgeneral": "87.5%"
   },
   {
     "DNI": 75595802,
@@ -526,8 +386,8 @@
     "Semana2": "95.0%",
     "Semana3": "90.0%",
     "Semana4": "90.0%",
-    "Semana5": "",
-    "Totalgeneral": "92.5%"
+    "Semana5": "70.00%",
+    "Totalgeneral": "89.3%"
   },
   {
     "DNI": 75609881,
@@ -536,107 +396,297 @@
     "Semana2": "0.0%",
     "Semana3": "95.0%",
     "Semana4": "80.0%",
-    "Semana5": "",
-    "Totalgeneral": "71.7%"
+    "Semana5": "80.00%",
+    "Totalgeneral": "72.9%"
   },
   {
     "DNI": 75937957,
     "Agente": "MAIRA MARITZA CALZADA RIVAS",
-    "Semana1": "90.00%",
-    "Semana2": "80.00%",
-    "Semana3": "92.50%",
-    "Semana4": "90.00%",
-    "Semana5": "",
-    "Totalgeneral": "89.20%"
+    "Semana1": "90.0%",
+    "Semana2": "80.0%",
+    "Semana3": "92.5%",
+    "Semana4": "90.0%",
+    "Semana5": "75.00%",
+    "Totalgeneral": "87.1%"
   },
   {
     "DNI": 76501062,
     "Agente": "JHON HENRY VILLA HUMBO",
-    "Semana1": "0.00%",
-    "Semana2": "95.00%",
-    "Semana3": "90.00%",
-    "Semana4": "47.50%",
-    "Semana5": "",
-    "Totalgeneral": "46.70%"
+    "Semana1": "0.0%",
+    "Semana2": "95.0%",
+    "Semana3": "90.0%",
+    "Semana4": "47.5%",
+    "Semana5": "80.00%",
+    "Totalgeneral": "51.4%"
   },
   {
     "DNI": 76520405,
     "Agente": "JOSAFAT SEGURA SEGURA GONZALES",
-    "Semana1": "0.00%",
-    "Semana2": "80.00%",
-    "Semana3": "90.00%",
-    "Semana4": "45.00%",
-    "Semana5": "",
-    "Totalgeneral": "52.00%"
+    "Semana1": "0.0%",
+    "Semana2": "80.0%",
+    "Semana3": "90.0%",
+    "Semana4": "45.0%",
+    "Semana5": "85.00%",
+    "Totalgeneral": "57.5%"
   },
   {
     "DNI": 77100193,
     "Agente": "CINTHYA PAMELA BERROCAL ROJAS",
-    "Semana1": "95.00%",
-    "Semana2": "85.00%",
-    "Semana3": "90.00%",
+    "Semana1": "95.0%",
+    "Semana2": "85.0%",
+    "Semana3": "90.0%",
     "Semana4": "",
-    "Semana5": "",
-    "Totalgeneral": "90.00%"
+    "Semana5": "75.00%",
+    "Totalgeneral": "86.3%"
   },
   {
     "DNI": 47785192,
     "Agente": "LINIKER VICTOR ARAUJO HUAMAN",
     "Semana1": "",
-    "Semana2": "100.00%",
-    "Semana3": "90.00%",
-    "Semana4": "90.00%",
-    "Semana5": "",
-    "Totalgeneral": "93.30%"
+    "Semana2": "100.0%",
+    "Semana3": "90.0%",
+    "Semana4": "90.0%",
+    "Semana5": "80.00%",
+    "Totalgeneral": "88.0%"
   },
   {
     "DNI": 10791308,
     "Agente": "DENYS LUIS VALVERDE ARROSPIDE",
     "Semana1": "",
-    "Semana2": "70.00%",
-    "Semana3": "100.00%",
-    "Semana4": "72.50%",
-    "Semana5": "",
-    "Totalgeneral": "78.80%"
+    "Semana2": "70.0%",
+    "Semana3": "100.0%",
+    "Semana4": "72.5%",
+    "Semana5": "87.50%",
+    "Totalgeneral": "81.7%"
   },
   {
     "DNI": 46611282,
     "Agente": "SANDRA SOFIA NUÑEZ AGREDA",
-    "Semana1": "80.00%",
+    "Semana1": "80.0%",
     "Semana2": "",
-    "Semana3": "95.00%",
-    "Semana4": "90.00%",
-    "Semana5": "",
-    "Totalgeneral": "88.80%"
+    "Semana3": "95.0%",
+    "Semana4": "90.0%",
+    "Semana5": "95.00%",
+    "Totalgeneral": "90.0%"
   },
   {
     "DNI": 61044071,
     "Agente": "DAYANA TAIZ UNOCC LLACSA",
     "Semana1": "",
-    "Semana2": "95.00%",
+    "Semana2": "95.0%",
     "Semana3": "",
     "Semana4": "",
     "Semana5": "",
-    "Totalgeneral": "95.00%"
+    "Totalgeneral": "95.0%"
   },
   {
     "DNI": 47571906,
     "Agente": "JAIME CONSUELO SALAZAR",
     "Semana1": "",
-    "Semana2": "70.00%",
-    "Semana3": "95.00%",
-    "Semana4": "75.00%",
-    "Semana5": "",
-    "Totalgeneral": "80.00%"
+    "Semana2": "70.0%",
+    "Semana3": "95.0%",
+    "Semana4": "75.0%",
+    "Semana5": "45.00%",
+    "Totalgeneral": "66.0%"
   },
   {
     "DNI": 25520561,
     "Agente": "NELLY MARISSA RODRIGUEZ JUAREZ",
     "Semana1": "",
-    "Semana2": "100.00%",
-    "Semana3": "90.00%",
-    "Semana4": "87.50%",
+    "Semana2": "100.0%",
+    "Semana3": "90.0%",
+    "Semana4": "87.5%",
+    "Semana5": "90.00%",
+    "Totalgeneral": "90.8%"
+  },
+  {
+    "DNI": 44264575,
+    "Agente": "MARÍA ELIZABETH MONTEZA TORRES",
+    "Semana1": "",
+    "Semana2": "",
+    "Semana3": "",
+    "Semana4": "",
+    "Semana5": "80.00%",
+    "Totalgeneral": "80.0%"
+  },
+  {
+    "DNI": 75366571,
+    "Agente": "SEGUNDO FRANCISCO VERGARAY VERA",
+    "Semana1": "",
+    "Semana2": "",
+    "Semana3": "",
+    "Semana4": "",
+    "Semana5": "75.00%",
+    "Totalgeneral": "75.0%"
+  },
+  {
+    "DNI": 41358241,
+    "Agente": "EDUARDO GUSTAVO ROJAS ENCINAS",
+    "Semana1": "",
+    "Semana2": "",
+    "Semana3": "",
+    "Semana4": "",
+    "Semana5": "90.00%",
+    "Totalgeneral": "90.0%"
+  },
+  {
+    "DNI": 8388577,
+    "Agente": "MAURY YUSBELI TORRES GALÍNDEZ",
+    "Semana1": "",
+    "Semana2": "",
+    "Semana3": "",
+    "Semana4": "",
+    "Semana5": "75.00%",
+    "Totalgeneral": "75.0%"
+  },
+  {
+    "DNI": 75597235,
+    "Agente": "YADHIRA MACCIE JUAREZ GORDALIZA",
+    "Semana1": "",
+    "Semana2": "",
+    "Semana3": "",
+    "Semana4": "",
+    "Semana5": "85.00%",
+    "Totalgeneral": "85.00%"
+  },
+  {
+    "DNI": 40070885,
+    "Agente": "EDGARDO MANUEL HERRERA ARRUNATEGUI",
+    "Semana1": "89.67%",
+    "Semana2": "78.00%",
+    "Semana3": "",
+    "Semana4": "",
     "Semana5": "",
-    "Totalgeneral": "91.30%"
+    "Totalgeneral": "86.75%"
+  },
+  {
+    "DNI": 60095952,
+    "Agente": "JHESLY NAYELY BARZOLA BORJA",
+    "Semana1": "96.50%",
+    "Semana2": "89.00%",
+    "Semana3": "92.00%",
+    "Semana4": "92.67%",
+    "Semana5": "82.33%",
+    "Totalgeneral": "90.00%"
+  },
+  {
+    "DNI": 61790011,
+    "Agente": "LUIS ALVARO OCHOA CUADROS",
+    "Semana1": "78.50%",
+    "Semana2": "63.00%",
+    "Semana3": "91.00%",
+    "Semana4": "92.00%",
+    "Semana5": "75.00%",
+    "Totalgeneral": "82.63%"
+  },
+  {
+    "DNI": 70696739,
+    "Agente": "CHRISTOPHER CAMPOMANES AUCCASI",
+    "Semana1": "98.00%",
+    "Semana2": "91.00%",
+    "Semana3": "94.00%",
+    "Semana4": "",
+    "Semana5": "",
+    "Totalgeneral": "94.25%"
+  },
+  {
+    "DNI": 70825791,
+    "Agente": "ROBERT AURELIO URIBE TICLA",
+    "Semana1": "92.00%",
+    "Semana2": "88.00%",
+    "Semana3": "87.50%",
+    "Semana4": "78.00%",
+    "Semana5": "34.00%",
+    "Totalgeneral": "75.67%"
+  },
+  {
+    "DNI": 72694742,
+    "Agente": "ERIK JOSE ROMAN VEGA",
+    "Semana1": "90.00%",
+    "Semana2": "",
+    "Semana3": "",
+    "Semana4": "",
+    "Semana5": "",
+    "Totalgeneral": "90.00%"
+  },
+  {
+    "DNI": 73063917,
+    "Agente": "RAITCHEL ESTRELLA GONZA QUISPE",
+    "Semana1": "88.00%",
+    "Semana2": "82.00%",
+    "Semana3": "88.00%",
+    "Semana4": "92.00%",
+    "Semana5": "90.25%",
+    "Totalgeneral": "89.25%"
+  },
+  {
+    "DNI": 74500665,
+    "Agente": "GRACIELA DEL ROSARIO VALENCIA TAPULLIMA",
+    "Semana1": "91.00%",
+    "Semana2": "91.00%",
+    "Semana3": "92.00%",
+    "Semana4": "88.00%",
+    "Semana5": "79.50%",
+    "Totalgeneral": "87.63%"
+  },
+  {
+    "DNI": 75357155,
+    "Agente": "ARIANA EMELY MORALES SOLIER",
+    "Semana1": "95.00%",
+    "Semana2": "76.00%",
+    "Semana3": "99.00%",
+    "Semana4": "",
+    "Semana5": "",
+    "Totalgeneral": "92.25%"
+  },
+  {
+    "DNI": 76283993,
+    "Agente": "ADRIANA CUETO PAREDES",
+    "Semana1": "95.50%",
+    "Semana2": "93.00%",
+    "Semana3": "88.00%",
+    "Semana4": "85.50%",
+    "Semana5": "87.50%",
+    "Totalgeneral": "89.56%"
+  },
+  {
+    "DNI": 61089994,
+    "Agente": "GABRIEL ALEXANDER SANTANA NIETO",
+    "Semana1": "",
+    "Semana2": "78.00%",
+    "Semana3": "90.50%",
+    "Semana4": "96.50%",
+    "Semana5": "58.67%",
+    "Totalgeneral": "78.50%"
+  },
+  {
+    "DNI": 7493336,
+    "Agente": "JAIR OSWALDO CABELLO TAMANI",
+    "Semana1": "",
+    "Semana2": "",
+    "Semana3": "",
+    "Semana4": "96.50%",
+    "Semana5": "84.33%",
+    "Totalgeneral": "89.20%"
+  },
+  {
+    "DNI": 75157228,
+    "Agente": "FHERGIE JANICE INFANTE GUTIERREZ",
+    "Semana1": "",
+    "Semana2": "",
+    "Semana3": "",
+    "Semana4": "78.00%",
+    "Semana5": "87.00%",
+    "Totalgeneral": "84.75%"
+  },
+  {
+    "DNI": 72738754,
+    "Agente": "PIETRO ALESSANDRO DEL AGUILA CARRILLO",
+    "Semana1": "",
+    "Semana2": "",
+    "Semana3": "",
+    "Semana4": "76.00%",
+    "Semana5": "56.67%",
+    "Totalgeneral": "61.50%"
   }
 ]
