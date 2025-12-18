@@ -3,456 +3,412 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alertas Web360</title>
-  
-  <!-- Tailwind CSS via CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Fonts -->
+  <title>Caribuphx 360 | Notas</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
   <style>
-    body { 
-      font-family: 'Inter', sans-serif; 
+    :root {
+      --primary-blue: #2563eb;
+      --primary-dark: #1d4ed8;
+      --primary-light: #dbeafe;
+      --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --shadow-soft: 0 4px 12px rgba(0,0,0,0.04);
+      --menu-height: 70px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-main);
       overflow-x: hidden;
-      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
     }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: var(--menu-height);
+      background: linear-gradient(90deg, rgba(30, 58, 138, 0.95), rgba(37, 99, 235, 0.95));
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(37, 99, 235, 0.3);
     }
-    .animate-fadeInUp { animation: fadeInUp 0.4s ease-out forwards; }
-
-    @keyframes pulseRed {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.7; }
-    }
-    .animate-pulseRed { animation: pulseRed 1.5s ease-in-out infinite; }
-
-    .alert-card {
-      position: relative;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      border-left-width: 4px !important;
-    }
-    .alert-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    }
-
-    .delete-btn {
-      position: absolute; top: 16px; right: 16px;
-      width: 32px; height: 32px; border-radius: 50%;
-      background-color: rgba(254, 242, 242, 0.8);
-      display: flex; align-items: center; justify-content: center;
-      opacity: 0; pointer-events: none; transition: all 0.25s ease;
-      color: #ef4444; font-weight: bold; border: none;
-      z-index: 10;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    }
-    .alert-card:hover .delete-btn { 
-      opacity: 1; 
-      pointer-events: all; 
-    }
-    .delete-btn:hover { 
-      background-color: #fee2e2; 
-      color: #dc2626;
-      transform: scale(1.1);
+    header .logo {
+      font-weight: 800;
+      font-size: 1.7rem;
+      letter-spacing: 1.5px;
+      color: white;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
 
-    #alert-count {
-      position: absolute; top: -4px; right: -4px;
-      min-width: 20px; height: 20px; font-size: 0.65rem;
-      line-height: 20px; text-align: center; border-radius: 50%;
-      background: #ef4444; color: white; font-weight: 700;
-      box-shadow: 0 0 0 2px #f8fafc; border: 2px solid #f8fafc;
-      z-index: 20;
-      animation: pulseRed 2s infinite;
+    main {
+      padding: calc(var(--menu-height) + 40px) 40px 40px;
     }
 
-    #alert-icon {
-      transition: all 0.3s ease;
+    .panel {
+      background: var(--card-bg);
+      border-radius: 20px;
+      box-shadow: var(--shadow-soft);
+      padding: 24px;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
-    #user-menu {
-      transform-origin: top right;
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-      transform: scaleY(0);
-      opacity: 0;
-      pointer-events: none;
+    h1 {
+      font-size: 1.6rem;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #1e293b;
     }
-    #user-menu.show {
-      transform: scaleY(1);
-      opacity: 1;
-      pointer-events: all;
+    h1::before { content: "📊"; }
+
+    .search-box {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      align-items: center;
+    }
+    .search-box input {
+      flex: 1;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 2px solid #3b82f6;
+      font-size: 14px;
+    }
+    .search-box input:focus {
+      outline: none;
+      border-color: var(--primary-blue);
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.25);
+    }
+    .search-box button {
+      background: linear-gradient(270deg, #3b82f6, #1d4ed8);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 10px 18px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .search-box button:hover { opacity: 0.9; }
+
+    .result-header {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: #1e293b;
     }
 
-    /* Login Modal */
-    .login-modal {
-      backdrop-filter: blur(8px);
+    .result-content {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
     }
-    .login-modal-content {
-      transform: scale(0.95);
-      opacity: 0;
-      transition: all 0.3s ease;
+
+.chart-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+svg {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+.circle-bg {
+  fill: none;
+  stroke: #d1d5db;
+  stroke-width: 16;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 4px rgba(0,0,0,0.05));
+}
+.circle-progress {
+  fill: none;
+  stroke-width: 16;
+  stroke-linecap: round;
+  stroke-dasharray: 502.4; /* Circunferencia de r=80: 2 * π * 80 = 502.4 */
+  stroke-dashoffset: 502.4;
+  transition: stroke-dashoffset 0.6s ease-out, stroke 0.3s ease;
+}
+.percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1e293b;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+    .note-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      font-weight: 600;
     }
-    .login-modal.show .login-modal-content {
-      transform: scale(1);
-      opacity: 1;
+    .note-good { background: #dcfce7; color: #16a34a; }
+    .note-warn { background: #ffedd5; color: #ea580c; }
+    .note-bad  { background: #fee2e2; color: #dc2626; }
+
+    .summary {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    .table-container {
+      background: #e0f2fe;
+      border-radius: 8px;
+      padding: 12px;
+      min-width: 220px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th {
+      background: #dbeafe;
+      padding: 8px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: #1e293b;
+    }
+    td {
+      padding: 8px;
+      border-bottom: 1px solid #bfdbfe;
+    }
+    tr:last-child td { border-bottom: none; }
+
+    .info, .error {
+      text-align: center;
+      padding: 20px;
+      color: var(--text-muted);
+    }
+    .error { color: #ef4444; }
+
+    .loader {
+      border: 3px solid #f3f3f3;
+      border-top: 3px solid #2563eb;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      animation: spin 1s linear infinite;
+      margin: 20px auto;
+    }
+    @keyframes spin { 100% { transform: rotate(360deg); } }
+
+    @media (max-width: 900px) {
+      main { padding: calc(var(--menu-height) + 20px) 16px 16px; }
+      .search-box { flex-direction: column; }
+      .search-box input, .search-box button { width: 100%; }
+      .result-content { flex-direction: column; gap: 20px; }
+      .table-container { min-width: auto; }
     }
   </style>
 </head>
-<body class="bg-gray-50 min-h-screen flex">
-
-  <!-- BARRA LATERAL -->
-  <aside class="fixed top-0 left-0 bottom-0 z-40 w-64 bg-gradient-to-b from-gray-900 to-gray-800 text-white shadow-2xl border-r border-gray-700">
-    <div class="flex flex-col h-full">
-      <div class="p-6 border-b border-gray-700 flex items-center gap-3">
-        <div id="alert-icon" class="p-2 bg-red-500 rounded-xl">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-          </svg>
-        </div>
-        <h1 class="text-xl font-bold text-white">Alerta 360</h1>
-      </div>
-      <nav class="flex-1 px-4 py-6 space-y-1">
-        <a href="index.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-gray-700 text-blue-300 font-medium group">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-          </svg>
-          <span class="sidebar-text">Dashboard</span>
-        </a>
-
-        <a href="Notas.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-gray-800 text-blue-400 font-medium transition-all hover:bg-gray-700 group">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M9 7h6v6H9V7zm8 0h6v6h-6V7zM9 15h6v6H9v-6zm8 0h6v6h-6v-6z"/>
-          </svg>
-          <span>Notas</span>
-        </a>
-        
-          <a href="Caribu_phx.html" 
-             class="flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-800 text-blue-400 font-medium transition-all hover:bg-gray-700 hover:shadow-lg transform hover:-translate-y-0.5">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M4 3a1 1 0 00-1 1v13h14V4a1 1 0 00-1-1H4zm2 2h2v2H6V5zm0 4h2v2H6V9zm0 4h2v2H6v-2zm4-8h2v2h-2V5zm0 4h2v2h-2V9zm0 4h2v2h-2v-2z" clip-rule="evenodd"/>
-            </svg>
-            <span>Caribu PHX</span>
-          </a>       
-      </nav>
-      <div class="p-4 text-center text-xs text-gray-400 border-t border-gray-700">
-        © 2025 Web360
-      </div>
-    </div>
-  </aside>
-
-  <!-- HEADER -->
-  <header class="fixed top-0 left-64 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-200 px-6 py-3">
-    <div class="max-w-7xl mx-auto flex justify-end items-center h-full">
-      <div class="relative">
-        <button id="user-menu-btn" class="flex items-center gap-3 px-4 py-2 rounded-xl hover:bg-gray-50 transition-all duration-200 group">
-          <span id="user-name" class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Usuario</span>
-          <div class="relative">
-            <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-xs font-bold">
-              U
-            </div>
-            <span id="alert-count" class="hidden absolute -top-1 -right-1"></span>
-          </div>
-        </button>
-        <div id="user-menu" class="absolute right-0 mt-3 w-56 bg-white rounded-xl shadow-2xl py-2 z-50 border border-gray-100 hidden">
-          <div class="px-4 py-2 text-sm text-gray-700 border-b border-gray-100">
-            <div id="user-email-display" class="font-medium"></div>
-          </div>
-          <button id="logout-btn" class="flex items-center w-full px-4 py-3 text-sm text-red-600 hover:bg-red-50 hover:text-red-700 transition-colors gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-            </svg>
-            Desloguear
-          </button>
-        </div>
-      </div>
-    </div>
+<body>
+  <header>
+    <div class="logo">Caribuphx 360</div>
   </header>
 
-  <!-- CONTENIDO -->
-  <main class="flex-1 ml-64 pt-24 pb-12 px-6">
-    <div id="app-container" class="max-w-5xl mx-auto"></div>
+  <main>
+    <div class="panel">
+      <h1>Consulta tus notas de calidad</h1>
+      <div class="search-box">
+        <input type="text" id="dniInput" placeholder="Ingresa tu DNI (ej: 47894561)" />
+        <button id="btnSearch">🔍 Buscar</button>
+      </div>
+      <div id="resultContainer">
+        <div class="info">🔍 Ingresa un DNI para ver tus resultados</div>
+      </div>
+    </div>
   </main>
 
-  <script>
-    const DEFAULT_PASSWORD = "Sales2025";
-    const FIREBASE_CONFIG = { 
-      apiKey: "TU_API_KEY_REAL_AQUI", 
-      authDomain: "alertasweb360.firebaseapp.com", 
-      projectId: "alertasweb360", 
-      storageBucket: "alertasweb360.appspot.com", 
-      messagingSenderId: "123", 
-      appId: "1:123:web:abc" 
-    };
+  <!-- Supabase SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-// 🔗 URL pública del Google Sheet en CSV (¡sin espacios!)
-const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTIgsZoBQjMmvl3iDq6GzMt0gvfyCxy5F7eCPZ6Q04YT52gKDiLQ5P9JflhA4zOFcrRRUjHqaDc08zA/pub?gid=0&single=true&output=csv";
-let SHEET_DATA = [];
+<script>
+  window.addEventListener('load', async () => {
+    const SUPABASE_URL = "https://sylucvtlscfcerqqtrpy.supabase.co";
+    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN5bHVjdnRsc2NmY2VycXF0cnB5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI3ODQ2NTYsImV4cCI6MjA3ODM2MDY1Nn0.opybqq7PK-GMYWFrJbSdCOenmpkkbMFO-K3u5ahQUWY";
+    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-// ✅ Función que devuelve una promesa para Promise.all
-async function loadSheetData() {
+    let allData = [];
+
+    // === UTILS ===
+    function parseToPercent(val) {
+      if (val == null) return null;
+      let n = parseFloat(val);
+      if (isNaN(n)) return null;
+      if (n <= 1) n *= 100;
+      return Math.min(100, Math.max(0, n));
+    }
+
+    function getNoteClass(note) {
+      if (note >= 85) return 'note-good';
+      if (note >= 66) return 'note-warn';
+      return 'note-bad';
+    }
+
+    function calcAvg(arr) {
+      const valid = arr.filter(n => n != null);
+      return valid.length ? valid.reduce((a, b) => a + b, 0) / valid.length : 0;
+    }
+
+// === CARGAR DATOS ===
+async function loadData() {
+  const container = document.getElementById('resultContainer');
+  container.innerHTML = '<div class="loader"></div>';
   try {
-    const res = await fetch(SHEET_URL);
-    if (!res.ok) throw new Error("Error al cargar el CSV");
-
-    const csv = await res.text();
-    // 🛠 Elimina líneas vacías o mal formateadas
-    const lines = csv.trim().split(/\r?\n/).filter(l => l.trim() !== "");
-    if (lines.length < 2) throw new Error("CSV vacío o mal formateado");
-
-    const headers = lines[0].split(",").map(h => h.trim());
-    const rows = lines.slice(1)
-      .filter(line => line && line.includes(",")) // evita procesar líneas sin datos válidos
-      .map(line => {
-        // Soporte básico para campos entre comillas
-        const cells = line.split(",").map(c => c.trim().replace(/^"(.*)"$/, "$1"));
-        let obj = {};
-        headers.forEach((h, i) => {
-          obj[h] = (cells[i] || "").toLowerCase();
-        });
-        return obj;
-      });
-
-    SHEET_DATA = rows;
-    console.log("✅ Datos del Sheet cargados:", SHEET_DATA);
-    return SHEET_DATA;
-  } catch (error) {
-    console.error("❌ Error al cargar el Sheet:", error);
-    alert("⚠️ No se pudo cargar la lista de usuarios autorizados. Verifica la URL del Sheet.");
-    throw error;
+    const { data, error } = await supabase.from('notas_caribuphx').select('*');
+    if (error) throw error;
+    allData = data;
+    container.innerHTML = '<div class="info">🔍 Ingresa un DNI para ver tus resultados</div>';
+  } catch (err) {
+    container.innerHTML = `<div class="error">❌ Error al cargar datos: ${err.message}</div>`;
+    console.error(err);
   }
 }
 
-
-    // === PARPADEO DEL TÍTULO ===
-    let blinkInterval = null;
-    const originalTitle = document.title;
-
-    function startTitleBlink(alertCount) {
-      if (blinkInterval) return;
-      blinkInterval = setInterval(() => {
-        if (document.hidden) {
-          document.title = document.title.startsWith('⚠️') 
-            ? originalTitle 
-            : `⚠️ ${alertCount} nueva${alertCount > 1 ? 's' : ''} alerta${alertCount > 1 ? 's' : ''} • Alertas Web360`;
-        } else {
-          stopTitleBlink();
-        }
-      }, 1000);
-    }
-
-    function stopTitleBlink() {
-      if (blinkInterval) {
-        clearInterval(blinkInterval);
-        blinkInterval = null;
+    // === BUSCAR ===
+    async function searchByDNI() {
+      const dni = document.getElementById('dniInput').value.trim();
+      if (!dni) {
+        alert("Por favor, ingresa un DNI.");
+        return;
       }
-      document.title = originalTitle;
-    }
 
-    document.addEventListener('visibilitychange', () => {
-      if (!document.hidden) {
-        stopTitleBlink();
+      if (allData.length === 0) await loadData();
+
+      const matches = allData.filter(r =>
+        r.dni && r.dni.toString().includes(dni)
+      );
+
+      const container = document.getElementById('resultContainer');
+      if (matches.length === 0) {
+        container.innerHTML = `<div class="error">No se encontraron registros para el DNI: ${dni}</div>`;
+        return;
       }
-    });
-    // === FIN PARPADEO ===
 
-    (function(){
-      const loadScript = src => new Promise(res => {
-        const s = document.createElement('script');
-        s.src = src;
-        s.onload = res;
-        document.head.appendChild(s);
-      });
+      const agente = matches[0].agente || "Sin nombre";
 
-      Promise.all([
-        loadScript('https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js'),
-        loadScript('https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js'),
-        loadSheetData()
-      ]).then(() => {
-        firebase.initializeApp(FIREBASE_CONFIG);
-        const db = firebase.firestore();
-        let currentUserEmail = localStorage.getItem('currentUserEmail');
-        let currentCampaign = localStorage.getItem('campanaAsignada');
+      // Calcular promedio general de todas las evaluaciones
+      const todasNotas = matches.map(r => parseToPercent(r.c_nota));
+      const avgGeneral = calcAvg(todasNotas);
 
-        function showLogin() {
-          const modal = document.createElement('div');
-          modal.className = 'login-modal fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 p-4';
-          modal.innerHTML = `
-            <div class="login-modal-content bg-white rounded-2xl p-8 w-full max-w-md shadow-2xl transform transition-all">
-              <div class="text-center mb-6">
-                <div class="inline-flex p-3 bg-red-100 rounded-full mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                  </svg>
-                </div>
-                <h2 class="text-2xl font-bold text-gray-800">🔐 Iniciar Sesión</h2>
-                <p class="text-gray-500 mt-2">Ingresa tus credenciales para continuar</p>
-              </div>
-              <input id="login-email" type="email" placeholder="Correo electrónico" class="w-full mb-4 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition">
-              <input id="login-pass" type="password" placeholder="Contraseña" class="w-full mb-6 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition">
-              <button id="login-btn" class="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 rounded-lg font-medium hover:from-blue-700 hover:to-blue-800 transform hover:scale-[1.02] transition-all duration-200">Ingresar</button>
-              <p id="login-error" class="text-red-500 text-sm mt-4 hidden text-center font-medium">Credenciales incorrectas</p>
-            </div>`;
-          document.body.appendChild(modal);
-          setTimeout(() => modal.classList.add('show'), 50);
+      let html = `<div class="result-header">Resultados para: <strong>${agente}</strong></div>`;
 
-          modal.querySelector('#login-btn').onclick = () => {
-            const email = modal.querySelector('#login-email').value.trim().toLowerCase();
-            const pass = modal.querySelector('#login-pass').value.trim();
-            const errorEl = modal.querySelector('#login-error');
-            errorEl.classList.add('hidden');
+      // Contenido principal: gráfico + tabla
+      html += `
+        <div class="result-content">
+          <div class="chart-container">
+            <svg viewBox="0 0 160 160">
+              <circle class="circle-bg" cx="80" cy="80" r="70"></circle>
+              <circle class="circle-progress" cx="80" cy="80" r="70"></circle>
+            </svg>
+            <div class="percentage" id="percentValue">${avgGeneral.toFixed(2)}%</div>
+          </div>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Semana</th>
+                  <th>Nota</th>
+                </tr>
+              </thead>
+              <tbody>
+      `;
 
-            const row = SHEET_DATA.find(r =>
-              r["CorreoAgente"] === email ||
-              r["Supervisor"] === email ||
-              r["Monitores"] === email ||
-              r["SupervisorGlobal"] === email
-            );
+      // Definir semanas fijas
+      const semanas = ['SEM 1', 'SEM 2', 'SEM 3', 'SEM 4', 'SEM 5'];
 
-            if (!row) {
-              errorEl.textContent = "❌ Correo no autorizado";
-              errorEl.classList.remove('hidden');
-              return;
-            }
-            if (pass !== DEFAULT_PASSWORD) {
-              errorEl.textContent = "❌ Contraseña incorrecta";
-              errorEl.classList.remove('hidden');
-              return;
-            }
+      semanas.forEach(semana => {
+        // Filtrar evaluaciones de esta semana
+        const semanaMatches = matches.filter(r => r.semana === semana);
+        let notaStr = '—';
+        let notaClass = '';
 
-            localStorage.setItem('currentUserEmail', email);
-            localStorage.setItem('campanaAsignada', row["Campaña"] || "");
-            currentUserEmail = email;
-            currentCampaign = row["Campaña"];
-            modal.remove();
-            initApp();
-          };
-        }
-
-        function logout() {
-          localStorage.clear();
-          currentUserEmail = null;
-          currentCampaign = null;
-          document.getElementById('app-container').innerHTML = '';
-          showLogin();
-        }
-
-        function initApp() {
-          document.getElementById('user-name').textContent = currentUserEmail.split('@')[0];
-          document.getElementById('user-email-display').textContent = currentUserEmail;
-          
-          const container = document.getElementById('app-container');
-          container.innerHTML = `
-            <div class="mb-8">
-              <h1 class="text-3xl font-bold text-gray-800">📋 Tus Alertas (${currentCampaign || 'Sin campaña'})</h1>
-              <p class="text-gray-600 mt-1">Mensajes importantes dirigidos a ti</p>
-            </div>
-            <div id="alerts-container" class="space-y-4"></div>
-          `;
-          
-          const alertsContainer = document.getElementById('alerts-container');
-
-          db.collection("alertas").orderBy("timestamp", "desc").onSnapshot(snap => {
-            let alertCount = 0;
-            alertsContainer.innerHTML = '';
-
-            snap.docs.forEach(doc => {
-              const data = doc.data();
-              const supervisores = data.supervisores || [];
-              const correoAgente = data.correoAgente || "";
-              const match = (
-                supervisores.includes(currentUserEmail) ||
-                correoAgente === currentUserEmail
-              );
-              
-              if (match) {
-                alertCount++;
-
-                const ts = new Date(data.timestamp?.seconds * 1000 || data.timestamp).toLocaleString('es-PE', {
-                  year: 'numeric',
-                  month: 'short',
-                  day: 'numeric',
-                  hour: '2-digit',
-                  minute: '2-digit'
-                });
-                
-                const div = document.createElement('div');
-                div.className = "alert-card bg-white p-6 rounded-xl shadow-sm border-l-4 border-red-500 hover:shadow-md transition-all duration-300";
-                div.innerHTML = `
-                  <div class="flex justify-between items-start mb-3">
-                    <span class="text-xs font-medium text-gray-500 flex items-center gap-1">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V5a2 2 0 00-2-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                      </svg>
-                      ${ts}
-                    </span>
-                  </div>
-                  <div class="mb-3">
-                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                      ✉️ ${correoAgente}
-                    </span>
-                  </div>
-                  <p class="text-gray-800 leading-relaxed">${data.alertaTexto || 'Sin contenido'}</p>
-                  <button class="delete-btn mt-4">✖</button>
-                `;
-                
-                div.querySelector('.delete-btn').onclick = () => {
-                  if (confirm('¿Estás seguro de eliminar esta alerta?')) {
-                    db.collection("alertas").doc(doc.id).delete();
-                  }
-                };
-                
-                alertsContainer.appendChild(div);
-              }
-            });
-
-            const alertCountEl = document.getElementById('alert-count');
-            if (alertCount > 0) {
-              alertCountEl.textContent = alertCount > 99 ? '99+' : alertCount;
-              alertCountEl.classList.remove('hidden');
-            } else {
-              alertCountEl.classList.add('hidden');
-            }
-
-            // ✅ Gestionar el parpadeo del título
-            if (alertCount > 0 && document.hidden) {
-              startTitleBlink(alertCount);
-            } else {
-              stopTitleBlink();
-            }
-          });
-        }
-
-        if (currentUserEmail) {
-          const row = SHEET_DATA.find(r =>
-            r["CorreoAgente"] === currentUserEmail ||
-            r["Supervisor"] === currentUserEmail ||
-            r["Monitores"] === currentUserEmail ||
-            r["SupervisorGlobal"] === currentUserEmail
-          );
-          if (row) {
-            initApp();
-          } else {
-            showLogin();
+        if (semanaMatches.length > 0) {
+          const semanaNotas = semanaMatches.map(r => parseToPercent(r.c_nota));
+          const semanaAvg = calcAvg(semanaNotas);
+          if (!isNaN(semanaAvg)) {
+            notaStr = `${semanaAvg.toFixed(2)}%`;
+            notaClass = getNoteClass(semanaAvg);
           }
-        } else {
-          showLogin();
         }
 
-        document.getElementById('logout-btn').onclick = logout;
-        document.getElementById('user-menu-btn').onclick = () => {
-          const menu = document.getElementById('user-menu');
-          menu.classList.toggle('hidden');
-          menu.classList.toggle('show');
-        };
-      }).catch(err => {
-        console.error("Error crítico al iniciar la app:", err);
-        alert("⚠️ No se pudo iniciar la aplicación. Revisa la consola.");
+        html += `
+          <tr>
+            <td>${semana}</td>
+            <td><span class="note-badge ${notaClass}">${notaStr}</span></td>
+          </tr>
+        `;
       });
-    })();
-  </script>
+
+      html += `
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="summary">Nota promedio | Evaluaciones: ${matches.length}</div>
+      `;
+
+      container.innerHTML = html;
+
+      // Animar gráfico
+      if (!isNaN(avgGeneral)) {
+        animateDonut(avgGeneral);
+      }
+    }
+
+    // === ANIMACIÓN DEL GRÁFICO ===
+function animateDonut(target) {
+  const circle = document.querySelector('.circle-progress');
+  const text = document.getElementById('percentValue');
+  const radius = 80; // Nuevo radio para el SVG de 200x200
+  const circumference = 2 * Math.PI * radius;
+  circle.style.strokeDasharray = `${circumference} ${circumference}`;
+  let current = 0;
+
+  function step() {
+    current += (target - current) * 0.15; // Aceleramos un poco la animación
+    if (Math.abs(current - target) < 0.1) current = target;
+    const offset = circumference - (current / 100) * circumference;
+    circle.style.strokeDashoffset = offset;
+    const color = current >= 85 ? "#10b981" : current >= 66 ? "#facc15" : "#f43f5e";
+    circle.style.stroke = color;
+    if (text) text.textContent = current.toFixed(2) + '%';
+    if (current < target) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+    // === EVENTOS ===
+    document.getElementById('btnSearch').addEventListener('click', searchByDNI);
+    document.getElementById('dniInput').addEventListener('keyup', e => {
+      if (e.key === 'Enter') searchByDNI();
+    });
+  });
+</script>
+  
 </body>
 </html>
